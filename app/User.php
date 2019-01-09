@@ -19,6 +19,13 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+    public function gradients() {
+        return $this->hasMany('App\Gradients');
+    }
+    public function palette() {
+        return $this->hasMany('App\Palette');
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *

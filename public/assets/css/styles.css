@@ -1,0 +1,64 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background-color: #ffffff;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.nav-color {
+    color: #1976d2 !important;
+}
+
+.nav-color:hover {
+    color: #004ba0 !important;
+}
+
+.btn {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 100px;
+}
+
+.btn:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.btn-gradient {
+    color: #000000;
+    background-color: #ffffff;
+    margin-right: 5px;
+}
+
+.btn-primary {
+    background-color: #1976d2;
+}
+.card {
+    margin-bottom: 20px;
+}
+.card-gradient {
+    color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+.card-gradient:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.card-form {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.gradient-link {
+    text-decoration: none !important;
+    text-transform: uppercase;
+}
+
+.jumbotron-fluid {
+    height: 50vh;
+}
