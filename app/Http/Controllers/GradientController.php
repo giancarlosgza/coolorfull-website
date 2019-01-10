@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Gradients;
 use App\User;
 use Illuminate\Http\Request;
@@ -105,7 +106,7 @@ class GradientController extends Controller
     {
         // Para checar los input, usa Validation de Laravel
         $validatedData = $request->validate([
-            'gradientId' => 'required',
+            'gradient_id' => 'required',
             'nombre' => 'required',
             'color_1' => 'required',
             'color_2' => 'required',
@@ -121,9 +122,9 @@ class GradientController extends Controller
         } 
 
         Log::debug('Se validaron los campos');
-        Log::debug('Obteniendo gradient con id: ' . $request->input('gradientId'));
+        Log::debug('Obteniendo gradient con id: ' . $request->input('gradient_id'));
 
-        $gradient = Gradients::find($request->input('gradientId'));
+        $gradient = Gradients::find($request->input('gradient_id'));
         $this->authorize('pass', $gradient);
 
         Log::debug('READY!');
@@ -149,7 +150,7 @@ class GradientController extends Controller
     //DELETE POST
     public function deleteGradients(Request $request)
     {
-        $gradient = Gradients::find($request->input('gradientId'));
+        $gradient = Gradients::find($request->input('gradient_id'));
         $this->authorize('pass', $gradient);
 
         if($gradient->image_name != 'noimage.jpg'){

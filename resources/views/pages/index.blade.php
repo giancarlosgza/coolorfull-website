@@ -8,9 +8,6 @@
             <h4>Últimos Degradados</h4>
         </div>
     </div>
-</div>
-<br>
-<div class="container">
     <div class="row">
         @foreach($gradients as $gradient)
         <div class="col-sm-6 col-md-4">
@@ -26,12 +23,4 @@
     </div>
 </div>
 <br>
-<div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h4>Últimas Paletas de Colores</h4>
-            </div>
-        </div>
-    </div>
-    <br>
 @endsection

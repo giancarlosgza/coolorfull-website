@@ -22,7 +22,7 @@ class User extends Authenticatable
     public function gradients() {
         return $this->hasMany('App\Gradients');
     }
-    public function palette() {
+    public function palettes() {
         return $this->hasMany('App\Palette');
     }
 

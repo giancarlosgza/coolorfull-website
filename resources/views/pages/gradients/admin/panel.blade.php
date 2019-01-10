@@ -12,7 +12,6 @@
     <div class="row">
         @foreach($gradients as $gradient)
         <div class="col-sm-6 col-md-4">
-
             <div class="card">
                 <div class="card-body card-gradient" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
                     <h5 class="text-center gradient-link">{{$gradient->name}}</h5>

@@ -10,21 +10,21 @@
                     <!--FORM-->
                     <form method="POST" action="/gradients/edit" enctype="multipart/form-data">
                         @csrf
-                        <input type="hidden" id="invisible_id" name="gradientId" value="{{$gradient->id}}">
+                        <input type="hidden" id="invisible_id" value="{{$gradient->id}}" name="gradient_id">
 
                         <div class="form-group">
                             <label for="name">Nombre:</label>
-                            <input type="name" id="name" name="nombre" class="form-control" value="{{ $gradient->name }}">
+                            <input type="name" id="name" value="{{ $gradient->name }}" name="nombre" class="form-control" >
                         </div>
 
                         <div class="form-group">
                             <label for="color_1">Color 1:</label>
-                            <input type="text" id="color_1" name="color_1" class="form-control" value="{{ $gradient->color_1 }}">
+                            <input type="text" id="color_1" value="{{ $gradient->color_1 }}" name="color_1" class="form-control" >
                         </div>
 
                         <div class="form-group">
                             <label for="color_2">Color 2:</label>
-                            <input type="text" id="color_2" name="color_2" class="form-control" value="{{ $gradient->color_2 }}">
+                            <input type="text" id="color_2" value="{{ $gradient->color_2 }}" name="color_2" class="form-control" >
                         </div>
                         <!--
                         <div class="input-group mb-3">
