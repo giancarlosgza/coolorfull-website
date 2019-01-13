@@ -66,16 +66,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <!--Wow.js-->
-    <script src="https://wowjs.uk/dist/wow.min.js"></script>
-    <script src="{{ asset('assets/js/clipboard.min.js') }}"></script>
-    <script>
+    <script type="text/javascript" src="https://wowjs.uk/dist/wow.min.js"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/clipboard.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.mask.min.js') }}"></script>
+    <script type="text/javascript">
         new WOW().init();
         new ClipboardJS('.btn');
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
         });
-
     </script>
+    @yield('scripts')
     <!--END SCRIPTS-->
 </body>
 

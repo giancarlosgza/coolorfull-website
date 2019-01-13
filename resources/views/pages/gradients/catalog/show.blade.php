@@ -3,12 +3,12 @@
 @section('content')
 <ul class="nav justify-content-center">
     <li class="nav-item">
-        <a class="nav-link btn btn-gradient" data-toggle="tooltip" title="Click para Copiar" data-clipboard-text="{{$gradient->color_1}}">
+        <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy" data-clipboard-text="{{$gradient->color_1}}">
             <i class="fas fa-circle" style="color: {{$gradient->color_1}};"></i> {{$gradient->color_1}}
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link btn btn-gradient" data-toggle="tooltip" title="Click para Copiar" data-clipboard-text="{{$gradient->color_2}}">
+        <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy" data-clipboard-text="{{$gradient->color_2}}">
             <i class="fas fa-circle" style="color: {{$gradient->color_2}};"></i> {{$gradient->color_2}}
         </a>
     </li>
@@ -82,4 +82,11 @@
         </div>
     </div><br>
 </div>
+@endsection
+@section('scripts')
+    <script>
+        function copyColor() {
+            alert("Copied!");
+        }
+    </script>
 @endsection

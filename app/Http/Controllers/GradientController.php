@@ -161,5 +161,4 @@ class GradientController extends Controller
         $gradient->delete();
         return redirect ('/gradients/admin/panel')->with('delete', true);
     }
-
 }

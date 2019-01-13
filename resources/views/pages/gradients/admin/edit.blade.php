@@ -19,7 +19,7 @@
 
                         <div class="form-group">
                             <label for="color_1">Color 1:</label>
-                            <input type="text" id="color_1" value="{{ $gradient->color_1 }}" name="color_1" class="form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" >
+                            <input type="text" id="color_1" value="{{ $gradient->color_1 }}" name="color_1" class="hexcolor form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" >
                         </div>
 
                         <div class="form-group">
@@ -47,4 +47,20 @@
         </div>
     </div>
 </div>
+@endsection
+@section('scripts')
+ <script type="text/javascript">
+     $(document).ready(function(){
+        $('.hexcolor').mask('SAAAAAA', {
+            'translation': {
+                S: {
+                    pattern: /[#]/
+                },
+                A: {
+                    pattern: /[A-Fa-f0-9]/
+                }
+            }
+        });
+    });
+ </script>   
 @endsection
