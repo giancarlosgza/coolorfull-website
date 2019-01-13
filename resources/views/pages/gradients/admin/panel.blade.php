@@ -1,11 +1,11 @@
 @extends('layouts.app')
-@section('title', 'Panel Degradados')
+@section('title', 'Gradients Panel')
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-12">
             <a href="/gradients/admin/create" class="btn btn-primary">
-                CREAR NUEVO
+                CREATE GRADIENT
             </a>
         </div>
     </div><br>
@@ -17,13 +17,13 @@
                     <h5 class="text-center gradient-link">{{$gradient->name}}</h5>
                 </div>
                 <div class="card-footer text-left">
-                    <a href="/gradients/{{$gradient->id}}" class="btn btn-primary">Ver</a>
-                    <a href="/gradients/admin/edit/{{$gradient->id}}" class="btn btn-primary">Editar</a>
+                    <a href="/gradients/{{$gradient->id}}" class="btn btn-primary">View</a>
+                    <a href="/gradients/admin/edit/{{$gradient->id}}" class="btn btn-primary">Edit</a>
                     <hr>
                     <form method="POST" action="/gradients/delete">
                         @csrf
                         <input id="invisible_id" name="gradientId" type="hidden" value="{{$gradient->id}}">
-                        <button value="POST" type="submit" class='btn btn-danger'>Borrar</button>
+                        <button value="POST" type="submit" class='btn btn-danger'>Delete</button>
                     </form>
                 </div>
             </div>

@@ -40,7 +40,7 @@ class GradientController extends Controller
         $gradients;
 
         if(empty($searchQuery)) {
-            $gradients = Gradients::orderBy('id', 'DESC')->paginate(3);
+            $gradients = Gradients::orderBy('id', 'DESC')->paginate(4);
             return view ('pages.index')->with('gradients',  $gradients)->with('searchQuery', $searchQuery);
         } else {
             $gradients = DB::table('gradients')

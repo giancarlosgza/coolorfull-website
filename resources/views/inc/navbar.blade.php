@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-md navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand nav-color" href="/">Colorfull</a>
+        <a class="navbar-brand nav-color logo" href="/">Colorfull</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,21 +8,21 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link nav-color" href="/">Inicio <span class="sr-only">(current)</span></a>
+                    <a class="nav-link nav-color" href="/"><i class="fas fa-home"></i> Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-color" href="/palettes/catalog">Paletas</a>
+                    <a class="nav-link nav-color" href="/palettes/catalog"><i class="fas fa-palette"></i> Palettes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-color" href="/gradients/catalog">Degradados</a>
+                    <a class="nav-link nav-color" href="/gradients/catalog"><i class="fas fa-fill"></i> Gradients</a>
                 </li>
                 @guest
                 @else
                 <li class="nav-item">
-                    <a class="nav-link nav-color" href="/gradients/admin/panel">Panel Degradados</a>
+                    <a class="nav-link nav-color" href="/gradients/admin/panel">Gradients Panel</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-color" href="/palettes/admin/panel">Panel Paletas</a>
+                    <a class="nav-link nav-color" href="/palettes/admin/panel">Palettes Panel</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -31,11 +31,11 @@
                         {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/home">Cuenta</a>
+                        <a class="dropdown-item" href="/home"><i class="fas fa-user-circle"></i> Account</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                            <i class="fas fa-sign-out-alt"></i> {{ __('Cerrar Sesión') }}
+                            <i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf

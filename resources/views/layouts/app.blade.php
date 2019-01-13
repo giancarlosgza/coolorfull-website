@@ -11,7 +11,7 @@
     <title>@yield('title') | Coolorfull</title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600|Roboto:400,500,700|Nunito:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Roboto:400,500,700|Nunito:400,500,700" rel="stylesheet">
     <!--STYLES-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
@@ -24,7 +24,7 @@
 <body>
 
     @include('inc.navbar')
-    <div class="container-fluid">
+    
         <!--ALERTS-->
         @if(session('info'))
         <div class="container">
@@ -55,7 +55,7 @@
         <!--CONTENT-->
         @yield('content')
         <!--END CONTENT-->
-    </div>
+    
     @include('inc.footer')
 
     <!--SCRIPTS-->
