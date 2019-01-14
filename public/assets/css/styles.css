@@ -68,6 +68,9 @@ body {
 .color-blue {
     color: #258bff;
 }
+.color-darkblue {
+    color: #1976d2;
+}
 
 .bold {
     font-weight: 600;

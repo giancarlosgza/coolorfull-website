@@ -16,7 +16,7 @@
         <div class="col-md-4">
             <a href="/gradients/{{$gradient->id}}" class="gradient-link">
                 <div class="card text-center">
-                    <div class="card-body card-gradient shadow-medium" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+                    <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
                         <h6 class="bold">{{$gradient->name}}</h6>
                     </div>
                 </div>
