@@ -79,12 +79,17 @@
 
     <!--SCRIPTS-->
     <script type="text/javascript">
-        navigator.serviceWorker.register(("{{ asset('assets/js/sw.js') }}"))
-        .then(function(reg) {
-            console.log('Service worker registration succeeded!');
-        }).catch(function(error) {
-            console.log('Service worker registration failed: ' + error);
-        });
+        if ('serviceWorker' in navigator ) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
