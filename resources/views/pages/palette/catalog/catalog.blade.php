@@ -7,6 +7,17 @@
         <div class="col-sm-12">
             <h4 class="bold">Palettes</h4>
         </div>
+        <div class="col-sm-12">
+            <form action="" method="get">
+                <div class="input-group mb-3">
+                    <input type="text" name="q" id="query" value="{{ $searchQuery }}" class="form-control shadow-medium no-border"
+                        placeholder="Search Palettes" aria-label="Search Palettes" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit" id="button-addon2">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
     <br>
     <div class="row">

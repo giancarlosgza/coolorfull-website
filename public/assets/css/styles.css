@@ -186,13 +186,18 @@ a {
     color: #258bff;
 }
 
+.no-border {
+    border: none;
+    border-radius: 15px;
+}
+
 @media only screen and (max-width: 600px) {
     .palette-show {
         height: 80px;
     }
 
     h1 {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .intro-text {
