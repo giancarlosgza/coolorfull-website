@@ -10,8 +10,10 @@
         </div>
     </div><br>
     <div class="row">
-        @if ($palettes->count() < 1) 
-        <h6>No colorS palettes</h6>
+        @if ($palettes->count() < 1)
+        <div class="col-sm-12">
+           <h6>No colors palettes</h6> 
+        </div>
         @else 
         @foreach($palettes as $palette) 
         <div class="col-sm-6 col-md-4">

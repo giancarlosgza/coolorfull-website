@@ -13,17 +13,17 @@
 
                         <div class="form-group">
                             <label for="name">Name:</label>
-                            <input type="name" class="form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" id="name" name="nombre" placeholder="Fire Red, Leaf Green">
+                            <input type="name" class="form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" id="name" name="nombre" placeholder="Fire Red, Leaf Green" value="{{ old('nombre') }}">
                         </div>
 
                         <div class="form-group">
                             <label for="color_1">Color 1:</label>
-                            <input type="text" class="form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" id="color_1" name="color_1" placeholder="#11998e">
+                            <input type="text" class="hexcolor form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" id="color_1" name="color_1" placeholder="#11998e" value="{{ old('color_1') }}">
                         </div>
 
                         <div class="form-group">
                             <label for="color_2">Color 2:</label>
-                            <input type="text" class="form-control{{ $errors->has('color_2') ? ' is-invalid' : '' }}" id="color_2" name="color_2" placeholder="#38ef7d">
+                            <input type="text" class="hexcolor form-control{{ $errors->has('color_2') ? ' is-invalid' : '' }}" id="color_2" name="color_2" placeholder="#38ef7d" value="{{ old('color_2') }}">
                         </div>
                         <!--
                         <div class="input-group mb-3">
@@ -46,4 +46,20 @@
         </div>
     </div>
 </div>
+@endsection
+@section('scripts')
+ <script type="text/javascript">
+     $(document).ready(function(){
+        $('.hexcolor').mask('SAAAAAA', {
+            'translation': {
+                S: {
+                    pattern: /[#]/
+                },
+                A: {
+                    pattern: /[A-Fa-f0-9]/
+                }
+            }
+        });
+    });
+ </script>   
 @endsection

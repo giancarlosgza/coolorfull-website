@@ -23,6 +23,16 @@ body {
     font-family: 'Fredoka One', cursive;
 }
 
+.gradient {
+    background: -webkit-linear-gradient( #00F260, #0575E6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.palette {
+    color: #F74D47;
+}
+
 .btn {
     font-weight: 600;
     text-transform: uppercase;
@@ -68,6 +78,9 @@ body {
 .color-blue {
     color: #258bff;
 }
+.color-darkblue {
+    color: #1976d2;
+}
 
 .bold {
     font-weight: 600;
@@ -104,6 +117,11 @@ body {
     background: -webkit-linear-gradient(to right, #1976d2, #258bff);
     background: linear-gradient(to right, #1976d2, #258bff);
     color: #ffffff;
+    text-align: center;
+}
+
+.card-white {
+    color: #000000;
     text-align: center;
 }
 
@@ -167,8 +185,22 @@ a {
 .page-link {
     color: #258bff;
 }
+
+.no-border {
+    border: none;
+    border-radius: 15px;
+}
+
 @media only screen and (max-width: 600px) {
     .palette-show {
         height: 80px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .intro-text {
+        display: none;
     }
 }

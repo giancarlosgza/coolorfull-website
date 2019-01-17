@@ -13,7 +13,7 @@ class CreatePaletteTable extends Migration
      */
     public function up()
     {
-        Schema::create('palette', function (Blueprint $table) {
+        Schema::create('palettes', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
 
@@ -40,6 +40,6 @@ class CreatePaletteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('palette');
+        Schema::dropIfExists('palettes');
     }
 }

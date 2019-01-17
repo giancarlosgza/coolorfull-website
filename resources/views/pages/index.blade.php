@@ -5,25 +5,19 @@
 <div class="main">
     <div class="container">
         <div class="row">
-            <div class="col-6 col-sm-6">
-                <a href="/gradients/catalog">
-                    <div class="card card-blue shadow-medium">
-                        <div class="card-body ">
-                            <h6 class="logo">GRADIENTS</h6>
+            <div class="col-sm-12">
+                <form action="" method="get">
+                    <div class="input-group mb-3">
+                        <input type="text" name="q" id="query" value="{{ $searchQuery }}" class="form-control shadow-medium no-border" placeholder="Search Gradients"
+                            aria-label="Search Gradients" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit" id="button-addon2">Search</button>
                         </div>
                     </div>
-                </a>
+                </form>
             </div>
-            <div class="col-6 col-sm-6">
-                <a href="/palettes/catalog">
-                    <div class="card card-blue shadow-medium">
-                        <div class="card-body">
-                            <h6 class="logo">PALETTES</h6>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div><br>
+        </div>
+        <br>
         <div class="row">
             <div class="col-sm-12">
                 <h4 class="bold">Last Gradients</h4>
