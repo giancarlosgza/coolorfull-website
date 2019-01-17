@@ -23,7 +23,7 @@ class PaletteController extends Controller
         $palettes;
 
         if(empty($searchQuery)) {
-            $palettes = Palette::orderBy('id', 'DESC')->paginate(9);
+            $palettes = Palette::orderBy('id', 'DESC')->paginate(12);
         } else {
             $palettes = DB::table('palettes')
                     ->where('name', 'like', '%' . $searchQuery . '%')
@@ -31,7 +31,7 @@ class PaletteController extends Controller
                     ->orWhere('color_2', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_3', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_4', 'like', '%' . $searchQuery . '%')
-                    ->orderBy('id', 'DESC')->paginate(9);
+                    ->orderBy('id', 'DESC')->paginate(12);
         }
         return view ('pages.palette.catalog.catalog')->with('palettes', $palettes)->with('searchQuery', $searchQuery);
     }

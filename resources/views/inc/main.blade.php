@@ -4,7 +4,7 @@
             <h1 class="logo">
                 Color Gradients and Palettes!
             </h1>
-            <h4>
+            <h4 class="intro-text">
                 Look, choose and use for free any colors from this collection. 
             </h4>
         </div>

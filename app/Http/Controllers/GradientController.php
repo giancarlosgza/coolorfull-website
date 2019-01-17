@@ -23,13 +23,13 @@ class GradientController extends Controller
         $gradients;
 
         if(empty($searchQuery)) {
-            $gradients = Gradients::orderBy('id', 'DESC')->paginate(9);
+            $gradients = Gradients::orderBy('id', 'DESC')->paginate(12);
         } else {
             $gradients = DB::table('gradients')
                     ->where('name', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_1', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_2', 'like', '%' . $searchQuery . '%')
-                    ->orderBy('id', 'DESC')->paginate(9);
+                    ->orderBy('id', 'DESC')->paginate(12);
         }
         return view ('pages.gradients.catalog.catalog')->with('gradients', $gradients)->with('searchQuery', $searchQuery);
     }

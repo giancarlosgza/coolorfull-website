@@ -10,6 +10,11 @@
         </div>
     </div><br>
     <div class="row">
+        @if ($gradients->count() < 1)
+        <div class="col-sm-12">
+            <h6>No colors gradients</h6> 
+        </div>
+        @else 
         @foreach($gradients as $gradient)
         <div class="col-sm-6 col-md-4">
             <div class="card">
@@ -22,13 +27,14 @@
                     <hr>
                     <form method="POST" action="/gradients/delete">
                         @csrf
-                        <input id="invisible_id" name="gradientId" type="hidden" value="{{$gradient->id}}">
+                        <input id="invisible_id" name="gradient_id" type="hidden" value="{{$gradient->id}}">
                         <button value="POST" type="submit" class='btn btn-danger'>Delete</button>
                     </form>
                 </div>
             </div>
         </div>
         @endforeach
+        @endif
     </div>
 </div>
 @endsection

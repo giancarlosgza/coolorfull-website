@@ -13,7 +13,7 @@
 <div class="container">
     <div class="row">
         @foreach($gradients as $gradient)
-        <div class="col-md-4">
+        <div class="col-6 col-md-4">
             <a href="/gradients/{{$gradient->id}}" class="gradient-link">
                 <div class="card text-center">
                     <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
