@@ -18,11 +18,15 @@
                 </li>
                 @guest
                 @else
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/gradients/admin/panel">Gradients Panel</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/palettes/admin/panel">Palettes Panel</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Housekeeping
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item bold" href="/palettes/admin/panel"><i class="fas fa-palette"></i> Palettes Panel</a>
+                        <a class="dropdown-item bold" href="/gradients/admin/panel"><i class="fas fa-fill"></i> Gradients Panel</a>                       
+                    </div>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -31,9 +35,9 @@
                         {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/home"><i class="fas fa-user-circle"></i> Account</a>
+                        <a class="dropdown-item bold" href="/home"><i class="fas fa-user-circle"></i> Account</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        <a class="dropdown-item bold" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
                         </a>

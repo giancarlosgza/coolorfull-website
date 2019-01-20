@@ -24,10 +24,12 @@ class CreateGradientsTable extends Migration
                     ->onUpdate('CASCADE')
                     ->onDelete('CASCADE'); 
 
-            $table->string('name'); //rojo fuego
+            $table->string('name'); //fire red, dusk, dawn
             $table->string('color_1'); //#3q232
             $table->string('color_2'); //#00043
             $table->string('image_name'); //firered.jpeg
+            $table->string('color_filter'); //red, blue, green
+            $table->string('color_filter_2'); //red, blue, green
         });
     }
 

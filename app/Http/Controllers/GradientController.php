@@ -29,6 +29,8 @@ class GradientController extends Controller
                     ->where('name', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_1', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_2', 'like', '%' . $searchQuery . '%')
+                    ->orWhere('color_filter', 'like', '%' . $searchQuery . '%')
+                    ->orWhere('color_filter_2', 'like', '%' . $searchQuery . '%')
                     ->orderBy('id', 'DESC')->paginate(12);
         }
         return view ('pages.gradients.catalog.catalog')->with('gradients', $gradients)->with('searchQuery', $searchQuery);
@@ -47,6 +49,8 @@ class GradientController extends Controller
                     ->where('name', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_1', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_2', 'like', '%' . $searchQuery . '%')
+                    ->orWhere('color_filter', 'like', '%' . $searchQuery . '%')
+                    ->orWhere('color_filter_2', 'like', '%' . $searchQuery . '%')
                     ->orderBy('id', 'DESC')->paginate(9);
         }
         return view ('pages.gradients.catalog.catalog')->with('gradients', $gradients)->with('searchQuery', $searchQuery);
@@ -61,6 +65,8 @@ class GradientController extends Controller
             'color_1' => 'required',
             'color_2' => 'required',
             'imagen' => 'image|nullable|max:1999',
+            'color_filter' => 'required',
+            'color_filter_2' => 'required',
         ]);
 
         if($request->hasFile('imagen')){
@@ -80,6 +86,8 @@ class GradientController extends Controller
         $gradient->color_1 = $request->input('color_1');
         $gradient->color_2 = $request->input('color_2');
         $gradient->image_name = $fileNameToStore;
+        $gradient->color_filter = $request->input('color_filter');
+        $gradient->color_filter_2 = $request->input('color_filter_2');
 
         $user = Auth::user();
         $user->gradients()->save($gradient);
@@ -111,6 +119,8 @@ class GradientController extends Controller
             'color_1' => 'required',
             'color_2' => 'required',
             'imagen' => 'image|nullable|max:1999',
+            'color_filter' => 'required',
+            'color_filter_2' => 'required',
         ]);
 
         if($request->hasFile('imagen')){
@@ -132,6 +142,8 @@ class GradientController extends Controller
         $gradient->name  = $request->input('nombre');
         $gradient->color_1 = $request->input('color_1');
         $gradient->color_2 = $request->input('color_2');
+        $gradient->color_filter = $request->input('color_filter');
+        $gradient->color_filter_2 = $request->input('color_filter_2');
         
         if($request->hasFile('imagen')){
             $gradient->image_name = $fileNameToStore;
