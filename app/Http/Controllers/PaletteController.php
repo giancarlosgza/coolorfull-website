@@ -31,6 +31,8 @@ class PaletteController extends Controller
                     ->orWhere('color_2', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_3', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_4', 'like', '%' . $searchQuery . '%')
+                    ->orWhere('color_filter', 'like', '%' . $searchQuery . '%')
+                    ->orWhere('color_filter_2', 'like', '%' . $searchQuery . '%')
                     ->orderBy('id', 'DESC')->paginate(12);
         }
         return view ('pages.palette.catalog.catalog')->with('palettes', $palettes)->with('searchQuery', $searchQuery);
@@ -51,6 +53,8 @@ class PaletteController extends Controller
                     ->orWhere('color_2', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_3', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_4', 'like', '%' . $searchQuery . '%')
+                    ->orWhere('color_filter', 'like', '%' . $searchQuery . '%')
+                    ->orWhere('color_filter_2', 'like', '%' . $searchQuery . '%')
                     ->orderBy('id', 'DESC')->paginate(9);
         }
         return view ('pages.palette.catalog.catalog')->with('palettes', $palettes)->with('searchQuery', $searchQuery);
@@ -67,6 +71,8 @@ class PaletteController extends Controller
             'color_3' => 'required',
             'color_4' => 'required',
             'imagen' => 'image|nullable|max:1999',
+            'color_filter' => 'required',
+            'color_filter_2' => 'required',
         ]);
 
         if($request->hasFile('imagen')){
@@ -88,6 +94,8 @@ class PaletteController extends Controller
         $palette->color_3 = $request->input('color_3');
         $palette->color_4 = $request->input('color_4');
         $palette->image_name = $fileNameToStore;
+        $palette->color_filter = $request->input('color_filter');
+        $palette->color_filter_2 = $request->input('color_filter_2');
 
         $user = Auth::user();
         $user->palettes()->save($palette);
@@ -121,6 +129,8 @@ class PaletteController extends Controller
             'color_3' => 'required',
             'color_4' => 'required',
             'imagen' => 'image|nullable|max:1999',
+            'color_filter' => 'required',
+            'color_filter_2' => 'required',
         ]);
 
         if($request->hasFile('imagen')){
@@ -144,6 +154,8 @@ class PaletteController extends Controller
         $palette->color_2 = $request->input('color_2');
         $palette->color_3 = $request->input('color_3');
         $palette->color_4 = $request->input('color_4');
+        $palette->color_filter = $request->input('color_filter');
+        $palette->color_filter_2 = $request->input('color_filter_2');
         
         if($request->hasFile('imagen')){
             $palette->image_name = $fileNameToStore;
