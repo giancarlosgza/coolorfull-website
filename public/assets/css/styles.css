@@ -146,6 +146,7 @@ a {
 
 .jumbotron-fluid {
     height: 50vh;
+    border-radius: 15px;
 }
 
 .list-group {

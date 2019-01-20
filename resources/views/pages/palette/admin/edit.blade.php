@@ -34,8 +34,45 @@
 
                         <div class="form-group">
                             <label for="color_4">Color 4:</label>
-                            <input type="text" class="hexcolor form-control{{ $errors->has('color_4') ? ' is-invalid' : '' }}" value="{{ $palette->color_4 }}" id="color_4" name="color_4>
+                            <input type="text" class="hexcolor form-control{{ $errors->has('color_4') ? ' is-invalid' : '' }}" value="{{ $palette->color_4 }}" id="color_4" name="color_4">
                         </div>
+
+                        <div class="form-group">
+                            <label for="color_filter">Color Filter:</label>
+                            <select id="color_filter" value="{{ $palette->color_filter }}" class="form-control{{ $errors->has('color_filter') ? ' is-invalid' : '' }}"  name="color_filter">
+                                <option>Red</option>
+                                <option>Green</option>
+                                <option>Blue</option>
+                                <option>Cyan</option>
+                                <option>Purple</option>
+                                <option>Yellow</option>
+                                <option>Orange</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Pink</option>
+                                <option>Brown</option>
+                                <option>Grey</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="color_filter_2">Color Filter 2:</label>
+                            <select id="color_filter_2" value="{{ $palette->color_filter_2 }}" class="form-control{{ $errors->has('color_filter_2') ? ' is-invalid' : '' }}"  name="color_filter_2">
+                                <option>Red</option>
+                                <option>Green</option>
+                                <option>Blue</option>
+                                <option>Cyan</option>
+                                <option>Purple</option>
+                                <option>Yellow</option>
+                                <option>Orange</option>
+                                <option>White</option>
+                                <option>Black</option>
+                                <option>Pink</option>
+                                <option>Brown</option>
+                                <option>Grey</option>
+                            </select>
+                        </div>
+
                         <!--
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
