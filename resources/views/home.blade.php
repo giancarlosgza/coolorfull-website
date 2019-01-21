@@ -26,6 +26,10 @@
                                     <th scope="row">Email</th>
                                     <td>{{ Auth::user()->email }}</td>
                                 </tr>
+                                <tr>
+                                    <th scope="row">Username</th>
+                                    <td>{{ Auth::user()->username }}</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
