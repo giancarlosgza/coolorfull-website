@@ -2,9 +2,9 @@
     <div class="container py-3">
         <div class="row">
             <div class="col-md-4">
-                <h5 class="logo color-darkblue">Colorfull</h5>
+                <h5 class="logo color-darkblue">Colorffy</h5>
                 <p>
-                    Colorfull is a design website. 
+                    Colorffy is a design website. 
                     We creates useful gradients and palettes for designers and UI developers.
                 </p>
             </div>
@@ -21,7 +21,7 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-md-12 text-right small align-self-end">©2019 Colorfull.</div>
+            <div class="col-md-12 text-right small align-self-end">©2019 Colorffy.</div>
         </div>
     </div>
 </footer>

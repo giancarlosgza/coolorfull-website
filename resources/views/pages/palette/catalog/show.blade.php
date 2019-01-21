@@ -1,6 +1,14 @@
 @extends('layouts.app')
 @section('title', 'Paleta de Colores')
 @section('content')
+<div class="container btn-return">
+    <div class="row">
+        <div class="col-sm-12">
+            <a class="btn btn-link" href="/palettes/catalog"><i class="fas fa-arrow-left"></i> Palettes</a>
+            <br>
+        </div>
+    </div>
+</div>
 <ul class="nav justify-content-center">
     <li class="nav-item">
         <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy" data-clipboard-text="{{$palette->color_1}}">

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#258bff"/>
-    <title>@yield('title') | Coolorfull</title>
+    <title>@yield('title') | Colorffy</title>
     <link rel="manifest" href="{{ asset('/manifest.json') }}">
 
     <!-- CSRF Token -->

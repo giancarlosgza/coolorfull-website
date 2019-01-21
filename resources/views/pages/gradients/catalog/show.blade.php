@@ -1,6 +1,14 @@
 @extends('layouts.app')
 @section('title', 'Gradient')
 @section('content')
+<div class="container btn-return">
+    <div class="row">
+        <div class="col-sm-12">
+            <a class="btn btn-link" href="/gradients/catalog"><i class="fas fa-arrow-left"></i> Gradients</a>
+            <br>
+        </div>
+    </div>
+</div>
 <ul class="nav justify-content-center">
     <li class="nav-item">
         <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy"
@@ -50,7 +58,7 @@
         <div class="col-sm-12 col-md-6"><br>
             <h4>Navbars Black Text</h4>
             <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
-                <a class="navbar-brand text-body logo">Colorfull</a>
+                <a class="navbar-brand text-body logo">Colorffy</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav2"
                     aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -70,7 +78,7 @@
         <div class="col-sm-12 col-md-6"><br>
             <h4>Navbars White Text</h4>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
-                <a class="navbar-brand text-white logo">Colorfull</a>
+                <a class="navbar-brand text-white logo">Colorffy</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3"
                     aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

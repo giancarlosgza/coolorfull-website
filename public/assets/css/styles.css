@@ -75,6 +75,10 @@ body {
     box-shadow: 0 2px 4px 0 rgba(0, 64, 128, .2);
 }
 
+.btn-return {
+    display: none !important;
+}
+
 .color-blue {
     color: #258bff;
 }
@@ -203,5 +207,10 @@ a {
 
     .intro-text {
         display: none;
+    }
+
+    .btn-return {
+        display: flex !important;
+        margin-bottom: 10px;
     }
 }
