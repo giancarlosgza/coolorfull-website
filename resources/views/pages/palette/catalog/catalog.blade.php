@@ -23,7 +23,7 @@
     <br>
     <div class="row">
         @foreach($palettes as $palette)
-        <div class="col-6 col-md-4">
+        <div class="col-6 col-md-3">
             <div class="card shadow-medium">
                 <div class="card-body">
                     <h6 class="bold text-center">{{$palette->name}}</h6>
