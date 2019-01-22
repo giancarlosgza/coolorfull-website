@@ -11,13 +11,13 @@
 </div>
 <ul class="nav justify-content-center">
     <li class="nav-item">
-        <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy"
+        <a class="nav-link btn btn-gradient" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy"
             data-clipboard-text="{{$gradient->color_1}}">
             <i class="fas fa-circle" style="color: {{$gradient->color_1}};"></i> {{$gradient->color_1}}
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy"
+        <a class="nav-link btn btn-gradient" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy"
             data-clipboard-text="{{$gradient->color_2}}">
             <i class="fas fa-circle" style="color: {{$gradient->color_2}};"></i> {{$gradient->color_2}}
         </a>
@@ -111,7 +111,7 @@
                     <p><code>background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});</code></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="copyColor()" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">Copy</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">Copy</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -121,8 +121,8 @@
 @endsection
 @section('scripts')
 <script>
-    function copyColor() {
-        alert("Copied!");
+    function copyColor(element) {
+        element.title = "Copied!";
     }
 
 </script>
