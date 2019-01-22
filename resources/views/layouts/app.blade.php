@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#258bff"/>
+    <meta name="Description" content="Design website for gradients and color palettes.">
     <title>@yield('title') | Colorffy</title>
     <link rel="manifest" href="{{ asset('/manifest.json') }}">
 
@@ -52,6 +53,30 @@
                 <div class="col-sm-12 col-md-12">
                     <div class="alert alert-info" role="alert">
                         {{ session('info')}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
+
+        @if(session('success'))
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="alert alert-success" role="alert">
+                        Color submitted!
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
+
+        @if(session('delete'))
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="alert alert-warning" role="alert">
+                        Color deleted!
                     </div>
                 </div>
             </div>
