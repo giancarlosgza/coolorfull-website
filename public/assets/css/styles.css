@@ -154,7 +154,7 @@ a {
 }
 
 .list-group {
-    box-shadow: 0 10px 40px -10px rgba(0, 64, 128, .2);
+    /*box-shadow: 0 10px 40px -10px rgba(0, 64, 128, .2);*/
     margin-bottom: 20px;
     border-radius: 15px;
 }
@@ -164,7 +164,7 @@ a {
 }
 
 .palette-show {
-    height: 100px;
+    height: 80px;
 }
 
 .form-control:focus {

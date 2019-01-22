@@ -29,6 +29,7 @@ class CreatePaletteTable extends Migration
             $table->string('color_2'); //#00043
             $table->string('color_3'); //#00043
             $table->string('color_4'); //#00043
+            $table->string('color_5'); //#00043
             $table->string('image_name'); //firered.jpeg
             $table->string('color_filter'); //red, blue, green
             $table->string('color_filter_2'); //red, blue, green

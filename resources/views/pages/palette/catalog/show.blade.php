@@ -30,6 +30,11 @@
             <i class="fas fa-circle" style="color: {{$palette->color_4}};"></i> {{$palette->color_4}}
         </a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy" data-clipboard-text="{{$palette->color_4}}">
+            <i class="fas fa-circle" style="color: {{$palette->color_5}};"></i> {{$palette->color_5}}
+        </a>
+    </li>
 </ul><br>
 <div class="container">
     <div class="row">
@@ -40,6 +45,7 @@
                 <li class="list-group-item palette-show" style="background-color:{{$palette->color_2}}"></li>
                 <li class="list-group-item palette-show" style="background-color:{{$palette->color_3}}"></li>
                 <li class="list-group-item palette-show" style="background-color:{{$palette->color_4}}"></li>
+                <li class="list-group-item palette-show" style="background-color:{{$palette->color_5}}"></li>
             </ul>
         </div>
     </div>

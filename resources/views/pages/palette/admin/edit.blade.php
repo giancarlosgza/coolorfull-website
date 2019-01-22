@@ -38,6 +38,11 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="color_5">Color 5:</label>
+                            <input type="text" class="hexcolor form-control{{ $errors->has('color_5') ? ' is-invalid' : '' }}" value="{{ $palette->color_5 }}" id="color_5" name="color_5">
+                        </div>
+
+                        <div class="form-group">
                             <label for="color_filter">Color Filter:</label>
                             <select id="color_filter" value="{{ $palette->color_filter }}" class="form-control{{ $errors->has('color_filter') ? ' is-invalid' : '' }}"  name="color_filter">
                                 <option>Red</option>

@@ -29,11 +29,11 @@
                     <h6 class="bold text-center">{{$palette->name}}</h6>
                     <a href="/palettes/{{$palette->id}}" class="gradient-link" title="{{$palette->name}}">
                         <ul class="list-group">
-                            <li class="list-group-item list-palette" style="background-color:{{$palette->color_1}}">
-                            </li>
+                            <li class="list-group-item list-palette" style="background-color:{{$palette->color_1}}"></li>
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_2}}"></li>
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_3}}"></li>
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_4}}"></li>
+                            <li class="list-group-item list-palette" style="background-color:{{$palette->color_5}}"></li>
                         </ul>
                     </a>
                 </div>

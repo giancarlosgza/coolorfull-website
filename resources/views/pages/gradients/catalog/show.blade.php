@@ -11,13 +11,13 @@
 </div>
 <ul class="nav justify-content-center">
     <li class="nav-item">
-        <a class="nav-link btn btn-gradient" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy"
+        <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy"
             data-clipboard-text="{{$gradient->color_1}}">
             <i class="fas fa-circle" style="color: {{$gradient->color_1}};"></i> {{$gradient->color_1}}
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link btn btn-gradient" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy"
+        <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy"
             data-clipboard-text="{{$gradient->color_2}}">
             <i class="fas fa-circle" style="color: {{$gradient->color_2}};"></i> {{$gradient->color_2}}
         </a>
@@ -121,8 +121,11 @@
 @endsection
 @section('scripts')
 <script>
-    function copyColor(element) {
-        element.title = "Copied!";
+    //function copyColor(element) {
+    //    element.title = "Copied!";
+    //}
+    function copyColor() {
+        alert("Copied!");
     }
 
 </script>

@@ -37,6 +37,11 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="color_4">Color 5:</label>
+                            <input type="text" class="hexcolor form-control{{ $errors->has('color_4') ? ' is-invalid' : '' }}" id="color_5" name="color_5" placeholder="#0072ff" value="{{ old('color_5') }}">
+                        </div>
+
+                        <div class="form-group">
                             <label for="color_filter">Color Filter:</label>
                             <select class="form-control{{ $errors->has('color_filter') ? ' is-invalid' : '' }}" id="color_filter" name="color_filter" placeholder="Red, Blue, Green" value="{{ old('color_filter') }}">
                                 <option>Red</option>
