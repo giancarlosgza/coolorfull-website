@@ -126,6 +126,7 @@
 
     <!--Wow.js-->
     <script type="text/javascript" src="https://wowjs.uk/dist/wow.min.js"></script>
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script type="text/javascript" src="{{ asset('assets/js/clipboard.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery.mask.min.js') }}"></script>
     <script type="text/javascript">
@@ -133,6 +134,10 @@
         new ClipboardJS('.btn');
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
+        });
+
+        html2canvas(document.body).then(function(canvas) {
+            document.body.appendChild(canvas);
         });
     </script>
     @yield('scripts')

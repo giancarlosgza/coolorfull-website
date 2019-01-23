@@ -40,7 +40,7 @@
     <div class="row">
         <div class="col-sm-12">
             <h4 class="text-center bold">{{$palette->name}}</h4>
-            <ul class="list-group shadow-medium">
+            <ul id="htmltoimage" class="list-group shadow-medium">
                 <li class="list-group-item palette-show" style="background-color:{{$palette->color_1}}"> </li>
                 <li class="list-group-item palette-show" style="background-color:{{$palette->color_2}}"></li>
                 <li class="list-group-item palette-show" style="background-color:{{$palette->color_3}}"></li>
@@ -49,6 +49,15 @@
             </ul>
         </div>
     </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <a class="btn btn-gradient" onclick="downloadimage()">
+                <i class="fas fa-image"></i>
+                Get IMG
+            </a>
+        </div>
+    </div>
+    <hr>
 </div>
 
 @endsection
@@ -56,6 +65,19 @@
     <script>
         function copyColor() {
             alert("Copied!");
+        }
+        function downloadimage(){
+            //var container = document.getElementById("image-wrap"); //specific element on page
+            var container = document.getElementById("htmltoimage");; // full page 
+            html2canvas(container,{allowTaint : true}).then(function(canvas) {
+            
+                var link = document.createElement("a");
+                document.body.appendChild(link);
+                link.download = "palette{{$palette->name}}_{{$palette->id}}.jpg";
+                link.href = canvas.toDataURL();
+                link.target = '_blank';
+                link.click();
+            });
         }
     </script>
 @endsection

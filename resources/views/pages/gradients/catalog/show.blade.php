@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-12">
             <h4 class="text-center bold">{{$gradient->name}}</h4>
-            <div class="jumbotron jumbotron-fluid" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+            <div id="htmltoimage" class="jumbotron jumbotron-fluid" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
             </div>
         </div>
     </div>
@@ -39,7 +39,12 @@
             <a class="btn btn-gradient" data-toggle="modal" data-target="#exampleModal">
                 <i class="fab fa-css3-alt"></i> 
                 Get CSS
-            </a><hr>
+            </a>
+            <a class="btn btn-gradient" onclick="downloadimage()">
+                <i class="fas fa-image"></i>
+                Get IMG
+            </a>
+            <hr>
             <h4 class="bold">Preview</h4>
         </div>
     </div>
@@ -128,5 +133,18 @@
         alert("Copied!");
     }
 
+    function downloadimage(){
+	 	//var container = document.getElementById("image-wrap"); //specific element on page
+		var container = document.getElementById("htmltoimage");; // full page 
+		html2canvas(container,{allowTaint : true}).then(function(canvas) {
+		
+			var link = document.createElement("a");
+			document.body.appendChild(link);
+			link.download = "gradient{{$gradient->name}}_{{$gradient->id}}.jpg";
+			link.href = canvas.toDataURL();
+			link.target = '_blank';
+			link.click();
+		});
+	}
 </script>
 @endsection
