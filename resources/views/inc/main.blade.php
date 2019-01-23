@@ -2,10 +2,10 @@
     <div class="row">
         <div class="col-md-6">
             <h1 class="logo text-body">
-                Color Gradients and Palettes!
+                Color Gradients and Palettes! 🎨
             </h1>
             <h4 class="intro-text">
-                Look, choose and use for free any colors from this collection.
+                Look, choose and use for free any colors from this collection. 🖌️
             </h4>
         </div>
     </div><br>
