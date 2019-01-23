@@ -136,9 +136,7 @@
             $('[data-toggle="tooltip"]').tooltip();
         });
 
-        html2canvas(document.body).then(function(canvas) {
-            document.body.appendChild(canvas);
-        });
+        
     </script>
     @yield('scripts')
     <!--END SCRIPTS-->
