@@ -26,7 +26,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 col-md-12">
-            <h4 class="text-center bold">{{$gradient->name}}</h4>
+            <h4 class="text-center bold uppercase">{{$gradient->name}}</h4>
             <div id="htmltoimage" class="jumbotron jumbotron-fluid" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
             </div>
         </div>

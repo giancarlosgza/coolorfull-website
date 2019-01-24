@@ -26,7 +26,7 @@
         <div class="col-6 col-md-3">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h6 class="bold text-center">{{$palette->name}}</h6>
+                    <h6 class="bold text-center uppercase">{{$palette->name}}</h6>
                     <a href="/palettes/{{$palette->id}}" class="gradient-link" title="{{$palette->name}}">
                         <ul class="list-group">
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_1}}"></li>

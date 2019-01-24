@@ -39,7 +39,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="text-center bold">{{$palette->name}}</h4>
+            <h4 class="text-center bold uppercase">{{$palette->name}}</h4>
             <ul id="htmltoimage" class="list-group shadow-medium">
                 <li class="list-group-item palette-show" style="background-color:{{$palette->color_1}}"> </li>
                 <li class="list-group-item palette-show" style="background-color:{{$palette->color_2}}"></li>

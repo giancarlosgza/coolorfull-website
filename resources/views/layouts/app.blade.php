@@ -7,13 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#258bff"/>
-    <meta name="Description" content="Design website for gradients and color palettes.">
+    <meta name="description" content="Design website for gradients and color palettes.">
+    <meta name="keywords" content="Color, Gradients, Palettes, Color Gradients, Color Palettes, Illustrations">
+
     <title>@yield('title') | Colorffy</title>
     <link rel="manifest" href="{{ asset('/manifest.json') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <meta name="robots" content="all">
+    <meta name="googlebot" content="all">
     
+    <!--META FACEBOOK-->
+    <meta property="og:url" content="https://www.colorffy.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Colorffy" />
+    <meta property="og:description" content="Colorffy is a design website. We creates useful gradients and palettes for designers and UI developers." />
+    <meta property="og:image" content="https://www.colorffy.com/assets/img/colorffy-logo.png">
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="750">
+    <meta property="og:image:height" content="350">
+    <meta property="og:image:alt" content="Colorffy Logo" />
+
+    <!-- Twitter Card -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Colorffy" />
+    <meta name="twitter:description" content="Colorffy is a design website. We creates useful gradients and palettes for designers and UI developers."/>
+	<meta name="twitter:creator" content="@giancarlosgza" />
+	<meta name="twitter:image:src" content="https://www.colorffy.com/assets/img/colorffy-logo.png" />
+	<meta name="twitter:domain" content="https://www.colorffy.com" />
+
     <!--FAVICON-->
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('/assets/img/favicon/apple-icon-57x57.png')}}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('/assets/img/favicon/apple-icon-60x60.png')}}">
@@ -42,6 +66,31 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
+
+    <!-- MARKUP JSON-LD Google. -->
+    <script type="application/ld+json">
+        {
+        "@context" : "http://schema.org",
+        "@type" : "Article",
+        "name" : "Colorffy",
+        "author" : {
+            "@type" : "Person",
+            "name" : "©2019 Colorffy."
+        },
+        "articleSection" : "Color Gradients and Palettes!",
+        "articleBody" : "Look, choose and use for free any colors from this collection.",
+        "url" : "https://www.colorffy.com/"
+        }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114030245-4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114030245-4');
+    </script>
 
 </head>
 <body>
@@ -135,8 +184,6 @@
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
         });
-
-        
     </script>
     @yield('scripts')
     <!--END SCRIPTS-->
