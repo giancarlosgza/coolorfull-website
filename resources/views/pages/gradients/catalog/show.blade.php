@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Gradient')
+@section('title', "$gradient->name")
 @section('content')
 <div class="container btn-return">
     <div class="row">
@@ -45,7 +45,7 @@
                 Get IMG
             </a>
             <hr>
-            <h4 class="bold">Preview</h4>
+            <h4 class="bold">Preview UI Elements</h4>
         </div>
     </div>
     <div class="row">
@@ -61,7 +61,7 @@
             <span class="badge badge-dark" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</span>
         </div>
         <div class="col-sm-12 col-md-6"><br>
-            <h4>Navbars Black Text</h4>
+            <h4>Navbar Black Text</h4>
             <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
                 <a class="navbar-brand text-body logo">Colorffy</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav2"
@@ -81,7 +81,7 @@
             </nav>
         </div>
         <div class="col-sm-12 col-md-6"><br>
-            <h4>Navbars White Text</h4>
+            <h4>Navbar White Text</h4>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
                 <a class="navbar-brand text-white logo">Colorffy</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3"
@@ -100,7 +100,12 @@
                 </div>
             </nav>
         </div>
-    </div><br>
+    </div><hr>
+    <a class="twitter-share-button "
+        href="https://twitter.com/intent/tweet?text={{$gradient->name}}%20Gradient%20by%20@colorffy"
+        data-size="large">
+        Tweet
+    </a>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -146,5 +151,23 @@
 			link.click();
 		});
 	}
+
+    window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+            t._e.push(f);
+        };
+
+        return t;
+    }(document, "script", "twitter-wjs"));
+
 </script>
 @endsection
