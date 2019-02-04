@@ -8,13 +8,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link nav-color" href="/"><i class="fas fa-home"></i> Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link nav-color" href="/">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-color" href="/palettes/catalog"><i class="fas fa-palette"></i> Palettes</a>
+                    <a class="nav-link nav-color" href="/palettes/catalog">Palettes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-color" href="/gradients/catalog"><i class="fas fa-fill"></i> Gradients</a>
+                    <a class="nav-link nav-color" href="/gradients/catalog">Gradients</a>
                 </li>
                 @guest
                 @else

@@ -61,7 +61,7 @@
             <span class="badge badge-dark" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</span>
         </div>
         <div class="col-sm-12 col-md-6"><br>
-            <h4>Navbar Black Text</h4>
+            <h4>Navbar text-black</h4>
             <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
                 <a class="navbar-brand text-body logo">Colorffy</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav2"
@@ -81,7 +81,7 @@
             </nav>
         </div>
         <div class="col-sm-12 col-md-6"><br>
-            <h4>Navbar White Text</h4>
+            <h4>Navbar text-white</h4>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
                 <a class="navbar-brand text-white logo">Colorffy</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3"
@@ -100,7 +100,28 @@
                 </div>
             </nav>
         </div>
-    </div><hr>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6"><br>
+            <h4>Card text-black</h4>
+            <div class="card text-body" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+                <div class="card-body">
+                    <h4 class="card-title bold"><i class="far fa-clock"></i> 9:30 AM</h4>
+                    <p class="card-text bold">Work Meeting</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6"><br>
+            <h4>Card text-white</h4>
+            <div class="card text-white" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+                <div class="card-body">
+                    <h4 class="card-title bold"><i class="far fa-clock"></i> 6:30 PM</h4>
+                    <p class="card-text bold">Pizza time!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
     <a class="twitter-share-button "
         href="https://twitter.com/intent/tweet?text={{$gradient->name}}%20Gradient%20by%20@colorffy"
         data-size="large">
