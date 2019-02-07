@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card card-form">
                 <div class="card-body">
-                    <h4 class="logo text-center color-blue">Colorfull</h4>
+                    <h4 class="logo text-center color-blue">Colorffy</h4>
                     <h5 class="text-center">Login</h5>
                     <br>
                     <form method="POST" action="{{ route('login') }}">
