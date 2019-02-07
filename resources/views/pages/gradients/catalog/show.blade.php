@@ -70,8 +70,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav2">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                            <a class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link">Gradients</a>
@@ -90,8 +90,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav3">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                            <a class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link">Gradients</a>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#258bff"/>
-    <meta name="description" content="Design website for gradients and color palettes.">
+    <meta name="description" content="Color gradients and palettes daily! Get css, image, and ui previews.">
     <meta name="keywords" content="Color, Gradients, Palettes, Color Gradients, Color Palettes, Illustrations">
 
     <title>@yield('title') | Colorffy</title>
@@ -23,8 +23,8 @@
     <meta property="og:url" content="https://www.colorffy.com" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Colorffy" />
-    <meta property="og:description" content="Colorffy is a design website. We creates useful gradients and palettes for designers and UI developers." />
-    <meta property="og:image" content="https://www.colorffy.com/assets/img/colorffy-logo.png">
+    <meta property="og:description" content="Color gradients and palettes daily! Get css, image, and ui previews." />
+    <meta property="og:image" content="https://www.colorffy.com/assets/img/colorffy-twitter-card.png">
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="750">
     <meta property="og:image:height" content="350">
@@ -33,9 +33,9 @@
     <!-- Twitter Card -->
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="Colorffy" />
-    <meta name="twitter:description" content="Colorffy is a design website. We creates useful gradients and palettes for designers and UI developers."/>
+    <meta name="twitter:description" content="Color gradients and palettes daily! Get css, image, and ui previews."/>
 	<meta name="twitter:creator" content="@giancarlosgza" />
-	<meta name="twitter:image:src" content="https://www.colorffy.com/assets/img/colorffy-logo.png" />
+	<meta name="twitter:image:src" content="https://www.colorffy.com/assets/img/colorffy-twitter-card.png" />
 	<meta name="twitter:domain" content="https://www.colorffy.com" />
 
     <!--FAVICON-->
@@ -94,62 +94,62 @@
 
 </head>
 <body>
-    @include('inc.navbar')
-        <!--ALERTS-->
-        @if(session('info'))
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-12">
-                    <div class="alert alert-info" role="alert">
-                        {{ session('info')}}
-                    </div>
+@include('inc.navbar')
+    <!--ALERTS-->
+    @if(session('info'))
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="alert alert-info" role="alert">
+                    {{ session('info')}}
                 </div>
             </div>
         </div>
-        @endif
+    </div>
+    @endif
 
-        @if(session('success'))
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-12">
-                    <div class="alert alert-success" role="alert">
-                        Color submitted!
-                    </div>
+    @if(session('success'))
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="alert alert-success" role="alert">
+                    Color submitted!
                 </div>
             </div>
         </div>
-        @endif
+    </div>
+    @endif
 
-        @if(session('delete'))
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-12">
-                    <div class="alert alert-warning" role="alert">
-                        Color deleted!
-                    </div>
+    @if(session('delete'))
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="alert alert-warning" role="alert">
+                    Color deleted!
                 </div>
             </div>
         </div>
-        @endif
+    </div>
+    @endif
 
-        @if(count($errors))
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-12">
-                    <div class="alert alert-danger" role="alert">
-                        @foreach($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                        @endforeach
-                    </div>
+    @if(count($errors))
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="alert alert-danger" role="alert">
+                    @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
                 </div>
             </div>
         </div>
-        @endif
-        <!--END ALERTS-->
-        <!--CONTENT-->
-        @yield('content')
-        <!--END CONTENT-->
-    @include('inc.footer')
+    </div>
+    @endif
+    <!--END ALERTS-->
+    <!--CONTENT-->
+    @yield('content')
+    <!--END CONTENT-->
+@include('inc.footer')
 
     <!--SCRIPTS-->
     <script type="text/javascript">
