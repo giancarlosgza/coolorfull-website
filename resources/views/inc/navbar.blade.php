@@ -16,6 +16,16 @@
                 <li class="nav-item {{ (request()->is('gradients/catalog')) ? 'active' : '' }}">
                     <a class="nav-link nav-color" href="/gradients/catalog">Gradients</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownGG" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Generator <span class="badge badge-primary">NEW</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGG">
+                        <a class="dropdown-item bold" href="/generator/gradients">2 Colors-Gradient</a>
+                        <a class="dropdown-item bold" href="/generator/mgradients">3 Colors-Gradient</a>                       
+                    </div>
+                </li>
                 @guest
                 @else
                 <li class="nav-item dropdown">

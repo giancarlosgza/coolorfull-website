@@ -5,7 +5,7 @@
                 Color Gradients and Palettes! 🎨
             </h1>
             <h4 class="intro-text">
-                Look, choose and use for free any colors from this collection. 🖌️
+                Look, choose and use for free any colors from this collection or create your own gradient. 🖌️
             </h4>
         </div>
     </div><br>

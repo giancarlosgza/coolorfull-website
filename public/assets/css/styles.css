@@ -212,6 +212,16 @@ a {
     border-radius: 15px;
 }
 
+.badge-primary {
+    color: #fff;
+    background-color: #255DCE;
+    background: linear-gradient(to right, #255DCE, #1C9FE7);
+}
+
+.footer-icon {
+    margin-right: 5px;
+}
+
 @media only screen and (max-width: 600px) {
     .palette-show {
         height: 80px;

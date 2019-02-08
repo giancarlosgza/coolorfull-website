@@ -4,8 +4,10 @@
             <div class="col-md-4">
                 <h5 class="logo color-darkblue">Colorffy</h5>
                 <p>
-                    Colorffy is a design website. 
-                    We creates useful gradients and palettes for designers and UI developers.
+                    Color gradients and palettes daily! Get css, images, ui previews or create your own gradients! 👀
+                </p>
+                <p>
+                We creates amazing gradients and palettes for designers and UI developers. 🚀
                 </p>
             </div>
             <div class="col-md-4 offset-md-4">
@@ -14,14 +16,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4"><br>
-                <a href="https://twitter.com/colorffy" class="color-darkblue" title="Twitter" alt="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/colorffy_/" class="color-darkblue" title="Instagram" alt="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <div class="col-6 col-md-6"><br>
+                <a href="https://twitter.com/colorffy" class="color-darkblue footer-icon" title="Twitter" alt="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter fa-1x"></i></a>
+                <a href="https://www.instagram.com/colorffy_/" class="color-darkblue" title="Instagram" alt="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram fa-1x"></i></a>
+            </div>
+            <div class="col-6 col-md-6 text-right small align-self-end"><br>
+                <p>Made with ❤️ & ☕ by <a href="https://twitter.com/giancarlosgza" title="Twitter" alt="Twitter" target="_blank" rel="noopener">@giancarlosgza</a></p>
             </div>
         </div>
         <hr>
         <div class="row">
-            <div class="col-md-12 text-right small align-self-end">©2019 Colorffy v1.3</div>
+            <div class="col-md-12 text-right small align-self-end">©2019 Colorffy v1.5</div>
         </div>
     </div>
 </footer>

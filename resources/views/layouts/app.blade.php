@@ -23,8 +23,8 @@
     <meta property="og:url" content="https://www.colorffy.com" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Colorffy" />
-    <meta property="og:description" content="Color gradients and palettes daily! Get css, image, and ui previews." />
-    <meta property="og:image" content="https://www.colorffy.com/assets/img/colorffy-twitter-card.png">
+    <meta property="og:description" content="Color gradients and palettes daily! Get css, image, ui previews or create your own gradients! " />
+    <meta property="og:image" content="https://www.colorffy.com/assets/img/colorffy-full-width-card.jpg">
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="750">
     <meta property="og:image:height" content="350">
@@ -33,27 +33,21 @@
     <!-- Twitter Card -->
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="Colorffy" />
-    <meta name="twitter:description" content="Color gradients and palettes daily! Get css, image, and ui previews."/>
+    <meta name="twitter:description" content="Color gradients and palettes daily! Get css, image, ui previews or create your own gradients!"/>
 	<meta name="twitter:creator" content="@giancarlosgza" />
-	<meta name="twitter:image:src" content="https://www.colorffy.com/assets/img/colorffy-twitter-card.png" />
-	<meta name="twitter:domain" content="https://www.colorffy.com" />
+	<meta name="twitter:image" content="https://www.colorffy.com/assets/img/colorffy-full-width-card.jpg" />
+    <meta name="twitter:image:alt" content="Colorffy Image Card" />
+    <meta name="twitter:site" content="@colorffy" />
+    <meta name="twitter:domain" content="https://www.colorffy.com" />
 
     <!--FAVICON-->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('/assets/img/favicon/apple-icon-57x57.png')}}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('/assets/img/favicon/apple-icon-60x60.png')}}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('/assets/img/favicon/apple-icon-72x72.png')}}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('/assets/img/favicon/apple-icon-76x76.png')}}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('/assets/img/favicon/apple-icon-114x114.png')}}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('/assets/img/favicon/apple-icon-120x120.png')}}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('/assets/img/favicon/apple-icon-144x144.png')}}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('/assets/img/favicon/apple-icon-152x152.png')}}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/assets/img/favicon/apple-icon-180x180.png')}}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('/assets/img/favicon/android-icon-192x192.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/assets/img/favicon/apple-touch-icon.png')}}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/assets/img/favicon/favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('/assets/img/favicon/favicon-96x96.png')}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/assets/img/favicon/favicon-16x16.png')}}">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ asset('/assets/img/favicon/ms-icon-144x144.png')}}">
+    <link rel="mask-icon" href="{{ asset('/assets/img/favicon/safari-pinned-tab.svg')}}" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="Colorffy">
+    <meta name="application-name" content="Colorffy">
+    <meta name="msapplication-TileColor" content="#2d89ef">
     
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -65,7 +59,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">
 
     <!-- MARKUP JSON-LD Google. -->
     <script type="application/ld+json">
@@ -165,21 +158,21 @@
             });
         }
     </script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
 
-    <!--Wow.js-->
-    <script type="text/javascript" src="https://wowjs.uk/dist/wow.min.js"></script>
+    <!--Wow.js
+    <script type="text/javascript" src="https://wowjs.uk/dist/wow.min.js"></script>-->
     <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script type="text/javascript" src="{{ asset('assets/js/clipboard.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery.mask.min.js') }}"></script>
     <script type="text/javascript">
-        new WOW().init();
+        
         new ClipboardJS('.btn');
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
