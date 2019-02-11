@@ -31,7 +31,7 @@
     <meta property="og:image:alt" content="Colorffy Logo" />
 
     <!-- Twitter Card -->
-	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Colorffy" />
     <meta name="twitter:description" content="Color gradients and palettes daily! Get css, image, ui previews or create your own gradients!"/>
 	<meta name="twitter:creator" content="@giancarlosgza" />

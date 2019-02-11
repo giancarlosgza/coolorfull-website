@@ -6,7 +6,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item {{ (request()->is('/')) ? 'active' : '' }}">
                     <a class="nav-link nav-color" href="/">Home</a>
                 </li>
@@ -34,8 +36,8 @@
                         Housekeeping
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownHK">
-                        <a class="dropdown-item bold" href="/palettes/admin/panel"><i class="fas fa-palette"></i> Palettes Panel</a>
-                        <a class="dropdown-item bold" href="/gradients/admin/panel"><i class="fas fa-fill"></i> Gradients Panel</a>                       
+                        <a class="dropdown-item bold" href="/palettes/admin/panel">Palettes Panel</a>
+                        <a class="dropdown-item bold" href="/gradients/admin/panel">Gradients Panel</a>                       
                     </div>
                 </li>
 

@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('title', 'Edit Gradient')
 @section('content')
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery.minicolors.css') }}">
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -62,19 +64,6 @@
                                 <option>Grey</option>
                             </select>
                         </div>
-
-                        <!--
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroupFileAddon01">Imagen (Opcional)</span>
-                            </div>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" name="imagen" id="image_name"
-                                    aria-describedby="inputGroupFileAddon01">
-                                <label class="custom-file-label" for="image_name">Seleccionar Archivo</label>
-                            </div>
-                        </div>
-                        -->
                         <button type="submit" class="btn btn-primary">
                             {{ __('Update') }}
                         </button>
@@ -86,6 +75,7 @@
 </div>
 @endsection
 @section('scripts')
+<script type="text/javascript" src="{{ asset('assets/js/jquery.minicolors.js') }}"></script>
  <script type="text/javascript">
      $(document).ready(function(){
         $('.hexcolor').mask('SAAAAAA', {
@@ -99,5 +89,7 @@
             }
         });
     });
+    $('#color_1').minicolors({ animationEasing: 'swing'});
+    $('#color_2').minicolors({ animationEasing: 'swing'});
  </script>   
 @endsection
