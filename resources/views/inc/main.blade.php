@@ -7,6 +7,8 @@
             <h4 class="intro-text">
                 Look, choose and use for free any colors from this collection or create your own gradient. 🖌️
             </h4>
+            <h5 class="intro-text">Gradients <span class="badge badge-primary">{{ $gradients->count()+56 }}+</span></h5>
+            
         </div>
     </div><br>
     <div class="row">
