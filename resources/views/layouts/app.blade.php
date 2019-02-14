@@ -22,7 +22,7 @@
     <!--META FACEBOOK-->
     <meta property="og:url" content="https://www.colorffy.com" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Colorffy" />
+    <meta property="og:title" content="@yield('title') | Colorffy"/>
     <meta property="og:description" content="Color gradients and palettes daily! Get css, image, ui previews or create your own gradients! " />
     <meta property="og:image" content="https://www.colorffy.com/assets/img/colorffy-full-width-card.jpg">
     <meta property="og:image:type" content="image/png" />
@@ -32,7 +32,7 @@
 
     <!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Colorffy" />
+	<meta name="twitter:title" content="@yield('title') | Colorffy" />
     <meta name="twitter:description" content="Color gradients and palettes daily! Get css, image, ui previews or create your own gradients!"/>
 	<meta name="twitter:creator" content="@giancarlosgza" />
 	<meta name="twitter:image" content="https://www.colorffy.com/assets/img/colorffy-full-width-card.jpg" />
@@ -44,14 +44,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/assets/img/favicon/apple-touch-icon.png')}}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/assets/img/favicon/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/assets/img/favicon/favicon-16x16.png')}}">
-    <link rel="mask-icon" href="{{ asset('/assets/img/favicon/safari-pinned-tab.svg')}}" color="#5bbad5">
+    <link rel="mask-icon" href="{{ asset('/assets/img/favicon/safari-pinned-tab.svg')}}" color="#17b7e5">
     <meta name="apple-mobile-web-app-title" content="Colorffy">
     <meta name="application-name" content="Colorffy">
     <meta name="msapplication-TileColor" content="#2d89ef">
     
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Roboto:400,500,700|Nunito:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Roboto:600|Nunito:400,500,700" rel="stylesheet">
     
     <!--STYLES-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
@@ -61,7 +60,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
 
     <!-- MARKUP JSON-LD Google. -->
-    <script type="application/ld+json">
+    <script async type="application/ld+json">
         {
         "@context" : "http://schema.org",
         "@type" : "Article",
@@ -81,13 +80,34 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-114030245-4');
     </script>
-
+    <style>
+        @font-face {
+            font-family: 'Pacifico';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
+        }
+        @font-face {
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v9/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2) format('woff2');
+        }
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: local('Roboto Bold'), local('Roboto-Bold'), local('sans-serif'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfABc4AMP6lbBP.woff2) format('woff2');
+        }
+    </style>
 </head>
 <body>
-@include('inc.navbar')
+    @include('inc.navbar')
     <!--ALERTS-->
     @if(session('info'))
     <div class="container">
@@ -142,7 +162,7 @@
     <!--CONTENT-->
     @yield('content')
     <!--END CONTENT-->
-@include('inc.footer')
+    @include('inc.footer')
 
     <!--SCRIPTS-->
     <script type="text/javascript">
@@ -166,13 +186,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
 
-    <!--Wow.js
-    <script type="text/javascript" src="https://wowjs.uk/dist/wow.min.js"></script>-->
     <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script type="text/javascript" src="{{ asset('assets/js/clipboard.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery.mask.min.js') }}"></script>
     <script type="text/javascript">
-        
         new ClipboardJS('.btn');
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();

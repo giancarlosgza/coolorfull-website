@@ -47,6 +47,22 @@
                 </div>
             </div>
         </div>
+        <div class="col-12 col-sm-6">
+            <div class="card shadow-medium">
+                <div class="card-body">
+                    <h5 class="bold">RGB</h5>
+                    <code><h6 class="bold" id="rgb"></h6></code>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6">
+            <div class="card shadow-medium">
+                <div class="card-body">
+                    <h5 class="bold">HSL</h5>
+                    <code><h6 class="bold" id="hsl"></h6></code>
+                </div>
+            </div>
+        </div>
     </div>
     <hr>
     <a class="twitter-share-button "
@@ -72,6 +88,9 @@
     $('#color_1').minicolors({ animationEasing: 'swing'});
     $('#color_2').minicolors({ animationEasing: 'swing'});
 
+    //hex to rgb and hsl converter
+
+    //twitter share btn
     window.twttr = (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
             t = window.twttr || {};

@@ -43,7 +43,7 @@ mix.webpackConfig({
                 handler: 'cacheFirst'
             },
             {
-                urlPattern: /^https:\/\/www\.thecocktaildb\.com\/images\/media\/drink\/(\w+)\.jpg/,
+                urlPattern: /^https:\/\/fonts\.gstatic\.com/,
                 handler: 'cacheFirst'
             },
             {
