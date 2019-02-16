@@ -21,7 +21,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownGG" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        Generator <span class="badge badge-primary">NEW</span>
+                        Generator <span class="badge badge-primary">New</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownGG">
                         <a class="dropdown-item bold" href="/generator/gradients">2 Colors-Gradient</a>

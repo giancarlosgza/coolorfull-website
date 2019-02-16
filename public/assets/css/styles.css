@@ -7,8 +7,9 @@ body {
 .navbar {
     background-color: #ffffff;
     font-weight: 600;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
     box-shadow: 0 2px 4px 0 rgba(0, 64, 128, .2);
+    
 }
 
 .navbar-light .navbar-nav .active>.nav-link {

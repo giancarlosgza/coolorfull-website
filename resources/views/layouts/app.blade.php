@@ -49,16 +49,18 @@
     <meta name="application-name" content="Colorffy">
     <meta name="msapplication-TileColor" content="#2d89ef">
     
+    <!-- CSS -->
+    <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Roboto:600|Nunito:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Nunito:400,500,700" rel="stylesheet">
     
     <!--STYLES-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
-
+    
     <!-- MARKUP JSON-LD Google. -->
     <script async type="application/ld+json">
         {
@@ -96,13 +98,6 @@
             font-weight: 400;
             font-display: swap;
             src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v9/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2) format('woff2');
-        }
-        @font-face {
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 600;
-            font-display: swap;
-            src: local('Roboto Bold'), local('Roboto-Bold'), local('sans-serif'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfABc4AMP6lbBP.woff2) format('woff2');
         }
     </style>
 </head>
