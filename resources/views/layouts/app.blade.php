@@ -28,7 +28,7 @@
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="750">
     <meta property="og:image:height" content="350">
-    <meta property="og:image:alt" content="Colorffy Logo" />
+    <meta property="og:image:alt" content="Colorffy Banner" />
 
     <!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -63,18 +63,13 @@
     
     <!-- MARKUP JSON-LD Google. -->
     <script async type="application/ld+json">
-        {
-        "@context" : "http://schema.org",
-        "@type" : "Article",
-        "name" : "Colorffy",
-        "author" : {
-            "@type" : "Person",
-            "name" : "©2019 Colorffy."
-        },
-        "articleSection" : "Color Gradients and Palettes!",
-        "articleBody" : "Look, choose and use for free any colors from this collection.",
-        "url" : "https://www.colorffy.com/"
-        }
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Colorffy",
+        "url": "https://colorffy.com",
+        "logo": "https://colorffy.com/assets/new-logo.png"
+    }   
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114030245-4"></script>
@@ -115,7 +110,6 @@
         </div>
     </div>
     @endif
-
     @if(session('success'))
     <div class="container">
         <div class="row">
@@ -127,7 +121,6 @@
         </div>
     </div>
     @endif
-
     @if(session('delete'))
     <div class="container">
         <div class="row">
@@ -139,7 +132,6 @@
         </div>
     </div>
     @endif
-
     @if(count($errors))
     <div class="container">
         <div class="row">
@@ -158,7 +150,6 @@
     @yield('content')
     <!--END CONTENT-->
     @include('inc.footer')
-
     <!--SCRIPTS-->
     <script type="text/javascript">
         if ('serviceWorker' in navigator ) {

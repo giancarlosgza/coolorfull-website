@@ -2,11 +2,10 @@
 @section('title', '2 Colors-Gradient Generator')
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery.minicolors.css') }}">
-
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold">2 Colors-Gradient Generator</h4>
+            <h4 class="bold">🎯 2 Colors-Gradient Generator</h4>
         </div>
     </div>
     <div class="card shadow-medium">
@@ -14,11 +13,11 @@
             <div class="form-row">
                 <div class="form-group col-6 col-sm-6">
                     <label for="color_1" class="bold">Color 1</label><br>
-                    <input type="text" class="form-control" id="color_1" value="#002DFF">        
+                    <input type="text" class="form-control" id="color_1" value="#000000">        
                 </div>
                 <div class="form-group col-6 col-sm-6">
                     <label for="color_2" class="bold">Color 2</label><br>
-                    <input type="text" class="form-control" id="color_2" value="#00F4FF">
+                    <input type="text" class="form-control" id="color_2" value="#000000">
                 </div>
             </div>
         </div>
@@ -97,163 +96,14 @@
         Tweet
     </a>
 </div>
-
 @endsection
 @section('scripts')
     <script type="text/javascript" src="{{ asset('assets/js/jquery.minicolors.js') }}"></script>
     <script type="text/javascript">
-    $('#color_1').minicolors({ animationEasing: 'swing'});
-    $('#color_2').minicolors({ animationEasing: 'swing'});
-
-    //hex to rgb and hsl converter
-    $(window).on('load', function(){
-
-    /* Change color on every key input. */
-    $('#color_1').bind('blur keydown', function (event) {
-        var el = this;
-        setTimeout(function () {
-            var color1 = document.getElementById("color_1").value;
-            var color2 = document.getElementById("color_2").value;
-
-            var rgb = [],
-                $input = $(el),
-                fail = false,
-                original = $input.val(),
-            
-            color_1 = (original+'').replace(/#/, '');
-            
-            if (original.length === 1 && original !== '#') { $input.val('#' + original); }
-            if (color_1.length == 3) color_1 = color_1 + color_1;
-
-            for (var i = 0; i < 6; i+=2) {
-            rgb.push(parseInt(color_1.substr(i,2),16));
-            fail = fail || rgb[rgb.length - 1].toString() === 'NaN';
-            }
-            
-            document.getElementById("gradient_preview").style.background ="linear-gradient(to right, " + color1 + "," + color2 + ")";
-            document.getElementById("hexadecimal").innerHTML = "background: linear-gradient(to right, " + color1 + "," + color2 + ");";
-            document.getElementById("css_code").innerHTML = color1 + ", " + color2;
-            document.getElementById("rgb").innerHTML = 'rgb(' + rgb + ')';
-            document.getElementById("hsl").innerHTML = 'hsl(' + rgbToHsl.apply(null, rgb).join(',') + ')';
-            document.getElementById("cmyk").innerHTML = 'cmyk(' + rgb2cmyk.apply(null, rgb) + ')';
-        }, 13);
-    });
-
-    /* Change color on every key input. */
-    $('#color_2').bind('blur keydown', function (event) {
-        var el = this;
-        setTimeout(function () {
-            var color1 = document.getElementById("color_1").value;
-            var color2 = document.getElementById("color_2").value;
-
-            var rgb = [],
-                $input = $(el),
-                fail = false,
-                original = $input.val(),
-            
-            color_2 = (original+'').replace(/#/, '');
-            
-            if (original.length === 1 && original !== '#') { $input.val('#' + original); }
-            if (color_1.length == 3) color_2 = color_2 + color_2;
-
-            for (var i = 0; i < 6; i+=2) {
-            rgb.push(parseInt(color_2.substr(i,2),16));
-            fail = fail || rgb[rgb.length - 1].toString() === 'NaN';
-            }
-
-            document.getElementById("gradient_preview").style.background ="linear-gradient(to right, " + color1 + "," + color2 + ")";
-            document.getElementById("hexadecimal").innerHTML = "background: linear-gradient(to right, " + color1 + "," + color2 + ");";
-            document.getElementById("css_code").innerHTML = color1 + ", " + color2;
-            document.getElementById("rgb2").innerHTML = 'rgb(' + rgb + ')';
-            document.getElementById("hsl2").innerHTML = 'hsl(' + rgbToHsl.apply(null, rgb).join(',') + ')';
-            document.getElementById("cmyk2").innerHTML = 'cmyk(' + rgb2cmyk.apply(null, rgb) + ')';
-        }, 13);
-    });
-
-    /* Function to convert rgb-to-hsl. */
-    function rgbToHsl(r, g, b){
-        r /= 255, g /= 255, b /= 255;
-        var max = Math.max(r, g, b), min = Math.min(r, g, b);
-        var h, s, l = (max + min) / 2;
-
-        if (max == min) { h = s = 0; } 
-        else {
-            var d = max - min;
-            s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-
-            switch (max){
-                case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-                case g: h = (b - r) / d + 2; break;
-                case b: h = (r - g) / d + 4; break;
-            }
-            h /= 6;
-        }
-        return [(h*360+0.5)|0, ((s*100+0.5)|0) + '%', ((l*100+0.5)|0) + '%'];
-    }
-
-    //RGB TO CMYK
-    function rgb2cmyk (r,g,b) {
-        var C = 0;
-        var M = 0;
-        var Y = 0;
-        var K = 0;
-        //remove spaces from input RGB values, convert to int
-        var r = parseInt( (''+r).replace(/\s/g,''),10 ); 
-        var g = parseInt( (''+g).replace(/\s/g,''),10 ); 
-        var b = parseInt( (''+b).replace(/\s/g,''),10 ); 
-
-        // BLACK
-        if (r==0 && g==0 && b==0) {
-        K = 1;
-        return [0,0,0,1];
-        }
-
-        C = 1 - (r/255);
-        M = 1 - (g/255);
-        Y = 1 - (b/255);
-
-        var minCMY = Math.min(C,
-                    Math.min(M,Y));
-        C = (C - minCMY) / (1 - minCMY) ;
-        M = (M - minCMY) / (1 - minCMY) ;
-        Y = (Y - minCMY) / (1 - minCMY) ;
-        K = minCMY;
-
-        return [((C*100+0.5)|0) + '%', ((M*100+0.5)|0) + '%', ((Y*100+0.5)|0) + '%', ((K*100+0.5)|0) + '%'];
-        }
-    });
-    
-    //download image
-    function downloadimage(){
-	 	//var container = document.getElementById("image-wrap"); //specific element on page
-		var container = document.getElementById("gradient_preview");; // full page 
-		html2canvas(container,{allowTaint : true}).then(function(canvas) {
-		
-			var link = document.createElement("a");
-			document.body.appendChild(link);
-			link.download = "newGradient.jpg";
-			link.href = canvas.toDataURL();
-			link.target = '_blank';
-			link.click();
-		});
-	}
-</script>
-<script>
-    //twitter share btn
-    window.twttr = (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-        if (d.getElementById(id)) return t;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-
-        t._e = [];
-        t.ready = function(f) {
-            t._e.push(f);
-        };
-        return t;
-    }(document, "script", "twitter-wjs"));
-</script>
+        function downloadimage(){var e=document.getElementById("gradient_preview");html2canvas(e,{allowTaint:!0}).then(function(e){var n=document.createElement("a");document.body.appendChild(n),n.download="newGradient.jpg",n.href=e.toDataURL(),n.target="_blank",n.click()})}$("#color_1").minicolors({animationEasing:"swing"}),$("#color_2").minicolors({animationEasing:"swing"}),$(window).on("load",function(){function d(e,n,t){e/=255,n/=255,t/=255;var r,a,l=Math.max(e,n,t),o=Math.min(e,n,t),i=(l+o)/2;if(l==o)r=a=0;else{var c=l-o;switch(a=.5<i?c/(2-l-o):c/(l+o),l){case e:r=(n-t)/c+(n<t?6:0);break;case n:r=(t-e)/c+2;break;case t:r=(e-n)/c+4}r/=6}return[360*r+.5|0,(100*a+.5|0)+"%",(100*i+.5|0)+"%"]}function m(e,n,t){var r=0,a=0,l=0;e=parseInt((""+e).replace(/\s/g,""),10),n=parseInt((""+n).replace(/\s/g,""),10),t=parseInt((""+t).replace(/\s/g,""),10);if(0==e&&0==n&&0==t)return[0,0,0,1];r=1-e/255,a=1-n/255,l=1-t/255;var o=Math.min(r,Math.min(a,l));return[(100*(r=(r-o)/(1-o))+.5|0)+"%",(100*(a=(a-o)/(1-o))+.5|0)+"%",(100*(l=(l-o)/(1-o))+.5|0)+"%",(100*o+.5|0)+"%"]}$("#color_1").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=[],r=$(c),a=!1,l=r.val(),o=(l+"").replace(/#/,"");1===l.length&&"#"!==l&&r.val("#"+l),3==o.length&&(o+=o);for(var i=0;i<6;i+=2)t.push(parseInt(o.substr(i,2),16)),a=a||"NaN"===t[t.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+")",document.getElementById("hexadecimal").innerHTML="background: linear-gradient(to right, "+e+","+n+");",document.getElementById("css_code").innerHTML=e+", "+n,document.getElementById("rgb").innerHTML="rgb("+t+")",document.getElementById("hsl").innerHTML="hsl("+d.apply(null,t).join(",")+")",document.getElementById("cmyk").innerHTML="cmyk("+m.apply(null,t)+")"},13)}),$("#color_2").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=[],r=$(c),a=!1,l=r.val(),o=(l+"").replace(/#/,"");1===l.length&&"#"!==l&&r.val("#"+l),3==color_1.length&&(o+=o);for(var i=0;i<6;i+=2)t.push(parseInt(o.substr(i,2),16)),a=a||"NaN"===t[t.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+")",document.getElementById("hexadecimal").innerHTML="background: linear-gradient(to right, "+e+","+n+");",document.getElementById("css_code").innerHTML=e+", "+n,document.getElementById("rgb2").innerHTML="rgb("+t+")",document.getElementById("hsl2").innerHTML="hsl("+d.apply(null,t).join(",")+")",document.getElementById("cmyk2").innerHTML="cmyk("+m.apply(null,t)+")"},13)})});
+    </script>
+    <script>
+        //twitter share btn
+        window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)||((n=t.createElement(e)).id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)}),w}(document,"script","twitter-wjs");
+    </script>
 @endsection

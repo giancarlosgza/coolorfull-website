@@ -68,39 +68,10 @@
 @endsection
 @section('scripts')
     <script>
-        function copyColor() {
-            alert("Copied!");
-        }
-        function downloadimage(){
-            //var container = document.getElementById("image-wrap"); //specific element on page
-            var container = document.getElementById("htmltoimage");; // full page 
-            html2canvas(container,{allowTaint : true}).then(function(canvas) {
-            
-                var link = document.createElement("a");
-                document.body.appendChild(link);
-                link.download = "palette{{$palette->name}}_{{$palette->id}}.jpg";
-                link.href = canvas.toDataURL();
-                link.target = '_blank';
-                link.click();
-            });
-        }
-        
-        window.twttr = (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-        if (d.getElementById(id)) return t;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-
-        t._e = [];
-        t.ready = function(f) {
-            t._e.push(f);
-        };
-
-        return t;
-    }(document, "script", "twitter-wjs"));
-
+        function copyColor(){alert("Copied!")}function downloadimage(){var t=document.getElementById("htmltoimage");html2canvas(t,{allowTaint:!0}).then(function(t){var e=document.createElement("a");document.body.appendChild(e),e.download="palette{{$palette->name}}_{{$palette->id}}.jpg",e.href=t.toDataURL(),e.target="_blank",e.click()})}
+    </script>
+    <script>
+        //twitter share btn
+        window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)||((n=t.createElement(e)).id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)}),w}(document,"script","twitter-wjs");
     </script>
 @endsection

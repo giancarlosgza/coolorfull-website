@@ -12,7 +12,8 @@
             </div>
             <div class="col-md-4 offset-md-4">
                 <h5 class="logo">More</h5>
-                <p><a href="mailto:colorffy@gmail.com" class="color-darkblue">Contact Us</a></p>
+                <a href="mailto:colorffy@gmail.com" class="color-darkblue">Contact Us</a><br>
+                <a href="https://www.iubenda.com/privacy-policy/13414429" class="iubenda-white iubenda-embed color-darkblue" title="Privacy Policy" target="_blank" rel="noopener">Privacy Policy</a>
             </div>
         </div>
         <div class="row">
@@ -21,12 +22,12 @@
                 <a href="https://www.instagram.com/colorffy_/" class="color-darkblue" title="Instagram" alt="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram fa-1x"></i></a>
             </div>
             <div class="col-6 col-md-6 text-right small align-self-end"><br>
-                <p>Made with ❤️ & ☕ by <a href="https://twitter.com/giancarlosgza" title="Twitter" alt="Twitter" target="_blank" rel="noopener">@giancarlosgza</a></p>
+                <p>Made with ❤️ & ☕ by <a href="https://twitter.com/giancarlosgza" title="Twitter" alt="Twitter" target="_blank" rel="noopener" class="color-darkblue">@giancarlosgza</a></p>
             </div>
         </div>
         <hr>
         <div class="row">
-            <div class="col-md-12 text-right small align-self-end">©2019 Colorffy v1.6</div>
+            <div class="col-md-12 text-right small align-self-end">©2019 Colorffy v1.7</div>
         </div>
     </div>
 </footer>

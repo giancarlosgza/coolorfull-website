@@ -2,13 +2,12 @@
     <div class="row">
         <div class="col-md-6">
             <h1 class="logo text-body">
-                Color Gradients and Palettes! 🎨
+                Color gradients and palettes! 🎨
             </h1>
             <h4 class="intro-text">
-                Look, choose and use for free any colors from this collection or create your own gradient. 🖌️
+                Preview ui elements, colors codes & gradients generators. ☝️
             </h4>
-            <h5 class="intro-text">Gradients <span class="badge badge-primary">{{ $gradients->count()+66 }}+</span></h5>
-            
+            <h5 class="intro-text">Gradients and Palettes <span class="badge badge-primary">120+</span></h5>
         </div>
     </div><br>
     <div class="row">
