@@ -17,6 +17,14 @@ class GradientController extends Controller
         return view('pages.gradients.catalog.show')->with('gradient', $gradient);
     }
 
+    //GENERATOR GRADIENTS
+    function generatorGradients(Gradients $gradient) {
+        return view('pages.gradients.generator');
+    }
+    function generatorMGradients(Gradients $gradient) {
+        return view('pages.gradients.mgenerator');
+    }
+
     //SHOW GRADIENTS IN CATALOG
     function catalogGradients(Request $request) {
         $searchQuery = $request->input('q');
@@ -173,4 +181,5 @@ class GradientController extends Controller
         $gradient->delete();
         return redirect ('/gradients/admin/panel')->with('delete', true);
     }
+
 }

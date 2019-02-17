@@ -1,33 +1,35 @@
 @extends('layouts.app')
 @section('title', 'Create Gradient')
 @section('content')
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery.minicolors.css') }}">
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card card-form">
                 <div class="card-body"> 
-                    <h4 class="bold">Create new Gradient</h4>
+                    <h4 class="bold">🆕 Create new Gradient</h4>
                     <!--FORM-->
                     <form method="POST" action="/gradients/new" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group">
-                            <label for="name">Name:</label>
+                            <label for="name" class="bold">Name:</label>
                             <input type="name" class="form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" id="name" name="nombre" placeholder="Fire Red, Dusk, Sunset" value="{{ old('nombre') }}">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_1">Color 1:</label>
+                            <label for="color_1" class="bold">Color 1:</label>
                             <input type="text" class="hexcolor form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" id="color_1" name="color_1" placeholder="#11998e" value="{{ old('color_1') }}">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_2">Color 2:</label>
+                            <label for="color_2" class="bold">Color 2:</label>
                             <input type="text" class="hexcolor form-control{{ $errors->has('color_2') ? ' is-invalid' : '' }}" id="color_2" name="color_2" placeholder="#38ef7d" value="{{ old('color_2') }}">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_filter">Color Filter:</label>
+                            <label for="color_filter" class="bold">Color Filter:</label>
                             <select class="form-control{{ $errors->has('color_filter') ? ' is-invalid' : '' }}" id="color_filter" name="color_filter" placeholder="Red, Blue, Green" value="{{ old('color_filter') }}">
                                 <option>Red</option>
                                 <option>Green</option>
@@ -45,7 +47,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="color_filter_2">Color Filter 2:</label>
+                            <label for="color_filter_2" class="bold">Color Filter 2:</label>
                             <select class="form-control{{ $errors->has('color_filter_2') ? ' is-invalid' : '' }}" id="color_filter_2" name="color_filter_2" placeholder="Red, Blue, Green" value="{{ old('color_filter_2') }}">
                                 <option>Red</option>
                                 <option>Green</option>
@@ -60,20 +62,8 @@
                                 <option>Brown</option>
                                 <option>Grey</option>
                             </select>
-                        </div>
-                        <!--
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroupFileAddon01">Imagen: (Opcional)</span>
-                            </div>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" name="imagen" id="image_name"
-                                    aria-describedby="inputGroupFileAddon01">
-                                <label class="custom-file-label" for="image_name">Seleccionar Archivo</label>
-                            </div>
-                        </div>
-                        -->
-                        <button type="submit" class="btn btn-primary">
+                        </div><br>
+                        <button type="submit" class="btn btn-primary button-block shadow-medium">
                             {{ __('Submit') }}
                         </button>
                     </form>
@@ -84,6 +74,7 @@
 </div>
 @endsection
 @section('scripts')
+<script type="text/javascript" src="{{ asset('assets/js/jquery.minicolors.js') }}"></script>
  <script type="text/javascript">
      $(document).ready(function(){
         $('.hexcolor').mask('SAAAAAA', {
@@ -97,5 +88,7 @@
             }
         });
     });
+    $('#color_1').minicolors({ animationEasing: 'swing'});
+    $('#color_2').minicolors({ animationEasing: 'swing'});
  </script>   
 @endsection

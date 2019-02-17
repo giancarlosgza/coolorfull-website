@@ -34,6 +34,10 @@ Route::get('admin/delete/{gradients}', 'GradientController@showDelete')->middlew
 Route::post('gradients/delete', 'GradientController@deleteGradients');
 /*PANEL*/
 Route::get('/gradients/admin/panel', 'GradientController@userGradients')->middleware('auth');
+//GENERATOR
+Route::get('/generator/gradients', 'GradientController@generatorGradients');
+Route::get('/generator/mgradients', 'GradientController@generatorMGradients');
+
 //------------------------------------------------------------------------------------------------
 
 //PALETTE ROUTES

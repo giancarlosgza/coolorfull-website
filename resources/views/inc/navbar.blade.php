@@ -1,40 +1,52 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand nav-color logo" href="/">Colorfull</a>
+        <a class="navbar-brand logo logo-brand" href="/">Colorffy</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link nav-color" href="/"><i class="fas fa-home"></i> Home<span class="sr-only">(current)</span></a>
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item {{ (request()->is('/')) ? 'active' : '' }}">
+                    <a class="nav-link nav-color" href="/">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/palettes/catalog"><i class="fas fa-palette"></i> Palettes</a>
+                <li class="nav-item {{ (request()->is('palettes/catalog')) ? 'active' : '' }}">
+                    <a class="nav-link nav-color" href="/palettes/catalog">Palettes</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-color" href="/gradients/catalog"><i class="fas fa-fill"></i> Gradients</a>
+                <li class="nav-item {{ (request()->is('gradients/catalog')) ? 'active' : '' }}">
+                    <a class="nav-link nav-color" href="/gradients/catalog">Gradients</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownGG" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Generator <span class="badge badge-primary">New</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGG">
+                        <a class="dropdown-item bold" href="/generator/gradients">2 Colors-Gradient</a>
+                        <a class="dropdown-item bold" href="/generator/mgradients">3 Colors-Gradient</a>                       
+                    </div>
                 </li>
                 @guest
                 @else
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownHK" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Housekeeping
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item bold" href="/palettes/admin/panel"><i class="fas fa-palette"></i> Palettes Panel</a>
-                        <a class="dropdown-item bold" href="/gradients/admin/panel"><i class="fas fa-fill"></i> Gradients Panel</a>                       
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownHK">
+                        <a class="dropdown-item bold" href="/palettes/admin/panel">Palettes Panel</a>
+                        <a class="dropdown-item bold" href="/gradients/admin/panel">Gradients Panel</a>                       
                     </div>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAc" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         {{ Auth::user()->name }}
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAc">
                         <a class="dropdown-item bold" href="/home"><i class="fas fa-user-circle"></i> Account</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item bold" href="{{ route('logout') }}" onclick="event.preventDefault();

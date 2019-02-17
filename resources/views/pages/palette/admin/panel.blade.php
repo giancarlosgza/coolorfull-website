@@ -16,8 +16,8 @@
         </div>
         @else 
         @foreach($palettes as $palette) 
-        <div class="col-sm-6 col-md-4">
-            <div class="card shadow-medium">
+        <div class="col-12 col-md-3">
+            <div class="card">
                 <div class="card-body card-gradient" style="background-color:{{$palette->color_1}};">
                     <h5 class="text-center gradient-link">{{$palette->name}}</h5>
                 </div>

@@ -1,6 +1,14 @@
 @extends('layouts.app')
-@section('title', 'Paleta de Colores')
+@section('title', "$palette->name")
 @section('content')
+<div class="container btn-return">
+    <div class="row">
+        <div class="col-sm-12">
+            <a class="btn btn-link" href="/palettes/catalog"><i class="fas fa-arrow-left"></i> Palettes</a>
+            <br>
+        </div>
+    </div>
+</div>
 <ul class="nav justify-content-center">
     <li class="nav-item">
         <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy" data-clipboard-text="{{$palette->color_1}}">
@@ -22,26 +30,48 @@
             <i class="fas fa-circle" style="color: {{$palette->color_4}};"></i> {{$palette->color_4}}
         </a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy" data-clipboard-text="{{$palette->color_4}}">
+            <i class="fas fa-circle" style="color: {{$palette->color_5}};"></i> {{$palette->color_5}}
+        </a>
+    </li>
 </ul><br>
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="text-center bold">{{$palette->name}}</h4>
-            <ul class="list-group shadow-medium">
+            <h4 class="text-center bold uppercase">{{$palette->name}}</h4>
+            <ul id="htmltoimage" class="list-group shadow-medium">
                 <li class="list-group-item palette-show" style="background-color:{{$palette->color_1}}"> </li>
                 <li class="list-group-item palette-show" style="background-color:{{$palette->color_2}}"></li>
                 <li class="list-group-item palette-show" style="background-color:{{$palette->color_3}}"></li>
                 <li class="list-group-item palette-show" style="background-color:{{$palette->color_4}}"></li>
+                <li class="list-group-item palette-show" style="background-color:{{$palette->color_5}}"></li>
             </ul>
         </div>
     </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <a class="btn btn-gradient" onclick="downloadimage()">
+                <i class="fas fa-image"></i>
+                Get IMG
+            </a>
+        </div>
+    </div>
+    <hr>
+    <a class="twitter-share-button "
+        href="https://twitter.com/intent/tweet?text={{$palette->name}}%20Palette%20by%20@colorffy"
+        data-size="large">
+        Tweet
+    </a>
 </div>
 
 @endsection
 @section('scripts')
     <script>
-        function copyColor() {
-            alert("Copied!");
-        }
+        function copyColor(){alert("Copied!")}function downloadimage(){var t=document.getElementById("htmltoimage");html2canvas(t,{allowTaint:!0}).then(function(t){var e=document.createElement("a");document.body.appendChild(e),e.download="palette{{$palette->name}}_{{$palette->id}}.jpg",e.href=t.toDataURL(),e.target="_blank",e.click()})}
+    </script>
+    <script>
+        //twitter share btn
+        window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)||((n=t.createElement(e)).id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)}),w}(document,"script","twitter-wjs");
     </script>
 @endsection

@@ -1,6 +1,14 @@
 @extends('layouts.app')
-@section('title', 'Gradient')
+@section('title', "$gradient->name")
 @section('content')
+<div class="container btn-return">
+    <div class="row">
+        <div class="col-sm-12">
+            <a class="btn btn-link" href="/gradients/catalog"><i class="fas fa-arrow-left"></i> Gradients</a>
+            <br>
+        </div>
+    </div>
+</div>
 <ul class="nav justify-content-center">
     <li class="nav-item">
         <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy"
@@ -18,8 +26,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 col-md-12">
-            <h4 class="text-center bold">{{$gradient->name}}</h4>
-            <div class="jumbotron jumbotron-fluid" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+            <h4 class="text-center bold uppercase">{{$gradient->name}}</h4>
+            <div id="htmltoimage" class="jumbotron jumbotron-fluid" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
             </div>
         </div>
     </div>
@@ -31,8 +39,13 @@
             <a class="btn btn-gradient" data-toggle="modal" data-target="#exampleModal">
                 <i class="fab fa-css3-alt"></i> 
                 Get CSS
-            </a><hr>
-            <h4 class="bold">Preview</h4>
+            </a>
+            <a class="btn btn-gradient" onclick="downloadimage()">
+                <i class="fas fa-image"></i>
+                Get IMG
+            </a>
+            <hr>
+            <h4 class="bold">Preview UI Elements</h4>
         </div>
     </div>
     <div class="row">
@@ -43,22 +56,22 @@
             <div class="btn btn-outline-light btn-lg" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</div>
         </div>
         <div class="col-sm-12 col-md-6"><br>
-            <h4>Medals</h4>
+            <h4>Badges</h4>
             <span class="badge badge-light" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</span>
             <span class="badge badge-dark" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</span>
         </div>
         <div class="col-sm-12 col-md-6"><br>
-            <h4>Navbars Black Text</h4>
+            <h4>Navbar text-black</h4>
             <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
-                <a class="navbar-brand text-body logo">Colorfull</a>
+                <a class="navbar-brand text-body logo">Colorffy</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav2"
                     aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav2">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                            <a class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link">Gradients</a>
@@ -68,17 +81,17 @@
             </nav>
         </div>
         <div class="col-sm-12 col-md-6"><br>
-            <h4>Navbars White Text</h4>
+            <h4>Navbar text-white</h4>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
-                <a class="navbar-brand text-white logo">Colorfull</a>
+                <a class="navbar-brand text-white logo">Colorffy</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3"
                     aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav3">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                            <a class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link">Gradients</a>
@@ -87,7 +100,33 @@
                 </div>
             </nav>
         </div>
-    </div><br>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6"><br>
+            <h4>Card text-black</h4>
+            <div class="card text-body" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+                <div class="card-body">
+                    <h4 class="card-title bold"><i class="far fa-clock"></i> 9:30 AM</h4>
+                    <p class="card-text bold">Work Meeting</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6"><br>
+            <h4>Card text-white</h4>
+            <div class="card text-white" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+                <div class="card-body">
+                    <h4 class="card-title bold"><i class="far fa-clock"></i> 6:30 PM</h4>
+                    <p class="card-text bold">Pizza time!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <a class="twitter-share-button "
+        href="https://twitter.com/intent/tweet?text={{$gradient->name}}%20Gradient%20by%20@colorffy"
+        data-size="large">
+        Tweet
+    </a>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -103,7 +142,7 @@
                     <p><code>background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});</code></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="copyColor()" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">Copy</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">Copy</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -112,10 +151,11 @@
 </div>
 @endsection
 @section('scripts')
-<script>
-    function copyColor() {
-        alert("Copied!");
-    }
-
-</script>
+    <script>
+        function copyColor(){alert("Copied!")}function downloadimage(){var t=document.getElementById("htmltoimage");html2canvas(t,{allowTaint:!0}).then(function(t){var a=document.createElement("a");document.body.appendChild(a),a.download="gradient{{$gradient->name}}_{{$gradient->id}}.jpg",a.href=t.toDataURL(),a.target="_blank",a.click()})}
+    </script>
+    <script>
+        //twitter share btn
+        window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)||((n=t.createElement(e)).id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)}),w}(document,"script","twitter-wjs");
+    </script>
 @endsection

@@ -12,6 +12,7 @@
                     </div>
                     @endif
                     <h5 class="bold">Profile Information</h5>
+                    <h6 class="bold">👋 Hi {{ Auth::user()->name }}!</h6>
                     <br>
                     <div class="table-responsive">
                         <table class="table">
@@ -25,6 +26,10 @@
                                 <tr>
                                     <th scope="row">Email</th>
                                     <td>{{ Auth::user()->email }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Username</th>
+                                    <td>{{ Auth::user()->username }}</td>
                                 </tr>
                             </tbody>
                         </table>
