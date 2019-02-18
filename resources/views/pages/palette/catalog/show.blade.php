@@ -58,13 +58,54 @@
         </div>
     </div>
     <hr>
+    <div class="card shadow-medium">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                        <th scope="col">🎨</th>
+                        <th scope="col">👨‍💻 HEX</th>
+                        <th scope="col">💻 RGB</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><i class="fas fa-circle" style="color: {{$palette->color_1}};"></i></th>
+                            <td>{{$palette->color_1}}</td>
+                            <td><?php $hex="$palette->color_1"; list($r, $g, $b)=sscanf($hex, "#%02x%02x%02x"); echo "rgb($r, $g, $b)"; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="fas fa-circle" style="color: {{$palette->color_2}};"></i></th>
+                            <td>{{$palette->color_2}}</td>
+                            <td><?php $hex="$palette->color_2"; list($r, $g, $b)=sscanf($hex, "#%02x%02x%02x"); echo "rgb($r, $g, $b)"; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="fas fa-circle" style="color: {{$palette->color_3}};"></i></th>
+                            <td>{{$palette->color_3}}</td>
+                            <td><?php $hex="$palette->color_3"; list($r, $g, $b)=sscanf($hex, "#%02x%02x%02x"); echo "rgb($r, $g, $b)"; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="fas fa-circle" style="color: {{$palette->color_4}};"></i></th>
+                            <td>{{$palette->color_4}}</td>
+                            <td><?php $hex="$palette->color_4"; list($r, $g, $b)=sscanf($hex, "#%02x%02x%02x"); echo "rgb($r, $g, $b)"; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="fas fa-circle" style="color: {{$palette->color_5}};"></i></th>
+                            <td>{{$palette->color_5}}</td>
+                            <td><?php $hex="$palette->color_5"; list($r, $g, $b)=sscanf($hex, "#%02x%02x%02x"); echo "rgb($r, $g, $b)"; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div><hr>
     <a class="twitter-share-button "
         href="https://twitter.com/intent/tweet?text={{$palette->name}}%20Palette%20by%20@colorffy"
         data-size="large">
         Tweet
     </a>
 </div>
-
 @endsection
 @section('scripts')
     <script>

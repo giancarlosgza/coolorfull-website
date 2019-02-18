@@ -45,6 +45,33 @@
                 Get IMG
             </a>
             <hr>
+            <div class="card shadow-medium">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                <th scope="col">🎨</th>
+                                <th scope="col">👨‍💻 HEX</th>
+                                <th scope="col">💻 RGB</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-circle" style="color: {{$gradient->color_1}};"></i></th>
+                                    <td>{{$gradient->color_1}}</td>
+                                    <td><?php $hex="$gradient->color_1"; list($r, $g, $b)=sscanf($hex, "#%02x%02x%02x"); echo "rgb($r, $g, $b)"; ?></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-circle" style="color: {{$gradient->color_2}};"></i></th>
+                                    <td>{{$gradient->color_2}}</td>
+                                    <td><?php $hex="$gradient->color_2"; list($r, $g, $b)=sscanf($hex, "#%02x%02x%02x"); echo "rgb($r, $g, $b)"; ?></td>
+                                </tr>  
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div><hr>
             <h4 class="bold">Preview UI Elements</h4>
         </div>
     </div>
@@ -104,7 +131,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-6"><br>
             <h4>Card text-black</h4>
-            <div class="card text-body" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+            <div class="card text-body shadow-medium" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
                 <div class="card-body">
                     <h4 class="card-title bold"><i class="far fa-clock"></i> 9:30 AM</h4>
                     <p class="card-text bold">Work Meeting</p>
@@ -113,7 +140,7 @@
         </div>
         <div class="col-sm-12 col-md-6"><br>
             <h4>Card text-white</h4>
-            <div class="card text-white" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+            <div class="card text-white shadow-medium" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
                 <div class="card-body">
                     <h4 class="card-title bold"><i class="far fa-clock"></i> 6:30 PM</h4>
                     <p class="card-text bold">Pizza time!</p>
