@@ -75,75 +75,79 @@
             <h4 class="bold">Preview UI Elements</h4>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-6"><br>
-            <h4>Buttons</h4>
-            <div class="btn btn-outline-light btn-sm" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</div>
-            <div class="btn btn-outline-light" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</div>
-            <div class="btn btn-outline-light btn-lg" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</div>
-        </div>
-        <div class="col-sm-12 col-md-6"><br>
-            <h4>Badges</h4>
-            <span class="badge badge-light" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</span>
-            <span class="badge badge-dark" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</span>
-        </div>
-        <div class="col-sm-12 col-md-6"><br>
-            <h4>Navbar text-black</h4>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
-                <a class="navbar-brand text-body logo">Colorffy</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav2"
-                    aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav2">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Gradients</a>
-                        </li>
-                    </ul>
+    <div class="card shadow-medium">
+        <div class="card-body">  
+            <div class="row">
+                <div class="col-sm-12 col-md-6"><br>
+                    <h4>Buttons</h4>
+                    <div class="btn btn-outline-light btn-sm" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</div>
+                    <div class="btn btn-outline-light" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</div>
+                    <div class="btn btn-outline-light btn-lg" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</div>
                 </div>
-            </nav>
-        </div>
-        <div class="col-sm-12 col-md-6"><br>
-            <h4>Navbar text-white</h4>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
-                <a class="navbar-brand text-white logo">Colorffy</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3"
-                    aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav3">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Gradients</a>
-                        </li>
-                    </ul>
+                <div class="col-sm-12 col-md-6"><br>
+                    <h4>Badges</h4>
+                    <span class="badge badge-light" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</span>
+                    <span class="badge badge-dark" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">{{$gradient->name}}</span>
                 </div>
-            </nav>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-6"><br>
-            <h4>Card text-black</h4>
-            <div class="card text-body shadow-medium" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
-                <div class="card-body">
-                    <h4 class="card-title bold"><i class="far fa-clock"></i> 9:30 AM</h4>
-                    <p class="card-text bold">Work Meeting</p>
+                <div class="col-sm-12 col-md-6"><br>
+                    <h4>Navbar text-black</h4>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+                        <a class="navbar-brand text-body logo">Colorffy</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav2"
+                            aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav2">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">Gradients</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-sm-12 col-md-6"><br>
+                    <h4>Navbar text-white</h4>
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+                        <a class="navbar-brand text-white logo">Colorffy</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3"
+                            aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav3">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">Gradients</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-12 col-md-6"><br>
-            <h4>Card text-white</h4>
-            <div class="card text-white shadow-medium" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
-                <div class="card-body">
-                    <h4 class="card-title bold"><i class="far fa-clock"></i> 6:30 PM</h4>
-                    <p class="card-text bold">Pizza time!</p>
+            <div class="row">
+                <div class="col-sm-12 col-md-6"><br>
+                    <h4>Card text-black</h4>
+                    <div class="card text-body shadow-medium" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+                        <div class="card-body">
+                            <h4 class="card-title bold"><i class="far fa-clock"></i> 9:30 AM</h4>
+                            <p class="card-text bold">Work Meeting</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6"><br>
+                    <h4>Card text-white</h4>
+                    <div class="card text-white shadow-medium" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+                        <div class="card-body">
+                            <h4 class="card-title bold"><i class="far fa-clock"></i> 6:30 PM</h4>
+                            <p class="card-text bold">Pizza time!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

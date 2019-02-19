@@ -84,9 +84,13 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary button-block shadow-medium">
                                     {{ __('Register') }}
                                 </button>
+                                <hr>
+                                <a class="btn btn-link" href="{{ route('login') }}">
+                                    {{ __('Already have an account? Login!') }}
+                                </a>
                             </div>
                         </div>
                     </form>
