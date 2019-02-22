@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-6">
             <h1 class="logo text-body">
-                Color gradients and palettes! 🎨
+                Color gradients and palettes!
             </h1>
             <h4 class="intro-text">
                 Preview ui elements, colors codes & gradients generators. ☝️
