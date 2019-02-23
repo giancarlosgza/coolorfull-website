@@ -30,14 +30,15 @@
                 </li>
                 @guest
                 @else
+                @if(auth()->user()->is_admin == 0)
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownHK" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Housekeeping
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownHK">
-                        <a class="dropdown-item bold" href="/palettes/admin/panel">Palettes Panel</a>
-                        <a class="dropdown-item bold" href="/gradients/admin/panel">Gradients Panel</a>                       
+                        <a class="dropdown-item bold" href="/palettes/admin/panel">🎨 Palettes Panel</a>
+                        <a class="dropdown-item bold" href="/gradients/admin/panel">🎆 Gradients Panel</a>                       
                     </div>
                 </li>
 
@@ -47,17 +48,36 @@
                         {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownAc">
-                        <a class="dropdown-item bold" href="/home"><i class="fas fa-user-circle"></i> Account</a>
+                        <a class="dropdown-item bold" href="/home">✌️ Account</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item bold" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                            <i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
+                            👋 {{ __('Logout') }}
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
                     </div>
                 </li>
+                @else 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAc" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        {{ Auth::user()->name }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAc">
+                        <a class="dropdown-item bold" href="/home">✌️ Account</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item bold" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                            👋 {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+                @endif
                 @endguest
             </ul>
         </div>
