@@ -100,6 +100,17 @@
         </div>
     </div>
     @endif
+    @if(session('error'))
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="alert alert-danger" role="alert">
+                    You are not allowed to this page
+                </div>
+            </div>
+        </div>
+    </div>
+    @endif
     @if(count($errors))
     <div class="container">
         <div class="row">
