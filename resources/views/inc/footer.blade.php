@@ -4,7 +4,7 @@
             <div class="col-md-4">
                 <h5 class="logo color-darkblue">Colorffy</h5>
                 <p>
-                    Color gradients and palettes daily! Get css, images, ui previews or create your own gradients! 👀
+                    Color gradients and palettes daily! Get css, images, ui previews or create your own gradients!
                 </p>
                 <p>
                 We creates amazing gradients and palettes for designers and UI developers. 🚀
@@ -12,8 +12,9 @@
             </div>
             <div class="col-md-4 offset-md-4">
                 <h5 class="logo">More</h5>
-                <a href="mailto:colorffy@gmail.com" class="color-darkblue">Contact Us</a><br>
-                <a href="https://www.iubenda.com/privacy-policy/13414429" class="iubenda-white iubenda-embed color-darkblue" title="Privacy Policy" target="_blank" rel="noopener">Privacy Policy</a>
+                <a href="https://www.paypal.me/giancarlosgza?locale.x=es_XC" class="color-darkblue" title="Buy me a Coffee" target="_blank" rel="noopener">☕ Buy me a Coffee</a><br>
+                <a href="mailto:colorffy@gmail.com" class="color-darkblue" title="Contact Us">📧 Contact Us</a><br>
+                <a href="https://www.iubenda.com/privacy-policy/13414429" class="iubenda-white iubenda-embed color-darkblue" title="Privacy Policy" target="_blank" rel="noopener">📄 Privacy Policy</a>
             </div>
         </div>
         <div class="row">

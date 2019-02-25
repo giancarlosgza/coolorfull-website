@@ -37,7 +37,7 @@
     </div>
     <div class="row">
         <div class="col-12 col-md-12">
-            {{ $gradients->appends($_GET)->onEachSide(2)->links() }}
+            {{ $gradients->appends($_GET)->onEachSide(1)->links()  }}
         </div>
     </div>
 </div>

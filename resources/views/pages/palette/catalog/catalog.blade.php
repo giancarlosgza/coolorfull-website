@@ -43,7 +43,7 @@
     </div>
     <div class="row">
         <div class="col-12 col-md-12">
-            {{ $palettes->appends($_GET)->onEachSide(2)->links() }}
+            {{ $palettes->appends($_GET)->onEachSide(1)->links()  }}
         </div>
     </div>
 </div>

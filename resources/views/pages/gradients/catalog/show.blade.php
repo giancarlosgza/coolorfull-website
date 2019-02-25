@@ -173,8 +173,8 @@
                     <p><code>background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});</code></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary shadow-medium" data-dismiss="modal" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">Copy</button>
-                    <button type="button" class="btn btn-secondary shadow-medium" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary shadow-medium " data-dismiss="modal" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">Copy</button>
+                    <button type="button" class="btn btn-secondary shadow-medium " data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
