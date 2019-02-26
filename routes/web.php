@@ -16,7 +16,8 @@ Route::get('/', 'GradientController@indexGradients');
 
 Route::get('gradients/catalog', 'GradientController@catalogGradients');
 Route::get('gradients/{gradient}', 'GradientController@showGradients');
-Route::post('gradients/favorites', 'FavoriteGradientController@store');
+Route::get('gradients/favorites', 'FavoriteGradientController@index');
+Route::post('gradients/favorites', 'FavoriteGradientController@store')->name('storeFavGradient');
 
 /*ADMIN*/
 //CREATE

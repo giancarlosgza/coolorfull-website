@@ -29,7 +29,7 @@
                 <div class="card text-center">
                     <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
                         <h6 class="bold">{{$gradient->name}}</h6>
-                        <div class="fav-heart">❤</div>
+                        <div id="fav-heart-gradient-{{$gradient->id}}" class="fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})">❤</div>
                     </div>
                 </div>
             </a>
@@ -42,4 +42,18 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+    function newFavoriteGradient(gradientId) {
+        console.log('will send post to {{route("storeFavGradient")}}')
+        $.post('{{route("storeFavGradient")}}', {
+            gradientId: gradientId,
+        }).done(response => {
+            alert(response.msg)
+            $('#fav-heart-gradient-' + gradientId).toggleClass('active-heart')
+        })
+    }
+</script>
 @endsection
