@@ -16,8 +16,9 @@ Route::get('/', 'GradientController@indexGradients');
 
 Route::get('gradients/catalog', 'GradientController@catalogGradients');
 Route::get('gradients/{gradient}', 'GradientController@showGradients');
-Route::get('gradients/favorites', 'FavoriteGradientController@index');
-Route::post('gradients/favorites', 'FavoriteGradientController@store')->name('storeFavGradient');
+
+Route::get('favorites/gradients', 'FavoriteGradientController@index')->middleware('auth');
+Route::post('favorites/gradients', 'FavoriteGradientController@store')->name('storeFavGradient');
 
 /*ADMIN*/
 //CREATE

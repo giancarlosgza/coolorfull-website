@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Gradients;
+use App\User;
 use Validator;
 use Auth;
 use Log;
@@ -12,9 +13,9 @@ class FavoriteGradientController extends Controller
 {
 
     public function index() {
-        // $gradients = Auth::user()->favoriteGradients();
-        return 'gian es un pendejo';
-        // return view('')->with('gradients', $gradients);
+        
+        $users = Auth::user()->favoriteGradients();
+        return view('pages.gradients.favorites')->with('user', Auth::user());
     }
 
     /**
