@@ -29,6 +29,7 @@
                 <div class="card text-center">
                     <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
                         <h6 class="bold">{{$gradient->name}}</h6>
+                        <div class="fav-heart">❤</div>
                     </div>
                 </div>
             </a>
