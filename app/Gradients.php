@@ -13,4 +13,8 @@ class Gradients extends Model
     public function user() {
         return $this->belongsTo('App\User');
     }
+
+    public function usersWhoFav() {
+        return $this->belongsToMany('App\User', 'gradient_user', 'gradient_id', 'user_id');
+    }
 }
