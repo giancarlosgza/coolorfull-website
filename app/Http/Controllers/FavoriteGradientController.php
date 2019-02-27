@@ -13,8 +13,6 @@ class FavoriteGradientController extends Controller
 {
 
     public function index() {
-        
-        $users = Auth::user()->favoriteGradients();
         return view('pages.gradients.favorites')->with('user', Auth::user());
     }
 
@@ -44,12 +42,14 @@ class FavoriteGradientController extends Controller
             $user->favoriteGradients()->detach($gradient->id);
             return array(
                 'success' => true,
+                'code' => 0,
                 'msg' => 'Not a favorite anymore!',
             );
         } else {
             $user->favoriteGradients()->attach($gradient->id);
             return array(
                 'success' => true,
+                'code' => 1,
                 'msg' => 'New favorite gradient'
             );
         }

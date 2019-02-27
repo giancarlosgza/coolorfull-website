@@ -39,7 +39,7 @@
                                 <div id="fav-heart-gradient-{{$gradient->id}}" class="text-left align-self-end fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})"><i class="fas fa-heart"></i></div>
                             </div>
                             <div class="col-6">
-                                <div class="text-right align-self-end color-blue bold">{{ ($user->favoriteGradients->count()) }}</div>
+                                <div id="fav-count-gradient-{{$gradient->id}}" class="text-right align-self-end color-blue bold">{{ $gradient->usersWhoFav->count() }}</div>
                                 @else
                                 <a href="/favorites/gradients" title="Fav Gradient" ><i class="fas fa-heart fav-heart"></i></a>
                                 @endif
@@ -66,7 +66,13 @@
             gradientId: gradientId,
         }).done(response => {
             //alert(response.msg)
-            $('#fav-heart-gradient-' + gradientId).toggleClass('active-heart')
+            const FAV_COUNT_ELEM = $('#fav-count-gradient-' + gradientId)
+            const FAV_HEART_ELEM = $('#fav-heart-gradient-' + gradientId)
+            let newCount = response.code == 0 ? (parseInt(FAV_COUNT_ELEM.html()) - 1) : (parseInt(FAV_COUNT_ELEM.html()) + 1) ;
+            
+            FAV_HEART_ELEM.toggleClass('active-heart')
+
+            FAV_COUNT_ELEM.html( newCount );
         })
     }
 </script>
