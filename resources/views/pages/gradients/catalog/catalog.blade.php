@@ -24,14 +24,30 @@
 <div class="container">
     <div class="row">
         @foreach($gradients as $gradient)
-        <div class="col-6 col-md-4">
-            <a href="/gradients/{{$gradient->id}}" class="gradient-link">
-                <div class="card text-center">
-                    <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
-                        <h6 class="bold">{{$gradient->name}}</h6>
-                    </div>
+        <div class="col-6 col-md-3">
+            <div class="card shadow-medium">
+                <div class="card-body">
+                    <h6 class="bold text-center uppercase">{{$gradient->name}}</h6>
+                    <a href="/gradients/{{$gradient->id}}" class="gradient-link">
+                        <div class="card text-center">
+                            <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">     
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                @if(Auth::user())
+                                <div id="fav-heart-gradient-{{$gradient->id}}" class="text-left align-self-end fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})"><i class="fas fa-heart"></i></div>
+                            </div>
+                            <div class="col-6">
+                                <div class="text-right align-self-end color-blue bold">{{ ($user->favoriteGradients->count()) }}</div>
+                                @else
+                                <a href="/favorites/gradients" title="Fav Gradient" ><i class="fas fa-heart fav-heart"></i></a>
+                                @endif
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
+            </div>
         </div>
         @endforeach
     </div>
@@ -41,4 +57,17 @@
         </div>
     </div>
 </div>
+@endsection
+@section('scripts')
+<script>
+    function newFavoriteGradient(gradientId) {
+        console.log('will send post to {{route("storeFavGradient")}}')
+        $.post('{{route("storeFavGradient")}}', {
+            gradientId: gradientId,
+        }).done(response => {
+            //alert(response.msg)
+            $('#fav-heart-gradient-' + gradientId).toggleClass('active-heart')
+        })
+    }
+</script>
 @endsection
