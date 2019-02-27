@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Gradients extends Model
 {
     protected $fillable = [
-        'id', 'user_id', 'name', 'color_1', 'color_2', 'image_name','color_filter','color_filter_2'
+        'id', 'user_id', 'name', 'color_1', 'color_2', 'image_name','color_filter','color_filter_2', 'is_public'
     ];
 
     public function user() {

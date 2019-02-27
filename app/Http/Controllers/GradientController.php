@@ -99,6 +99,7 @@ class GradientController extends Controller
         $gradient->image_name = $fileNameToStore;
         $gradient->color_filter = $request->input('color_filter');
         $gradient->color_filter_2 = $request->input('color_filter_2');
+        $gradient->is_public = true;
 
         $user = Auth::user();
         $user->gradients()->save($gradient);
