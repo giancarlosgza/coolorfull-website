@@ -39,7 +39,7 @@
                                 <div id="fav-heart-gradient-{{$gradient->id}}" class="text-left align-self-end fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})"><i class="fas fa-heart"></i></div>
                             </div>
                             <div class="col-6">
-                                <div class="text-right align-self-end color-blue bold">{{ $gradient->id }}</div>
+                                <div class="text-right align-self-end color-blue bold">{{ ($user->favoriteGradients->count()) }}</div>
                                 @else
                                 <a href="/favorites/gradients" title="Fav Gradient" ><i class="fas fa-heart fav-heart"></i></a>
                                 @endif
@@ -65,7 +65,7 @@
         $.post('{{route("storeFavGradient")}}', {
             gradientId: gradientId,
         }).done(response => {
-            alert(response.msg)
+            //alert(response.msg)
             $('#fav-heart-gradient-' + gradientId).toggleClass('active-heart')
         })
     }

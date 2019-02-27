@@ -53,8 +53,8 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownAc">
                         <a class="dropdown-item bold" href="/home">✌️ Account</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bold" href="/favorites/gradients">⭐ Favorites Gradients</a>
                         <a class="dropdown-item bold" href="/">⭐ Favorites Palettes</a>
+                        <a class="dropdown-item bold" href="/favorites/gradients">⭐ Favorites Gradients</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item bold" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
@@ -73,6 +73,8 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownAc">
                         <a class="dropdown-item bold" href="/home">✌️ Account</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item bold" href="/">⭐ Favorites Palettes</a>
                         <a class="dropdown-item bold" href="/favorites/gradients">⭐ Favorites Gradients</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item bold" href="{{ route('logout') }}" onclick="event.preventDefault();

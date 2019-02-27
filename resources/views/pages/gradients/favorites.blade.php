@@ -11,6 +11,7 @@
             <div class="card card-form">
                 <div class="card-body">
                     <h6>No favorites gradients 😔</h6>
+                    <a href="/gradients/catalog">You can save from here</a>
                 </div>
             </div>
         </div>
@@ -49,7 +50,7 @@
         $.post('{{route("storeFavGradient")}}', {
             gradientId: gradientId,
         }).done(response => {
-            alert(response.msg)
+            //alert(response.msg)
             $('#fav-heart-gradient-' + gradientId).toggleClass('active-heart')
         })
     }
