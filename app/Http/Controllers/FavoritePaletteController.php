@@ -10,7 +10,7 @@ use App\Palette;
 class FavoritePaletteController extends Controller
 {
     public function index() {
-        // return view('pages.gradients.favorites')->with('user', Auth::user());
+        return view('pages.palette.favorites')->with('user', Auth::user());
     }
 
     /**

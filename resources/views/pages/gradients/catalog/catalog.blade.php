@@ -41,7 +41,7 @@
                             <div class="col-6">
                                 <div id="fav-count-gradient-{{$gradient->id}}" class="text-right align-self-end color-blue bold">{{ $gradient->usersWhoFav->count() }}</div>
                                 @else
-                                <a href="/favorites/gradients" title="Fav Gradient" ><i class="fas fa-heart fav-heart"></i></a>
+                                <a href="/favorites/gradients" title="Fav Gradient"><i class="fas fa-heart fav-heart"></i></a>
                                 @endif
                             </div>
                         </div>

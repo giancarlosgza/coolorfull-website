@@ -1,28 +1,22 @@
 @extends('layouts.app')
-@section('title', 'Palettes')
+@section('title', 'Favorites Palettes')
 @section('content')
-
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold">🎨 Palettes</h4>
+            <h4 class="bold">⭐ Favorites Palettes</h4><br>
         </div>
+        @if ($user->favoritePalettes->count() < 1)
         <div class="col-sm-12">
-            <form action="" method="get">
-                <div class="input-group mb-3">
-                    <input type="text" name="q" id="query" value="{{ $searchQuery }}" class="form-control shadow-medium no-border"
-                        placeholder="🔍 Search colors or hexadecimal" aria-label="Search colors or hexadecimal" aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary shadow-medium" type="submit" id="button-addon2">Search</button>
-                    </div>
+            <div class="card card-form">
+                <div class="card-body">
+                    <h6>No favorites palettes 😔</h6>
+                    <a href="/palettes/catalog">You can save from here</a>
                 </div>
-            </form>
-           
+            </div>
         </div>
-    </div>
-    <br>
-    <div class="row">
-        @foreach($palettes as $palette)
+        @else 
+        @foreach($user->favoritePalettes as $palette)
         <div class="col-6 col-md-3">
             <div class="card shadow-medium">
                 <div class="card-body">
@@ -38,29 +32,21 @@
                     </a>
                     <div class="row">
                         <div class="col-6">
-                            @if(Auth::user())
                             <div id="fav-heart-palette-{{$palette->id}}" class="text-left align-self-end fav-heart @if($user->favoritePalettes->contains($palette)) active-heart @endif" onclick="event.preventDefault(); newFavoritePalette({{$palette->id}})"><i class="fas fa-heart"></i></div>
                         </div>
                         <div class="col-6">
-                            <div id="fav-count-palette-{{$palette->id}}" class="text-right align-self-end color-blue bold">{{ $palette->usersWhoFav->count() }}</div>
-                            @else
-                            <a href="/favorites/palettes" title="Fav Palette"><i class="fas fa-heart fav-heart"></i></a>
-                            @endif
+                            <div id="fav-count-palette-{{$palette->id}}" class="text-right align-self-end color-blue bold">{{ $palette->usersWhoFav->count() }}</div> 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         @endforeach
-    </div>
-    <div class="row">
-        <div class="col-12 col-md-12">
-            {{ $palettes->appends($_GET)->onEachSide(1)->links()  }}
-        </div>
+        @endif
     </div>
 </div>
 @endsection
-@section('scripts') 
+@section('scripts')
 <script>
     function newFavoritePalette(paletteId) {
         $.post('{{route("storeFavPalette")}}', {
