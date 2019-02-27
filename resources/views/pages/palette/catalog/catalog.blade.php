@@ -36,6 +36,18 @@
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_5}}"></li>
                         </ul>
                     </a>
+                    <div class="row">
+                        <div class="col-6">
+                            @if(Auth::user())
+                            <div id="fav-heart-palette-{{$palette->id}}" class="text-left align-self-end fav-heart @if($user->favoritePalettes->contains($palette)) active-heart @endif" onclick="event.preventDefault(); newFavoritePalette({{$palette->id}})"><i class="fas fa-heart"></i></div>
+                        </div>
+                        <div class="col-6">
+                            <div id="fav-count-palette-{{$palette->id}}" class="text-right align-self-end color-blue bold">{{ $palette->usersWhoFav->count() }}</div>
+                            @else
+                            <a href="/favorites/palettes" title="Fav Gradient" ><i class="fas fa-heart fav-heart"></i></a>
+                            @endif
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,4 +59,22 @@
         </div>
     </div>
 </div>
+@endsection
+@section('scripts') 
+<script>
+    function newFavoritePalette(paletteId) {
+        $.post('{{route("storeFavPalette")}}', {
+            paletteId: paletteId,
+        }).done(response => {
+            //alert(response.msg)
+            const FAV_COUNT_ELEM = $('#fav-count-palette-' + paletteId)
+            const FAV_HEART_ELEM = $('#fav-heart-palette-' + paletteId)
+            let newCount = response.code == 0 ? (parseInt(FAV_COUNT_ELEM.html()) - 1) : (parseInt(FAV_COUNT_ELEM.html()) + 1) ;
+            
+            FAV_HEART_ELEM.toggleClass('active-heart')
+
+            FAV_COUNT_ELEM.html( newCount );
+        })
+    }
+</script>
 @endsection

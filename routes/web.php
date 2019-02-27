@@ -48,6 +48,10 @@ Route::get('/generator/mgradients', 'GradientController@generatorMGradients');
 
 Route::get('palettes/catalog', 'PaletteController@catalogPalettes');
 Route::get('palettes/{palette}', 'PaletteController@showPalettes');
+
+// Route::get('favorites/palettes', 'FavoritePaletteController@index')->middleware('auth');
+Route::post('favorites/palettes', 'FavoritePaletteController@store')->name('storeFavPalette');
+
 /*ADMIN*/
 //CREATE
 Route::get('/palettes/admin/create', function () {

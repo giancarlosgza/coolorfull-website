@@ -39,4 +39,8 @@ class User extends Authenticatable
     public function favoriteGradients() {
         return $this->belongsToMany('App\Gradients', 'gradient_user', 'user_id', 'gradient_id');
     }
+
+    public function favoritePalettes() {
+        return $this->belongsToMany('App\Palette', 'palette_user', 'user_id', 'palette_id');
+    }
 }

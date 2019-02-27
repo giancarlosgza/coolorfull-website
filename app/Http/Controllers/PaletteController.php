@@ -36,7 +36,10 @@ class PaletteController extends Controller
                     ->orWhere('color_filter_2', 'like', '%' . $searchQuery . '%')
                     ->orderBy('id', 'DESC')->paginate(12);
         }
-        return view ('pages.palette.catalog.catalog')->with('palettes', $palettes)->with('searchQuery', $searchQuery);
+        return view ('pages.palette.catalog.catalog')
+                    ->with('palettes', $palettes)
+                    ->with('searchQuery', $searchQuery)
+                    ->with('user', Auth::user());
     }
 
     //SHOW GRADIENTS ON INDEX

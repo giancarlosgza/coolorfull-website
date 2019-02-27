@@ -35,7 +35,7 @@
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                @if(Auth::user())
+                                @if($user)
                                 <div id="fav-heart-gradient-{{$gradient->id}}" class="text-left align-self-end fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})"><i class="fas fa-heart"></i></div>
                             </div>
                             <div class="col-6">
@@ -58,10 +58,9 @@
     </div>
 </div>
 @endsection
-@section('scripts')
+@section('scripts') 
 <script>
     function newFavoriteGradient(gradientId) {
-        console.log('will send post to {{route("storeFavGradient")}}')
         $.post('{{route("storeFavGradient")}}', {
             gradientId: gradientId,
         }).done(response => {
