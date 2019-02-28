@@ -27,13 +27,17 @@
         <div class="row">
             @foreach($gradients as $gradient)
             <div class="col-6 col-md-3">
-                <a href="/gradients/{{$gradient->id}}" class="gradient-link">
-                    <div class="card text-center">
-                        <div class="card-body card-gradient shadow-medium" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
-                            <h6 class="bold">{{$gradient->name}}</h6>
-                        </div>
+                <div class="card shadow-medium">
+                    <div class="card-body">
+                        <h6 class="bold text-center uppercase">{{$gradient->name}}</h6>
+                        <a href="/gradients/{{$gradient->id}}" class="gradient-link">
+                            <div class="card text-center">
+                                <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">     
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
             </div>
             @endforeach
         </div>

@@ -16,6 +16,10 @@ Route::get('/', 'GradientController@indexGradients');
 
 Route::get('gradients/catalog', 'GradientController@catalogGradients');
 Route::get('gradients/{gradient}', 'GradientController@showGradients');
+
+Route::get('favorites/gradients', 'FavoriteGradientController@index')->middleware('auth');
+Route::post('favorites/gradients', 'FavoriteGradientController@store')->name('storeFavGradient');
+
 /*ADMIN*/
 //CREATE
 Route::get('/gradients/admin/create', function () {
@@ -44,6 +48,10 @@ Route::get('/generator/mgradients', 'GradientController@generatorMGradients');
 
 Route::get('palettes/catalog', 'PaletteController@catalogPalettes');
 Route::get('palettes/{palette}', 'PaletteController@showPalettes');
+
+Route::get('favorites/palettes', 'FavoritePaletteController@index')->middleware('auth');
+Route::post('favorites/palettes', 'FavoritePaletteController@store')->name('storeFavPalette');
+
 /*ADMIN*/
 //CREATE
 Route::get('/palettes/admin/create', function () {

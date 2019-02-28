@@ -41,7 +41,10 @@ class GradientController extends Controller
                     ->orWhere('color_filter_2', 'like', '%' . $searchQuery . '%')
                     ->orderBy('id', 'DESC')->paginate(12);
         }
-        return view ('pages.gradients.catalog.catalog')->with('gradients', $gradients)->with('searchQuery', $searchQuery);
+        return view ('pages.gradients.catalog.catalog')
+                    ->with('gradients', $gradients)
+                    ->with('searchQuery', $searchQuery)
+                    ->with('user', Auth::user());
     }
 
     //SHOW GRADIENTS ON INDEX
@@ -96,6 +99,7 @@ class GradientController extends Controller
         $gradient->image_name = $fileNameToStore;
         $gradient->color_filter = $request->input('color_filter');
         $gradient->color_filter_2 = $request->input('color_filter_2');
+        $gradient->is_public = true;
 
         $user = Auth::user();
         $user->gradients()->save($gradient);
