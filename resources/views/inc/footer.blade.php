@@ -28,7 +28,7 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-md-12 text-right small align-self-end">©2019 Colorffy v1.7</div>
+            <div class="col-md-12 text-right small align-self-end">©2019 Colorffy v2.0</div>
         </div>
     </div>
 </footer>

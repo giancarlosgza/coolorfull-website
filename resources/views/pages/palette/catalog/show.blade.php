@@ -34,7 +34,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy" data-clipboard-text="{{$palette->color_4}}">
+        <a class="nav-link btn btn-gradient" onclick="copyColor()" data-toggle="tooltip" title="Click to copy" data-clipboard-text="{{$palette->color_5}}">
             <i class="fas fa-circle" style="color: {{$palette->color_5}};"></i> {{$palette->color_5}}
         </a>
     </li>
@@ -118,10 +118,10 @@
                     <a class="nav-link" id="pills-color3-tab" data-toggle="pill" href="#pills-color3" role="tab" aria-controls="pills-color3" aria-selected="false">{{$palette->color_3}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-color4-tab" data-toggle="pill" href="#pills-color4" role="tab" aria-controls="pills-color4" aria-selected="false">{{$palette->color_2}}</a>
+                    <a class="nav-link" id="pills-color4-tab" data-toggle="pill" href="#pills-color4" role="tab" aria-controls="pills-color4" aria-selected="false">{{$palette->color_4}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-color5-tab" data-toggle="pill" href="#pills-color5" role="tab" aria-controls="pills-color5" aria-selected="false">{{$palette->color_3}}</a>
+                    <a class="nav-link" id="pills-color5-tab" data-toggle="pill" href="#pills-color5" role="tab" aria-controls="pills-color5" aria-selected="false">{{$palette->color_5}}</a>
                 </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
