@@ -72,7 +72,10 @@ Route::post('palettes/delete', 'PaletteController@deletePalettes');
 /*PANEL*/
 Route::get('/palettes/admin/panel', 'PaletteController@userPalettes')->middleware('checkrole');
 
-
+// PAYING FORM
+Route::get('/account/pay', function() {
+    return 'holi';
+});
 
 //GENERAL ROUTES
 Auth::routes();
