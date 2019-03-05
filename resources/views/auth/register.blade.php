@@ -91,11 +91,13 @@
         <div class="col-md-6">
             <div class="card card-form">
                 <div class="card-body">
-                    <h5>❤️ Save your favorites gradients</h5>
-                    <h5>💚 Save your favorites palettes</h5>
-                    <h5>👓 Access to color blindness filter</h5>
-                    <h5>🙆‍♂️ Save gradients created with generators</h5>
-                    <h5>🎨 Preview icons with color palettes</h5>
+                    <h5 class="bold">Join Colorffy and become Pro</h5>
+                    <hr>
+                    <h5>❤️ Save your <strong>favorites gradients</strong></h5>
+                    <h5>💚 Save your <strong>favorites palettes</strong></h5>
+                    <h5>👓 Access to <strong>color blindness</strong> filter</h5>
+                    <h5>🙆‍♂️ <strong>Save gradients</strong> created with generators</h5>
+                    <h5>🎨 <strong>Preview icons</strong> with color palettes</h5>
                     <h5>🎁 Access to icons, backgrounds and illustrations (maybe)</h5>
                 </div>
             </div>
