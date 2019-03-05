@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#258bff"/>
     <meta name="description" content="Color gradients and palettes daily! Get css, image, and ui previews.">
     <meta name="keywords" content="Color, Gradients, Palettes, Color Gradients, Color Palettes, Illustrations">
-    <title>@yield('title') | Colorffy</title>
+    <title>@yield('title') - Colorffy</title>
     <link rel="manifest" href="{{ asset('/manifest.json') }}">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

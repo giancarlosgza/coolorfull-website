@@ -80,3 +80,14 @@ Route::get('/account/pay', function() {
 //GENERAL ROUTES
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+//MORE ROUTES
+Route::get('/pricing', function () {
+    return view('more.pricing');
+});
+Route::get('/team', function () {
+    return view('more.team');
+});
+Route::get('/whatsnew', function () {
+    return view('more.whatsnew');
+});

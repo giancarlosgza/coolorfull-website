@@ -7,7 +7,7 @@
             <h4 class="intro-text">
                 Preview ui elements, colors codes & gradients generators. ☝️
             </h4>
-            <h5 class="intro-text">Gradients and Palettes <span class="badge badge-primary">180+</span></h5>
+            <h5 class="intro-text">Gradients and Palettes <span class="badge badge-primary">200+</span></h5>
         </div>
     </div><br>
     <div class="row">
