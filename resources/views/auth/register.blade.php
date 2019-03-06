@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <div class="card card-form">
                 <div class="card-body">
                     <h4 class="logo text-center color-blue">Colorffy</h4>
@@ -88,7 +88,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card card-form">
                 <div class="card-body">
                     <h5 class="bold">Join Colorffy and become Pro</h5>
@@ -98,7 +98,8 @@
                     <h5>👓 Access to <strong>color blindness</strong> filter</h5>
                     <h5>🙆‍♂️ <strong>Save gradients</strong> created with generators</h5>
                     <h5>🎨 <strong>Preview icons</strong> with color palettes</h5>
-                    <h5>🎁 Access to icons, backgrounds and illustrations (maybe)</h5>
+                    <h5>🎁 <strong>Access</strong> to icons, backgrounds and illustrations (maybe)</h5>
+                    <h5>📧 Do you want some <strong>feature? <a href="mailto:colorffy@gmail.com" class="color-darkblue" title="Contact Us">request here!</a></strong></h5>
                 </div>
             </div>
         </div>
