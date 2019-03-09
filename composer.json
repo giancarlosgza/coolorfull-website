@@ -12,7 +12,8 @@
         "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "paypal/paypal-checkout-sdk": "1.0.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -33,6 +34,9 @@
         }
     },
     "autoload": {
+        "files": [
+            "app/Http/Helpers/Paypal/PayPalClient.php"
+        ],
         "psr-4": {
             "App\\": "app/"
         },

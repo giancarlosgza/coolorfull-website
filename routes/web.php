@@ -72,11 +72,6 @@ Route::post('palettes/delete', 'PaletteController@deletePalettes');
 /*PANEL*/
 Route::get('/palettes/admin/panel', 'PaletteController@userPalettes')->middleware('checkrole');
 
-// PAYING FORM
-Route::get('/account/pay', function() {
-    return 'holi';
-});
-
 //GENERAL ROUTES
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
@@ -91,3 +86,6 @@ Route::get('/team', function () {
 Route::get('/whatsnew', function () {
     return view('more.whatsnew');
 });
+
+// PAYING FORM
+Route::post('register', 'PaymentController@create')->name('register');

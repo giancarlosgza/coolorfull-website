@@ -62,7 +62,8 @@
     <style>
         @font-face{font-family:'Poppins';font-style:normal;font-weight:700;src:local('Poppins Bold'),local('Poppins-Bold'),url(https://fonts.gstatic.com/s/poppins/v6/pxiByp8kv8JHgFVrLCz7Z11lFc-K.woff2) format('woff2');font-display:swap}@font-face{font-family:'Nunito';font-style:normal;font-weight:400;font-display:swap;src:local('Nunito Regular'),local('Nunito-Regular'),url(https://fonts.gstatic.com/s/nunito/v9/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2) format('woff2')}
     </style>
-    
+    <script src="https://www.paypal.com/sdk/js?client-id=AVn-ha5Xh1vExzfPeJhndobQxo67kJK1EF7Y0OF8l2AnYj3JPpca1jrjeuSLuX6ASjjVtBCY8cVEqUph"></script>
+
 </head>
 <body>
     @include('inc.navbar')
@@ -136,6 +137,13 @@
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
@@ -144,13 +152,6 @@
     <script type="text/javascript" src="{{ asset('assets/js/jquery.mask.min.js') }}"></script>
     <script type="text/javascript">
         new ClipboardJS(".btn"),$(document).ready(function(){$("[data-toggle=\"tooltip\"]").tooltip()});
-    </script>
-    <script>
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
     </script>
     @yield('scripts')
     <!--END SCRIPTS-->
