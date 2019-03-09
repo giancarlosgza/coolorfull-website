@@ -113,38 +113,36 @@
         ERRORS.hide()
 
         paypal.Buttons({
-            createOrder: function(data, actions) {
+            createOrder: (data, actions) => {
                 return actions.order.create({
                     purchase_units: [{
                         amount: {
                             value: '{{ env('MONTHLY_PRICE') }}'
                         }
                     }]
-                });
+                })
             },
-            onApprove: function(data, actions) {
+            onApprove: (data, actions) => {
                 return actions.order.capture()
-                    .then(function(details) {
-                         registeringRequest(data)
-                    });
+                    .then(details => registeringRequest(data))
+                    .catch(details => console.log(details)) //TODO: handling
             }
         }).render('#monthly-paypal-button-container');
 
         paypal.Buttons({
-            createOrder: function(data, actions) {
+            createOrder: (data, actions) => {
                 return actions.order.create({
                     purchase_units: [{
                         amount: {
                             value: '{{ env('LIFETIME_PRICE') }}'
                         }
                     }]
-                });
+                })
             },
-            onApprove: function(data, actions) {
+            onApprove: (data, actions) => {
                 return actions.order.capture()
-                    .then(function(details) {
-                        registeringRequest(data);
-                    });
+                    .then(details => registeringRequest(data))
+                    .catch(details => console.log(details)) //TODO: handling
             }
         }).render('#lifetime-paypal-button-container');
 
@@ -161,11 +159,14 @@
                     username: $('input[name="username"]').val(),
                 }
             }).done((response, status) => {
-                if (response.success && status === 'success' && response.message === 'COMPLETED') {
+                if (response.success &&
+                    status === 'success' &&
+                    response.message === 'COMPLETED') {
                     window.location = "{{ route('home') }}"
                 } else if (!response.success && response.status === 'INCORRECT_FORM') {
                     ERRORS.html(`{{ __('Error while trying to register user. We have registered the error and if
-                                payment went through, we will contact you as soon as possible to give you your account manually.') }}  `)
+                                payment went through, we will contact you as soon as possible to give you your account
+                                manually.') }}`)
                     ERRORS.show()
                 } else {
                     ERRORS.html('{{ __('Error while processing payment') }}')
