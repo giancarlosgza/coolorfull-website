@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use PayPalCheckoutSdk\Orders\OrdersGetRequest;
-use Sample\PayPalClient;
+use App\Http\Helpers\PayPal\PayPalClient;
 
 class PaymentController extends Controller
 {
