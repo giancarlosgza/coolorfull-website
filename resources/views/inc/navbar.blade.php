@@ -33,7 +33,7 @@
                     <a class="nav-link nav-color" href="/register">Join</a>
                 </li>
                 @else
-                @if(auth()->user()->is_admin == 0)
+                @if(auth()->user()->is_admin == 1)
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownHK" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">

@@ -14,7 +14,7 @@ class AddIsAdminToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->enum('is_admin', [1,0]);
+            $table->enum('is_admin', [0,1]);
         });
     }
 

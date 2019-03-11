@@ -11,7 +11,7 @@
                         {{ session('status') }}
                     </div>
                     @endif
-                    <h5 class="bold">Profile Information - {!! auth()->user()->is_admin == 0 ? 'Admin' : 'Pro' !!}</h5>
+                    <h5 class="bold">Profile Information - {!! auth()->user()->is_admin == 1 ? 'Admin' : 'Pro' !!}</h5>
                     <h6 class="bold">👋 Hi {{ Auth::user()->name }}!</h6>
                     
                     <br>
@@ -34,7 +34,7 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">Account</th>
-                                    <td>@if(Auth::user()->is_admin == 0)Admin @else Pro @endif</td>
+                                    <td>@if(Auth::user()->is_admin == 1)Admin @else Pro @endif</td>
                                 </tr>
                             </tbody>
                         </table>
