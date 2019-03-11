@@ -40,8 +40,8 @@
                         Housekeeping
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownHK">
-                        <a class="dropdown-item bold" href="/palettes/admin/panel">🎨 Palettes Panel</a>
-                        <a class="dropdown-item bold" href="/gradients/admin/panel">🎆 Gradients Panel</a>                       
+                        <a class="dropdown-item bold" href="/palettes/admin/panel">⚙️ Palettes Panel</a>
+                        <a class="dropdown-item bold" href="/gradients/admin/panel">⚙️ Gradients Panel</a>                       
                     </div>
                 </li>
 

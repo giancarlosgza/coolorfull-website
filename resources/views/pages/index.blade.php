@@ -19,8 +19,13 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-6">
                 <h4 class="bold">Last Gradients</h4>
+            </div>
+            <div class="col-6 text-right">
+                <a href="/gradients/catalog" class="color-blue bold">
+                    🔥 View all
+                </a>
             </div>
         </div>
         <br>

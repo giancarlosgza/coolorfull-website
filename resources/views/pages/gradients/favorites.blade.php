@@ -21,7 +21,7 @@
             <div class="card shadow-medium">
                 <div class="card-body">
                     <h6 class="bold text-center uppercase">{{$gradient->name}}</h6>
-                    <a href="/gradients/{{$gradient->id}}" class="gradient-link">
+                    <a href="/gradients/{{$gradient->id}}" title="{{$gradient->name}}">
                         <div class="card text-center">        
                             <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
                             </div>
@@ -31,7 +31,13 @@
                                 <div id="fav-heart-gradient-{{$gradient->id}}" class="text-left align-self-end fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})"><i class="fas fa-heart"></i></div>
                             </div>
                             <div class="col-6">
-                                <div id="fav-count-gradient-{{$gradient->id}}" class="text-right align-self-end color-blue bold">{{ $gradient->usersWhoFav->count() }}</div>
+                                <div id="fav-count-gradient-{{$gradient->id}}" class="text-right align-self-end color-blue bold">
+                                    @if($gradient->usersWhoFav->count() == 1) 
+                                    {{ $gradient->usersWhoFav->count() }} like
+                                    @else
+                                    {{ $gradient->usersWhoFav->count() }} likes
+                                    @endif 
+                                </div>
                             </div>
                         </div>
                     </a>

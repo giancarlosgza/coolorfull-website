@@ -99,7 +99,7 @@
                     <h5>👓 Access to <strong>color blindness</strong> filter</h5>
                     <h5>🙆‍♂️ <strong>Save gradients</strong> created with generators</h5>
                     <h5>🎨 <strong>Preview icons</strong> with color palettes</h5>
-                    <h5>🎁 <strong>Access</strong> to icons, backgrounds and illustrations (maybe)</h5>
+                    <h5>🎁 <strong>Access</strong> to icons, backgrounds and illustrations (coming soon)</h5>
                     <h5>📧 Do you want some <strong>feature? <a href="mailto:colorffy@gmail.com" class="color-darkblue" title="Contact Us">request here!</a></strong></h5>
                 </div>
             </div>
