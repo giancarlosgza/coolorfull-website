@@ -37,11 +37,11 @@
                         </ul>
                     </a>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-4 col-sm-6 col-md-4">
                             @if(Auth::user())
                             <div id="fav-heart-palette-{{$palette->id}}" class="text-left align-self-end fav-heart @if($user->favoritePalettes->contains($palette)) active-heart @endif" onclick="event.preventDefault(); newFavoritePalette({{$palette->id}})"><i class="fas fa-heart"></i></div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-8 col-sm-6 col-md-8">
                             <div id="fav-count-palette-{{$palette->id}}" class="text-right align-self-end color-blue bold">
                                 @if($palette->usersWhoFav->count() == 1) 
                                 {{ $palette->usersWhoFav->count() }} like

@@ -185,11 +185,7 @@
     <hr>
     <div class="row">
         <div class="col-sm-12">
-           <a class="twitter-share-button"
-                href="https://twitter.com/intent/tweet?text={{$palette->name}}%20Palette%20by%20@colorffy"
-                data-size="large">
-                Tweet
-            </a> 
+            <div class="sharethis-inline-share-buttons"></div>
         </div>
     </div>
 </div>
@@ -198,8 +194,5 @@
     <script>
         function copyColor(){alert("Copied!")}function downloadimage(){var t=document.getElementById("htmltoimage");html2canvas(t,{allowTaint:!0}).then(function(t){var e=document.createElement("a");document.body.appendChild(e),e.download="palette{{$palette->name}}_{{$palette->id}}.jpg",e.href=t.toDataURL(),e.target="_blank",e.click()})}
     </script>
-    <script>
-        //twitter share btn
-        window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)||((n=t.createElement(e)).id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)}),w}(document,"script","twitter-wjs");
-    </script>
+    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons' async='async'></script>
 @endsection

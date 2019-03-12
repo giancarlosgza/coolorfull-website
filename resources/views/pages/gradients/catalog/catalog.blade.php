@@ -34,11 +34,11 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-4 col-sm-6 col-md-4">
                                 @if($user)
                                 <div id="fav-heart-gradient-{{$gradient->id}}" class="text-left align-self-end fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})"><i class="fas fa-heart"></i></div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-8 col-sm-6 col-md-8">
                                 <div id="fav-count-gradient-{{$gradient->id}}" class="text-right align-self-end color-blue bold">
                                     @if($gradient->usersWhoFav->count() == 1) 
                                     {{ $gradient->usersWhoFav->count() }} like
