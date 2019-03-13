@@ -11,7 +11,7 @@
                         {{ session('status') }}
                     </div>
                     @endif
-                    <h4 class="bold">👋 Hi {{ Auth::user()->name }}!</h4>
+                    <h4 class="bold">Hi {{ Auth::user()->name }}! 👋</h4>
                     <h5 class="bold">{{ Auth::user()->username }}</h5>
                 </div>
             </div>
@@ -45,7 +45,13 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">Paid Until</th>
-                                    <td>{{ Auth::user()->paid_until }}</td>
+                                    <td>
+                                        @if(Auth::user()->paid_until == NULL)
+                                        Lifetime 🤟
+                                        @else
+                                        {{date('F, m, Y', strtotime(Auth::user()->paid_until))}}
+                                        @endif
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
