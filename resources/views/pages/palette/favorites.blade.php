@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold">⭐ Favorites Palettes</h4><br>
+            <h4 class="bold text-body">❤️ Liked Palettes</h4><br>
         </div>
         @if ($user->favoritePalettes->count() < 1)
         <div class="col-sm-12">

@@ -11,7 +11,7 @@
                         {{ session('status') }}
                     </div>
                     @endif
-                    <h4 class="bold">Hi {{ Auth::user()->name }}! 👋</h4>
+                    <h4 class="bold text-body">Hi {{ Auth::user()->name }}! 👋</h4>
                     <h5 class="bold">{{ Auth::user()->username }}</h5>
                 </div>
             </div>

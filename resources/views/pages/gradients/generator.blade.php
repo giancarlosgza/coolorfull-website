@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold">🎯 2 Colors-Gradient Generator</h4>
+            <h4 class="bold text-body">🎯 2 Colors-Gradient Generator</h4>
         </div>
     </div>
     <div class="card shadow-medium">

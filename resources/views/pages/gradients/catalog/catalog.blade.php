@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold">🎆 Gradients</h4>
+            <h4 class="bold text-body">🎆 Gradients</h4>
         </div>
         <div class="col-sm-12">
             <form action="" method="get">
