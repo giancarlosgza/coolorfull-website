@@ -70,14 +70,22 @@
         $.post('{{route("storeFavGradient")}}', {
             gradientId: gradientId,
         }).done(response => {
-            //alert(response.msg)
-            const FAV_COUNT_ELEM = $('#fav-count-gradient-' + gradientId)
-            const FAV_HEART_ELEM = $('#fav-heart-gradient-' + gradientId)
-            let newCount = response.code == 0 ? (parseInt(FAV_COUNT_ELEM.html()) - 1) : (parseInt(FAV_COUNT_ELEM.html()) + 1) ;
-            
-            FAV_HEART_ELEM.toggleClass('active-heart')
+            console.log(response)
+            if(response.success)
+            {
+                const FAV_COUNT_ELEM = $('#fav-count-gradient-' + gradientId)
+                const FAV_HEART_ELEM = $('#fav-heart-gradient-' + gradientId)
+                let newCount = response.code == 0 ? (parseInt(FAV_COUNT_ELEM.html()) - 1) : (parseInt(FAV_COUNT_ELEM.html()) + 1) ;
+                
+                FAV_HEART_ELEM.toggleClass('active-heart')
 
-            FAV_COUNT_ELEM.html( newCount );
+                FAV_COUNT_ELEM.html( newCount )
+            }
+            else 
+            {
+                swal("Error ocurred", response.msg, "error")
+            }
+            
         })
     }
 </script>

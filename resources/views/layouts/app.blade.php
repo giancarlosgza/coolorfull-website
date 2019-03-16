@@ -153,6 +153,7 @@
     <script type="text/javascript">
         new ClipboardJS(".btn"),$(document).ready(function(){$("[data-toggle=\"tooltip\"]").tooltip()});
     </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @yield('scripts')
     <!--END SCRIPTS-->
 </body>
