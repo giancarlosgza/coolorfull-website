@@ -14,6 +14,9 @@ use App\Http\Helpers\PayPal\PayPalClient;
 
 class PaymentController extends Controller
 {
+    public function index() {
+        return 'no has pagado we xd';
+    }
     public function create(Request $request) {
 
         // This is supposed to be passed always because user should have JS client authentication first

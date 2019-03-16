@@ -14,12 +14,20 @@ class GradientController extends Controller
 {
     //SHOW GRADIENTS
     function showGradients(Gradients $gradient) {
+        if(!$gradient->is_public && $gradient->user->id !== Auth::id())
+        {
+            return back();
+        }
+
         return view('pages.gradients.catalog.show')->with('gradient', $gradient);
     }
 
     //GENERATOR GRADIENTS
     function generatorGradients(Gradients $gradient) {
-        return view('pages.gradients.generator');
+        $validSub = Auth::check() ? Auth::user()->validSubscription() : false;
+        
+        return view('pages.gradients.generator')
+                ->with('validSub', $validSub);
     }
     function generatorMGradients(Gradients $gradient) {
         return view('pages.gradients.mgenerator');
@@ -31,9 +39,9 @@ class GradientController extends Controller
         $gradients;
 
         if(empty($searchQuery)) {
-            $gradients = Gradients::orderBy('id', 'DESC')->paginate(12);
+            $gradients = Gradients::where('is_public', true)->orderBy('id', 'DESC')->paginate(12);
         } else {
-            $gradients = DB::table('gradients')
+            $gradients = Gradients::where('is_public', true)
                     ->where('name', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_1', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_2', 'like', '%' . $searchQuery . '%')
@@ -41,6 +49,7 @@ class GradientController extends Controller
                     ->orWhere('color_filter_2', 'like', '%' . $searchQuery . '%')
                     ->orderBy('id', 'DESC')->paginate(12);
         }
+
         return view ('pages.gradients.catalog.catalog')
                     ->with('gradients', $gradients)
                     ->with('searchQuery', $searchQuery)
@@ -53,10 +62,10 @@ class GradientController extends Controller
         $gradients;
 
         if(empty($searchQuery)) {
-            $gradients = Gradients::orderBy('id', 'DESC')->paginate(4);
+            $gradients = Gradients::where('is_public', true)->orderBy('id', 'DESC')->paginate(4);
             return view ('pages.index')->with('gradients',  $gradients)->with('searchQuery', $searchQuery);
         } else {
-            $gradients = DB::table('gradients')
+            $gradients = Gradients::where('is_public', true)
                     ->where('name', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_1', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_2', 'like', '%' . $searchQuery . '%')
@@ -110,9 +119,8 @@ class GradientController extends Controller
     //POSTS PANEL
     public function userGradients()
     {
-        $user_id = auth()->user('user_id');
         $user = Auth::user();
-        return view('pages.gradients.admin.panel')->with('gradients', $user->gradients);
+        return view('pages.gradients.admin.panel')->with('gradients', $user->publicGradients);
     }
 
     //UPDATE GET 
