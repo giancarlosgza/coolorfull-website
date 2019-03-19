@@ -23,7 +23,7 @@
             @if($validSub)
             <div class="row">
                 <div class="col text-right">
-                    <button id="save-gradient-btn" class="btn btn-primary">
+                    <button id="save-gradient-btn" class="btn btn-primary shadow-medium">
                         Save gradient (PRO)
                     </button>
                 </div>

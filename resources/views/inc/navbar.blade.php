@@ -56,6 +56,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownAc">
                         <a class="dropdown-item bold" href="/home">✌️ Account</a>
                         <div class="dropdown-divider"></div>
+                        <a class="dropdown-item bold" href="/saved/gradients">🔖 My Gradients</a>
                         <a class="dropdown-item bold" href="/favorites/palettes">❤️ Liked Palettes</a>
                         <a class="dropdown-item bold" href="/favorites/gradients">❤️ Liked Gradients</a>
                         <div class="dropdown-divider"></div>
@@ -80,6 +81,7 @@
                         <a class="dropdown-item bold" href="{{ route('payingForm') }}">⚠️ Renew Subscription</a>
                         @endif
                         <div class="dropdown-divider"></div>
+                        <a class="dropdown-item bold" href="/saved/gradients">🔖 My Gradients</a>
                         <a class="dropdown-item bold" href="/favorites/palettes">❤️ Liked Palettes</a>
                         <a class="dropdown-item bold" href="/favorites/gradients">❤️ Liked Gradients</a>
                         <div class="dropdown-divider"></div>

@@ -4,7 +4,7 @@
 <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h4 class="bold">💳 Pricing - PRO</h4>
+                <h4 class="bold text-body">💳 Pricing - PRO</h4><br>
             </div>
         </div>
         <div class="row">

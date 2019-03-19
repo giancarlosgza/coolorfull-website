@@ -23,7 +23,7 @@
                 <h4 class="bold text-body">Last Gradients</h4>
             </div>
             <div class="col-6 text-right">
-                <a href="/gradients/catalog" class="color-blue bold">
+                <a href="/gradients/catalog" class="color-darkblue bold">
                     🔥 View all
                 </a>
             </div>

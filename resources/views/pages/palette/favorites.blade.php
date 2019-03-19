@@ -10,7 +10,7 @@
         <div class="col-sm-12">
             <div class="card card-form">
                 <div class="card-body">
-                    <h6>No favorites palettes 😔</h6>
+                    <h6 class="bold">No favorites palettes 😔</h6>
                     <a href="/palettes/catalog">You can save from here</a>
                 </div>
             </div>

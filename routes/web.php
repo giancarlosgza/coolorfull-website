@@ -55,4 +55,6 @@ Route::middleware(['auth', 'checkpaid'])->group(function () {
 
     Route::get('favorites/palettes', 'FavoritePaletteController@index');
     Route::post('favorites/palettes', 'FavoritePaletteController@store')->name('storeFavPalette');
+
+    Route::get('saved/gradients', 'ProGradientController@index');
 });

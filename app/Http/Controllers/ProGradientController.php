@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Validator;
 use App\Gradients;
 use Auth;
+use Illuminate\Support\Facades\DB;
+
 
 class ProGradientController extends Controller
 {
@@ -40,5 +42,12 @@ class ProGradientController extends Controller
             'success' => true,
             'message' => 'everything correct',
         ]);
+    }
+
+    //INDEX GRADIENTS
+    public function index() {
+        //$gradients;
+        //$gradients = Gradients::orderBy('id', 'DESC')->paginate(4);
+        return view('pages.gradients.save')->with('gradients', Auth::user()->gradients);
     }
 }

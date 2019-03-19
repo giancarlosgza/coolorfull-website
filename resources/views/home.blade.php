@@ -47,9 +47,9 @@
                                     <th scope="row">Paid Until</th>
                                     <td>
                                         @if(Auth::user()->paid_until == NULL)
-                                        Lifetime 🤟
+                                        Lifetime 🔥
                                         @else
-                                        {{date('F, m, Y', strtotime(Auth::user()->paid_until))}}
+                                        {{date('F, m, Y', strtotime(Auth::user()->paid_until))}} 👌
                                         @endif
                                     </td>
                                 </tr>
@@ -65,6 +65,16 @@
                     <h6 class="bold"><i class="fas fa-share-alt-square"></i> Share Colorffy</h6>
                     <hr>
                     <div class="sharethis-inline-share-buttons"></div>
+                </div>
+            </div>
+            <div class="card card-form">
+                <div class="card-body">
+                    <h6 class="bold"><i class="fas fa-fill-drip"></i> Color Shortcuts</h6>
+                    <hr>
+                    <a href="/saved/gradients" class="btn btn-primary shadow-medium btn-sm">My Gradients</a>
+                    <a href="/favorites/gradients" class="btn btn-primary shadow-medium btn-sm">Liked Gradients</a>
+                    <br><br>
+                    <a href="/favorites/palettes" class="btn btn-primary shadow-medium btn-sm">Liked Palettes</a>
                 </div>
             </div>
         </div>

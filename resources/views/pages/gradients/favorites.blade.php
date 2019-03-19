@@ -10,7 +10,7 @@
         <div class="col-sm-12">
             <div class="card card-form">
                 <div class="card-body">
-                    <h6>No favorites gradients 😔</h6>
+                    <h6 class="bold">No favorites gradients 😔</h6>
                     <a href="/gradients/catalog">You can save from here</a>
                 </div>
             </div>
