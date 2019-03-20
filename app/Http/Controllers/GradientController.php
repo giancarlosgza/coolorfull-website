@@ -30,13 +30,15 @@ class GradientController extends Controller
                 ->with('validSub', $validSub);
     }
     function generatorMGradients(Gradients $gradient) {
-        return view('pages.gradients.mgenerator');
+        $validSub = Auth::check() ? Auth::user()->validSubscription() : false;
+
+        return view('pages.gradients.mgenerator')
+                ->with('validSub', $validSub);
     }
 
     //SHOW GRADIENTS IN CATALOG
     function catalogGradients(Request $request) {
         $searchQuery = $request->input('q');
-        $gradients;
 
         if(empty($searchQuery)) {
             $gradients = Gradients::where('is_public', true)->orderBy('id', 'DESC')->paginate(12);

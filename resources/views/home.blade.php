@@ -82,5 +82,10 @@
 </div>
 @endsection
 @section('scripts')
-    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons' async='async'></script>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons'" async="async"></script>
+    @if($alert)
+    <script>
+        swal("{{ _('Monthly subscription') }}", "{{ _('Your suscription has come to an end. To renew it click on your name, then on the Renew Subscription link.')}}", "warning");
+    </script>
+    @endif
 @endsection

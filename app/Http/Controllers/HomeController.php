@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = Auth::user();
+        $alert = !$user->validSubscription() && !$user->renew_alert;
+        if($alert)
+        {
+            $user->renew_alert = true;
+            $user->save();
+        }
+        return view('home')->with('alert', $alert);
     }
 }

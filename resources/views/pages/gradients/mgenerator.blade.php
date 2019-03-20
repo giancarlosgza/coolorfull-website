@@ -24,6 +24,24 @@
                     <input type="text" class="form-control" id="color_3" value="#000000">
                 </div>
             </div>
+            @if($validSub)
+                <div class="row">
+                    <div class="col text-right">
+                        <button id="save-gradient-btn" class="btn btn-primary">
+                            Save gradient (PRO)
+                        </button>
+                    </div>
+                </div>
+            @else
+                <div class="row">
+                    <div class="col text-right">
+                        <button id="save-gradient-btn" class="btn btn-primary" disabled>
+                            <i class="fas fa-lock"></i>
+                            Save gradient (PRO)
+                        </button>
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
     <div class="row">
@@ -103,5 +121,45 @@
     <script type="text/javascript">
         function downloadimage(){var e=document.getElementById("gradient_preview");html2canvas(e,{allowTaint:!0}).then(function(e){var n=document.createElement("a");document.body.appendChild(n),n.download="newGradient.jpg",n.href=e.toDataURL(),n.target="_blank",n.click()})}$("#color_1").minicolors({animationEasing:"swing"}),$("#color_2").minicolors({animationEasing:"swing"}),$("#color_3").minicolors({animationEasing:"swing"}),$(window).on("load",function(){function m(e,n,t){e/=255,n/=255,t/=255;var l,r,o=Math.max(e,n,t),a=Math.min(e,n,t),i=(o+a)/2;if(o==a)l=r=0;else{var d=o-a;switch(r=.5<i?d/(2-o-a):d/(o+a),o){case e:l=(n-t)/d+(n<t?6:0);break;case n:l=(t-e)/d+2;break;case t:l=(e-n)/d+4}l/=6}return[360*l+.5|0,(100*r+.5|0)+"%",(100*i+.5|0)+"%"]}function g(e,n,t){var l=0,r=0,o=0;e=parseInt((""+e).replace(/\s/g,""),10),n=parseInt((""+n).replace(/\s/g,""),10),t=parseInt((""+t).replace(/\s/g,""),10);if(0==e&&0==n&&0==t)return[0,0,0,1];l=1-e/255,r=1-n/255,o=1-t/255;var a=Math.min(l,Math.min(r,o));return[(100*(l=(l-a)/(1-a))+.5|0)+"%",(100*(r=(r-a)/(1-a))+.5|0)+"%",(100*(o=(o-a)/(1-a))+.5|0)+"%",(100*a+.5|0)+"%"]}$("#color_1").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=document.getElementById("color_3").value,l=[],r=$(c),o=!1,a=r.val(),i=(a+"").replace(/#/,"");1===a.length&&"#"!==a&&r.val("#"+a),3==i.length&&(i+=i);for(var d=0;d<6;d+=2)l.push(parseInt(i.substr(d,2),16)),o=o||"NaN"===l[l.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+", "+t+")",document.getElementById("hexadecimal").innerHTML="background: linear-gradient(to right, "+e+","+n+","+t+");",document.getElementById("css_code").innerHTML=e+", "+n+", "+t,document.getElementById("rgb").innerHTML="rgb("+l+")",document.getElementById("hsl").innerHTML="hsl("+m.apply(null,l).join(",")+")",document.getElementById("cmyk").innerHTML="cmyk("+g.apply(null,l)+")"},13)}),$("#color_2").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=document.getElementById("color_3").value,l=[],r=$(c),o=!1,a=r.val(),i=(a+"").replace(/#/,"");1===a.length&&"#"!==a&&r.val("#"+a),3==i.length&&(i+=i);for(var d=0;d<6;d+=2)l.push(parseInt(i.substr(d,2),16)),o=o||"NaN"===l[l.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+", "+t+")",document.getElementById("hexadecimal").innerHTML="background: linear-gradient(to right, "+e+","+n+","+t+");",document.getElementById("css_code").innerHTML=e+", "+n+", "+t,document.getElementById("rgb2").innerHTML="rgb("+l+")",document.getElementById("hsl2").innerHTML="hsl("+m.apply(null,l).join(",")+")",document.getElementById("cmyk2").innerHTML="cmyk("+g.apply(null,l)+")"},13)}),$("#color_3").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=document.getElementById("color_3").value,l=[],r=$(c),o=!1,a=r.val(),i=(a+"").replace(/#/,"");1===a.length&&"#"!==a&&r.val("#"+a),3==i.length&&(i+=i);for(var d=0;d<6;d+=2)l.push(parseInt(i.substr(d,2),16)),o=o||"NaN"===l[l.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+", "+t+")",document.getElementById("hexadecimal").innerHTML="background: linear-gradient(to right, "+e+","+n+","+t+");",document.getElementById("css_code").innerHTML=e+", "+n+", "+t,document.getElementById("rgb3").innerHTML="rgb("+l+")",document.getElementById("hsl3").innerHTML="hsl("+m.apply(null,l).join(",")+")",document.getElementById("cmyk3").innerHTML="cmyk("+g.apply(null,l)+")"},13)})});
     </script>
-    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons' async='async'></script>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons'" async="async"></script>
+    @if($validSub)
+    <script>
+    {{-- Only paid users will see this --}}
+
+    $(document).ready(() => {
+        const SAVE_GRADIENT_BTN = $('#save-gradient-btn')
+        SAVE_GRADIENT_BTN.click(event => {
+            swal({
+                title: 'Saving a gradient',
+                text: 'Type a name for your gradient',
+                button: {
+                    text: 'Save',
+                    closeModal: false,
+                },
+                content: {
+                    element: 'input',
+                    attributes: {
+                        placeholder: 'i.e. Sunrise'
+                    }
+                }
+            }).then(name => {
+                $.ajax({
+                    method: 'POST',
+                    url: '{{ route('saveGradient') }}',
+                    data: {
+                        name: name,
+                        color1: $('#color_1').val(),
+                        color2: $('#color_2').val(),
+                        color3: $('#color_3').val(),
+                    }
+                }).done((response, status) => {
+                    swal.stopLoading();
+                    swal.close();
+                    swal("Gradient saved!", "You can now navigate to My Gradients and see it there", "success");
+                })
+            })
+        })
+    })
+    </script>
+    @endif
 @endsection

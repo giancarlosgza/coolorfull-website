@@ -20,6 +20,7 @@ class ProGradientController extends Controller
             'name' => 'max:190',
             'color1' => ['required', 'regex:/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/'],
             'color2' => ['required', 'regex:/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/'],
+            'color3' => ['regex:/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/'],
         ]);
 
         if ($validator->fails()) {
@@ -35,6 +36,8 @@ class ProGradientController extends Controller
         $gradient->name = $request->name;
         $gradient->color_1 = $request->color1;
         $gradient->color_2 = $request->color2;
+        $gradient->color_3 = $request->color3;
+
         $user->gradients()->save($gradient);
         $gradient->save();
 
