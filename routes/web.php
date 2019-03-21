@@ -47,6 +47,7 @@ Route::get('whatsnew', function () {return view('more.whatsnew');});
 //------------------------------------------------------------------------------------------------
 Route::post('register', 'PaymentController@create')->name('register');
 Route::get('renew', 'PaymentController@index')->name('payingForm')->middleware('auth');
+Route::post('renew', 'PaymentController@renew')->name('renewSub')->middleware('auth');
 
 Route::middleware(['auth', 'checkpaid'])->group(function () {
     Route::get('favorites/gradients', 'FavoriteGradientController@index');

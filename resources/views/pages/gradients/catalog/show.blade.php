@@ -76,7 +76,7 @@
                                     <td><?php $hex="$gradient->color_2"; list($r, $g, $b)=sscanf($hex, "#%02x%02x%02x"); echo "rgb($r, $g, $b)"; ?></td>
                                     <td id="hsl2"></td>
                                     <td id="cmyk2"></td>
-                                </tr>  
+                                </tr>
                             </tbody>
                         </table>
                     </div>

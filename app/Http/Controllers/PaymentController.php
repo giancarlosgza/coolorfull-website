@@ -15,8 +15,14 @@ use App\Http\Helpers\PayPal\PayPalClient;
 class PaymentController extends Controller
 {
     public function index() {
-        return 'no has pagado we xd';
+        if(Auth::user()->validSubscription())
+        {
+            return redirect(route("home"));
+        }
+
+        return view("more.renewal");
     }
+
     public function create(Request $request) {
 
         // This is supposed to be passed always because user should have JS client authentication first
@@ -76,10 +82,7 @@ class PaymentController extends Controller
                     $paidUntil = Carbon::now()->addMonth();
                     break;
                 case env('LIFETIME_PRICE'):
-                    $paidUntil = null;
-                    break;
                 default:
-                    break;
             }
 
             $user = User::create([
@@ -87,10 +90,85 @@ class PaymentController extends Controller
                 'username' => $request->input('username'),
                 'email' => $request->input('email'),
                 'password' => Hash::make($request->input('password')),
-                'paid_until' => $paidUntil
+                'paypal_order_id' => $request->input('orderId'),
+                'paid_until' => $paidUntil,
             ]);
 
             Auth::loginUsingId($user->id, true);
+
+            return response()->json([
+                'success' => true,
+                'message' => $response->result->status,
+            ], 200);
+        }
+
+        return response()->json([
+            'success' => false,
+            'status' => $response->result->status,
+        ], 200);
+
+    }
+
+    public function renew(Request $request) {
+
+        // This is supposed to be passed always because user should have JS client authentication first
+        $validator = Validator::make($request->all(), [
+            'orderId' => 'required',
+        ]);
+
+        $client = PayPalClient::client();
+        $response = $client->execute(new OrdersGetRequest($request->input('orderId')));
+
+        if ($validator->fails()) {
+            $msg = "User failed to pass form validation but did probably"
+                . " pay the amonut."
+                . "\nSTATUS CODE: " . $response->statusCode
+                . "\nRESULT STATUS: " . $response->result->status
+                . "\nOrder ID: " . $response->result->id
+                . "\nIntent: " . $response->result->intent
+                . "\nUser ID: " . Auth::id()
+                . "\nPayment for: " . $response->result->purchase_units[0]->amount->value;
+
+            Log::alert('[RENEW-FORM-VALIDATION-FAILED]');
+            Log::alert('[RENEW-FORM-VALIDATION-FAILED]');
+            Log::alert('[RENEW-FORM-VALIDATION-FAILED] ' . $msg);
+            Log::alert('[RENEW-FORM-VALIDATION-FAILED]');
+            Log::alert($validator->errors());
+            Log::alert('[RENEW-FORM-VALIDATION-FAILED]');
+
+            try {
+                mail("giancarlosgza@gmail.com","Register form validation failed", $msg);
+            } catch (\Exception $e) {
+                Log::alert('Email was not send ' . $e->getMessage() );
+            }
+
+
+            return response()->json([
+                'success' => false,
+                'status' => 'INCORRECT_FORM',
+                'data' => $validator->errors()
+            ], 200);
+        }
+
+
+        if ($response->statusCode === 200 && $response->result->status == "COMPLETED")
+        {
+            $paidUntil = null;
+
+            switch($response->result->purchase_units[0]->amount->value)
+            {
+                case env('MONTHLY_PRICE'):
+                    $paidUntil = Carbon::now()->addMonth();
+                    break;
+                case env('LIFETIME_PRICE'):
+                default:
+            }
+
+            $user = Auth::user();
+            $user->paid_until = $paidUntil;
+            $user->renew_alert = false;
+            $user->paypal_order_id = $request->input('orderId');
+            $user->save();
 
             return response()->json([
                 'success' => true,
