@@ -43,8 +43,8 @@
     </div>
 @endsection
 @section('scripts')
+    <script src="https://www.paypal.com/sdk/js?client-id={{env('PAYPAL_CLIENT_ID')}}"></script>
     <script>
-
         paypal.Buttons({
             createOrder: (data, actions) => {
                 return actions.order.create({

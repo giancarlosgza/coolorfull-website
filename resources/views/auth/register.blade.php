@@ -1,8 +1,5 @@
 @extends('layouts.app')
 @section('title', 'Register')
-@section('styles')
-<link type="text/css" rel="stylesheet" href="{{ asset('assets/css/register.css') }}">
-@endsection
 @section('content')
 <div class="container">
     <div class="row">
@@ -26,7 +23,7 @@
                             <div class="form-group">
                                 <label for="username" class="bold"><i class="fas fa-user-tag"></i> {{ __('Username') }}</label>
                                 <input id="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}"
-                                    name="username" value="{{ old('username') }}" placeholder="Username" required>
+                                    name="username" value="{{ old('username') }}" placeholder="Username" required maxlength="20">
                                 <span id="username-error" class="invalid-feedback @if(!$errors->has('username')) d-none @endif" role="alert">
                                     <strong>{{ $errors->first('username') }}</strong>
                                 </span>
@@ -98,6 +95,8 @@
 </div>
 @endsection
 @section('scripts')
+    <script src="https://www.paypal.com/sdk/js?client-id={{env('PAYPAL_CLIENT_ID')}}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.mask.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/validation.js') }}"></script>
     <script>
         paypal.Buttons({

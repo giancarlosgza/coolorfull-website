@@ -37,18 +37,20 @@ class HomeController extends Controller
             $user->renew_alert = true;
             $user->save();
         } else {
-            // In our database is valid but this checks that user didnt refund
-            $client = PayPalClient::client();
-            $response = $client->execute(new OrdersGetRequest($user->paypal_order_id));
+            if($user->paypal_order_id != null) {
+                // In our database is valid but this checks that user didnt refund
+                $client = PayPalClient::client();
+                $response = $client->execute(new OrdersGetRequest($user->paypal_order_id));
 
 
-            if(isset($response->result->purchase_units[0]->payments->refunds))
-            {
-                $alertMessage = _('There has been an inconvinient with your payment. We have suspended your subscription.');
-                $sendAlert = true;
-                $user->renew_alert = true;
-                $user->paid_until = Carbon::now()->subMonth();
-                $user->save();
+                if(isset($response->result->purchase_units[0]->payments->refunds))
+                {
+                    $alertMessage = _('There has been an inconvinient with your payment. We have suspended your subscription.');
+                    $sendAlert = true;
+                    $user->renew_alert = true;
+                    $user->paid_until = Carbon::now()->subMonth();
+                    $user->save();
+                }
             }
         }
         return view('home')->with('alert', $sendAlert)->with('alertMessage', $alertMessage);

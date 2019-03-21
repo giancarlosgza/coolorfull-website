@@ -86,6 +86,7 @@ class GradientController extends Controller
             'nombre' => 'required',
             'color_1' => 'required',
             'color_2' => 'required',
+            'color_3' => 'nullable',
             'imagen' => 'image|nullable|max:1999',
             'color_filter' => 'required',
             'color_filter_2' => 'required',
@@ -107,6 +108,7 @@ class GradientController extends Controller
         $gradient->name  = $request->input('nombre');
         $gradient->color_1 = $request->input('color_1');
         $gradient->color_2 = $request->input('color_2');
+        $gradient->color_3 = $request->input('color_3');
         $gradient->image_name = $fileNameToStore;
         $gradient->color_filter = $request->input('color_filter');
         $gradient->color_filter_2 = $request->input('color_filter_2');
@@ -140,6 +142,7 @@ class GradientController extends Controller
             'nombre' => 'required',
             'color_1' => 'required',
             'color_2' => 'required',
+            'color_3' => 'nullable',
             'imagen' => 'image|nullable|max:1999',
             'color_filter' => 'required',
             'color_filter_2' => 'required',
@@ -164,6 +167,7 @@ class GradientController extends Controller
         $gradient->name  = $request->input('nombre');
         $gradient->color_1 = $request->input('color_1');
         $gradient->color_2 = $request->input('color_2');
+        $gradient->color_3 = $request->input('color_3');
         $gradient->color_filter = $request->input('color_filter');
         $gradient->color_filter_2 = $request->input('color_filter_2');
         

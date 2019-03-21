@@ -82,6 +82,7 @@
 </div>
 @endsection
 @section('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" async='async'></script>
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons'" async="async"></script>
     @if($alert)
     <script>

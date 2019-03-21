@@ -44,16 +44,13 @@
     <!-- CSS -->
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:700|Nunito:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600|Nunito:400,700" rel="stylesheet">
     <!--STYLES-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}">
     @yield('styles')
-
-
     <!-- MARKUP JSON-LD Google. -->
     <script async type="application/ld+json">
         {"@context":"http://schema.org","@type":"Organization","name":"Colorffy","url":"https://colorffy.com","logo":"https://colorffy.com/assets/new-logo.png"}
@@ -66,7 +63,6 @@
     <style>
         @font-face{font-family:'Poppins';font-style:normal;font-weight:700;src:local('Poppins Bold'),local('Poppins-Bold'),url(https://fonts.gstatic.com/s/poppins/v6/pxiByp8kv8JHgFVrLCz7Z11lFc-K.woff2) format('woff2');font-display:swap}@font-face{font-family:'Nunito';font-style:normal;font-weight:400;font-display:swap;src:local('Nunito Regular'),local('Nunito-Regular'),url(https://fonts.gstatic.com/s/nunito/v9/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2) format('woff2')}
     </style>
-    <script src="https://www.paypal.com/sdk/js?client-id={{env('PAYPAL_CLIENT_ID')}}"></script>
 </head>
 <body>
     @include('inc.navbar')
@@ -149,14 +145,6 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/clipboard.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/jquery.mask.min.js') }}"></script>
-    <script type="text/javascript">
-        new ClipboardJS(".btn"),$(document).ready(function(){$("[data-toggle=\"tooltip\"]").tooltip()});
-    </script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @yield('scripts')
     <!--END SCRIPTS-->
 </body>

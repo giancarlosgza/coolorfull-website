@@ -37,7 +37,12 @@
                         <h6 class="bold text-center uppercase">{{$gradient->name}}</h6>
                         <a href="/gradients/{{$gradient->id}}" class="gradient-link">
                             <div class="card text-center">
-                                <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">     
+                                <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" 
+                                     @if($gradient->color_3)
+                                    style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}}, {{$gradient->color_3}});">
+                                    @else
+                                    style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+                                    @endif   
                                 </div>
                             </div>
                         </a>
