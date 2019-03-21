@@ -42,7 +42,7 @@ class HomeController extends Controller
             $response = $client->execute(new OrdersGetRequest($user->paypal_order_id));
 
 
-            if($response->result->purchase_units[0]->payments->refunds)
+            if(isset($response->result->purchase_units[0]->payments->refunds))
             {
                 $alertMessage = _('There has been an inconvinient with your payment. We have suspended your subscription.');
                 $sendAlert = true;

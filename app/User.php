@@ -62,6 +62,6 @@ class User extends Authenticatable
 
     public function favoritePalettes() 
     {
-        return $this->belongsToMany('App\Palette', 'palette_user', 'user_id', 'palette_id');
+        return $this->belongsToMany('App\Palette');
     }
 }

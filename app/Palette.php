@@ -16,6 +16,6 @@ class Palette extends Model
     } 
 
     public function usersWhoFav() {
-        return $this->belongsToMany('App\User', 'palette_user', 'palette_id', 'user_id');
+        return $this->belongsToMany('App\User');
     }
 }

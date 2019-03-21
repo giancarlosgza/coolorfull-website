@@ -49,7 +49,7 @@
                                         @if(Auth::user()->paid_until == NULL)
                                         Lifetime 🔥
                                         @else
-                                        {{date('F, m, Y', strtotime(Auth::user()->paid_until))}} 👌
+                                        {{date('F, d, Y', strtotime(Auth::user()->paid_until))}} 👌
                                         @endif
                                     </td>
                                 </tr>
