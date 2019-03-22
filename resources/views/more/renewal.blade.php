@@ -44,6 +44,7 @@
 @endsection
 @section('scripts')
     <script src="https://www.paypal.com/sdk/js?client-id={{env('PAYPAL_CLIENT_ID')}}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         paypal.Buttons({
             createOrder: (data, actions) => {

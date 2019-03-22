@@ -33,7 +33,7 @@
                     <a class="nav-link nav-color" href="/login">Login</a>
                 </li>
                 <li class="nav-item {{ (request()->is('register')) ? 'active' : '' }}">
-                    <a class="nav-link nav-color" href="/register">Join</a>
+                    <a class="nav-link nav-color" href="/register">GO PRO</a>
                 </li>
                 @else
                 @if(auth()->user()->is_admin == 1)

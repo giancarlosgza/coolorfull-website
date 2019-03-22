@@ -46,14 +46,17 @@
             </div>
         </div>
         <div class="col-12 col-sm-12">
+            @if($validSub)
             <a class="btn btn-gradient" onclick="downloadimage()">
                 <i class="fas fa-image"></i>
                 Get IMG
-            </a><hr>    
+            </a>
+            @endif
+            <hr>    
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-sm-6">
+        <div class="col-12 col-sm-12">
             <div class="card shadow-medium">
                 <div class="card-body">
                     <h5 class="bold">CSS</h5>
@@ -69,6 +72,7 @@
                     <h5 class="bold">HEX</h5>
                     <code>
                         <h6 class="bold" id="css_code"></h6>
+                        <br>
                     </code>
                 </div>
             </div>
@@ -112,6 +116,7 @@
 </div>
 @endsection
 @section('scripts')
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery.minicolors.js') }}"></script>
     <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script type="text/javascript">

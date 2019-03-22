@@ -16,8 +16,6 @@ body {
 
 .nav-color {
     color: #6c757d !important;
-    text-transform: uppercase;
-    font-size: small;
 }
 
 .nav-color:hover {
