@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold">🎯 2 Colors-Gradient Generator</h4>
+            <h4 class="bold text-body">🎯 2 Colors-Gradient Generator</h4>
         </div>
     </div>
     <div class="card shadow-medium">
@@ -20,6 +20,24 @@
                     <input type="text" class="form-control" id="color_2" value="#000000">
                 </div>
             </div>
+            @if($validSub)
+            <div class="row">
+                <div class="col text-right">
+                    <button id="save-gradient-btn" class="btn btn-primary shadow-medium">
+                        Save gradient (PRO)
+                    </button>
+                </div>
+            </div>
+            @else 
+            <div class="row">
+                <div class="col text-right">
+                    <button id="save-gradient-btn" class="btn btn-primary shadow-medium" disabled>
+                        <i class="fas fa-lock"></i>
+                        Save gradient (PRO)
+                    </button>
+                </div>
+            </div>
+            @endif
         </div>
     </div>
     <div class="row">
@@ -28,14 +46,17 @@
             </div>
         </div>
         <div class="col-12 col-sm-12">
+            @if($validSub)
             <a class="btn btn-gradient" onclick="downloadimage()">
                 <i class="fas fa-image"></i>
                 Get IMG
-            </a><hr>    
+            </a>
+            @endif
+            <hr>    
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-sm-6">
+        <div class="col-12 col-sm-12">
             <div class="card shadow-medium">
                 <div class="card-body">
                     <h5 class="bold">CSS</h5>
@@ -51,6 +72,7 @@
                     <h5 class="bold">HEX</h5>
                     <code>
                         <h6 class="bold" id="css_code"></h6>
+                        <br>
                     </code>
                 </div>
             </div>
@@ -90,20 +112,54 @@
         </div>
     </div>
     <hr>
-    <a class="twitter-share-button"
-        href="https://twitter.com/intent/tweet?text=Hey!%20Check%20this%20amazing%202%20colors%20gradient%20generator!%20by%20@colorffy"
-        data-size="large">
-        Tweet
-    </a>
+    <div class="sharethis-inline-share-buttons"></div>
 </div>
 @endsection
 @section('scripts')
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery.minicolors.js') }}"></script>
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script type="text/javascript">
         function downloadimage(){var e=document.getElementById("gradient_preview");html2canvas(e,{allowTaint:!0}).then(function(e){var n=document.createElement("a");document.body.appendChild(n),n.download="newGradient.jpg",n.href=e.toDataURL(),n.target="_blank",n.click()})}$("#color_1").minicolors({animationEasing:"swing"}),$("#color_2").minicolors({animationEasing:"swing"}),$(window).on("load",function(){function d(e,n,t){e/=255,n/=255,t/=255;var r,a,l=Math.max(e,n,t),o=Math.min(e,n,t),i=(l+o)/2;if(l==o)r=a=0;else{var c=l-o;switch(a=.5<i?c/(2-l-o):c/(l+o),l){case e:r=(n-t)/c+(n<t?6:0);break;case n:r=(t-e)/c+2;break;case t:r=(e-n)/c+4}r/=6}return[360*r+.5|0,(100*a+.5|0)+"%",(100*i+.5|0)+"%"]}function m(e,n,t){var r=0,a=0,l=0;e=parseInt((""+e).replace(/\s/g,""),10),n=parseInt((""+n).replace(/\s/g,""),10),t=parseInt((""+t).replace(/\s/g,""),10);if(0==e&&0==n&&0==t)return[0,0,0,1];r=1-e/255,a=1-n/255,l=1-t/255;var o=Math.min(r,Math.min(a,l));return[(100*(r=(r-o)/(1-o))+.5|0)+"%",(100*(a=(a-o)/(1-o))+.5|0)+"%",(100*(l=(l-o)/(1-o))+.5|0)+"%",(100*o+.5|0)+"%"]}$("#color_1").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=[],r=$(c),a=!1,l=r.val(),o=(l+"").replace(/#/,"");1===l.length&&"#"!==l&&r.val("#"+l),3==o.length&&(o+=o);for(var i=0;i<6;i+=2)t.push(parseInt(o.substr(i,2),16)),a=a||"NaN"===t[t.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+")",document.getElementById("hexadecimal").innerHTML="background: linear-gradient(to right, "+e+","+n+");",document.getElementById("css_code").innerHTML=e+", "+n,document.getElementById("rgb").innerHTML="rgb("+t+")",document.getElementById("hsl").innerHTML="hsl("+d.apply(null,t).join(",")+")",document.getElementById("cmyk").innerHTML="cmyk("+m.apply(null,t)+")"},13)}),$("#color_2").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=[],r=$(c),a=!1,l=r.val(),o=(l+"").replace(/#/,"");1===l.length&&"#"!==l&&r.val("#"+l),3==color_1.length&&(o+=o);for(var i=0;i<6;i+=2)t.push(parseInt(o.substr(i,2),16)),a=a||"NaN"===t[t.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+")",document.getElementById("hexadecimal").innerHTML="background: linear-gradient(to right, "+e+","+n+");",document.getElementById("css_code").innerHTML=e+", "+n,document.getElementById("rgb2").innerHTML="rgb("+t+")",document.getElementById("hsl2").innerHTML="hsl("+d.apply(null,t).join(",")+")",document.getElementById("cmyk2").innerHTML="cmyk("+m.apply(null,t)+")"},13)})});
     </script>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons'" async="async"></script>
+    @if($validSub)
     <script>
-        //twitter share btn
-        window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)||((n=t.createElement(e)).id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)}),w}(document,"script","twitter-wjs");
+    {{-- Only paid users will see this --}}
+
+    $(document).ready(() => {
+        const SAVE_GRADIENT_BTN = $('#save-gradient-btn')
+        SAVE_GRADIENT_BTN.click(event => {
+            swal({
+                title: 'Saving a gradient',
+                text: 'Type a name for your gradient',
+                button: {
+                    text: 'Save',
+                    closeModal: false,
+                },
+                content: {
+                    element: 'input',
+                    attributes: {
+                        placeholder: 'i.e. Sunrise'
+                    }
+                }
+            }).then(name => {
+                $.ajax({
+                    method: 'POST',
+                    url: '{{ route('saveGradient') }}',
+                    data: {
+                        name: name,
+                        color1: $('#color_1').val(),
+                        color2: $('#color_2').val(),
+                    }
+                }).done((response, status) => {
+                    swal.stopLoading();
+                    swal.close();
+                    swal("Gradient saved!", "You can now navigate to My Gradients and see it there", "success");
+                })
+            })
+        })
+    })
     </script>
+    @endif
 @endsection

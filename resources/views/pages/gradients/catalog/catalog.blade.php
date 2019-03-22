@@ -1,11 +1,10 @@
 @extends('layouts.app')
 @section('title', 'Gradients')
 @section('content')
-
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold">🎆 Gradients</h4>
+            <h4 class="bold text-body">🎆 Gradients</h4>
         </div>
         <div class="col-sm-12">
             <form action="" method="get">
@@ -28,18 +27,29 @@
             <div class="card shadow-medium">
                 <div class="card-body">
                     <h6 class="bold text-center uppercase">{{$gradient->name}}</h6>
-                    <a href="/gradients/{{$gradient->id}}" class="gradient-link">
+                    <a href="/gradients/{{$gradient->id}}" title="{{$gradient->name}}">
                         <div class="card text-center">
-                            <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">     
+                            <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" 
+                                @if($gradient->color_3)
+                                style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}}, {{$gradient->color_3}});">
+                                @else
+                                style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+                                @endif   
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-4 col-sm-6 col-md-4">
                                 @if($user)
                                 <div id="fav-heart-gradient-{{$gradient->id}}" class="text-left align-self-end fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})"><i class="fas fa-heart"></i></div>
                             </div>
-                            <div class="col-6">
-                                <div id="fav-count-gradient-{{$gradient->id}}" class="text-right align-self-end color-blue bold">{{ $gradient->usersWhoFav->count() }}</div>
+                            <div class="col-8 col-sm-6 col-md-8">
+                                <div id="fav-count-gradient-{{$gradient->id}}" class="text-right align-self-end color-blue bold">
+                                    @if($gradient->usersWhoFav->count() == 1) 
+                                    {{ $gradient->usersWhoFav->count() }} like
+                                    @else
+                                    {{ $gradient->usersWhoFav->count() }} likes
+                                    @endif 
+                                </div>
                                 @else
                                 <a href="/favorites/gradients" title="Fav Gradient"><i class="fas fa-heart fav-heart"></i></a>
                                 @endif
@@ -64,14 +74,22 @@
         $.post('{{route("storeFavGradient")}}', {
             gradientId: gradientId,
         }).done(response => {
-            //alert(response.msg)
-            const FAV_COUNT_ELEM = $('#fav-count-gradient-' + gradientId)
-            const FAV_HEART_ELEM = $('#fav-heart-gradient-' + gradientId)
-            let newCount = response.code == 0 ? (parseInt(FAV_COUNT_ELEM.html()) - 1) : (parseInt(FAV_COUNT_ELEM.html()) + 1) ;
-            
-            FAV_HEART_ELEM.toggleClass('active-heart')
+            console.log(response)
+            if(response.success)
+            {
+                const FAV_COUNT_ELEM = $('#fav-count-gradient-' + gradientId)
+                const FAV_HEART_ELEM = $('#fav-heart-gradient-' + gradientId)
+                let newCount = response.code == 0 ? (parseInt(FAV_COUNT_ELEM.html()) - 1) : (parseInt(FAV_COUNT_ELEM.html()) + 1) ;
+                
+                FAV_HEART_ELEM.toggleClass('active-heart')
 
-            FAV_COUNT_ELEM.html( newCount );
+                FAV_COUNT_ELEM.html( newCount )
+            }
+            else 
+            {
+                swal("Error ocurred", response.msg, "error")
+            }
+            
         })
     }
 </script>

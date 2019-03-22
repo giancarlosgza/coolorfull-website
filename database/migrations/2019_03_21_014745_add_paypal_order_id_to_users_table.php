@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddIsAdminToUsers extends Migration
+class AddPaypalOrderIdToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddIsAdminToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->enum('is_admin', [0,1]);
+            $table->string('paypal_order_id')->after('paid_until');
         });
     }
 
@@ -26,7 +26,7 @@ class AddIsAdminToUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['is_admin']);
+            $table->dropColumn(['paypal_order_id']);
         });
     }
 }

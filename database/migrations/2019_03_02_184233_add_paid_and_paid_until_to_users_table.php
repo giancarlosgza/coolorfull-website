@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddIsAdminToUsers extends Migration
+class AddPaidAndPaidUntilToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddIsAdminToUsers extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->enum('is_admin', [0,1]);
+        Schema::table('Users', function (Blueprint $table) {
+            $table->date('paid_until')->after('remember_token')->nullable();
         });
     }
 
@@ -25,8 +25,8 @@ class AddIsAdminToUsers extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['is_admin']);
+        Schema::table('Users', function (Blueprint $table) {
+            $table->dropColumn(['paid']);
         });
     }
 }
