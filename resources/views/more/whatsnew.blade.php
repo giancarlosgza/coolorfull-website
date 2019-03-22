@@ -12,7 +12,7 @@
             <div class="card card-form">
                 <div class="card-body">
                     <h5 class="bold">
-                        <img src="/assets/img/new-logo.png" width="70px" alt="Colorffy logo">
+                        <img src="{{asset('/assets/img/logo-form.svg')}}" width="50px" alt="Colorffy logo">
                         Colorffy
                     </h5>
                     <hr>
@@ -28,6 +28,7 @@
                         <li>Preview icons with color palettes applied (PRO)</li>
                         <li>Preview UI elements with the gradients applied</li>
                         <li>Some UI elements redesign</li>
+                        <li>Random color generator</li>
                     </ul>
                     <hr>
                     <h6 class="bold"><i class="fas fa-calendar-alt"></i> March 2019</h6>

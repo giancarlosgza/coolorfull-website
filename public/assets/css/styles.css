@@ -11,7 +11,7 @@ body {
 }
 
 .navbar-light .navbar-nav .active>.nav-link {
-    color: #255dce !important
+    color: #4f5bff !important
 }
 
 .nav-color {
@@ -24,11 +24,11 @@ body {
 }
 
 .logo {
-    font-family: 'Poppins', sans-serif
+    font-family: 'Montserrat', sans-serif;
 }
 
 .logo-brand {
-    color: #258bff !important
+    color: #4f5bff !important
 }
 
 .gradient {
@@ -119,6 +119,10 @@ body {
 
 .color-blue {
     color: #258bff
+}
+
+.color-indigo {
+    color: #4f5bff;
 }
 
 .color-darkblue {

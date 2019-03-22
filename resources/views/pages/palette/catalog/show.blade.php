@@ -124,7 +124,7 @@
         </div>
     </div>
     <hr><!--ICONS WITH COLOR PALETTES-->
-    <h4 class="bold">Icons</h4>
+    <h4 class="bold">Icons Preview</h4>
         <div class="card shadow-medium">
             <div class="card-body">
                 @guest

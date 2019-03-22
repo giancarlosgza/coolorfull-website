@@ -42,6 +42,7 @@ Route::get('generator/mgradients', 'GradientController@generatorMGradients');
 Route::get('pricing', function(){return view('more.pricing');});
 Route::get('team', function () {return view('more.team');});
 Route::get('whatsnew', function () {return view('more.whatsnew');});
+Route::get('random/color', function () {return view('pages.colors.random');});
 //------------------------------------------------------------------------------------------------
 // SUBSCRIPTION ROUTES
 //------------------------------------------------------------------------------------------------

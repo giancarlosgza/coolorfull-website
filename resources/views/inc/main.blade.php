@@ -5,7 +5,7 @@
                 Color gradients and palettes!
             </h1>
             <h4 class="intro-text">
-                Preview ui elements, colors codes & gradients generators. ☝️
+                Preview ui elements, colors codes, random colors & gradients generators. ☝️
             </h4>
             <h5 class="intro-text">Gradients and Palettes <span class="badge badge-primary">250+</span></h5>
         </div>

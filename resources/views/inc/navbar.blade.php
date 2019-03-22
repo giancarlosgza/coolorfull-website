@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand logo logo-brand" href="/">Colorffy</a>
+        <a class="navbar-brand logo logo-brand" href="/">
+        <img src="{{asset('/assets/img/logo-form.svg')}}" width="50px" alt="Colorffy logo">
+            </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,8 +26,10 @@
                         Generator <span class="badge badge-primary">New</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownGG">
-                        <a class="dropdown-item bold" href="/generator/gradients">2 Colors-Gradient</a>
-                        <a class="dropdown-item bold" href="/generator/mgradients">3 Colors-Gradient</a>                       
+                        <a class="dropdown-item bold" href="/generator/gradients">2️⃣ Color Gradient</a>
+                        <a class="dropdown-item bold" href="/generator/mgradients">3️⃣ Color Gradient</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item bold" href="/random/color">🎲 Random Color</a>                       
                     </div>
                 </li>
                 @guest
@@ -33,7 +37,7 @@
                     <a class="nav-link nav-color" href="/login">Login</a>
                 </li>
                 <li class="nav-item {{ (request()->is('register')) ? 'active' : '' }}">
-                    <a class="nav-link nav-color" href="/register">GO PRO</a>
+                    <a class="nav-link nav-color logo-brand" href="/register">GO PRO</a>
                 </li>
                 @else
                 @if(auth()->user()->is_admin == 1)
