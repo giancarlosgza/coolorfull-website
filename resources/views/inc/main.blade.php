@@ -9,13 +9,16 @@
             </h4>
             <h5 class="intro-text">Gradients and Palettes <span class="badge badge-primary">250+</span></h5>
         </div>
+        <div class="col-md-6 text-center">
+            <img src="{{asset('/assets/img/logo-form.svg')}}" class="intro-text" width="300px" alt="Colorffy logo">
+        </div>
     </div><br>
     <div class="row">
         <div class="col-6 col-sm-6">
             <a href="/gradients/catalog">
                 <div class="card card-white shadow-medium">
                     <div class="card-body ">
-                        <h6 class="logo"><i class="fas fa-circle gradient"></i> GRADIENTS</h6>
+                        <h6 class="logo"><i class="fas fa-circle gradient"></i> Gradients</h6>
                     </div>
                 </div>
             </a>
@@ -24,7 +27,7 @@
             <a href="/palettes/catalog">
                 <div class="card card-white shadow-medium">
                     <div class="card-body">
-                        <h6 class="logo"><i class="fas fa-circle palette"></i> PALETTES</h6>
+                        <h6 class="logo"><i class="fas fa-circle palette"></i> Palettes</h6>
                     </div>
                 </div>
             </a>

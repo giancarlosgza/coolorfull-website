@@ -1,5 +1,4 @@
 body {
-    font-family: 'Nunito', sans-serif;
     color: #6c757d;
     background-color: #fafbfe
 }
@@ -21,10 +20,6 @@ body {
 .nav-color:hover {
     color: #000 !important;
     transition: all .3s cubic-bezier(.25, .8, .25, 1)
-}
-
-.logo {
-    font-family: 'Montserrat', sans-serif;
 }
 
 .logo-brand {
@@ -126,7 +121,7 @@ body {
 }
 
 .color-darkblue {
-    color: #1976d2
+    color: #11569C
 }
 
 .bold {
