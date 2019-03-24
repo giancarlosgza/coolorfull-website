@@ -4,8 +4,8 @@
             <h1 class="logo text-body">
                 Color gradients and palettes!
             </h1>
-            <h4 class="intro-text">
-                Preview ui elements, colors codes, random colors & gradients generators. ☝️
+            <h4 class="intro-text bold">
+                Preview ui elements, colors codes, random colors, get colors from images & gradients generators. ☝️
             </h4>
             <h5 class="intro-text">Gradients and Palettes <span class="badge badge-primary">250+</span></h5>
         </div>

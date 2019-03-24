@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold text-body">🎲 Random Color</h4><br>
+            <h4 class="bold text-body">🎲 Random Color</h4>
         </div>
     </div>
     <div class="row">
@@ -14,31 +14,31 @@
         </div>
         <div class="col-sm-12">
             <div class="card shadow-medium">
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                            <th scope="col">🎨</th>
-                            <th scope="col">👨‍💻 HEX</th>
-                            <th scope="col">💻 RGB</th>
-                            <th scope="col">💡 HSL</th>
-                            <th scope="col">🖨️ CMYK</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row"><i class="fas fa-circle" id="color1"></i></th>
-                                <td id="hex"></td>
-                                <td id="rgb"></td>
-                                <td id="hsl"></td>
-                                <td id="cmyk"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                <th scope="col">🎨</th>
+                                <th scope="col">👨‍💻 HEX</th>
+                                <th scope="col">💻 RGB</th>
+                                <th scope="col">💡 HSL</th>
+                                <th scope="col">🖨️ CMYK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-circle" id="color1"></i></th>
+                                    <td id="hex"></td>
+                                    <td id="rgb"></td>
+                                    <td id="hsl"></td>
+                                    <td id="cmyk"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
 </div>

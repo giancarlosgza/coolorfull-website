@@ -29,7 +29,8 @@
                         <a class="dropdown-item bold" href="/generator/gradients">2️⃣ Color Gradient</a>
                         <a class="dropdown-item bold" href="/generator/mgradients">3️⃣ Color Gradient</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bold" href="/random/color">🎲 Random Color</a>                       
+                        <a class="dropdown-item bold" href="/random/color">🎲 Random Color</a>
+                        <a class="dropdown-item bold" href="/image/color">🖼️ Image Colors</a>                    
                     </div>
                 </li>
                 @guest

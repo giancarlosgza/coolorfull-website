@@ -51,6 +51,11 @@
                 <i class="fas fa-image"></i>
                 Get IMG
             </a>
+            @else
+            <button class="btn btn-gradient" disabled>
+                <i class="fas fa-lock"></i>
+                Get IMG (PRO)
+            </button>
             @endif
             <hr>    
         </div>
@@ -61,55 +66,48 @@
                 <div class="card-body">
                     <h5 class="bold">CSS</h5>
                     <code>
-                        <h6 class="bold" id="hexadecimal"></h6>
+                        <h6 class="bold" id="css"></h6>
                     </code>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-6">
+        <!-- TABLE COLORS CODE -->
+        <div class="col-sm-12">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h5 class="bold">HEX</h5>
-                    <code>
-                        <h6 class="bold" id="css_code"></h6>
-                        <br>
-                    </code>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                <th scope="col">🎨</th>
+                                <th scope="col">👨‍💻 HEX</th>
+                                <th scope="col">💻 RGB</th>
+                                <th scope="col">💡 HSL</th>
+                                <th scope="col">🖨️ CMYK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-circle" id="color1"></i></th>
+                                    <td id="hex"></td>
+                                    <td id="rgb"></td>
+                                    <td id="hsl"></td>
+                                    <td id="cmyk"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-circle" id="color2"></i></th>
+                                    <td id="hex2"></td>
+                                    <td id="rgb2"></td>
+                                    <td id="hsl2"></td>
+                                    <td id="cmyk2"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-6">
-            <div class="card shadow-medium">
-                <div class="card-body">
-                    <h5 class="bold">RGB</h5>
-                    <code>
-                        <h6 class="bold" id="rgb"></h6>
-                        <h6 class="bold" id="rgb2"></h6>
-                    </code>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6">
-            <div class="card shadow-medium">
-                <div class="card-body">
-                    <h5 class="bold">HSL</h5>
-                    <code>
-                        <h6 class="bold" id="hsl"></h6>
-                        <h6 class="bold" id="hsl2"></h6>
-                    </code>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6">
-            <div class="card shadow-medium">
-                <div class="card-body">
-                    <h5 class="bold">CMYK</h5>
-                    <code>
-                        <h6 class="bold" id="cmyk"></h6>
-                        <h6 class="bold" id="cmyk2"></h6>
-                    </code>
-                </div>
-            </div>
-        </div>
+        <!--END TABLE-->
     </div>
     <hr>
     <div class="sharethis-inline-share-buttons"></div>
@@ -120,7 +118,26 @@
     <script type="text/javascript" src="{{ asset('assets/js/jquery.minicolors.js') }}"></script>
     <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script type="text/javascript">
-        function downloadimage(){var e=document.getElementById("gradient_preview");html2canvas(e,{allowTaint:!0}).then(function(e){var n=document.createElement("a");document.body.appendChild(n),n.download="newGradient.jpg",n.href=e.toDataURL(),n.target="_blank",n.click()})}$("#color_1").minicolors({animationEasing:"swing"}),$("#color_2").minicolors({animationEasing:"swing"}),$(window).on("load",function(){function d(e,n,t){e/=255,n/=255,t/=255;var r,a,l=Math.max(e,n,t),o=Math.min(e,n,t),i=(l+o)/2;if(l==o)r=a=0;else{var c=l-o;switch(a=.5<i?c/(2-l-o):c/(l+o),l){case e:r=(n-t)/c+(n<t?6:0);break;case n:r=(t-e)/c+2;break;case t:r=(e-n)/c+4}r/=6}return[360*r+.5|0,(100*a+.5|0)+"%",(100*i+.5|0)+"%"]}function m(e,n,t){var r=0,a=0,l=0;e=parseInt((""+e).replace(/\s/g,""),10),n=parseInt((""+n).replace(/\s/g,""),10),t=parseInt((""+t).replace(/\s/g,""),10);if(0==e&&0==n&&0==t)return[0,0,0,1];r=1-e/255,a=1-n/255,l=1-t/255;var o=Math.min(r,Math.min(a,l));return[(100*(r=(r-o)/(1-o))+.5|0)+"%",(100*(a=(a-o)/(1-o))+.5|0)+"%",(100*(l=(l-o)/(1-o))+.5|0)+"%",(100*o+.5|0)+"%"]}$("#color_1").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=[],r=$(c),a=!1,l=r.val(),o=(l+"").replace(/#/,"");1===l.length&&"#"!==l&&r.val("#"+l),3==o.length&&(o+=o);for(var i=0;i<6;i+=2)t.push(parseInt(o.substr(i,2),16)),a=a||"NaN"===t[t.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+")",document.getElementById("hexadecimal").innerHTML="background: linear-gradient(to right, "+e+","+n+");",document.getElementById("css_code").innerHTML=e+", "+n,document.getElementById("rgb").innerHTML="rgb("+t+")",document.getElementById("hsl").innerHTML="hsl("+d.apply(null,t).join(",")+")",document.getElementById("cmyk").innerHTML="cmyk("+m.apply(null,t)+")"},13)}),$("#color_2").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=[],r=$(c),a=!1,l=r.val(),o=(l+"").replace(/#/,"");1===l.length&&"#"!==l&&r.val("#"+l),3==color_1.length&&(o+=o);for(var i=0;i<6;i+=2)t.push(parseInt(o.substr(i,2),16)),a=a||"NaN"===t[t.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+")",document.getElementById("hexadecimal").innerHTML="background: linear-gradient(to right, "+e+","+n+");",document.getElementById("css_code").innerHTML=e+", "+n,document.getElementById("rgb2").innerHTML="rgb("+t+")",document.getElementById("hsl2").innerHTML="hsl("+d.apply(null,t).join(",")+")",document.getElementById("cmyk2").innerHTML="cmyk("+m.apply(null,t)+")"},13)})});
+    function downloadimage(){var a=document.getElementById("gradient_preview");html2canvas(a,{allowTaint:!0}).then(function(a){var b=document.createElement("a");document.body.appendChild(b),b.download="newGradient.jpg",b.href=a.toDataURL(),b.target="_blank",b.click()})}
+    $("#color_1").minicolors({animationEasing:"swing"}),$("#color_2").minicolors({animationEasing:"swing"}),$(window).on("load",function(){function b(b,d,f){b/=255,d/=255,f/=255;var g,h,j=Math.max(b,d,f),k=Math.min(b,d,f),l=(j+k)/2;if(j==k)g=h=0;else{var i=j-k;switch(h=.5<l?i/(2-j-k):i/(j+k),j){case b:g=(d-f)/i+(d<f?6:0);break;case d:g=(f-b)/i+2;break;case f:g=(b-d)/i+4}
+    g/=6}
+    return[0|360*g+.5,(0|100*h+.5)+"%",(0|100*l+.5)+"%"]}
+    function d(b,c,d){var f=0,g=0,h=0;if(b=parseInt((""+b).replace(/\s/g,""),10),c=parseInt((""+c).replace(/\s/g,""),10),d=parseInt((""+d).replace(/\s/g,""),10),0==b&&0==c&&0==d)return[0,0,0,1];f=1-b/255,g=1-c/255,h=1-d/255;var i=Math.min(f,Math.min(g,h));return[(0|100*(f=(f-i)/(1-i))+.5)+"%",(0|100*(g=(g-i)/(1-i))+.5)+"%",(0|100*(h=(h-i)/(1-i))+.5)+"%",(0|100*i+.5)+"%"]}
+    $("#color_1").bind("blur keydown",function(){var f=this;setTimeout(function(){var c=document.getElementById("color_1").value,e=document.getElementById("color_2").value,g=[],h=$(f),j=!1,k=h.val(),l=(k+"").replace(/#/,"");1===k.length&&"#"!==k&&h.val("#"+k),3==l.length&&(l+=l);for(var m=0;6>m;m+=2)
+    g.push(parseInt(l.substr(m,2),16))
+    j=j||"NaN"===g[g.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+c+","+e+")"
+    document.getElementById("css").innerHTML="background: linear-gradient(to right, "+c+","+e+");"
+    document.getElementById("color1").style.color=c;document.getElementById("color2").style.color=e;document.getElementById("hex").innerHTML=c
+    document.getElementById("hex2").innerHTML=e
+    document.getElementById("rgb").innerHTML="rgb("+g+")"
+    document.getElementById("hsl").innerHTML="hsl("+b.apply(null,g).join(",")+")"
+    document.getElementById("cmyk").innerHTML="cmyk("+d.apply(null,g)+")"},13)}),$("#color_2").bind("blur keydown",function(){var f=this;setTimeout(function(){var c=document.getElementById("color_1").value,e=document.getElementById("color_2").value,g=[],h=$(f),j=!1,k=h.val(),l=(k+"").replace(/#/,"");1===k.length&&"#"!==k&&h.val("#"+k),3==color_1.length&&(l+=l);for(var m=0;6>m;m+=2)g.push(parseInt(l.substr(m,2),16)),j=j||"NaN"===g[g.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+c+","+e+")"
+    document.getElementById("css").innerHTML="background: linear-gradient(to right, "+c+","+e+");"
+    document.getElementById("color1").style.color=c;document.getElementById("color2").style.color=e;document.getElementById("hex").innerHTML=c
+    document.getElementById("hex2").innerHTML=e
+    document.getElementById("rgb2").innerHTML="rgb("+g+")"
+    document.getElementById("hsl2").innerHTML="hsl("+b.apply(null,g).join(",")+")"
+    document.getElementById("cmyk2").innerHTML="cmyk("+d.apply(null,g)+")"},13)})})
     </script>
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons'" async="async"></script>
     @if($validSub)

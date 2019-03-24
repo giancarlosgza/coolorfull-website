@@ -29,6 +29,7 @@
                         <li>Preview UI elements with the gradients applied</li>
                         <li>Some UI elements redesign</li>
                         <li>Random color generator</li>
+                        <li>Get colors from image</li>
                     </ul>
                     <hr>
                     <h6 class="bold"><i class="fas fa-calendar-alt"></i> March 2019</h6>
