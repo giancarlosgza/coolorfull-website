@@ -67,11 +67,13 @@
                             <div id="lifetime-paypal-button-container"></div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <hr>
-                        <a class="btn btn-link" href="{{ route('login') }}">
-                            {{ __('Already have an account? Login!') }}
-                        </a>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <hr><br>
+                            <a class="btn btn-link" href="{{ route('login') }}">
+                                {{ __('Already have an account? Login!') }}
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

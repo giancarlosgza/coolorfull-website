@@ -88,7 +88,7 @@
                     @else
                     <div class="row">
                         <div class="col-6 col-sm-4">
-                            <?xml version="1.0" encoding="UTF-8"?>
+                            <?php echo '<?xml version="1.0" encoding="UTF-8"?>' ?>
                             <svg class="svg-2" data-name="Capa 1" viewBox="0 0 581.24 345.71" xmlns="http://www.w3.org/2000/svg">
                                 <title>Pc-icon</title>
                                 <path class="cls-1" transform="translate(-279.76 -211.29)" d="m560 413s91 140 238 99"/>
@@ -112,6 +112,7 @@
                             </svg>                                                                  
                         </div>
                     @endguest
+                    </div>
                 </div>
             </div>
         </div>

@@ -111,7 +111,7 @@
         <div class="card-body">
             @guest
             <h6>Do you want to see color blindness filter?</h6>
-            <h6><a class="bold" href="/pricing">JOIN</a> Colorffy and become Pro</h6>
+            <h6><a class="bold color-darkblue" href="/pricing">JOIN</a> Colorffy and become Pro</h6>
             @else
             <div class="device">
                 <!--COLOR BLINDNESS TABS-->
@@ -129,11 +129,11 @@
             <div class="card-body">
                 @guest
                     <h6>Do you want to see the color palette applied to icons?</h6>
-                    <h6><a class="bold" href="/pricing">JOIN</a> Colorffy and become Pro</h6>
+                    <h6><a class="bold color-darkblue" href="/pricing">JOIN</a> Colorffy and become Pro</h6>
                 @else
                 <div class="row text-center">
                     <div class="col-6 col-sm-4">
-                        <?xml version="1.0" encoding="UTF-8"?>
+                        <?php echo '<?xml version="1.0" encoding="UTF-8"?>' ?>
                         <svg class="svg-1" data-name="Capa 1" viewBox="0 0 663.79 467.42" xmlns="http://www.w3.org/2000/svg">
                             <title>Camera</title>
                             <rect class="cls-1" x="47.03" y="35.04" width="84" height="82" rx="20" ry="20"/>
@@ -148,7 +148,7 @@
                         </svg>                            
                     </div>
                     <div class="col-6 col-sm-4">
-                        <?xml version="1.0" encoding="UTF-8"?>
+                        <?php echo '<?xml version="1.0" encoding="UTF-8"?>' ?>
                         <svg class="svg-2" data-name="Capa 1" viewBox="0 0 581.24 345.71" xmlns="http://www.w3.org/2000/svg">
                             <title>Pc-icon</title>
                             <path class="cls-1" transform="translate(-279.76 -211.29)" d="m560 413s91 140 238 99"/>
@@ -172,7 +172,7 @@
                         </svg>                                                                  
                     </div>
                     <div class="col-6 col-sm-4">
-                        <?xml version="1.0" encoding="UTF-8"?>
+                        <?php echo '<?xml version="1.0" encoding="UTF-8"?>' ?>
                         <svg class="svg-3" data-name="Capa 1" viewBox="0 0 417.21 449.91" xmlns="http://www.w3.org/2000/svg">
                             <title>Backpack</title>
                             <rect class="cls-1" y="292.72" width="41.72" height="106.9" rx="12.58" ry="12.58"/>

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#258bff"/>
-    <meta name="description" content="Color gradients and palettes daily! Get css, image, and ui previews.">
-    <meta name="keywords" content="Color, Gradients, Palettes, Color Gradients, Color Palettes, Illustrations">
+    <meta name="description" content="Preview ui elements, colors codes, random colors, get colors from images & gradients generators.">
+    <meta name="keywords" content="Color, Gradients, Palettes, Color Gradients, Color Palettes, Gradients Generators, Color Codes, Random Color, Color from Images">
     <title>@yield('title') - Colorffy</title>
     <link rel="manifest" href="{{ asset('/manifest.json') }}">
     <!-- CSRF Token -->
@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://www.colorffy.com" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="@yield('title') | Colorffy"/>
-    <meta property="og:description" content="Color gradients and palettes daily! Get css, image, ui previews or create your own gradients! " />
+    <meta property="og:description" content="Color gradients and palettes! Preview ui elements, colors codes, random colors, get colors from images & gradients generators." />
     <meta property="og:image" content="https://www.colorffy.com/assets/img/colorffy-full-width-card.jpg">
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="750">
@@ -27,20 +27,20 @@
     <!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="@yield('title') | Colorffy" />
-    <meta name="twitter:description" content="Color gradients and palettes daily! Get css, image, ui previews or create your own gradients!"/>
+    <meta name="twitter:description" content="Color gradients and palettes! Preview ui elements, colors codes, random colors, get colors from images & gradients generators."/>
 	<meta name="twitter:creator" content="@giancarlosgza" />
 	<meta name="twitter:image" content="https://www.colorffy.com/assets/img/colorffy-full-width-card.jpg" />
     <meta name="twitter:image:alt" content="Colorffy Image Card" />
     <meta name="twitter:site" content="@colorffy" />
     <meta name="twitter:domain" content="https://www.colorffy.com" />
     <!--FAVICON-->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/assets/img/favicon/apple-touch-icon.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/assets/img/favicon/favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/assets/img/favicon/favicon-16x16.png')}}">
-    <link rel="mask-icon" href="{{ asset('/assets/img/favicon/safari-pinned-tab.svg')}}" color="#17b7e5">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/assets/img/favicon/apple-touch-icon.png?v=9BPEpJ6Nzd')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/assets/img/favicon/favicon-32x32.png?v=9BPEpJ6Nzd')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/assets/img/favicon/favicon-16x16.png?v=9BPEpJ6Nzd')}}">
+    <link rel="mask-icon" href="{{ asset('/assets/img/favicon/safari-pinned-tab.svg?v=9BPEpJ6Nzd')}}" color="#5bbad5">
     <meta name="apple-mobile-web-app-title" content="Colorffy">
     <meta name="application-name" content="Colorffy">
-    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <!-- CSS -->
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <!--Import Google Icon Font-->

@@ -26,7 +26,6 @@ Route::middleware(['auth', 'checkrole'])->group(function () {
     Route::post('palettes/delete', 'PaletteController@deletePalettes');
 
 });
-
 //------------------------------------------------------------------------------------------------
 // GENERAL ROUTES
 //------------------------------------------------------------------------------------------------
