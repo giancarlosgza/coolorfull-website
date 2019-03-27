@@ -75,7 +75,10 @@ class GradientController extends Controller
                     ->orWhere('color_filter_2', 'like', '%' . $searchQuery . '%')
                     ->orderBy('id', 'DESC')->paginate(9);
         }
-        return view ('pages.gradients.catalog.catalog')->with('gradients', $gradients)->with('searchQuery', $searchQuery);
+        return view ('pages.gradients.catalog.catalog')
+                    ->with('gradients', $gradients)
+                    ->with('searchQuery', $searchQuery)
+                    ->with('user', Auth::user());
     }
     
     //CREATE GRADIENT POST

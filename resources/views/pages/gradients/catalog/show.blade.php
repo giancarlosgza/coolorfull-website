@@ -99,10 +99,26 @@
                         </table>
                     </div>
                 </div>
-            </div>
-            <h4 class="bold">Preview UI Elements</h4>
+            </div>    
         </div>
     </div>
+    <div class="row">
+        @guest
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- colorffy_ads -->
+        <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-5211873894116133"
+                data-ad-slot="6188882839"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        @else
+        @endguest
+    </div>
+    <h4 class="bold">Preview UI Elements</h4>
     <div class="card shadow-medium">
         <div class="card-body">  
             <!--UI ELEMENTS-->
@@ -112,10 +128,6 @@
     <h4 class="bold">Color Blindness</h4>
     <div class="card shadow-medium">
         <div class="card-body">
-            @guest
-            <h6>Do you want to see color blindness filter?</h6>
-            <h6><a class="bold color-darkblue" href="/pricing">JOIN</a> Colorffy and become Pro</h6>
-            @else
             <div class="device">
                 <!--COLOR BLINDNESS TABS-->
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist"> <li class="nav-item"> <a class="nav-link active" id="pills-color1-tab" data-toggle="pill" href="#pills-color1" role="tab" aria-controls="pills-color1" aria-selected="true">{{$gradient->color_1}}</a> </li> <li class="nav-item"> <a class="nav-link" id="pills-color2-tab" data-toggle="pill" href="#pills-color2" role="tab" aria-controls="pills-color2" aria-selected="false">{{$gradient->color_2}}</a> </li> @if($gradient->color_3) <li class="nav-item"> <a class="nav-link" id="pills-color3-tab" data-toggle="pill" href="#pills-color3" role="tab" aria-controls="pills-color3" aria-selected="false">{{$gradient->color_3}}</a> </li> @endif</ul><div class="tab-content" id="pills-tabContent"> <div class="tab-pane fade show active" id="pills-color1" role="tabpanel" aria-labelledby="pills-color1-tab"> <div class="row"> <div class="col-4 col-sm-2"> <section> <h6>Normal</h6> <div class="card"> <div class="card-body bg-1"></div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="protanopia"> <h6>Protanopia</h6> <div class="card"> <div class="card-body bg-1"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="protanomaly"> <h6>Protanomaly</h6> <div class="card"> <div class="card-body bg-1"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="deuteranopia"> <h6>Deuteranopia</h6> <div class="card"> <div class="card-body bg-1"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="deuteranomaly"> <h6>Deuteranomaly</h6> <div class="card"> <div class="card-body bg-1"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="tritanopia"> <h6>Tritanopia</h6> <div class="card"> <div class="card-body bg-1"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="tritanomaly"> <h6>Tritanomaly</h6> <div class="card"> <div class="card-body bg-1"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="achromatopsia"> <h6>Achromatopsia</h6> <div class="card"> <div class="card-body bg-1"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="achromatomaly"> <h6>Achromatomaly</h6> <div class="card"> <div class="card-body bg-1"> </div> </div> </section> </div> </div> </div> <div class="tab-pane fade" id="pills-color2" role="tabpanel" aria-labelledby="pills-color2-tab"> <div class="row"> <div class="col-4 col-sm-2"> <section> <h6>Normal</h6> <div class="card"> <div class="card-body bg-2"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="protanopia"> <h6>Protanopia</h6> <div class="card"> <div class="card-body bg-2"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="protanomaly"> <h6>Protanomaly</h6> <div class="card"> <div class="card-body bg-2"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="deuteranopia"> <h6>Deuteranopia</h6> <div class="card"> <div class="card-body bg-2"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="deuteranomaly"> <h6>Deuteranomaly</h6> <div class="card"> <div class="card-body bg-2"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="tritanopia"> <h6>Tritanopia</h6> <div class="card"> <div class="card-body bg-2"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="tritanomaly"> <h6>Tritanomaly</h6> <div class="card"> <div class="card-body bg-2"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="achromatopsia"> <h6>Achromatopsia</h6> <div class="card"> <div class="card-body bg-2"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="achromatomaly"> <h6>Achromatomaly</h6> <div class="card"> <div class="card-body bg-2"> </div> </div> </section> </div> </div> </div> @if($gradient->color_3) <div class="tab-pane fade" id="pills-color3" role="tabpanel" aria-labelledby="pills-color3-tab"> <div class="row"> <div class="col-4 col-sm-2"> <section> <h6>Normal</h6> <div class="card"> <div class="card-body bg-3"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="protanopia"> <h6>Protanopia</h6> <div class="card"> <div class="card-body bg-3"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="protanomaly"> <h6>Protanomaly</h6> <div class="card"> <div class="card-body bg-3"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="deuteranopia"> <h6>Deuteranopia</h6> <div class="card"> <div class="card-body bg-3"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="deuteranomaly"> <h6>Deuteranomaly</h6> <div class="card"> <div class="card-body bg-3"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="tritanopia"> <h6>Tritanopia</h6> <div class="card"> <div class="card-body bg-3"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="tritanomaly"> <h6>Tritanomaly</h6> <div class="card"> <div class="card-body bg-3"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="achromatopsia"> <h6>Achromatopsia</h6> <div class="card"> <div class="card-body bg-3"> </div> </div> </section> </div> <div class="col-4 col-sm-2"> <section class="achromatomaly"> <h6>Achromatomaly</h6> <div class="card"> <div class="card-body bg-3"> </div> </div> </section> </div> </div> </div> @endif</div>
@@ -123,7 +135,6 @@
             <div class="alert-device">
                 <h6>Sorry, the color blindness filters are not available yet for mobile 😔. But they are available on PC 😁</h6>
             </div>
-            @endguest
         </div>
     </div>
     <hr>
@@ -145,4 +156,11 @@
     @endif
     </script>
     <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons' async='async'></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5211873894116133",
+            enable_page_level_ads: true
+        });
+    </script>
 @endsection
