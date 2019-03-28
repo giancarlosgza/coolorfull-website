@@ -86,11 +86,12 @@
                     <h5>❤️ Save your <strong>favorites gradients</strong></h5>
                     <h5>💚 Save your <strong>favorites palettes</strong></h5>
                     <h5>💻 <strong>HEX, RGB, HSL & CMYK</strong> for every gradients and generators</h5>
-                    <h5>👓 Access to <strong>color blindness</strong> filter</h5>
+                    <h5>👓 <strong>Color blindness</strong> filter on saved gradients</h5>
                     <h5>🙆‍♂️ <strong>Create and save</strong> unlimited gradients</h5>
+                    <h5>🚫 No <strong>ads</strong></h5>
                     <h5>🎨 <strong>Preview icons</strong> with color palettes & colors from images</h5>
                     <h5>🎁 <strong>Access</strong> to icons, backgrounds and illustrations (coming soon)</h5>
-                    <h5>📧 Do you want some <strong>feature? <a href="mailto:colorffy@gmail.com" class="color-darkblue" title="Contact Us">request here!</a></strong></h5>
+                    <h5>📧 Do you want some <strong>feature or feedback? <a href="mailto:colorffy@gmail.com" class="color-darkblue" title="Contact Us">request here!</a></strong></h5>
                 </div>
             </div>
         </div>

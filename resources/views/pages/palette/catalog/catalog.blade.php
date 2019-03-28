@@ -22,27 +22,11 @@
 </div><br>
 <div class="container">
     <div class="row">
-        @guest
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- colorffy_ads -->
-        <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-5211873894116133"
-                data-ad-slot="6188882839"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        @else
-        @endguest
-    </div>
-    <div class="row">
         @foreach($palettes as $palette)
         <div class="col-6 col-md-4 col-lg-3">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h6 class="bold text-center uppercase">{{$palette->name}}</h6>
+                    <h6 class="bold text-center uppercase h6-responsive">{{$palette->name}}</h6>
                     <a href="/palettes/{{$palette->id}}" title="{{$palette->name}}">
                         <ul class="list-group">
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_1}}"></li>
@@ -78,6 +62,22 @@
     <div class="row">
         <div class="col-12 col-md-12">
             {{ $palettes->appends($_GET)->onEachSide(1)->links()  }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            @guest
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- colorffy_ads_small -->
+            <ins class="adsbygoogle"
+                style="display:inline-block;width:320px;height:100px"
+                data-ad-client="ca-pub-5211873894116133"
+                data-ad-slot="9130617236"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            @else
+            @endguest
         </div>
     </div>
 </div>

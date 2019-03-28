@@ -34,7 +34,7 @@
             <div class="col-6 col-md-3">
                 <div class="card shadow-medium">
                     <div class="card-body">
-                        <h6 class="bold text-center uppercase">{{$gradient->name}}</h6>
+                        <h6 class="bold text-center uppercase h6-responsive">{{$gradient->name}}</h6>
                         <a href="/gradients/{{$gradient->id}}" class="gradient-link">
                             <div class="card text-center">
                                 <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" 

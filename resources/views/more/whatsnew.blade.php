@@ -32,7 +32,8 @@
                         <li>Get colors from image</li>
                     </ul>
                     <hr>
-                    <h6 class="bold"><i class="fas fa-calendar-alt"></i> March 2019</h6>
+                    <h6 class="bold"><i class="fas fa-calendar-alt"></i> March 2019</h6><hr>
+                    <a href="https://www.producthunt.com/posts/colorffy?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-colorffy" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=149375&theme=light" alt="Colorffy - Gradients, palettes & tools for designers & developers! 🎨 | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
                 </div>
             </div>
         </div>

@@ -63,20 +63,20 @@
         </div>
     </div>
     <div class="row">
-        @guest
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- colorffy_ads -->
-        <ins class="adsbygoogle"
-                style="display:block"
+        <div class="col-sm-12">
+            @guest
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- colorffy_ads_small -->
+            <ins class="adsbygoogle"
+                style="display:inline-block;width:320px;height:100px"
                 data-ad-client="ca-pub-5211873894116133"
-                data-ad-slot="6188882839"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        @else
-        @endguest
+                data-ad-slot="9130617236"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            @else
+            @endguest
+        </div>
     </div>
     <hr><!--COLORS HEX RGB TABLE-->
     <div class="card shadow-medium">
