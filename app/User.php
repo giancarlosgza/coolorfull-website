@@ -19,28 +19,49 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected $casts = [
+        
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'username',
+        'name', 'email', 'password', 'username', 'paid', 'paypal_order_id', 'paid_until', 'renew_alert'
     ];
 
-    public function gradients() {
+    /**
+     * Check if subscription is still valid
+     * @return boolean
+     */
+    public function validSubscription()
+    {
+        return !$this->paid_until ? true : strtotime(date('Ymd')) < strtotime($this->paid_until);
+    }
+
+    public function gradients() 
+    {
         return $this->hasMany('App\Gradients');
     }
 
-    public function palettes() {
+    public function publicGradients() {
+        return $this->gradients()->where('is_public', true);
+    }
+
+    public function palettes() 
+    {
         return $this->hasMany('App\Palette');
     }
 
-    public function favoriteGradients() {
+    public function favoriteGradients() 
+    {
         return $this->belongsToMany('App\Gradients', 'gradient_user', 'user_id', 'gradient_id');
     }
 
-    public function favoritePalettes() {
-        return $this->belongsToMany('App\Palette', 'palette_user', 'user_id', 'palette_id');
+    public function favoritePalettes() 
+    {
+        return $this->belongsToMany('App\Palette');
     }
 }

@@ -90,6 +90,7 @@
 @endsection
 @section('scripts')
 <script type="text/javascript" src="{{ asset('assets/js/jquery.minicolors.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/jquery.mask.min.js') }}"></script>
  <script type="text/javascript">
      $(document).ready(function(){
         $('.hexcolor').mask('SAAAAAA', {

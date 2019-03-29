@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold">🎨 Palettes</h4>
+            <h4 class="bold text-body">🎨 Palettes</h4>
         </div>
         <div class="col-sm-12">
             <form action="" method="get">
@@ -17,17 +17,17 @@
                     </div>
                 </div>
             </form>
-           
         </div>
     </div>
-    <br>
+</div><br>
+<div class="container">
     <div class="row">
         @foreach($palettes as $palette)
-        <div class="col-6 col-md-3">
+        <div class="col-6 col-md-4 col-lg-3">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h6 class="bold text-center uppercase">{{$palette->name}}</h6>
-                    <a href="/palettes/{{$palette->id}}" class="gradient-link" title="{{$palette->name}}">
+                    <h6 class="bold text-center uppercase h6-responsive">{{$palette->name}}</h6>
+                    <a href="/palettes/{{$palette->id}}" title="{{$palette->name}}">
                         <ul class="list-group">
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_1}}"></li>
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_2}}"></li>
@@ -37,12 +37,18 @@
                         </ul>
                     </a>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-4 col-sm-6 col-md-4">
                             @if(Auth::user())
                             <div id="fav-heart-palette-{{$palette->id}}" class="text-left align-self-end fav-heart @if($user->favoritePalettes->contains($palette)) active-heart @endif" onclick="event.preventDefault(); newFavoritePalette({{$palette->id}})"><i class="fas fa-heart"></i></div>
                         </div>
-                        <div class="col-6">
-                            <div id="fav-count-palette-{{$palette->id}}" class="text-right align-self-end color-blue bold">{{ $palette->usersWhoFav->count() }}</div>
+                        <div class="col-8 col-sm-6 col-md-8">
+                            <div id="fav-count-palette-{{$palette->id}}" class="text-right align-self-end color-blue bold">
+                                @if($palette->usersWhoFav->count() == 1) 
+                                {{ $palette->usersWhoFav->count() }} like
+                                @else
+                                {{ $palette->usersWhoFav->count() }} likes
+                                @endif 
+                            </div>
                             @else
                             <a href="/favorites/palettes" title="Fav Palette"><i class="fas fa-heart fav-heart"></i></a>
                             @endif
@@ -56,6 +62,22 @@
     <div class="row">
         <div class="col-12 col-md-12">
             {{ $palettes->appends($_GET)->onEachSide(1)->links()  }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            @guest
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- colorffy_ads_small -->
+            <ins class="adsbygoogle"
+                style="display:inline-block;width:320px;height:100px"
+                data-ad-client="ca-pub-5211873894116133"
+                data-ad-slot="9130617236"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            @else
+            @endguest
         </div>
     </div>
 </div>
@@ -75,5 +97,12 @@
             FAV_COUNT_ELEM.html( newCount );
         })
     }
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-5211873894116133",
+          enable_page_level_ads: true
+     });
 </script>
 @endsection

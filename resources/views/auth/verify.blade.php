@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="logo text-center color-blue">Colorffy</h4>
+                    <h4 class="logo text-center color-indigo">Colorffy</h4>
                     <h5 class="text-center">{{ __('Verify Your Email Address') }}</h5>
                     <br>
                     @if (session('resent'))
