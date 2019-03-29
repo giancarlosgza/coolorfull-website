@@ -37,12 +37,33 @@ class GradientController extends Controller
     }
 
     //SHOW GRADIENTS IN CATALOG
-    function catalogGradients(Request $request) {
+    function catalogGradients(Request $request)
+    {
         $searchQuery = $request->input('q');
+        $filtersAvailable = Gradients::select('color_filter', 'color_filter_2')->get();
 
-        if(empty($searchQuery)) {
+        $filters = collect([]);
+
+        foreach($filtersAvailable as $filter)
+        {
+            if(!$filters->contains($filter->color_filter))
+            {
+                $filters->push($filter->color_filter);
+            }
+
+            if(!$filters->contains($filter->color_filter_2))
+            {
+                $filter->push($filter->color_filter_2);
+            }
+        }
+
+
+        if(empty($searchQuery))
+        {
             $gradients = Gradients::where('is_public', true)->orderBy('id', 'DESC')->paginate(12);
-        } else {
+        }
+        else
+        {
             $gradients = Gradients::where('is_public', true)
                     ->where('name', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_1', 'like', '%' . $searchQuery . '%')
@@ -54,6 +75,7 @@ class GradientController extends Controller
 
         return view ('pages.gradients.catalog.catalog')
                     ->with('gradients', $gradients)
+                    ->with('filters', $filters)
                     ->with('searchQuery', $searchQuery)
                     ->with('user', Auth::user());
     }

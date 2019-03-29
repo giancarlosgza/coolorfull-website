@@ -16,6 +16,9 @@
                     </div>
                 </div>
             </form>
+            @foreach($filters as $filter)
+                <a href="{{ route('gradientsCatalog', ['q' => $filter]) }}">{{ $filter }}</a>
+            @endforeach
         </div>
     </div>
 </div>

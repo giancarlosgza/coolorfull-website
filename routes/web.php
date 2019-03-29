@@ -29,7 +29,7 @@ Route::middleware(['auth', 'checkrole'])->group(function () {
 //------------------------------------------------------------------------------------------------
 // GENERAL ROUTES
 //------------------------------------------------------------------------------------------------
-Route::get('gradients/catalog', 'GradientController@catalogGradients');
+Route::get('gradients/catalog', 'GradientController@catalogGradients')->name('gradientsCatalog');
 Route::get('gradients/{gradient}', 'GradientController@showGradients');
 
 Route::get('palettes/catalog', 'PaletteController@catalogPalettes');
