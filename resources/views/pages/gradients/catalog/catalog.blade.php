@@ -17,7 +17,10 @@
                 </div>
             </form>
             @foreach($filters as $filter)
-                <a href="{{ route('gradientsCatalog', ['q' => $filter]) }}">{{ $filter }}</a>
+                <a class="btn btn-gradient" href="{{ route('gradientsCatalog', ['q' => $filter]) }}">
+                    <i class="fas fa-circle" style="color: {{ strtolower($filter) }}"></i>
+                    {{ $filter }}
+                </a>
             @endforeach
         </div>
     </div>
