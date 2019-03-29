@@ -20,7 +20,25 @@ class PaletteController extends Controller
     //SHOW GRADIENTS IN CATALOG
     function catalogPalettes(Request $request) {
         $searchQuery = $request->input('q');
-        $palettes;
+
+        $filtersAvailable = Palette::select('color_filter', 'color_filter_2')->get();
+
+        $filters = collect([]);
+
+        foreach($filtersAvailable as $filter)
+        {
+            if(!$filters->contains($filter->color_filter))
+            {
+                $filters->push($filter->color_filter);
+            }
+
+            if(!$filters->contains($filter->color_filter_2))
+            {
+                $filters->push($filter->color_filter_2);
+            }
+        }
+
+
 
         if(empty($searchQuery)) {
             $palettes = Palette::orderBy('id', 'DESC')->paginate(12);
@@ -38,6 +56,7 @@ class PaletteController extends Controller
         return view ('pages.palette.catalog.catalog')
                     ->with('palettes', $palettes)
                     ->with('searchQuery', $searchQuery)
+                    ->with('filters', $filters)
                     ->with('user', Auth::user());
     }
 

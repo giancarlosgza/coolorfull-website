@@ -17,6 +17,12 @@
                     </div>
                 </div>
             </form>
+            @foreach($filters as $filter)
+                <a class="btn btn-gradient" href="{{ route('palettesCatalog', ['q' => $filter]) }}">
+                    <i class="fas fa-circle" style="color: {{ strtolower($filter) }}"></i>
+                    {{ $filter }}
+                </a>
+            @endforeach
         </div>
     </div>
 </div><br>

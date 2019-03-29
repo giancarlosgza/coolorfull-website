@@ -32,7 +32,7 @@ Route::middleware(['auth', 'checkrole'])->group(function () {
 Route::get('gradients/catalog', 'GradientController@catalogGradients')->name('gradientsCatalog');
 Route::get('gradients/{gradient}', 'GradientController@showGradients');
 
-Route::get('palettes/catalog', 'PaletteController@catalogPalettes');
+Route::get('palettes/catalog', 'PaletteController@catalogPalettes')->name('palettesCatalog');
 Route::get('palettes/{palette}', 'PaletteController@showPalettes');
 
 Route::get('generator/gradients', 'GradientController@generatorGradients');

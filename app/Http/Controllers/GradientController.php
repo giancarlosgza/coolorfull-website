@@ -40,7 +40,7 @@ class GradientController extends Controller
     function catalogGradients(Request $request)
     {
         $searchQuery = $request->input('q');
-        $filtersAvailable = Gradients::select('color_filter', 'color_filter_2')->get();
+        $filtersAvailable = Gradients::select('color_filter', 'color_filter_2')->where('is_public', true)->get();
 
         $filters = collect([]);
 
@@ -53,7 +53,7 @@ class GradientController extends Controller
 
             if(!$filters->contains($filter->color_filter_2))
             {
-                $filter->push($filter->color_filter_2);
+                $filters->push($filter->color_filter_2);
             }
         }
 
