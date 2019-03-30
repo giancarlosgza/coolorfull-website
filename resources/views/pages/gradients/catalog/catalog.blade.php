@@ -10,18 +10,25 @@
             <form action="" method="get">
                 <div class="input-group mb-3">
                     <input type="text" name="q" id="query" value="{{ $searchQuery }}" class="form-control shadow-medium no-border"
-                        placeholder="🔍 Search colors or hexadecimal" aria-label="Search colors or hexadecimal" aria-describedby="button-addon2">
+                        placeholder="🔍 Search colors or hex" aria-label="Search colors or hex" aria-describedby="button-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-primary shadow-medium" type="submit" id="button-addon2">Search</button>
                     </div>
                 </div>
             </form>
-            @foreach($filters as $filter)
-                <a class="btn btn-gradient" href="{{ route('gradientsCatalog', ['q' => $filter]) }}">
-                    <i class="fas fa-circle" style="color: {{ strtolower($filter) }}"></i>
-                    {{ $filter }}
-                </a>
-            @endforeach
+            <div class="table-responsive">
+                <table class="table table-borderless table-sm">
+                    <thead>
+                        @foreach($filters as $filter)
+                            <td scope="col">
+                                <a class="btn btn-gradient" href="{{ route('gradientsCatalog', ['q' => $filter]) }}">
+                                    <div class="h6-responsive">{{ $filter }}</div>
+                                </a>
+                            </td>
+                        @endforeach   
+                    </thead>
+                </table>
+            </div>
         </div>
     </div>
 </div>
@@ -72,15 +79,15 @@
             {{ $gradients->appends($_GET)->onEachSide(1)->links()  }}
         </div>
     </div>
-    <div class="row">
+    <div class="row text-center">
         <div class="col-sm-12">
             @guest
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- colorffy_ads_small -->
+            <br>
+            <!-- colorffy_ads_xs -->
             <ins class="adsbygoogle"
-                style="display:inline-block;width:320px;height:100px"
+                style="display:inline-block;width:320px;height:50px"
                 data-ad-client="ca-pub-5211873894116133"
-                data-ad-slot="9130617236"></ins>
+                data-ad-slot="2188507199"></ins>
             <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
@@ -116,10 +123,4 @@
     }
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-5211873894116133",
-          enable_page_level_ads: true
-     });
-</script>
 @endsection

@@ -41,9 +41,7 @@ class GradientController extends Controller
     {
         $searchQuery = $request->input('q');
         $filtersAvailable = Gradients::select('color_filter', 'color_filter_2')->where('is_public', true)->get();
-
         $filters = collect([]);
-
         foreach($filtersAvailable as $filter)
         {
             if(!$filters->contains($filter->color_filter))
@@ -56,8 +54,6 @@ class GradientController extends Controller
                 $filters->push($filter->color_filter_2);
             }
         }
-
-
         if(empty($searchQuery))
         {
             $gradients = Gradients::where('is_public', true)->orderBy('id', 'DESC')->paginate(12);
@@ -72,7 +68,6 @@ class GradientController extends Controller
                     ->orWhere('color_filter_2', 'like', '%' . $searchQuery . '%')
                     ->orderBy('id', 'DESC')->paginate(12);
         }
-
         return view ('pages.gradients.catalog.catalog')
                     ->with('gradients', $gradients)
                     ->with('filters', $filters)
@@ -83,8 +78,20 @@ class GradientController extends Controller
     //SHOW GRADIENTS ON INDEX
     function indexGradients(Request $request) {
         $searchQuery = $request->input('q');
-        $gradients;
+        $filtersAvailable = Gradients::select('color_filter', 'color_filter_2')->where('is_public', true)->get();
+        $filters = collect([]);
+        foreach($filtersAvailable as $filter)
+        {
+            if(!$filters->contains($filter->color_filter))
+            {
+                $filters->push($filter->color_filter);
+            }
 
+            if(!$filters->contains($filter->color_filter_2))
+            {
+                $filters->push($filter->color_filter_2);
+            }
+        }
         if(empty($searchQuery)) {
             $gradients = Gradients::where('is_public', true)->orderBy('id', 'DESC')->paginate(4);
             return view ('pages.index')->with('gradients',  $gradients)->with('searchQuery', $searchQuery);
@@ -95,10 +102,11 @@ class GradientController extends Controller
                     ->orWhere('color_2', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_filter', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_filter_2', 'like', '%' . $searchQuery . '%')
-                    ->orderBy('id', 'DESC')->paginate(9);
+                    ->orderBy('id', 'DESC')->paginate(12);
         }
         return view ('pages.gradients.catalog.catalog')
                     ->with('gradients', $gradients)
+                    ->with('filters', $filters)
                     ->with('searchQuery', $searchQuery)
                     ->with('user', Auth::user());
     }

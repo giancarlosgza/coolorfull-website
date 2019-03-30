@@ -8,7 +8,7 @@
 <div class="container btn-return">
     <div class="row">
         <div class="col-sm-12">
-            <a class="btn btn-link" href="/gradients/catalog"><i class="fas fa-arrow-left"></i> Gradients</a>
+            <a class="btn btn-link color-darkblue" href="/gradients/catalog"><i class="fas fa-arrow-left"></i> Gradients</a>
             <br>
         </div>
     </div>
@@ -102,22 +102,6 @@
             </div>    
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-            @guest
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- colorffy_ads_small -->
-            <ins class="adsbygoogle"
-                style="display:inline-block;width:320px;height:100px"
-                data-ad-client="ca-pub-5211873894116133"
-                data-ad-slot="9130617236"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-            @else
-            @endguest
-        </div>
-    </div>
     <h4 class="bold">Preview UI Elements</h4>
     <div class="card shadow-medium">
         <div class="card-body">  
@@ -156,11 +140,4 @@
     @endif
     </script>
     <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons' async='async'></script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-5211873894116133",
-            enable_page_level_ads: true
-        });
-    </script>
 @endsection

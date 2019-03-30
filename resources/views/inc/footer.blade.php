@@ -13,12 +13,12 @@
             </div>
             <div class="col-md-4 offset-md-4">
                 <h5 class="logo">More</h5>
-                <a href="/pricing" class="color-darkblue" title="Pricing">💳 Pricing</a><br>
-                <a href="/whatsnew" class="color-darkblue" title="What's new?">🆕 What's new?</a><br>
-                <!--<a href="https://www.paypal.me/giancarlosgza?locale.x=es_XC" class="color-darkblue" title="Buy me a Coffee" target="_blank" rel="noopener">☕ Buy me a Coffee</a>-->
-                <a href="/team" class="color-darkblue" title="Team">👨‍💻 Team</a><br>
-                <a href="mailto:colorffy@gmail.com" class="color-darkblue" title="Contact Us">📧 Contact Us</a><br>
-                <a href="https://www.iubenda.com/privacy-policy/13414429" class="iubenda-white iubenda-embed color-darkblue" title="Privacy Policy" target="_blank" rel="noopener">📄 Privacy Policy</a>
+                <a href="/pricing" class="color-darkblue text-spacing" title="Pricing">💳 Pricing</a><br>
+                <a href="/whatsnew" class="color-darkblue text-spacing" title="What's new?">🆕 What's new?</a><br>
+                <!--<a href="https://www.paypal.me/giancarlosgza?locale.x=es_XC" class="color-darkblue text-spacing" title="Buy me a Coffee" target="_blank" rel="noopener">☕ Buy me a Coffee</a>-->
+                <a href="/team" class="color-darkblue text-spacing" title="Team">👨‍💻 Team</a><br>
+                <a href="mailto:colorffy@gmail.com" class="color-darkblue text-spacing" title="Contact Us">📧 Contact Us</a><br>
+                <a href="https://www.iubenda.com/privacy-policy/13414429" class="iubenda-white iubenda-embed color-darkblue text-spacing" title="Privacy Policy" target="_blank" rel="noopener">📄 Privacy Policy</a>
             </div>
         </div>
         <div class="row">

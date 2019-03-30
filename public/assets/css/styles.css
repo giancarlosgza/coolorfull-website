@@ -290,6 +290,10 @@ code {
     z-index: 999;
 }
 
+.text-spacing {
+    line-height: 30px;
+}
+
 @media only screen and (max-width:600px) {
     .palette-show {
         height: 80px
