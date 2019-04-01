@@ -43,6 +43,7 @@ Route::get('team', function () {return view('more.team');});
 Route::get('whatsnew', function () {return view('more.whatsnew');});
 Route::get('random/color', function () {return view('pages.colors.random');});
 Route::get('image/color', function () {return view('pages.colors.imagecolors');});
+Route::get('code/editor', function () {return view('pages.code.editor');});
 //------------------------------------------------------------------------------------------------
 // SUBSCRIPTION ROUTES
 //------------------------------------------------------------------------------------------------
