@@ -9,7 +9,6 @@
                 <p>
                 We creates amazing gradients and palettes for designers and developers. 🚀
                 </p>
-                <a href="https://www.producthunt.com/posts/colorffy?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-colorffy" target="_blank" rel="noopener"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=149375&theme=light" alt="Colorffy - Gradients, palettes & tools for designers & developers! 🎨 | Product Hunt Embed" style="width: 180px; height: 54px;" width="180px" height="54px" /></a>
             </div>
             <div class="col-md-4 offset-md-4">
                 <h5 class="logo">More</h5>
@@ -23,16 +22,20 @@
         </div>
         <div class="row">
             <div class="col-6 col-md-6"><br>
-                <a href="https://twitter.com/colorffy" class="color-darkblue footer-icon" title="Twitter" alt="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter fa-1x"></i></a>
-                <a href="https://www.instagram.com/colorffyweb/" class="color-darkblue" title="Instagram" alt="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram fa-1x"></i></a>
+                <a href="https://www.producthunt.com/posts/colorffy?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-colorffy" target="_blank" rel="noopener"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=149375&theme=light" alt="Colorffy - Gradients, palettes & tools for designers & developers! 🎨 | Product Hunt Embed" style="width: 180px; height: 54px;" width="180px" height="54px" /></a>
+
             </div>
             <div class="col-6 col-md-6 text-right small align-self-end"><br>
-                <p>Made with ❤️ & ☕ by <a href="https://twitter.com/giancarlosgza" title="Twitter" alt="Twitter" target="_blank" rel="noopener" class="color-darkblue">@giancarlosgza</a></p>
+                <a href="https://twitter.com/colorffy" class="color-darkblue footer-icon" title="Twitter" alt="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.instagram.com/colorffyweb/" class="color-darkblue" title="Instagram" alt="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram fa-2x"></i></a>
             </div>
         </div>
         <hr>
         <div class="row">
-            <div class="col-md-12 text-right small align-self-end">©2019 Colorffy v2.0 🎉</div>
+            <div class="col-8 col-md-6 text-left small align-self-center"><br>
+                <p>Made with ❤️ & ☕ by <a href="https://twitter.com/giancarlosgza" title="Twitter" alt="Twitter" target="_blank" rel="noopener" class="color-darkblue">@giancarlosgza</a></p>
+            </div>
+            <div class="col-4 col-md-6 text-right small align-self-center">©2019 Colorffy v2.0 🎉</div>
         </div>
     </div>
 </footer>

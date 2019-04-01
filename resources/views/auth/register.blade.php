@@ -2,7 +2,7 @@
 @section('title', 'Register')
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card card-form">
                 <div class="card-body">
@@ -78,6 +78,7 @@
                 </div>
             </div>
         </div>
+        <!--
         <div class="col-md-4">
             <div class="card card-form">
                 <div class="card-body">
@@ -94,7 +95,7 @@
                     <h5>📧 Do you want some <strong>feature or feedback? <a href="mailto:colorffy@gmail.com" class="color-darkblue" title="Contact Us">request here!</a></strong></h5>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
 @endsection

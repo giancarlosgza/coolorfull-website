@@ -7,7 +7,7 @@
             <h4 class="intro-text ">
                 Preview ui elements, colors codes, random colors, get colors from images & gradients generators. ☝️
             </h4>
-            <h5 class="intro-text">Gradients and Palettes <span class="badge badge-primary">250+</span></h5>
+            <h5 class="intro-text">Gradients and Palettes <span class="badge badge-primary">280+</span></h5>
         </div>
         <div class="col-md-6 text-center">
             <img src="{{asset('/assets/img/logo-form.svg')}}" class="intro-text" width="300px" alt="Colorffy logo">

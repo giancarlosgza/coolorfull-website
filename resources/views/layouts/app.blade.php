@@ -63,10 +63,10 @@
     <style>
         body{font-family:'Nunito',sans-serif}.logo{font-family:'Montserrat',sans-serif}
     </style>
+    @yield('mailchimp')
 </head>
 <body>
     @include('inc.navbar')
-    <!--ALERTS-->
     @if(session('info'))
     <div class="container">
         <div class="row">
@@ -124,7 +124,6 @@
         </div>
     </div>
     @endif
-    <!--END ALERTS-->
     <!--CONTENT-->
     @yield('content')
     <!--END CONTENT-->

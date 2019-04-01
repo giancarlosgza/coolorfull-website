@@ -51,8 +51,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-4 col-sm-6 col-md-4">
-                                @if($user)
+                            @if($user)
+                            <div class="col-4 col-sm-6 col-md-4"> 
                                 <div id="fav-heart-gradient-{{$gradient->id}}" class="text-left align-self-end fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})"><i class="fas fa-heart"></i></div>
                             </div>
                             <div class="col-8 col-sm-6 col-md-8">
@@ -63,10 +63,14 @@
                                     {{ $gradient->usersWhoFav->count() }} likes
                                     @endif 
                                 </div>
-                                @else
-                                <a href="/favorites/gradients" title="Fav Gradient"><i class="fas fa-heart fav-heart"></i></a>
-                                @endif
                             </div>
+                            @else
+                            <div class="col-8 col-sm-6 col-md-8">
+                                <a href="/favorites/gradients" title="Fav Gradient"><i class="fas fa-heart fav-heart footer-icon"></i></a>
+                                <!--<a class="copy-url" onclick="copyUrl(this)" data-clipboard-text="https://www.colorffy.com/gradients/{{$gradient->id}}" data-toggle="tooltip"><i class="fas fa-share-alt text-body"></i></a>
+                                -->
+                            </div>
+                            @endif
                         </div>
                     </a>
                 </div>
@@ -98,6 +102,8 @@
 </div>
 @endsection
 @section('scripts') 
+<script type="text/javascript" src="{{ asset('assets/js/clipboard.min.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" async='async'></script>
 <script>
     function newFavoriteGradient(gradientId) {
         $.post('{{route("storeFavGradient")}}', {
@@ -121,6 +127,8 @@
             
         })
     }
+    new ClipboardJS(".copy-url"),$(document).ready(function(){$("[data-toggle=\"tooltip\"]").tooltip()});
+    function copyUrl(){const a=Swal.mixin({toast:!0,position:"top-end",showConfirmButton:!1,timer:3e3});a.fire({type:"success",title:"URL COPIED!"})}
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 @endsection
