@@ -16,6 +16,32 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-sm-12">    
+            <div class="table-responsive">
+                <table class="table table-borderless table-sm">
+                    <thead>
+                        @foreach($gradients as $gradient)
+                            <td scope="col">
+                                <a class="copyCSS" onclick="copyColor()" data-toggle="tooltip" title="Click to copy gradient css"
+                                    data-clipboard-text="@if($gradient->color_3)background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}}, {{$gradient->color_3}});" @else background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">@endif
+                                    <div class="card text-center" title="{{$gradient->name}}">        
+                                        <div class="card-body shadow-medium" title="{{$gradient->name}}" 
+                                            @if($gradient->color_3)
+                                            style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}}, {{$gradient->color_3}});">
+                                            @else
+                                            style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </a>
+                            </td>
+                        @endforeach   
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-4">
             <div class="card shadow-medium">
                 <div class="card-body">
@@ -74,7 +100,9 @@
             <h6 class="h6-responsive">< link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></h6>
             <hr>
             <h6 class="h6-responsive bold">
-                Paste code from Bootstrap or write your own code and add styles with CSS
+                You can paste code from Bootstrap or write your own code and add your styles with CSS. 
+                <br><br>
+                One more thing! You can copy the gradients css and paste to preview your components with the gradients
             </h6>
         </div>
         <div class="modal-footer">
@@ -83,6 +111,7 @@
         </div>
     </div>
 </div>
+<!--End Modal-->
 @endsection
 @section('scripts')
 <script>
@@ -102,5 +131,11 @@ function compile() {
   };
 }
 compile();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" async='async'></script>
+<script type="text/javascript" src="{{ asset('assets/js/clipboard.min.js') }}"></script>
+<script>
+    new ClipboardJS(".copyCSS"),$(document).ready(function(){$("[data-toggle=\"tooltip\"]").tooltip()});
+    function copyColor(){const a=Swal.mixin({toast:!0,position:"top-end",showConfirmButton:!1,timer:3e3});a.fire({type:"success",title:"COPIED!"})};
 </script>
 @endsection

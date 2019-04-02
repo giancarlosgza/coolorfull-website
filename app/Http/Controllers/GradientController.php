@@ -36,6 +36,12 @@ class GradientController extends Controller
                 ->with('validSub', $validSub);
     }
 
+    //CODE EDITOR GRADIENTS
+    function gradientsEditor(Gradients $gradient) {
+        $gradients = Gradients::where('is_public', true)->orderBy('id', 'DESC')->paginate(12);
+        return view ('pages.code.editor')->with('gradients',  $gradients);
+    }
+
     //SHOW GRADIENTS IN CATALOG
     function catalogGradients(Request $request)
     {
