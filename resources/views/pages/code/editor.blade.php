@@ -12,7 +12,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="text-body bold">Code Editor</h4>
+            <h4 class="text-body bold">💻 Code Editor</h4>
         </div>
     </div>
     <div class="row">
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="card shadow-medium">
                 <div class="card-body">
                     <h6 class="bold">Code</h6><hr>
@@ -74,7 +74,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div class="card shadow-medium">
                 <div class="card-body">
                     <h6 class="bold">Preview</h6><hr>
@@ -96,13 +96,16 @@
             </button>
         </div>
         <div class="modal-body">
-            <h6 class="h6-responsive bold">Copy and paste Bootstrap 4 css link into the textarea for Bootstrap Styles</h6>
-            <h6 class="h6-responsive">< link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></h6>
+            <h6 class="h6-responsive bold">✂️ Copy and paste Bootstrap 4 css link into the textarea for Bootstrap styles</h6>
+            <h6 class="h6-responsive bold">Just remove the space between "<" and "link"</h6>
+            <h6 class="h6-responsive"><code>< link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></code></h6>
             <hr>
             <h6 class="h6-responsive bold">
-                You can paste code from Bootstrap or write your own code and add your styles with CSS. 
+                📋 You can paste code from Bootstrap or write your own code and add your styles with CSS. 
                 <br><br>
-                One more thing! You can copy the gradients css and paste to preview your components with the gradients
+                ✋ One more thing! With the Pro version, you can copy the gradients css from the row above and paste it to preview your components with the gradients, so fast an easy!
+                <hr>
+                Make awesome things!
             </h6>
         </div>
         <div class="modal-footer">

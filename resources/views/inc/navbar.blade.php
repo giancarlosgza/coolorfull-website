@@ -30,7 +30,9 @@
                         <a class="dropdown-item bold" href="/generator/mgradients">3️⃣ Color Gradient</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item bold" href="/random/color">🎲 Random Color</a>
-                        <a class="dropdown-item bold" href="/image/color">🖼️ Image Colors</a>                    
+                        <a class="dropdown-item bold" href="/image/color">🖼️ Image Colors</a> 
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item bold" href="/code/editor">💻 Code Editor</a>              
                     </div>
                 </li>
                 @guest
@@ -38,7 +40,7 @@
                     <a class="nav-link nav-color" href="/login">Login</a>
                 </li>
                 <li class="nav-item {{ (request()->is('register')) ? 'active' : '' }}">
-                    <a class="nav-link nav-color logo-brand" href="/register">GO PRO</a>
+                    <a class="nav-link nav-color logo-brand" href="/register">PRO</a>
                 </li>
                 @else
                 @if(auth()->user()->is_admin == 1)
