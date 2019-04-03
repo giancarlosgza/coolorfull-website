@@ -2,7 +2,7 @@
 @section('title', 'Code Editor')
 @section('content')
 <style>
-.nav-pills .nav-link.active,.nav-pills .show>.nav-link{color:#fff;background-image:linear-gradient(to right,#255dce,#1c9fe7);border:0}.frame{width:100%;border:0;height:400px}textarea{height:200px!important}
+.nav-pills .nav-link.active,.nav-pills .show>.nav-link{color:#fff;background-image:linear-gradient(to right,#255dce,#1c9fe7);border:0}.frame{width:100%;border:0;height:400px}textarea{height:200px}
 </style>
 <div class="container">
     <div class="row">
@@ -40,7 +40,7 @@
                         @endforeach   
                     </thead>
                 </table>
-            </div>
+            </div><br>
             @endguest
         </div>
     </div>

@@ -64,6 +64,7 @@
         body{font-family:'Nunito',sans-serif}.logo{font-family:'Montserrat',sans-serif}
     </style>
     @yield('mailchimp')
+    @yield('googleads')
 </head>
 <body>
     @include('inc.navbar')

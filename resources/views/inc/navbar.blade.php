@@ -40,7 +40,7 @@
                     <a class="nav-link nav-color" href="/login">Login</a>
                 </li>
                 <li class="nav-item {{ (request()->is('register')) ? 'active' : '' }}">
-                    <a class="nav-link nav-color logo-brand" href="/register">PRO</a>
+                    <a class="nav-link nav-color logo-brand" href="/register">Sign Up</a>
                 </li>
                 @else
                 @if(auth()->user()->is_admin == 1)

@@ -1,7 +1,9 @@
 @extends('layouts.app')
 @section('title', 'Palettes')
+@section('googleads')
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+@endsection
 @section('content')
-
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
@@ -112,5 +114,4 @@
         })
     }
 </script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 @endsection

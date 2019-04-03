@@ -38,7 +38,7 @@ class GradientController extends Controller
 
     //CODE EDITOR GRADIENTS
     function gradientsEditor(Gradients $gradient) {
-        $gradients = Gradients::where('is_public', true)->orderBy('id', 'DESC')->paginate(12);
+        $gradients = Gradients::where('is_public', true)->orderBy('id', 'DESC')->paginate(24);
         return view ('pages.code.editor')->with('gradients',  $gradients);
     }
 

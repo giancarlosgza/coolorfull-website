@@ -5,7 +5,7 @@
             <h5 class="logo bold text-body text-spacing">Resources and Tools for designers and developers.</h5>
             
             <h5 class="intro-text text-spacing">Search gradients, look colors, copy css or preview your content with Colorffy resources.</h5>
-            <br class="intro-text">
+            <br>
             <!--<h5 class="intro-text">Gradients and Palettes <span class="badge badge-primary">300+</span></h5>-->
         </div>
         <div class="col-md-6 text-center">

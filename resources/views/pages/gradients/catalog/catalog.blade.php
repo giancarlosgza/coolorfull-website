@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section('title', 'Gradients')
+@section('googleads')
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+@endsection
 @section('content')
 <div class="container">
     <div class="row">
@@ -127,8 +130,5 @@
             
         })
     }
-    new ClipboardJS(".copy-url"),$(document).ready(function(){$("[data-toggle=\"tooltip\"]").tooltip()});
-    function copyUrl(){const a=Swal.mixin({toast:!0,position:"top-end",showConfirmButton:!1,timer:3e3});a.fire({type:"success",title:"URL COPIED!"})}
 </script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 @endsection
