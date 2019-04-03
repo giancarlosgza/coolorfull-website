@@ -2,12 +2,7 @@
 @section('title', 'Code Editor')
 @section('content')
 <style>
-.nav-pills .nav-link.active,.nav-pills .show>.nav-link{color:#fff;background-image:linear-gradient(to right,#255dce,#1c9fe7);border:0}
-.frame {
-    width: 100%;
-    border: none;
-    height: 400px;
-}
+.nav-pills .nav-link.active,.nav-pills .show>.nav-link{color:#fff;background-image:linear-gradient(to right,#255dce,#1c9fe7);border:0}.frame{width:100%;border:0;height:400px}textarea{height:200px!important}
 </style>
 <div class="container">
     <div class="row">
@@ -16,7 +11,14 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12">    
+        <div class="col-sm-12">
+            @guest
+            <div class="card shadow-medium">
+                <div class="card-body">
+                    <h6><a class="bold color-darkblue" href="/pricing">JOIN</a> Colorffy and become Pro to see the gradients row right here!</h6>
+                </div>
+            </div>
+            @else 
             <div class="table-responsive">
                 <table class="table table-borderless table-sm">
                     <thead>
@@ -39,6 +41,7 @@
                     </thead>
                 </table>
             </div>
+            @endguest
         </div>
     </div>
     <div class="row">
@@ -118,22 +121,7 @@
 @endsection
 @section('scripts')
 <script>
-function compile() {
-  var html = document.getElementById("html");
-  var css = document.getElementById("css");
-  var code = document.getElementById("code").contentWindow.document;
-  document.body.onkeyup = function() {
-    code.open();
-    code.writeln(
-        html.value +
-        "<style>" +
-        css.value +
-        "</style>"
-    );
-    code.close();
-  };
-}
-compile();
+    function compile(){var e=document.getElementById("html"),t=document.getElementById("css"),n=document.getElementById("code").contentWindow.document;document.body.onkeyup=function(){n.open(),n.writeln(e.value+"<style>"+t.value+"</style>"),n.close()}}compile();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" async='async'></script>
 <script type="text/javascript" src="{{ asset('assets/js/clipboard.min.js') }}"></script>
