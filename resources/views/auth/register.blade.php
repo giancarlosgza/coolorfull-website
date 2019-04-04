@@ -8,6 +8,7 @@
                 <div class="card-body">
                     <h4 class="logo text-center color-indigo">Colorffy</h4>
                     <h5 class="text-center">Register</h5>
+                    <p class="text-center bold">Fill in the form to enable the registration buttons.</p>
                     <br>
                     <div class="row justify-content-center">
                         <div class="col-md-8">

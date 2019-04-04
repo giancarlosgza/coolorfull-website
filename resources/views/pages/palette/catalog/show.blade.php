@@ -44,14 +44,18 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="text-center bold uppercase">{{$palette->name}}</h4>
-            <ul id="htmltoimage" class="list-group shadow-medium">
-                <li class="list-group-item palette-show" style="background-color:{{$palette->color_1}}"> </li>
-                <li class="list-group-item palette-show" style="background-color:{{$palette->color_2}}"></li>
-                <li class="list-group-item palette-show" style="background-color:{{$palette->color_3}}"></li>
-                <li class="list-group-item palette-show" style="background-color:{{$palette->color_4}}"></li>
-                <li class="list-group-item palette-show" style="background-color:{{$palette->color_5}}"></li>
-            </ul>
+            <div class="card shadow-medium">
+                <div class="card-body">
+                        <h4 class="text-center bold uppercase">{{$palette->name}}</h4>
+                    <ul id="htmltoimage" class="list-group">
+                        <li class="list-group-item palette-show" style="background-color:{{$palette->color_1}}"> </li>
+                        <li class="list-group-item palette-show" style="background-color:{{$palette->color_2}}"></li>
+                        <li class="list-group-item palette-show" style="background-color:{{$palette->color_3}}"></li>
+                        <li class="list-group-item palette-show" style="background-color:{{$palette->color_4}}"></li>
+                        <li class="list-group-item palette-show" style="background-color:{{$palette->color_5}}"></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">

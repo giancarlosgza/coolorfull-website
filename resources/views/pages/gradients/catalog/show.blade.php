@@ -39,9 +39,14 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-12">
-            <h4 class="text-center bold uppercase">{{$gradient->name}}</h4>
-            <div id="htmltoimage" class="jumbotron jumbotron-fluid @if($gradient->color_3) bg-3-gradient @else bg-gradient @endif">
+            <div class="card shadow-medium">
+                <div class="card-body">
+                   <h4 class="text-center bold uppercase">{{$gradient->name}}</h4>
+                    <div id="htmltoimage" class="card-form jumbotron jumbotron-fluid @if($gradient->color_3) bg-3-gradient @else bg-gradient @endif">
+                    </div> 
+                </div>
             </div>
+            
         </div>
     </div>
 </div>
