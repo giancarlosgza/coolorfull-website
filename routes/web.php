@@ -44,7 +44,10 @@ Route::get('whatsnew', function () {return view('more.whatsnew');});
 Route::get('random/color', function () {return view('pages.colors.random');});
 Route::get('image/color', function () {return view('pages.colors.imagecolors');});
 
-Route::get('code/editor', 'GradientController@gradientsEditor');
+Route::get('design/system', function () {return view('pages.design.designsystem');});
+Route::get('design/system/docs', function () {return view('pages.design.docs');});
+
+//Route::get('code/editor', 'GradientController@gradientsEditor');
 //------------------------------------------------------------------------------------------------
 // SUBSCRIPTION ROUTES
 //------------------------------------------------------------------------------------------------

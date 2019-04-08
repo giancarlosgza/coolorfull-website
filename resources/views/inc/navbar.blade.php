@@ -20,6 +20,9 @@
                 <li class="nav-item {{ (request()->is('gradients/catalog')) ? 'active' : '' }}">
                     <a class="nav-link nav-color" href="/gradients/catalog">Gradients</a>
                 </li>
+                <li class="nav-item {{ (request()->is('design/system')) ? 'active' : '' }}">
+                    <a class="nav-link nav-color" href="/design/system">Design System</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownGG" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -30,9 +33,7 @@
                         <a class="dropdown-item bold" href="/generator/mgradients">3️⃣ Color Gradient</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item bold" href="/random/color">🎲 Random Color</a>
-                        <a class="dropdown-item bold" href="/image/color">🖼️ Image Colors</a> 
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bold" href="/code/editor">💻 Code Editor</a>              
+                        <a class="dropdown-item bold" href="/image/color">🖼️ Image Colors</a>              
                     </div>
                 </li>
                 @guest
