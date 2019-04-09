@@ -36,7 +36,35 @@
     <div class="row">
         <div class="col-sm-12">
             <h5 class="logo color-indigo">Material Gradient</h5>
-            <h5 class="bold">Components</h5>
+            <h5 class="bold">Components</h5><hr>
+            <!--COLORS MATERIAL GRADIENT-->
+            <h5 class="bold">Colors</h5>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="p-3 mb-2 mat-bg mat-g-primary text-white">.mat-g-primary</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 mb-2 mat-bg mat-g-secondary text-dark">.mat-g-secondary</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 mb-2 mat-bg mat-g-success text-white">.mat-g-success</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 mb-2 mat-bg mat-g-danger text-white">.mat-g-danger</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 mb-2 mat-bg mat-g-warning text-dark">.mat-g-warning</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 mb-2 mat-bg mat-g-info text-white">.mat-g-info</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 mb-2 mat-bg mat-g-light text-dark">.mat-g-light</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 mb-2 mat-bg  mat-g-dark text-white">.mat-g-dark</div>
+                </div>
+            </div>
             <hr>
             <!--ALERTS MATERIAL GRADIENT-->
             <h5 class="bold">Alerts</h5>
@@ -75,14 +103,14 @@
             <hr>
             <!--BADGES MATERIAL GRADIENT-->
             <h5 class="bold">Badges</h5>
-            <span class="badge badge-mat-g-primary">Primary</span>
-            <span class="badge badge-mat-g-secondary">Secondary</span>
-            <span class="badge badge-mat-g-success">Success</span>
-            <span class="badge badge-mat-g-danger">Danger</span>
-            <span class="badge badge-mat-g-warning">Warning</span>
-            <span class="badge badge-mat-g-info">Info</span>
-            <span class="badge badge-mat-g-light">Light</span>
-            <span class="badge badge-mat-g-dark">Dark</span>
+            <span class="badge badge-mat-g badge-mat-g-primary">Primary</span>
+            <span class="badge badge-mat-g badge-mat-g-secondary">Secondary</span>
+            <span class="badge badge-mat-g badge-mat-g-success">Success</span>
+            <span class="badge badge-mat-g badge-mat-g-danger">Danger</span>
+            <span class="badge badge-mat-g badge-mat-g-warning">Warning</span>
+            <span class="badge badge-mat-g badge-mat-g-info">Info</span>
+            <span class="badge badge-mat-g badge-mat-g-light">Light</span>
+            <span class="badge badge-mat-g badge-mat-g-dark">Dark</span>
             <br><br>
             <button type="button" class="btn btn-mat-g btn-mat-g-primary">
             Notifications <span class="badge badge-light">4</span>
@@ -179,12 +207,12 @@
             <hr>
             <!--COLLAPSE-->
             <h5 class="bold">List Group</h5>
-            <ul class="list-group">
-                <li class="list-group-item active">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item active">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+            <ul class="list-group list-group-mat-g">
+                <li class="list-group-item list-group-mat-g-item active">Cras justo odio</li>
+                <li class="list-group-item list-group-mat-g-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item list-group-mat-g-item">Morbi leo risus</li>
+                <li class="list-group-item list-group-mat-g-item active">Porta ac consectetur ac</li>
+                <li class="list-group-item list-group-mat-g-item">Vestibulum at eros</li>
             </ul>
         </div>
         <div class="col-sm-12">
@@ -196,8 +224,8 @@
             </button>
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                <div class="modal-content mat-g-modal">
-                    <div class="modal-header modal-mat-g">
+                <div class="modal-content modal-mat-g-">
+                    <div class="modal-header modal-mat-g-body">
                     <h5 class="modal-title font-weight-bold text-body" id="exampleModalLabel">Some random title</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -206,7 +234,7 @@
                     <div class="modal-body">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </div>
-                    <div class="modal-footer modal-mat-g">
+                    <div class="modal-footer modal-mat-g-body">
                     <button type="button" class="btn btn-mat-g btn-mat-g-link" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-mat-g btn-mat-g-link">Continue</button>
                     </div>
@@ -218,7 +246,7 @@
             <hr>
             <!--NAVBAR-->
             <h5 class="bold">Navbar</h5>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light mat-g-navbar">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-mat-g">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -231,7 +259,7 @@
                     </div>
                 </div>
             </nav><br>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mat-g-navbar-gradient">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-mat-g-gradient">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkupEx" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -271,10 +299,10 @@
                     <h5 class="bold">Register</h5><hr>
                     <form>
                         <div class="form-group">
-                            <input type="email" class="form-control mat-g-form" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                            <input type="email" class="form-control form-mat-g" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control mat-g-form" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" class="form-control form-mat-g" id="exampleInputPassword1" placeholder="Password">
                         </div>
                         <button type="submit" class="btn btn-mat-g btn-mat-g-primary">Submit</button>
                     </form>

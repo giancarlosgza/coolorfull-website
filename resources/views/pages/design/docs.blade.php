@@ -2,18 +2,19 @@
 @section('title', 'Docs Design System')
 @section('content')
 @section('styles')
+<link rel="stylesheet" href="{{ asset('/assets/css/design-system/colorffy.matgradient.css')}}">
 <style>
 .gray {
-    color: gray !important;
+    color: #757575 !important;
 }
 .red {
-    color: red !important;
+    color: #b71c1c !important;
 }
 .blue {
-    color: blue !important;
+    color: #0d47a1 !important;
 }
 .cyan {
-    color: cyan !important;
+    color: #0097a7 !important;
 }
 </style>
 @endsection
@@ -51,6 +52,7 @@
         <div class="col-md-8">
             <div class="card card-form">
                 <div class="card-body">
+                    <h6 class="h6-responsive bold color-indigo">Getting Started</h6>
                     <h6 class="h6-responsive bold">Quick Start</h6>
                     <h6>
                         Hello! Getting started with Colorffy it's so fast.
@@ -59,30 +61,29 @@
                     <h6 class="h6-responsive bold">Download</h6>
                     <h6>
                         You can download the Material Gradients css from <a class="bold color-darkblue" href="/design/system">here!</a> <br>
-                        Just copy-paste the stylesheet link into your head 
-                        after Bootstrap styles to load this css.
                     </h6><hr>
                     <h6 class="h6-responsive bold">Dependencies</h6>
                     <h6>
                         Just Bootstrap 4’s core styles and jQuery. <br>
                         Read more about Bootstrap installation <a class="bold color-darkblue" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">here</a>
                     </h6><hr>
-                    <h6 class="h6-responsive bold">Starter Template</h6>
-                    <h6>
-                        <div class="card">
-                            <div class="card-body">
-                                <p>For example, if I have <code>&lt;p&gt</code>, I want the div to display in the browser as text not have the browser interpret it as html. Is this complicated to do?</p>
-                                <figure>
-                                    <pre>
-                                        <code data-lang="html">
-                                            <span class="gray">&lt;!-- Colorffy Material Gradient CSS --&gt;</span><br>
-                                            <span class="blue">&lt;link</span> <span class="cyan">rel=</span><span class="red">"stylesheet"</span> <span class="cyan">href=</span><span class="red">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"</span> <span class="blue">&gt;</span><br>
-                                        </code>
-                                    </pre>
-                                </figure>
-                            </div>
+                    <h6 class="h6-responsive bold">Link</h6>
+                    <h6 class="h6-responsive">Just copy-paste the stylesheet link into your head after Bootstrap styles to load this css.</h6>
+                    <div class="card">
+                        <div class="card-body">
+                            <figure>
+                                <pre>
+                                    <code data-lang="html">
+                                        <span class="gray">&lt;!-- Colorffy Material Gradient CSS --&gt;</span><br>
+                                        <span class="blue">&lt;link</span> <span class="cyan">rel=</span><span class="red">"stylesheet"</span> <span class="cyan">href=</span><span class="red">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"</span> <span class="blue">&gt;</span><br>
+                                        <span class="blue">&lt;link</span> <span class="cyan">rel=</span><span class="red">"stylesheet"</span> <span class="cyan">href=</span><span class="red">"/css/colorffy.matgradient.css"</span> <span class="blue">&gt;</span><br>
+                                    </code>
+                                </pre>
+                            </figure>
                         </div>
-                    </h6>
+                    </div><hr>
+                    <h6 class="h6-responsive bold color-indigo">Components</h6>
+                    <h6 class="h6-responsive bold">Alerts</h6>
                 </div>
             </div>
         </div>
