@@ -35,7 +35,7 @@
 <div class="container" id="material-gradient">
     <div class="row">
         <div class="col-sm-12">
-            <h5 class="logo">Material Gradient</h5>
+            <h5 class="logo color-indigo">Material Gradient</h5>
             <h5 class="bold">Components</h5>
             <hr>
             <!--ALERTS MATERIAL GRADIENT-->
@@ -148,6 +148,7 @@
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold ">One Card title</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <hr>
                     <a href="#" class="btn btn-mat-g btn-mat-g-primary">Learn More</a>
                 </div>
             </div>
@@ -158,7 +159,8 @@
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold">Two Card title</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <a href="#" class="btn btn-mat-g btn-mat-g-dark">Learn More</a>
+                    <hr>
+                    <a href="#" class="btn btn-mat-g btn-mat-g-light">Learn More</a>
                 </div>
             </div>
         </div>
@@ -168,6 +170,7 @@
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold">Three Card title</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <hr>
                     <a href="#" class="btn btn-mat-g btn-mat-g-link">Learn More</a>
                 </div>
             </div>
@@ -194,18 +197,18 @@
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                 <div class="modal-content mat-g-modal">
-                    <div class="modal-header">
-                    <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Some Title</h5>
+                    <div class="modal-header modal-mat-g">
+                    <h5 class="modal-title font-weight-bold text-body" id="exampleModalLabel">Some random title</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>
                     <div class="modal-body">
-                    Bodyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-mat-g btn-mat-g-light" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-mat-g btn-mat-g-primary">Save</button>
+                    <div class="modal-footer modal-mat-g">
+                    <button type="button" class="btn btn-mat-g btn-mat-g-link" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-mat-g btn-mat-g-link">Continue</button>
                     </div>
                 </div>
                 </div>

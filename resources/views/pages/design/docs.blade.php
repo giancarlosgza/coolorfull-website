@@ -1,6 +1,22 @@
 @extends('layouts.app')
 @section('title', 'Docs Design System')
 @section('content')
+@section('styles')
+<style>
+.gray {
+    color: gray !important;
+}
+.red {
+    color: red !important;
+}
+.blue {
+    color: blue !important;
+}
+.cyan {
+    color: cyan !important;
+}
+</style>
+@endsection
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
@@ -55,35 +71,14 @@
                     <h6>
                         <div class="card">
                             <div class="card-body">
-                                    <p>For example, if I have <code>&lt;p&gt</code>, I want the div to display in the browser as text not have the browser interpret it as html. Is this complicated to do?</p>
-
+                                <p>For example, if I have <code>&lt;p&gt</code>, I want the div to display in the browser as text not have the browser interpret it as html. Is this complicated to do?</p>
                                 <figure>
-                                    
+                                    <pre>
                                         <code data-lang="html">
-                                            <span class="cp">&lt;!doctype html&gt;</span><br>
-                                            <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span><br>
-                                            <span class="nt">&lt;head&gt;</span><br>
-                                            <span class="c">&lt;!-- Required meta tags --&gt;</span><br>
-                                            <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span><br>
-                                            <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span><br>
-                                            
-                                            <span class="c">&lt;!-- Bootstrap CSS --&gt;</span><br>
-                                            <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span><br>
-                                            
-                                            <span class="nt">&lt;title&gt;</span>Hello, world!<span class="nt">&lt;/title&gt;</span><br>
-                                            <span class="nt">&lt;/head&gt;</span><br>
-                                            <span class="nt">&lt;body&gt;</span><br>
-                                            <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span><br>
-                                            
-                                            <span class="c">&lt;!-- Optional JavaScript --&gt;</span><br>
-                                            <span class="c">&lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;</span><br>
-                                            <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span><br>
-                                            <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span><br>
-                                            <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span><br>
-                                            <span class="nt">&lt;/body&gt;</span><br>
-                                            <span class="nt">&lt;/html&gt;</span><br>
+                                            <span class="gray">&lt;!-- Colorffy Material Gradient CSS --&gt;</span><br>
+                                            <span class="blue">&lt;link</span> <span class="cyan">rel=</span><span class="red">"stylesheet"</span> <span class="cyan">href=</span><span class="red">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"</span> <span class="blue">&gt;</span><br>
                                         </code>
-                                    
+                                    </pre>
                                 </figure>
                             </div>
                         </div>
