@@ -113,7 +113,7 @@
             <span class="badge badge-mat-g badge-mat-g-dark">Dark</span>
             <br><br>
             <button type="button" class="btn btn-mat-g btn-mat-g-primary">
-            Notifications <span class="badge badge-light">4</span>
+            Notifications <span class="badge badge-mat-g badge-light">4</span>
             </button>
         </div>
         <div class="col-md-12">
