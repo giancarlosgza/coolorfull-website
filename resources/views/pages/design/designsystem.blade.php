@@ -205,7 +205,7 @@
         </div>
         <div class="col-sm-12">
             <hr>
-            <!--COLLAPSE-->
+            <!--LIST GROUP-->
             <h5 class="bold">List Group</h5>
             <ul class="list-group list-group-mat-g">
                 <li class="list-group-item list-group-mat-g-item active">Cras justo odio</li>
@@ -224,21 +224,21 @@
             </button>
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                <div class="modal-content modal-mat-g-">
-                    <div class="modal-header modal-mat-g-body">
-                    <h5 class="modal-title font-weight-bold text-body" id="exampleModalLabel">Some random title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <div class="modal-content modal-mat-g">
+                        <div class="modal-header modal-mat-g-body">
+                        <h5 class="modal-title font-weight-bold text-body" id="exampleModalLabel">Some random title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                        <div class="modal-footer modal-mat-g-body">
+                        <button type="button" class="btn btn-mat-g btn-mat-g-link" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-mat-g btn-mat-g-link">Continue</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </div>
-                    <div class="modal-footer modal-mat-g-body">
-                    <button type="button" class="btn btn-mat-g btn-mat-g-link" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-mat-g btn-mat-g-link">Continue</button>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>

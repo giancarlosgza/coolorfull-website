@@ -333,7 +333,7 @@
     border-bottom-left-radius: 6px;
 }
 /*MODAL*/
-.modal-mat-g- {
+.modal-mat-g {
     background-color: #ffffff;
     border: none;
     border-radius: 15px;
@@ -346,10 +346,10 @@
 }
 /*NAVBARS*/
 .navbar-mat-g {
-    box-shadow: 0 2px 4px rgba(0,0,0,.5); 
+    box-shadow: 0 2px 4px rgba(0,0,0,.4); 
 }
 .navbar-mat-g-gradient {
-  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+  box-shadow: 0 2px 4px rgba(0,0,0,.4);
   background: linear-gradient(to right, #4b75e8, #54c0ff);
 }
 /*PROGRESS*/

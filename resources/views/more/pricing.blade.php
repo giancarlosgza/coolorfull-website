@@ -42,9 +42,10 @@
                         <h5>🙆‍♂️ <strong>Create and save</strong> unlimited gradient</h5>
                         <h5>🖌️ <strong>Gradients row</strong> on code editor</h5>
                         <h5>🚫 No <strong>ads in the website</strong></h5>
-                        <h5>📧 Email you the best gradients and palettes of the week,<strong> every week (optional)</strong></h5>
+                        <!--<h5>📧 Email you the best gradients and palettes of the week,<strong> every week (optional)</strong></h5>
+                        -->
                         <h5>🎨 <strong>Preview icons</strong> with color palettes & colors from images</h5>
-                        <h5>🎁 <strong>Access</strong> to icons, backgrounds and illustrations (coming soon)</h5>
+                        <h5>🎁 <strong>Access</strong> to design systems (more coming soon)</h5>
                         <h5>❓  Do you want some <strong>feature or feedback? <a href="mailto:colorffy@gmail.com" class="color-darkblue" title="Contact Us">send us a message!</a></strong></h5>
                     </div>
                 </div>
