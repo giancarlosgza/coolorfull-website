@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold">🎯 3 Colors-Gradient Generator</h4>
+            <h4 class="bold text-body">🎯 3 Colors-Gradient Generator</h4>
         </div>
     </div>
     <div class="card shadow-medium">
@@ -24,6 +24,24 @@
                     <input type="text" class="form-control" id="color_3" value="#000000">
                 </div>
             </div>
+            @if($validSub)
+                <div class="row">
+                    <div class="col text-right">
+                        <button id="save-gradient-btn" class="btn btn-primary shadow-medium">
+                            Save gradient (PRO)
+                        </button>
+                    </div>
+                </div>
+            @else
+                <div class="row">
+                    <div class="col text-right">
+                        <button id="save-gradient-btn" class="btn btn-primary shadow-medium" disabled>
+                            <i class="fas fa-lock"></i>
+                            Save gradient (PRO)
+                        </button>
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
     <div class="row">
@@ -32,83 +50,150 @@
             </div>
         </div>
         <div class="col-12 col-sm-12">
+            @if($validSub)
             <a class="btn btn-gradient" onclick="downloadimage()">
                 <i class="fas fa-image"></i>
                 Get IMG
-            </a><hr>    
+            </a>
+            @else
+            <button class="btn btn-gradient" disabled>
+                <i class="fas fa-lock"></i>
+                Get IMG (PRO)
+            </button>
+            @endif
+            <hr>    
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-sm-6">
+        <div class="col-12 col-sm-12">
             <div class="card shadow-medium">
                 <div class="card-body">
                     <h5 class="bold">CSS</h5>
-                    <code><h6 class="bold" id="hexadecimal"></h6></code>
+                    <code><h6 class="bold" id="css"></h6></code>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-6">
+        <!-- TABLE COLORS CODE -->
+        <div class="col-sm-12">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h5 class="bold">HEX</h5>
-                    <code>
-                        <h6 class="bold" id="css_code"></h6>
-                    </code>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                <th scope="col">🎨</th>
+                                <th scope="col">👨‍💻 HEX</th>
+                                <th scope="col">💻 RGB</th>
+                                <th scope="col">💡 HSL</th>
+                                <th scope="col">🖨️ CMYK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-circle" id="color1"></i></th>
+                                    <td id="hex"></td>
+                                    <td id="rgb"></td>
+                                    <td id="hsl"></td>
+                                    <td id="cmyk"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-circle" id="color2"></i></th>
+                                    <td id="hex2"></td>
+                                    <td id="rgb2"></td>
+                                    <td id="hsl2"></td>
+                                    <td id="cmyk2"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-circle" id="color3"></i></th>
+                                    <td id="hex3"></td>
+                                    <td id="rgb3"></td>
+                                    <td id="hsl3"></td>
+                                    <td id="cmyk3"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-6">
-            <div class="card shadow-medium">
-                <div class="card-body">
-                    <h5 class="bold">RGB</h5>
-                    <code>
-                        <h6 class="bold" id="rgb"></h6>
-                        <h6 class="bold" id="rgb2"></h6>
-                        <h6 class="bold" id="rgb3"></h6>
-                    </code>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6">
-            <div class="card shadow-medium">
-                <div class="card-body">
-                    <h5 class="bold">HSL</h5>
-                    <code>
-                        <h6 class="bold" id="hsl"></h6>
-                        <h6 class="bold" id="hsl2"></h6>
-                        <h6 class="bold" id="hsl3"></h6>
-                    </code>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6">
-            <div class="card shadow-medium">
-                <div class="card-body">
-                    <h5 class="bold">CMYK</h5>
-                    <code>
-                        <h6 class="bold" id="cmyk"></h6>
-                        <h6 class="bold" id="cmyk2"></h6>
-                        <h6 class="bold" id="cmyk3"></h6>
-                    </code>
-                </div>
-            </div>
-        </div>
+        <!--END TABLE-->
     </div>
     <hr>
-    <a class="twitter-share-button "
-        href="https://twitter.com/intent/tweet?text=Hey!%20Check%20this%20amazing%203%20colors%20gradient%20generator!%20by%20@colorffy"
-        data-size="large">
-        Tweet
-    </a>
+    <div class="sharethis-inline-share-buttons"></div>
 </div>
 @endsection
 @section('scripts')
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="{{ asset('assets/js/jquery.minicolors.js') }}"></script>
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script type="text/javascript">
-        function downloadimage(){var e=document.getElementById("gradient_preview");html2canvas(e,{allowTaint:!0}).then(function(e){var n=document.createElement("a");document.body.appendChild(n),n.download="newGradient.jpg",n.href=e.toDataURL(),n.target="_blank",n.click()})}$("#color_1").minicolors({animationEasing:"swing"}),$("#color_2").minicolors({animationEasing:"swing"}),$("#color_3").minicolors({animationEasing:"swing"}),$(window).on("load",function(){function m(e,n,t){e/=255,n/=255,t/=255;var l,r,o=Math.max(e,n,t),a=Math.min(e,n,t),i=(o+a)/2;if(o==a)l=r=0;else{var d=o-a;switch(r=.5<i?d/(2-o-a):d/(o+a),o){case e:l=(n-t)/d+(n<t?6:0);break;case n:l=(t-e)/d+2;break;case t:l=(e-n)/d+4}l/=6}return[360*l+.5|0,(100*r+.5|0)+"%",(100*i+.5|0)+"%"]}function g(e,n,t){var l=0,r=0,o=0;e=parseInt((""+e).replace(/\s/g,""),10),n=parseInt((""+n).replace(/\s/g,""),10),t=parseInt((""+t).replace(/\s/g,""),10);if(0==e&&0==n&&0==t)return[0,0,0,1];l=1-e/255,r=1-n/255,o=1-t/255;var a=Math.min(l,Math.min(r,o));return[(100*(l=(l-a)/(1-a))+.5|0)+"%",(100*(r=(r-a)/(1-a))+.5|0)+"%",(100*(o=(o-a)/(1-a))+.5|0)+"%",(100*a+.5|0)+"%"]}$("#color_1").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=document.getElementById("color_3").value,l=[],r=$(c),o=!1,a=r.val(),i=(a+"").replace(/#/,"");1===a.length&&"#"!==a&&r.val("#"+a),3==i.length&&(i+=i);for(var d=0;d<6;d+=2)l.push(parseInt(i.substr(d,2),16)),o=o||"NaN"===l[l.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+", "+t+")",document.getElementById("hexadecimal").innerHTML="background: linear-gradient(to right, "+e+","+n+","+t+");",document.getElementById("css_code").innerHTML=e+", "+n+", "+t,document.getElementById("rgb").innerHTML="rgb("+l+")",document.getElementById("hsl").innerHTML="hsl("+m.apply(null,l).join(",")+")",document.getElementById("cmyk").innerHTML="cmyk("+g.apply(null,l)+")"},13)}),$("#color_2").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=document.getElementById("color_3").value,l=[],r=$(c),o=!1,a=r.val(),i=(a+"").replace(/#/,"");1===a.length&&"#"!==a&&r.val("#"+a),3==i.length&&(i+=i);for(var d=0;d<6;d+=2)l.push(parseInt(i.substr(d,2),16)),o=o||"NaN"===l[l.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+", "+t+")",document.getElementById("hexadecimal").innerHTML="background: linear-gradient(to right, "+e+","+n+","+t+");",document.getElementById("css_code").innerHTML=e+", "+n+", "+t,document.getElementById("rgb2").innerHTML="rgb("+l+")",document.getElementById("hsl2").innerHTML="hsl("+m.apply(null,l).join(",")+")",document.getElementById("cmyk2").innerHTML="cmyk("+g.apply(null,l)+")"},13)}),$("#color_3").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=document.getElementById("color_3").value,l=[],r=$(c),o=!1,a=r.val(),i=(a+"").replace(/#/,"");1===a.length&&"#"!==a&&r.val("#"+a),3==i.length&&(i+=i);for(var d=0;d<6;d+=2)l.push(parseInt(i.substr(d,2),16)),o=o||"NaN"===l[l.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+", "+t+")",document.getElementById("hexadecimal").innerHTML="background: linear-gradient(to right, "+e+","+n+","+t+");",document.getElementById("css_code").innerHTML=e+", "+n+", "+t,document.getElementById("rgb3").innerHTML="rgb("+l+")",document.getElementById("hsl3").innerHTML="hsl("+m.apply(null,l).join(",")+")",document.getElementById("cmyk3").innerHTML="cmyk("+g.apply(null,l)+")"},13)})});
+    function downloadimage(){var e=document.getElementById("gradient_preview");html2canvas(e,{allowTaint:!0}).then(function(e){var n=document.createElement("a");document.body.appendChild(n),n.download="newGradient.jpg",n.href=e.toDataURL(),n.target="_blank",n.click()})}
+    $("#color_1").minicolors({animationEasing:"swing"}),$("#color_2").minicolors({animationEasing:"swing"}),$("#color_3").minicolors({animationEasing:"swing"}),$(window).on("load",function(){function m(e,n,t){e/=255,n/=255,t/=255;var l,r,o=Math.max(e,n,t),a=Math.min(e,n,t),i=(o+a)/2;if(o==a)l=r=0;else{var d=o-a;switch(r=.5<i?d/(2-o-a):d/(o+a),o){case e:l=(n-t)/d+(n<t?6:0);break;case n:l=(t-e)/d+2;break;case t:l=(e-n)/d+4}
+    l/=6}
+    return[360*l+.5|0,(100*r+.5|0)+"%",(100*i+.5|0)+"%"]}
+    function g(e,n,t){var l=0,r=0,o=0;e=parseInt((""+e).replace(/\s/g,""),10),n=parseInt((""+n).replace(/\s/g,""),10),t=parseInt((""+t).replace(/\s/g,""),10);if(0==e&&0==n&&0==t)return[0,0,0,1];l=1-e/255,r=1-n/255,o=1-t/255;var a=Math.min(l,Math.min(r,o));return[(100*(l=(l-a)/(1-a))+.5|0)+"%",(100*(r=(r-a)/(1-a))+.5|0)+"%",(100*(o=(o-a)/(1-a))+.5|0)+"%",(100*a+.5|0)+"%"]}
+    $("#color_1").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=document.getElementById("color_3").value,l=[],r=$(c),o=!1,a=r.val(),i=(a+"").replace(/#/,"");1===a.length&&"#"!==a&&r.val("#"+a),3==i.length&&(i+=i);for(var d=0;d<6;d+=2)l.push(parseInt(i.substr(d,2),16)),o=o||"NaN"===l[l.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+", "+t+")"
+    document.getElementById("css").innerHTML="background: linear-gradient(to right, "+e+","+n+","+t+");"
+    document.getElementById("hex").innerHTML=e
+    document.getElementById("hex2").innerHTML=n
+    document.getElementById("hex3").innerHTML=t
+    document.getElementById("color1").style.color=e;document.getElementById("color2").style.color=n;document.getElementById("color3").style.color=t;document.getElementById("rgb").innerHTML="rgb("+l+")"
+    document.getElementById("hsl").innerHTML="hsl("+m.apply(null,l).join(",")+")"
+    document.getElementById("cmyk").innerHTML="cmyk("+g.apply(null,l)+")"},13)}),$("#color_2").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=document.getElementById("color_3").value,l=[],r=$(c),o=!1,a=r.val(),i=(a+"").replace(/#/,"");1===a.length&&"#"!==a&&r.val("#"+a),3==i.length&&(i+=i);for(var d=0;d<6;d+=2)l.push(parseInt(i.substr(d,2),16)),o=o||"NaN"===l[l.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+", "+t+")"
+    document.getElementById("css").innerHTML="background: linear-gradient(to right, "+e+","+n+","+t+");"
+    document.getElementById("hex").innerHTML=e
+    document.getElementById("hex2").innerHTML=n
+    document.getElementById("hex3").innerHTML=t
+    document.getElementById("color1").style.color=e;document.getElementById("color2").style.color=n;document.getElementById("color3").style.color=t;document.getElementById("rgb2").innerHTML="rgb("+l+")"
+    document.getElementById("hsl2").innerHTML="hsl("+m.apply(null,l).join(",")+")"
+    document.getElementById("cmyk2").innerHTML="cmyk("+g.apply(null,l)+")"},13)}),$("#color_3").bind("blur keydown",function(e){var c=this;setTimeout(function(){var e=document.getElementById("color_1").value,n=document.getElementById("color_2").value,t=document.getElementById("color_3").value,l=[],r=$(c),o=!1,a=r.val(),i=(a+"").replace(/#/,"");1===a.length&&"#"!==a&&r.val("#"+a),3==i.length&&(i+=i);for(var d=0;d<6;d+=2)l.push(parseInt(i.substr(d,2),16)),o=o||"NaN"===l[l.length-1].toString();document.getElementById("gradient_preview").style.background="linear-gradient(to right, "+e+","+n+", "+t+")"
+    document.getElementById("css").innerHTML="background: linear-gradient(to right, "+e+","+n+","+t+");"
+    document.getElementById("hex").innerHTML=e
+    document.getElementById("hex2").innerHTML=n
+    document.getElementById("hex3").innerHTML=t
+    document.getElementById("color1").style.color=e;document.getElementById("color2").style.color=n;document.getElementById("color3").style.color=t;document.getElementById("rgb3").innerHTML="rgb("+l+")"
+    document.getElementById("hsl3").innerHTML="hsl("+m.apply(null,l).join(",")+")"
+    document.getElementById("cmyk3").innerHTML="cmyk("+g.apply(null,l)+")"},13)})})
     </script>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons'" async="async"></script>
+    @if($validSub)
     <script>
-        //twitter share btn
-        window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)||((n=t.createElement(e)).id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)}),w}(document,"script","twitter-wjs");
+    {{-- Only paid users will see this --}}
+
+    $(document).ready(() => {
+        const SAVE_GRADIENT_BTN = $('#save-gradient-btn')
+        SAVE_GRADIENT_BTN.click(event => {
+            swal({
+                title: 'Saving a gradient',
+                text: 'Type a name for your gradient',
+                button: {
+                    text: 'Save',
+                    closeModal: false,
+                },
+                content: {
+                    element: 'input',
+                    attributes: {
+                        placeholder: 'i.e. Sunrise'
+                    }
+                }
+            }).then(name => {
+                $.ajax({
+                    method: 'POST',
+                    url: '{{ route('saveGradient') }}',
+                    data: {
+                        name: name,
+                        color1: $('#color_1').val(),
+                        color2: $('#color_2').val(),
+                        color3: $('#color_3').val(),
+                    }
+                }).done((response, status) => {
+                    swal.stopLoading();
+                    swal.close();
+                    swal("Gradient saved!", "You can now navigate to My Gradients and see it there", "success");
+                })
+            })
+        })
+    })
     </script>
+    @endif
 @endsection

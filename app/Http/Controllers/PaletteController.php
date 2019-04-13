@@ -20,13 +20,30 @@ class PaletteController extends Controller
     //SHOW GRADIENTS IN CATALOG
     function catalogPalettes(Request $request) {
         $searchQuery = $request->input('q');
-        $palettes;
+
+        $filtersAvailable = Palette::select('color_filter', 'color_filter_2')->get();
+
+        $filters = collect([]);
+
+        foreach($filtersAvailable as $filter)
+        {
+            if(!$filters->contains($filter->color_filter))
+            {
+                $filters->push($filter->color_filter);
+            }
+
+            if(!$filters->contains($filter->color_filter_2))
+            {
+                $filters->push($filter->color_filter_2);
+            }
+        }
+
+
 
         if(empty($searchQuery)) {
             $palettes = Palette::orderBy('id', 'DESC')->paginate(12);
         } else {
-            $palettes = DB::table('palettes')
-                    ->where('name', 'like', '%' . $searchQuery . '%')
+            $palettes = Palette::where('name', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_1', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_2', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_3', 'like', '%' . $searchQuery . '%')
@@ -36,7 +53,11 @@ class PaletteController extends Controller
                     ->orWhere('color_filter_2', 'like', '%' . $searchQuery . '%')
                     ->orderBy('id', 'DESC')->paginate(12);
         }
-        return view ('pages.palette.catalog.catalog')->with('palettes', $palettes)->with('searchQuery', $searchQuery);
+        return view ('pages.palette.catalog.catalog')
+                    ->with('palettes', $palettes)
+                    ->with('searchQuery', $searchQuery)
+                    ->with('filters', $filters)
+                    ->with('user', Auth::user());
     }
 
     //SHOW GRADIENTS ON INDEX
@@ -48,8 +69,7 @@ class PaletteController extends Controller
             $palettes = Palette::orderBy('id', 'DESC')->paginate(3);
             return view ('pages.index')->with('palettes',  $palettes)->with('searchQuery', $searchQuery);
         } else {
-            $palettes = DB::table('palettes')
-                    ->where('name', 'like', '%' . $searchQuery . '%')
+            $palettes = Palette::where('name', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_1', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_2', 'like', '%' . $searchQuery . '%')
                     ->orWhere('color_3', 'like', '%' . $searchQuery . '%')

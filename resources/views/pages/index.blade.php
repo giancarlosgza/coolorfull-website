@@ -19,21 +19,35 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-sm-12">
-                <h4 class="bold">Last Gradients</h4>
+            <div class="col-6">
+                <h4 class="bold text-body">Last Gradients</h4>
+            </div>
+            <div class="col-6 text-right">
+                <a href="/gradients/catalog" class="color-darkblue bold">
+                    🔥 View all
+                </a>
             </div>
         </div>
         <br>
         <div class="row">
             @foreach($gradients as $gradient)
             <div class="col-6 col-md-3">
-                <a href="/gradients/{{$gradient->id}}" class="gradient-link">
-                    <div class="card text-center">
-                        <div class="card-body card-gradient shadow-medium" style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
-                            <h6 class="bold">{{$gradient->name}}</h6>
-                        </div>
+                <div class="card shadow-medium">
+                    <div class="card-body">
+                        <h6 class="bold text-center uppercase h6-responsive">{{$gradient->name}}</h6>
+                        <a href="/gradients/{{$gradient->id}}" class="gradient-link">
+                            <div class="card text-center">
+                                <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" 
+                                     @if($gradient->color_3)
+                                    style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}}, {{$gradient->color_3}});">
+                                    @else
+                                    style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
+                                    @endif   
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
             </div>
             @endforeach
         </div>
