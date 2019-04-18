@@ -14,37 +14,37 @@
 
                         <div class="form-group">
                             <label for="name" class="bold">Name:</label>
-                            <input type="name" class="form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" id="name" name="nombre" placeholder="Fire Red, Leaf Green" value="{{ old('nombre') }}">
+                            <input type="name" class="form-mat-g form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" id="name" name="nombre" placeholder="Fire Red, Leaf Green" value="{{ old('nombre') }}">
                         </div>
 
                         <div class="form-group">
                             <label for="color_1" class="bold">Color 1:</label>
-                            <input type="text" class="hexcolor form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" id="color_1" name="color_1" placeholder="#11998e" value="{{ old('color_1') }}">
+                            <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" id="color_1" name="color_1" placeholder="#11998e" value="{{ old('color_1') }}">
                         </div>
 
                         <div class="form-group">
                             <label for="color_2" class="bold">Color 2:</label>
-                            <input type="text" class="hexcolor form-control{{ $errors->has('color_2') ? ' is-invalid' : '' }}" id="color_2" name="color_2" placeholder="#38ef7d" value="{{ old('color_2') }}">
+                            <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_2') ? ' is-invalid' : '' }}" id="color_2" name="color_2" placeholder="#38ef7d" value="{{ old('color_2') }}">
                         </div>
 
                         <div class="form-group">
                             <label for="color_3" class="bold">Color 3:</label>
-                            <input type="text" class="hexcolor form-control{{ $errors->has('color_3') ? ' is-invalid' : '' }}" id="color_3" name="color_3" placeholder="#5421rs" value="{{ old('color_3') }}">
+                            <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_3') ? ' is-invalid' : '' }}" id="color_3" name="color_3" placeholder="#5421rs" value="{{ old('color_3') }}">
                         </div>
 
                         <div class="form-group">
                             <label for="color_4" class="bold">Color 4:</label>
-                            <input type="text" class="hexcolor form-control{{ $errors->has('color_4') ? ' is-invalid' : '' }}" id="color_4" name="color_4" placeholder="#000000" value="{{ old('color_4') }}">
+                            <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_4') ? ' is-invalid' : '' }}" id="color_4" name="color_4" placeholder="#000000" value="{{ old('color_4') }}">
                         </div>
 
                         <div class="form-group">
                             <label for="color_4" class="bold">Color 5:</label>
-                            <input type="text" class="hexcolor form-control{{ $errors->has('color_4') ? ' is-invalid' : '' }}" id="color_5" name="color_5" placeholder="#0072ff" value="{{ old('color_5') }}">
+                            <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_4') ? ' is-invalid' : '' }}" id="color_5" name="color_5" placeholder="#0072ff" value="{{ old('color_5') }}">
                         </div>
 
                         <div class="form-group">
                             <label for="color_filter" class="bold">Color Filter:</label>
-                            <select class="form-control{{ $errors->has('color_filter') ? ' is-invalid' : '' }}" id="color_filter" name="color_filter" placeholder="Red, Blue, Green" value="{{ old('color_filter') }}">
+                            <select class="form-select form-mat-g form-control{{ $errors->has('color_filter') ? ' is-invalid' : '' }}" id="color_filter" name="color_filter" placeholder="Red, Blue, Green" value="{{ old('color_filter') }}">
                                 <option>Red</option>
                                 <option>Green</option>
                                 <option>Blue</option>
@@ -62,7 +62,7 @@
     
                         <div class="form-group">
                             <label for="color_filter_2" class="bold">Color Filter 2:</label>
-                            <select class="form-control{{ $errors->has('color_filter_2') ? ' is-invalid' : '' }}" id="color_filter_2" name="color_filter_2" placeholder="Red, Blue, Green" value="{{ old('color_filter_2') }}">
+                            <select class="form-select form-mat-g form-control{{ $errors->has('color_filter_2') ? ' is-invalid' : '' }}" id="color_filter_2" name="color_filter_2" placeholder="Red, Blue, Green" value="{{ old('color_filter_2') }}">
                                 <option>Red</option>
                                 <option>Green</option>
                                 <option>Blue</option>

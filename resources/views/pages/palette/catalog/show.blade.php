@@ -6,7 +6,7 @@
     .svg-1{width:100px}.svg-2{width:120px}.svg-3{width:85px}.cls-1,.cls-8{fill:none}.cls-1{stroke:#333;stroke-width:5px}.cls-1,.cls-8,.cls-9{stroke-miterlimit:10}.cls-2{fill:{{$palette->color_1}}}.cls-3,.cls-4,.cls-9{fill:{{$palette->color_2}}}.cls-5{fill:{{$palette->color_3}}}.cls-6{fill:{{$palette->color_4}}}.cls-7{fill:{{$palette->color_5}}}.cls-8{stroke:#65c8d0}.cls-9{stroke:#f2f2f2}.cls-10{fill:#b3b3b3}
 </style>
 
-<div class="container btn-return">
+<div class="container btn-indigo">
     <div class="row">
         <div class="col-sm-12">
             <a class="btn btn-link color-darkblue" href="/palettes/catalog"><i class="fas fa-arrow-left"></i> Palettes</a>

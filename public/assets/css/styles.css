@@ -40,11 +40,11 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 14px;
-    letter-spacing: .25px;
+    letter-spacing: 1.25px;
     border-radius: 100px;
-    transition: all .3s cubic-bezier(.25, .8, .25, 1)
+    transition: all .3s cubic-bezier(.25, .8, .25, 1);
+    
 }
-
 .btn-gradient {
     color: #000;
     background-color: #fff;
@@ -52,76 +52,64 @@ body {
     margin-bottom: 5px;
     box-shadow: 0 2px 4px 0 rgba(0, 64, 128, .2)
 }
-
 .btn-gradient:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 64, 128, .2), 0 2px 4px 0 rgba(0, 0, 0, .08)
 }
-
 .btn-primary {
     color: #fff;
     border: 0;
-    background-image: linear-gradient(to right, #255dce, #1c9fe7)
+    background: #1F2AFF;
 }
-
 .btn-primary:hover {
-    color: #255dce
+    background-color: #0f129e;
 }
-
-.btn-danger:active,
-.btn-danger:hover,
-.btn-primary:active,
-.btn-primary:hover {
-    background-image: linear-gradient(to right, #fff, #eaeaea);
-    border: 0
+.btn-primary:active, .btn-primary:focus {
+    background-color: #141acc !important;
 }
-
-.btn-primary:active {
-    color: #255dce !important
+.btn-secondary {
+    background-color: #ffffff;
+    border: 0;
+    color: #1F2AFF
 }
-
+.btn-secondary:hover {
+    background-color: #eeeeee;
+    color: #1F2AFF
+}
+.btn-secondary:active, .btn-secondary:focus {
+    background-color: #f5f5f5 !important;
+    color: #1F2AFF !important
+}
 .btn-danger {
-    background-image: linear-gradient(to right, #ea284c, #f15547);
+    background-color: #ea284c;
     border: 0
 }
-
 .btn-danger:hover {
-    color: #ea284c
+    color: #ffffff;
+    background-color: #9e0e0e;
 }
-
-.btn-danger:active {
-    color: #ea284c !important
+.btn-danger:active, .btn-danger:focus {
+    color: #ffffff !important;
+    background-color: #cc1212;
 }
-
 .btn-outline-light {
     box-shadow: 0 2px 4px 0 rgba(0, 64, 128, .2)
 }
-
 .btn-return {
     display: none !important
 }
-
-.btn-secondary {
-    background-image: linear-gradient(to right, #fff, #eaeaea);
-    border: 0;
-    color: #000
-}
-
-.btn-secondary:hover {
-    color: #000
-}
-
-.btn-secondary:active {
-    color: #000 !important
+.btn-link {
+    color: #1F2AFF;
 }
 
 .color-blue {
     color: #258bff
 }
-
 .color-indigo {
     color: #1F2AFF;
 }
-
+.color-indigo:hover {
+    color: #0f129e;
+}
 .color-darkblue {
     color: #11569C
 }
@@ -129,7 +117,6 @@ body {
 .bold {
     font-weight: 700
 }
-
 .uppercase {
     text-transform: uppercase !important
 }
@@ -138,12 +125,17 @@ body {
     margin-bottom: 20px;
     border: 0
 }
-
 .card,
 .card-body {
     border-radius: 15px
 }
-
+.card-header:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #1F2AFF;
+    color: #ffffff;
+    text-align: center;
+}
 .card-footer {
     background-color: #fff;
     -webkit-box-shadow: 0 10px 40px -10px rgba(0, 64, 128, .2);
@@ -193,7 +185,7 @@ a {
 
 .jumbotron-fluid {
     height: 50vh;
-    border-radius: 15px
+    border-radius: 4px
 }
 
 .list-group {
@@ -227,8 +219,8 @@ a {
 
 .page-item.active .page-link {
     color: #fff;
-    background-color: #255dce;
-    border-color: #255dce
+    background-color: #1F2AFF;
+    border-color: #1F2AFF;
 }
 
 .page-link {
@@ -242,8 +234,7 @@ a {
 
 .badge-primary {
     color: #fff;
-    background-color: #255dce;
-    background: linear-gradient(to right, #255dce, #1c9fe7)
+    background-color: #1F2AFF;
 }
 
 .footer-icon {
@@ -294,6 +285,115 @@ code {
 
 .text-spacing {
     line-height: 30px;
+}
+
+.form-mat-g {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    background-color: #e9ecef;
+    background-clip: padding-box;
+    border: none;
+    border-bottom: 1.0px solid;
+    border-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: all .35s ease-in-out;
+}
+.form-mat-g:focus {
+    color: #1F2AFF;
+    background-color: #e9ecef;
+    border-color: #1F2AFF !important;
+    box-shadow: none;
+    border-bottom: 1.5px solid;
+}
+.form-select {
+    color: #000000;
+    background-color: #e9ecef;
+}
+.form-select:focus {
+    color: #000000;
+    border-color: #1F2AFF !important;
+    box-shadow: none;
+    border-bottom: 1.5px solid;
+}
+
+.checkbox {
+    padding-left: 20px;
+}
+.checkbox label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 5px;
+}
+.checkbox label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    border: 2px solid #50555D;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.checkbox label::after {
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 0;
+    margin-left: -20px;
+    padding-left: 3px;
+    padding-top: 1px;
+    font-size: 11px;
+    color: #555555;
+}
+.checkbox input[type="checkbox"],
+.checkbox input[type="radio"] {
+    opacity: 0;
+    z-index: 1;
+}
+.checkbox input[type="checkbox"]:focus + label::before,
+.checkbox input[type="radio"]:focus + label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.checkbox input[type="checkbox"]:checked + label::after,
+.checkbox input[type="radio"]:checked + label::after {
+    content: "\f00c";
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+}
+.checkbox input[type="checkbox"]:disabled + label,
+.checkbox input[type="radio"]:disabled + label {
+    opacity: 0.65;
+}
+.checkbox input[type="checkbox"]:disabled + label::before,
+.checkbox input[type="radio"]:disabled + label::before {
+    background-color: #eeeeee;
+    cursor: not-allowed;
+}
+.checkbox-primary input[type="checkbox"]:checked + label::before,
+.checkbox-primary input[type="radio"]:checked + label::before {
+    background-color: #1F2AFF;
+    border-color: #1F2AFF;
+}
+.checkbox-primary input[type="checkbox"]:checked + label::after,
+.checkbox-primary input[type="radio"]:checked + label::after {
+    color: #fff;
 }
 
 @media only screen and (max-width:600px) {

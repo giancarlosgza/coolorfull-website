@@ -15,7 +15,7 @@
                             <div class="col-md-8">    
                                 <div class="form-group">
                                     <label for="email" class="bold"><i class="fas fa-user"></i> {{ __('E-Mail or Username') }}</label>   
-                                    <input id="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                    <input id="email" type="text" class="form-mat-g form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
                                     @if ($errors->has('email'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('email') }}</strong>
@@ -25,7 +25,7 @@
 
                                 <div class="form-group">
                                     <label for="password" class="bold"><i class="fas fa-lock"></i> {{ __('Password') }}</label>
-                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                    <input id="password" type="password" class="form-mat-g form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
                                     @if ($errors->has('password'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('password') }}</strong>
@@ -34,9 +34,8 @@
                                 </div>
                     
                                 <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
+                                    <div class="form-check checkbox checkbox-primary">
+                                        <input class="form-check-input " type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                         <label class="form-check-label" for="remember">
                                             {{ __('Remember Me') }}
                                         </label>

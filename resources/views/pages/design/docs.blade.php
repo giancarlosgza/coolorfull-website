@@ -272,15 +272,16 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <h6 class="bold">Normal</h6>
-                                    <button type="button" class="btn btn-mat-g btn-mat-g-primary">Primary</button>
-                                    <button type="button" class="btn btn-mat-g btn-mat-g-secondary">Secondary</button>
-                                    <button type="button" class="btn btn-mat-g btn-mat-g-success">Success</button>
-                                    <button type="button" class="btn btn-mat-g btn-mat-g-danger">Danger</button>
-                                    <button type="button" class="btn btn-mat-g btn-mat-g-warning">Warning</button>
-                                    <button type="button" class="btn btn-mat-g btn-mat-g-info">Info</button>
-                                    <button type="button" class="btn btn-mat-g btn-mat-g-light">Light</button>
-                                    <button type="button" class="btn btn-mat-g btn-mat-g-dark">Dark</button>
-                                    <button type="button" class="btn btn-mat-g btn-mat-g-link">Link</button>
+                                    <h6>Just add the class <code>.ripple</code> to the buttons for a ripple efect</h6>
+                                    <button type="button" class="btn btn-mat-g btn-mat-g-primary ripple">Primary</button>
+                                    <button type="button" class="btn btn-mat-g btn-mat-g-secondary ripple">Secondary</button>
+                                    <button type="button" class="btn btn-mat-g btn-mat-g-success ripple">Success</button>
+                                    <button type="button" class="btn btn-mat-g btn-mat-g-danger ripple">Danger</button>
+                                    <button type="button" class="btn btn-mat-g btn-mat-g-warning ripple">Warning</button>
+                                    <button type="button" class="btn btn-mat-g btn-mat-g-info ripple">Info</button>
+                                    <button type="button" class="btn btn-mat-g btn-mat-g-light ripple">Light</button>
+                                    <button type="button" class="btn btn-mat-g btn-mat-g-dark ripple">Dark</button>
+                                    <button type="button" class="btn btn-mat-g btn-mat-g-link ripple">Link</button>
                                     <br><br>
                                     <h6 class="bold">Outline</h6>
                                     <button type="button" class="btn btn-mat-g btn-mat-g-primary-out">Primary</button>

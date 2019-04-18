@@ -16,29 +16,29 @@
 
                         <div class="form-group">
                             <label for="name" class="bold">Name:</label>
-                            <input type="name" id="name" value="{{ $gradient->name }}" name="nombre" class="form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" >
+                            <input type="name" id="name" value="{{ $gradient->name }}" name="nombre" class="form-mat-g form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" >
                         </div>
 
                         <div class="form-group">
                             <label for="color_1" class="bold">Color 1:</label>
-                            <input type="text" id="color_1" value="{{ $gradient->color_1 }}" name="color_1" class="hexcolor form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" >
+                            <input type="text" id="color_1" value="{{ $gradient->color_1 }}" name="color_1" class="form-mat-g hexcolor form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" >
                         </div>
 
                         <div class="form-group">
                             <label for="color_2" class="bold">Color 2:</label>
-                            <input type="text" id="color_2" value="{{ $gradient->color_2 }}" name="color_2" class="form-control{{ $errors->has('color_2') ? ' is-invalid' : '' }}" >
+                            <input type="text" id="color_2" value="{{ $gradient->color_2 }}" name="color_2" class="form-mat-g form-control{{ $errors->has('color_2') ? ' is-invalid' : '' }}" >
                         </div>
 
                         <div class="form-group">
                             <label for="color_3" class="bold">Color 3: (OPTIONAL)</label>
-                            <input type="text" id="color_3" value="{{ $gradient->color_3 }}" name="color_3" class="form-control{{ $errors->has('color_3') ? ' is-invalid' : '' }}" >
+                            <input type="text" id="color_3" value="{{ $gradient->color_3 }}" name="color_3" class="form-mat-g form-control{{ $errors->has('color_3') ? ' is-invalid' : '' }}" >
                         </div>
 
                         <div class="row">
                             <div class="col-md-6 col-6">
                                 <div class="form-group">
                                     <label for="color_filter" class="bold">Color Filter:</label>
-                                    <select id="color_filter" value="{{ $gradient->color_filter }}" class="form-control{{ $errors->has('color_filter') ? ' is-invalid' : '' }}"  name="color_filter">
+                                    <select id="color_filter" value="{{ $gradient->color_filter }}" class="form-mat-g form-select form-control{{ $errors->has('color_filter') ? ' is-invalid' : '' }}"  name="color_filter">
                                         <option>Red</option>
                                         <option>Green</option>
                                         <option>Blue</option>
@@ -57,7 +57,7 @@
                             <div class="col-md-6 col-6">
                                 <div class="form-group">
                                     <label for="color_filter_2" class="bold">Color Filter 2:</label>
-                                    <select id="color_filter_2" value="{{ $gradient->color_filter_2 }}" class="form-control{{ $errors->has('color_filter_2') ? ' is-invalid' : '' }}"  name="color_filter_2">
+                                    <select id="color_filter_2" value="{{ $gradient->color_filter_2 }}" class="form-mat-g form-select form-control{{ $errors->has('color_filter_2') ? ' is-invalid' : '' }}"  name="color_filter_2">
                                         <option>Red</option>
                                         <option>Green</option>
                                         <option>Blue</option>

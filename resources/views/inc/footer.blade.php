@@ -2,7 +2,7 @@
     <div class="container py-3">
         <div class="row">
             <div class="col-md-4">
-                <h5 class="logo color-darkblue">Colorffy</h5>
+                <h5 class="logo color-indigo">Colorffy</h5>
                 <p>
                     Color gradients and palettes! Get css, color codes, images, ui previews or create your own gradients!
                 </p>
@@ -26,14 +26,14 @@
 
             </div>
             <div class="col-6 col-md-6 text-right small align-self-end"><br>
-                <a href="https://twitter.com/colorffy" class="color-darkblue footer-icon" title="Twitter" alt="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="https://www.instagram.com/colorffyweb/" class="color-darkblue" title="Instagram" alt="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://twitter.com/colorffy" class="color-indigo footer-icon" title="Twitter" alt="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.instagram.com/colorffyweb/" class="color-indigo" title="Instagram" alt="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram fa-2x"></i></a>
             </div>
         </div>
         <hr>
         <div class="row">
             <div class="col-8 col-md-6 text-left small align-self-center"><br>
-                <p>Made with ❤️ & ☕ by <a href="https://twitter.com/giancarlosgza" title="Twitter" alt="Twitter" target="_blank" rel="noopener" class="color-darkblue">@giancarlosgza</a></p>
+                <p>Made with ❤️ & ☕ by <a href="https://twitter.com/giancarlosgza" title="Twitter" alt="Twitter" target="_blank" rel="noopener" class="color-indigo">@giancarlosgza</a></p>
             </div>
             <div class="col-4 col-md-6 text-right small align-self-center">©2019 Colorffy v2.0 🎉</div>
         </div>

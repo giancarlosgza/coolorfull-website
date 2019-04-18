@@ -26,13 +26,13 @@
             <a href="{{ asset('/assets/css/design-system/colorffy.matgradient.css')}}" class="btn btn-primary shadow-medium text-right small align-self-end" download>
                 <i class="fas fa-download"></i> Download Free
             </a>
-            <a href="/design/system/docs" class="btn btn-primary shadow-medium text-right small align-self-end">
+            <a href="/design/system/docs" class="btn btn-secondary shadow-medium text-right small align-self-end">
                 <i class="fas fa-book"></i> Docs
             </a>
         </div>
     </div><br>
 </div>
-<div class="container" id="material-gradient">
+<div class="container container-material" id="material-gradient">
     <div class="row">
         <div class="col-sm-12">
             <h5 class="logo color-indigo">Material Gradient</h5>
@@ -112,7 +112,7 @@
             <span class="badge badge-mat-g badge-mat-g-light">Light</span>
             <span class="badge badge-mat-g badge-mat-g-dark">Dark</span>
             <br><br>
-            <button type="button" class="btn btn-mat-g btn-mat-g-primary">
+            <button type="button" class="btn btn-mat-g btn-mat-g-primary ripple">
             Notifications <span class="badge badge-mat-g badge-light">4</span>
             </button>
         </div>
@@ -144,26 +144,26 @@
             <!--BUTTONS-->
             <h5 class="bold">Buttons</h5>
             <h6>Normal</h6>
-            <button type="button" class="btn btn-mat-g btn-mat-g-primary">Primary</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-secondary">Secondary</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-success">Success</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-danger">Danger</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-warning">Warning</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-info">Info</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-light">Light</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-dark">Dark</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-link">Link</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-primary ripple">Primary</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-secondary ripple">Secondary</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-success ripple">Success</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-danger ripple">Danger</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-warning ripple">Warning</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-info ripple">Info</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-light ripple">Light</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-dark ripple">Dark</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-link ripple">Link</button>
             <br><br>
             <h6>Outline</h6>
-            <button type="button" class="btn btn-mat-g btn-mat-g-primary-out">Primary</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-secondary-out">Secondary</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-success-out">Success</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-danger-out">Danger</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-warning-out">Warning</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-info-out">Info</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-light-out">Light</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-dark-out">Dark</button>
-            <button type="button" class="btn btn-mat-g btn-mat-g-link-out">Link</button> 
+            <button type="button" class="btn btn-mat-g btn-mat-g-primary-out ripple">Primary</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-secondary-out ripple">Secondary</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-success-out ripple">Success</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-danger-out ripple">Danger</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-warning-out ripple">Warning</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-info-out ripple">Info</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-light-out ripple">Light</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-dark-out ripple">Dark</button>
+            <button type="button" class="btn btn-mat-g btn-mat-g-link-out ripple">Link</button> 
         </div>
         <div class="col-sm-12">
             <hr>
@@ -176,8 +176,8 @@
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold ">One Card title</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <hr>
-                    <a href="#" class="btn btn-mat-g btn-mat-g-primary">Learn More</a>
+                    
+                    <a href="#" class="btn btn-mat-g btn-mat-g-primary ripple">Learn More</a>
                 </div>
             </div>
         </div>
@@ -187,8 +187,8 @@
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold">Two Card title</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <hr>
-                    <a href="#" class="btn btn-mat-g btn-mat-g-light">Learn More</a>
+                    
+                    <a href="#" class="btn btn-mat-g btn-mat-g-light ripple">Learn More</a>
                 </div>
             </div>
         </div>
@@ -198,8 +198,8 @@
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold">Three Card title</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <hr>
-                    <a href="#" class="btn btn-mat-g btn-mat-g-link">Learn More</a>
+                    <a href="#" class="btn btn-mat-g btn-mat-g-link ripple">Button</a>
+                    <a href="#" class="btn btn-mat-g btn-mat-g-link ripple">Learn More</a>
                 </div>
             </div>
         </div>
@@ -219,7 +219,7 @@
             <hr>
             <!--MODAL-->
             <h5 class="bold">Modal</h5>
-            <button type="button" class="btn btn-mat-g btn-mat-g-primary" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-mat-g btn-mat-g-primary ripple" data-toggle="modal" data-target="#exampleModal">
                 Open Me!
             </button>
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -235,8 +235,8 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </div>
                         <div class="modal-footer modal-mat-g-body">
-                        <button type="button" class="btn btn-mat-g btn-mat-g-link" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-mat-g btn-mat-g-link">Continue</button>
+                        <button type="button" class="btn btn-mat-g btn-mat-g-link ripple" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-mat-g btn-mat-g-link ripple">Continue</button>
                         </div>
                     </div>
                 </div>
@@ -304,7 +304,7 @@
                         <div class="form-group">
                             <input type="password" class="form-control form-mat-g" id="exampleInputPassword1" placeholder="Password">
                         </div>
-                        <button type="submit" class="btn btn-mat-g btn-mat-g-primary">Submit</button>
+                        <button type="submit" class="btn btn-mat-g btn-mat-g-primary ripple">Submit</button>
                     </form>
                 </div>
             </div>

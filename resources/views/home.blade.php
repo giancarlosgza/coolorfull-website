@@ -72,9 +72,9 @@
                 <div class="card-body bold">
                     <h6 class="bold"><i class="fas fa-fill-drip"></i> Color Shortcuts</h6>
                     <hr>
-                    <a href="/saved/gradients" class="color-darkblue">🔖 My Gradients</a><br>
-                    <a href="/favorites/gradients" class="color-darkblue text-spacing">❤️ Liked Gradients</a><br>
-                    <a href="/favorites/palettes" class="color-darkblue">❤️ Liked Palettes</a><br>
+                    <a href="/saved/gradients" class="color-indigo">🔖 My Gradients</a><br>
+                    <a href="/favorites/gradients" class="color-indigo text-spacing">❤️ Liked Gradients</a><br>
+                    <a href="/favorites/palettes" class="color-indigo">❤️ Liked Palettes</a><br>
                 </div>
             </div>
         </div>

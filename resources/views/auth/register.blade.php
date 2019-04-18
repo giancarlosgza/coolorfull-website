@@ -14,7 +14,7 @@
                         <div class="col-md-8">
                             <div class="form-group">
                                 <label for="name" class="bold"><i class="fas fa-user"></i> {{ __('Name') }}</label>
-                                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
+                                    <input id="name" type="text" class="form-mat-g form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
                                         name="name" value="{{ old('name') }}" placeholder="Name" required autofocus >    
 
                                 <span id="name-error" class="invalid-feedback @if(!$errors->has('name')) d-none @endif" role="alert">
@@ -23,7 +23,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="username" class="bold"><i class="fas fa-user-tag"></i> {{ __('Username') }}</label>
-                                <input id="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}"
+                                <input id="username" type="text" class="form-mat-g form-control{{ $errors->has('username') ? ' is-invalid' : '' }}"
                                     name="username" value="{{ old('username') }}" placeholder="Username" required maxlength="20">
                                 <span id="username-error" class="invalid-feedback @if(!$errors->has('username')) d-none @endif" role="alert">
                                     <strong>{{ $errors->first('username') }}</strong>
@@ -31,7 +31,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="email" class="bold"><i class="fas fa-envelope"></i> {{ __('E-Mail') }}</label>
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
+                                <input id="email" type="email" class="form-mat-g form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
                                     name="email" value="{{ old('email') }}" placeholder="Email" required>
                                 <span id="email-error" class="invalid-feedback @if (!$errors->has('email')) d-none @endif" role="alert">
                                     <strong>{{ $errors->first('email') }}</strong>
@@ -39,7 +39,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="bold"><i class="fas fa-lock"></i> {{ __('Password') }}</label>
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
+                                <input id="password" type="password" class="form-mat-g form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
                                     name="password" placeholder="Password" required>
 
                                 <span id="password-error" class="invalid-feedback @if (!$errors->has('password')) d-none @endif" role="alert">
@@ -49,7 +49,7 @@
                             <div class="form-group">
                                 <label for="password-confirm" class="bold"><i class="fas fa-lock"></i> {{ __('Confirm
                                     Password') }}</label>
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
+                                <input id="password-confirm" type="password" class="form-mat-g form-control" name="password_confirmation"
                                 placeholder="Confirm Password" required>
 
                                 <span id="password-confirm-error" class="invalid-feedback d-none" role="alert"></span>

@@ -13,11 +13,11 @@
             <div class="form-row">
                 <div class="form-group col-6 col-sm-6">
                     <label for="color_1" class="bold">Color 1</label><br>
-                    <input type="text" class="form-control" id="color_1" value="#000000">        
+                    <input type="text" class="form-mat-g form-control" id="color_1" value="#000000">        
                 </div>
                 <div class="form-group col-6 col-sm-6">
                     <label for="color_2" class="bold">Color 2</label><br>
-                    <input type="text" class="form-control" id="color_2" value="#000000">
+                    <input type="text" class="form-mat-g form-control" id="color_2" value="#000000">
                 </div>
             </div>
             @if($validSub)
