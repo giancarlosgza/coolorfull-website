@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold text-body">🖼️ Image Colors</h4>
+            <h3 class="text-montserrat text-indigo">Image Colors</h3><br>
         </div>
     </div>
     <div class="row">
@@ -44,50 +44,30 @@
             <div class="card shadow-medium">
                 <div class="card-body" id="palette-preview">
                     <div class="row">
-                        <div class="col-6 col-md-4">
-                            <div class="card">
-                                <div id="palette-1" class="card-body shadow-medium img-palette"></div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="card">
-                                <div id="palette-2" class="card-body shadow-medium img-palette"></div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="card">
-                                <div id="palette-3" class="card-body shadow-medium img-palette"></div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="card">
-                                <div id="palette-4" class="card-body shadow-medium img-palette"></div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="card">
-                                <div id="palette-5" class="card-body shadow-medium img-palette"></div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="card">
-                                <div id="palette-6" class="card-body shadow-medium img-palette"></div>
-                            </div>
+                        <div class="col-md-12">
+                            <ul id="htmltoimage" class="list-group">
+                                <li id="palette-1" class="list-group-item palette-show"> </li>
+                                <li id="palette-2" class="list-group-item palette-show"></li>
+                                <li id="palette-3" class="list-group-item palette-show"></li>
+                                <li id="palette-4" class="list-group-item palette-show"></li>
+                                <li id="palette-5" class="list-group-item palette-show"></li>
+                                <li id="palette-6" class="list-group-item palette-show"></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-12">
-            <h4 class="bold">Icon Preview</h4>
+            <h4 class="text-montserrat">Icon Preview</h4>
             <div class="card shadow-medium">
                 <div class="card-body">
                     @guest
                     <h6>Do you want to see the color palette applied to an icon?</h6>
-                    <h6><a class="bold color-darkblue" href="/pricing">JOIN</a> Colorffy and become Pro</h6>
+                    <h6><a class="text-montserrat color-indigo" href="/pricing">JOIN</a> Colorffy and become Pro</h6>
                     @else
-                    <div class="row">
-                        <div class="col-6 col-sm-4">
+                    <div class="row text-center">
+                        <div class="col-12">
                             <?php echo '<?xml version="1.0" encoding="UTF-8"?>' ?>
                             <svg class="svg-2" data-name="Capa 1" viewBox="0 0 581.24 345.71" xmlns="http://www.w3.org/2000/svg">
                                 <title>Pc-icon</title>

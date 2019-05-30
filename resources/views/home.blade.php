@@ -2,33 +2,75 @@
 @section('title', 'Account')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="card card-form">
-                <div class="card-body">
-                     @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
-                    <h4 class="bold text-body">Hi {{ Auth::user()->name }}! 👋</h4>
-                    <h5 class="bold">{{ Auth::user()->username }}</h5>
-                </div>
+<div class="section profile-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-montserrat">Hi {{ Auth::user()->name }}! 👋</h3>
+                <h5 class="text-montserrat">{{ Auth::user()->email }}</h5>
             </div>
         </div>
     </div>
+</div>
+<div class="container">
     <div class="row">
-        <div class="col-sm-12 col-md-8">
+        <div class="col-md-12">
+            <h4 class="text-montserrat">Shortcuts</h4>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <a href="/saved/gradients">
+                <div class="card shadow-medium">
+                    <div class="card-body">
+                        <img src="/assets/img/illustrations/designer_3.svg" width="54%" alt="">
+                        <h3 class="bold-500 color-indigo">
+                            <br>
+                            My Gradients
+                        </h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="/favorites/palettes">
+                <div class="card shadow-medium">
+                    <div class="card-body">
+                        <img src="/assets/img/illustrations/creative_process_2.svg" width="61%" alt="">
+                        <h3 class="bold-500 color-indigo">
+                            <br>
+                            Liked Palettes
+                        </h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="/favorites/gradients">
+                <div class="card shadow-medium">
+                    <div class="card-body">
+                        <img src="/assets/img/illustrations/like.svg" width="50%" alt="">
+                        <h3 class="bold-500 color-indigo">
+                            <br>
+                            Liked Gradients
+                        </h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <h4 class="text-montserrat">Your Information</h4>
             <div class="card card-form">
                 <div class="card-body">
-                    <h6 class="bold"><i class="fas fa-user"></i> Profile Information</h6>
+                    <h6 class="text-montserrat"><i class="fas fa-user"></i> Profile Information</h6>
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table table-borderless">
                             <thead>
                                 <tr>
                                     <th scope="col">Full Name</th>
-                                    <th>{{ Auth::user()->name }}</th>
+                                    <td>{{ Auth::user()->name }}</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -60,33 +102,18 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-4">
-            <div class="card card-form">
-                <div class="card-body">
-                    <h6 class="bold"><i class="fas fa-share-alt-square"></i> Share Colorffy</h6>
-                    <hr>
-                    <div class="sharethis-inline-share-buttons"></div>
-                </div>
-            </div>
-            <div class="card card-form">
-                <div class="card-body bold">
-                    <h6 class="bold"><i class="fas fa-fill-drip"></i> Color Shortcuts</h6>
-                    <hr>
-                    <a href="/saved/gradients" class="color-indigo">🔖 My Gradients</a><br>
-                    <a href="/favorites/gradients" class="color-indigo text-spacing">❤️ Liked Gradients</a><br>
-                    <a href="/favorites/palettes" class="color-indigo">❤️ Liked Palettes</a><br>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 @endsection
 @section('scripts')
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons'" async="async"></script>
-    @if($alert)
-    <script>
-        swal("{{ _('Monthly subscription') }}", "{{ $alertMessage }}", "warning");
-    </script>
-    @endif
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript"
+    src="https://platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons'"
+    async="async"></script>
+@if($alert)
+<script>
+    swal("{{ _('Monthly subscription') }}", "{{ $alertMessage }}", "warning");
+
+</script>
+@endif
 @endsection

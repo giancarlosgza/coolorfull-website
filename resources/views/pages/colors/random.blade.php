@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold text-body">🎲 Random Color</h4>
+            <h3 class="text-montserrat text-indigo">Random Color</h3><br>
         </div>
     </div>
     <div class="row">
@@ -19,11 +19,11 @@
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                <th scope="col">🎨</th>
-                                <th scope="col">👨‍💻 HEX</th>
-                                <th scope="col">💻 RGB</th>
-                                <th scope="col">💡 HSL</th>
-                                <th scope="col">🖨️ CMYK</th>
+                                <th scope="col" class="text-montserrat">🎨</th>
+                                <th scope="col" class="text-montserrat">👨‍💻 HEX</th>
+                                <th scope="col" class="text-montserrat">💻 RGB</th>
+                                <th scope="col" class="text-montserrat">💡 HSL</th>
+                                <th scope="col" class="text-montserrat">🖨️ CMYK</th>
                                 </tr>
                             </thead>
                             <tbody>

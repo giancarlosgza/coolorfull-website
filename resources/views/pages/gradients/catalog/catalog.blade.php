@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold text-body">🎆 Gradients</h4>
+            <h3 class="text-montserrat text-indigo">Gradients</h3>
         </div>
         <div class="col-sm-12">
             <form action="" method="get">
@@ -42,7 +42,7 @@
         <div class="col-6 col-md-4 col-lg-3">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h6 class="bold text-center uppercase h6-responsive">{{$gradient->name}}</h6>
+                    <h6 class="text-center uppercase h6-responsive bold-500">{{$gradient->name}}</h6>
                     <a href="/gradients/{{$gradient->id}}" title="{{$gradient->name}}">
                         <div class="card text-center">
                             <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" 
@@ -59,7 +59,7 @@
                                 <div id="fav-heart-gradient-{{$gradient->id}}" class="text-left align-self-end fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})"><i class="fas fa-heart"></i></div>
                             </div>
                             <div class="col-8 col-sm-6 col-md-8">
-                                <div id="fav-count-gradient-{{$gradient->id}}" class="text-right align-self-end color-blue bold">
+                                <div id="fav-count-gradient-{{$gradient->id}}" class="text-right align-self-end color-indigo bold-500">
                                     @if($gradient->usersWhoFav->count() == 1) 
                                     {{ $gradient->usersWhoFav->count() }} like
                                     @else
@@ -79,7 +79,7 @@
                 </div>
             </div>
         </div>
-        @endforeach
+        @endforeach    
     </div>
     <div class="row">
         <div class="col-12 col-md-12">

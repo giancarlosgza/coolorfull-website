@@ -4,18 +4,18 @@
 <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h4 class="bold text-body">💳 Pricing</h4><br>
+                <h3 class="text-montserrat text-body">💳 Pricing</h3><br>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-4">
                 <div class="card card-form">
                     <div class="card-header">
-                        <h4 class="bold logo">🎁 Free</h4>
+                        <h3 class="text-montserrat">🎁 Free</h3>
                     </div>
                     <div class="card-body text-left">
-                        <h3 class="bold color-indigo text-center">$0 USD</h3>
-                        <h6 class="bold text-center">No account.</h6>
+                        <h3 class="text-montserrat  color-indigo text-center">$0 USD</h3>
+                        <h6 class="text-center">No account.</h6>
                         <br>
                         <h6>✔️ Access to every Colorffy's tools</h6>
                         <h6>✔️ Color codes for Colorffy gradients</h6>
@@ -34,11 +34,11 @@
             <div class="col-sm-4">
                 <div class="card card-form">
                     <div class="card-header">
-                        <h4 class="bold logo text-center">👌 1 Month</h4>
+                        <h3 class="text-montserrat text-center">👌 1 Month</h3>
                     </div>
                     <div class="card-body text-left">
-                        <h3 class="bold color-indigo text-center">$2.99 USD</h3>
-                        <h6 class="bold text-center">No subscription. Only pay for the month that you want to use Colorfy.</h6>
+                        <h3 class="text-montserrat text-indigo text-center">$2.99 USD</h3>
+                        <h6 class="text-center">No subscription. Only pay for the month that you want to use Colorfy.</h6>
                         <br>
                         <h6>✔️ Access to every Colorffy's tools.</h6>
                         <h6>✔️ Save your favorites gradients and palettes.</h6>
@@ -57,11 +57,11 @@
             <div class="col-sm-4">
                 <div class="card card-form">
                     <div class="card-header">
-                        <h4 class="bold logo">🔥 Lifetime</h4>
+                        <h3 class="text-montserrat ">🔥 Lifetime</h3>
                     </div>
                     <div class="card-body text-left">
-                        <h3 class="bold color-indigo text-center">$35 USD</h3>
-                        <h6 class="bold text-center">Only one payment forever.</h6>
+                        <h3 class="text-montserrat text-indigo text-center">$35 USD</h3>
+                        <h6 class="text-center">Only one payment forever.</h6>
                         <br>
                         <h6>✔️ Access to every Colorffy's tools.</h6>
                         <h6>✔️ Save your favorites gradients and palettes.</h6>

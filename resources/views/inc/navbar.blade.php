@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container">
-        <a class="navbar-brand logo logo-brand" href="/">
+        <a class="navbar-brand text-montserrat logo-brand" href="/">
             <img src="{{asset('/assets/img/logo-form.svg')}}" width="50px" alt="Colorffy logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
@@ -26,14 +26,14 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownGG" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        Tools <span class="badge badge-primary">New</span>
+                        Tools <span class="badge badge-secondary">New</span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownGG">
-                        <a class="dropdown-item bold" href="/generator/gradients">2️⃣ Color Gradient</a>
-                        <a class="dropdown-item bold" href="/generator/mgradients">3️⃣ Color Gradient</a>
+                        <a class="dropdown-item" href="/generator/gradients">2️⃣ Color Gradient</a>
+                        <a class="dropdown-item" href="/generator/mgradients">3️⃣ Color Gradient</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bold" href="/random/color">🎲 Random Color</a>
-                        <a class="dropdown-item bold" href="/image/color">🖼️ Image Colors</a>              
+                        <a class="dropdown-item" href="/random/color">🎲 Random Color</a>
+                        <a class="dropdown-item" href="/image/color">🖼️ Image Colors</a>              
                     </div>
                 </li>
                 @guest
@@ -51,8 +51,8 @@
                         Housekeeping
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownHK">
-                        <a class="dropdown-item bold" href="/palettes/admin/panel">⚙️ Palettes Panel</a>
-                        <a class="dropdown-item bold" href="/gradients/admin/panel">⚙️ Gradients Panel</a>                       
+                        <a class="dropdown-item" href="/palettes/admin/panel">⚙️ Palettes Panel</a>
+                        <a class="dropdown-item" href="/gradients/admin/panel">⚙️ Gradients Panel</a>                       
                     </div>
                 </li>
 
@@ -62,13 +62,13 @@
                         {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownAc">
-                        <a class="dropdown-item bold" href="/home">✌️ Account</a>
+                        <a class="dropdown-item" href="/home">✌️ Account</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bold" href="/saved/gradients">🔖 My Gradients</a>
-                        <a class="dropdown-item bold" href="/favorites/palettes">❤️ Liked Palettes</a>
-                        <a class="dropdown-item bold" href="/favorites/gradients">❤️ Liked Gradients</a>
+                        <a class="dropdown-item" href="/saved/gradients">🔖 My Gradients</a>
+                        <a class="dropdown-item" href="/favorites/palettes">❤️ Liked Palettes</a>
+                        <a class="dropdown-item" href="/favorites/gradients">❤️ Liked Gradients</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bold" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                             👋 {{ __('Logout') }}
                         </a>
@@ -84,16 +84,16 @@
                         {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownAc">
-                        <a class="dropdown-item bold" href="/home">✌️ Account</a>
+                        <a class="dropdown-item" href="/home">✌️ Account</a>
                         @if(!Auth::user()->validSubscription())
-                        <a class="dropdown-item bold" href="{{ route('payingForm') }}">⚠️ Renew Subscription</a>
+                        <a class="dropdown-item" href="{{ route('payingForm') }}">⚠️ Renew Subscription</a>
                         @endif
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bold" href="/saved/gradients">🔖 My Gradients</a>
-                        <a class="dropdown-item bold" href="/favorites/palettes">❤️ Liked Palettes</a>
-                        <a class="dropdown-item bold" href="/favorites/gradients">❤️ Liked Gradients</a>
+                        <a class="dropdown-item" href="/saved/gradients">🔖 My Gradients</a>
+                        <a class="dropdown-item" href="/favorites/palettes">❤️ Liked Palettes</a>
+                        <a class="dropdown-item" href="/favorites/gradients">❤️ Liked Gradients</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bold" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                             👋 {{ __('Logout') }}
                         </a>
@@ -104,6 +104,14 @@
                 </li>
                 @endif
                 @endguest
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" id="checkbox" class="custom-control-input">
+                            <label class="custom-control-label theme-switch" for="checkbox">Dark Mode</label>
+                        </div>
+                    </label>
+                </div>
             </ul>
         </div>
     </div>

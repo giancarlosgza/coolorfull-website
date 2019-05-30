@@ -12,7 +12,22 @@
     <div class="row">
         @if ($gradients->count() < 1)
         <div class="col-sm-12">
-            <h6>No colors gradients</h6> 
+            <div class="card card-form">
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-12 col-sm-6">
+                            <img src="{{ asset ('/assets/img/illustrations/drink_coffee_with_laptop_in_cafe.svg') }}" width="50%" alt="drink-coffee">
+                        <br><br>
+                        </div>
+                        <div class="col-12 col-sm-6 align-self-center">
+                            <h4 class="text-montserrat text-body">Empty gradients</h4>
+                            <h5>Create gradients and it will show up here.</h5>
+                            <br>
+                            <a href="/gradients/admin/create" class="btn btn-primary button-block shadow-medium">Create gradient</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         @else    
         @foreach($gradients as $gradient)
@@ -39,7 +54,7 @@
                         @else
                         @endif
                     </ul><br>
-                    <h6 class="bold text-center uppercase">{{$gradient->name}}</h6>
+                    <h6 class="bold-500 text-center uppercase">{{$gradient->name}}</h6>
                     <a href="/gradients/{{$gradient->id}}" title="{{$gradient->name}}">
                         <div class="card text-center">
                             <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" 
@@ -51,7 +66,7 @@
                             </div>
                             <div class="text-left"><br>
                                 <a href="/gradients/{{$gradient->id}}" class="btn btn-primary shadow-medium">View</a>
-                                <a href="/gradients/admin/edit/{{$gradient->id}}" class="btn btn-primary shadow-medium">Edit</a>
+                                <a href="/gradients/admin/edit/{{$gradient->id}}" class="btn btn-primary-light shadow-medium">Edit</a>
                                 <hr>
                                 <form method="POST" action="/gradients/delete">
                                     @csrf

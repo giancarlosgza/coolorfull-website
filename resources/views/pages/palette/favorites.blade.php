@@ -4,14 +4,24 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold text-body">❤️ Liked Palettes</h4><br>
+            <h3 class="text-montserrat text-indigo">Liked Palettes</h3><br>
         </div>
         @if ($user->favoritePalettes->count() < 1)
         <div class="col-sm-12">
             <div class="card card-form">
                 <div class="card-body">
-                    <h6 class="bold">No favorites palettes 😔</h6>
-                    <a href="/palettes/catalog">You can save from here</a>
+                    <div class="row text-center">
+                        <div class="col-12 col-sm-6">
+                            <img src="{{ asset ('/assets/img/illustrations/search_engine.svg') }}" width="50%" alt="start-up">
+                        <br><br>
+                        </div>
+                        <div class="col-12 col-sm-6 align-self-center">
+                            <h4 class="text-montserrat text-body">Empty liked palettes</h4>
+                            <h5>Search and like a palette and it will show up here.</h5>
+                            <br>
+                            <a href="/palettes/catalog" class="btn btn-primary button-block shadow-medium">Get Started</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -20,7 +30,7 @@
         <div class="col-6 col-md-3">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h6 class="bold text-center uppercase h6-responsive">{{$palette->name}}</h6>
+                    <h6 class="bold-500 text-center uppercase h6-responsive">{{$palette->name}}</h6>
                     <a href="/palettes/{{$palette->id}}" title="{{$palette->name}}">
                         <ul class="list-group">
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_1}}"></li>
@@ -35,7 +45,7 @@
                             <div id="fav-heart-palette-{{$palette->id}}" class="text-left align-self-end fav-heart @if($user->favoritePalettes->contains($palette)) active-heart @endif" onclick="event.preventDefault(); newFavoritePalette({{$palette->id}})"><i class="fas fa-heart"></i></div>
                         </div>
                         <div class="col-6">
-                            <div id="fav-count-palette-{{$palette->id}}" class="text-right align-self-end color-blue bold">
+                            <div id="fav-count-palette-{{$palette->id}}" class="text-right align-self-end bold-500 color-indigo">
                                 @if($palette->usersWhoFav->count() == 1) 
                                 {{ $palette->usersWhoFav->count() }} like
                                 @else

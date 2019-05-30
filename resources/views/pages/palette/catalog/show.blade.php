@@ -2,14 +2,14 @@
 @section('title', "$palette->name")
 @section('content')
 <style>
-    .protanopia{-webkit-filter:url(/assets/img/filters.svg#protanopia);filter:url(/assets/img/filters.svg#protanopia)}.protanomaly{-webkit-filter:url(/assets/img/filters.svg#protanomaly);filter:url(/assets/img/filters.svg#protanomaly)}.deuteranopia{-webkit-filter:url(/assets/img/filters.svg#deuteranopia);filter:url(/assets/img/filters.svg#deuteranopia)}.deuteranomaly{-webkit-filter:url(/assets/img/filters.svg#deuteranomaly);filter:url(/assets/img/filters.svg#deuteranomaly)}.tritanopia{-webkit-filter:url(/assets/img/filters.svg#tritanopia);filter:url(/assets/img/filters.svg#tritanopia)}.tritanomaly{-webkit-filter:url(/assets/img/filters.svg#tritanomaly);filter:url(/assets/img/filters.svg#tritanomaly)}.achromatopsia{-webkit-filter:url(/assets/img/filters.svg#achromatopsia);filter:url(/assets/img/filters.svg#achromatopsia)}.achromatomaly{-webkit-filter:url(/assets/img/filters.svg#achromatomaly);filter:url(/assets/img/filters.svg#achromatomaly)}.nav-pills .nav-link.active,.nav-pills .show>.nav-link{color:#fff;background-image:linear-gradient(to right,#255dce,#1c9fe7);border:0}
+    .protanopia{-webkit-filter:url(/assets/img/filters.svg#protanopia);filter:url(/assets/img/filters.svg#protanopia)}.protanomaly{-webkit-filter:url(/assets/img/filters.svg#protanomaly);filter:url(/assets/img/filters.svg#protanomaly)}.deuteranopia{-webkit-filter:url(/assets/img/filters.svg#deuteranopia);filter:url(/assets/img/filters.svg#deuteranopia)}.deuteranomaly{-webkit-filter:url(/assets/img/filters.svg#deuteranomaly);filter:url(/assets/img/filters.svg#deuteranomaly)}.tritanopia{-webkit-filter:url(/assets/img/filters.svg#tritanopia);filter:url(/assets/img/filters.svg#tritanopia)}.tritanomaly{-webkit-filter:url(/assets/img/filters.svg#tritanomaly);filter:url(/assets/img/filters.svg#tritanomaly)}.achromatopsia{-webkit-filter:url(/assets/img/filters.svg#achromatopsia);filter:url(/assets/img/filters.svg#achromatopsia)}.achromatomaly{-webkit-filter:url(/assets/img/filters.svg#achromatomaly);filter:url(/assets/img/filters.svg#achromatomaly)}.nav-pills .nav-link.active,.nav-pills .show>.nav-link{color:#fff;background-color: #1F2AFF;border:0}
     .svg-1{width:100px}.svg-2{width:120px}.svg-3{width:85px}.cls-1,.cls-8{fill:none}.cls-1{stroke:#333;stroke-width:5px}.cls-1,.cls-8,.cls-9{stroke-miterlimit:10}.cls-2{fill:{{$palette->color_1}}}.cls-3,.cls-4,.cls-9{fill:{{$palette->color_2}}}.cls-5{fill:{{$palette->color_3}}}.cls-6{fill:{{$palette->color_4}}}.cls-7{fill:{{$palette->color_5}}}.cls-8{stroke:#65c8d0}.cls-9{stroke:#f2f2f2}.cls-10{fill:#b3b3b3}
 </style>
 
-<div class="container btn-indigo">
+<div class="container btn-return">
     <div class="row">
         <div class="col-sm-12">
-            <a class="btn btn-link color-darkblue" href="/palettes/catalog"><i class="fas fa-arrow-left"></i> Palettes</a>
+            <a class="btn btn-link color-indigo" href="/palettes/catalog"><i class="fas fa-arrow-left"></i> Palettes</a>
             <br>
         </div>
     </div>
@@ -46,7 +46,7 @@
         <div class="col-sm-12">
             <div class="card shadow-medium">
                 <div class="card-body">
-                        <h4 class="text-center bold uppercase">{{$palette->name}}</h4>
+                    <h4 class="text-center text-montserrat uppercase">{{$palette->name}}</h4>
                     <ul id="htmltoimage" class="list-group">
                         <li class="list-group-item palette-show" style="background-color:{{$palette->color_1}}"> </li>
                         <li class="list-group-item palette-show" style="background-color:{{$palette->color_2}}"></li>
@@ -73,9 +73,9 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                        <th scope="col">🎨</th>
-                        <th scope="col">👨‍💻 HEX</th>
-                        <th scope="col">💻 RGB</th>
+                        <th scope="col" class="text-montserrat">🎨</th>
+                        <th scope="col" class="text-montserrat">👨‍💻 HEX</th>
+                        <th scope="col" class="text-montserrat">💻 RGB</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -110,7 +110,7 @@
         </div>
     </div>
     <hr>
-    <h4 class="bold">Color Blindness</h4>
+    <h3 class="text-montserrat">Color Blindness</h3>
     <div class="card shadow-medium">
         <div class="card-body">
             <div class="device">
@@ -123,12 +123,12 @@
         </div>
     </div>
     <hr><!--ICONS WITH COLOR PALETTES-->
-    <h4 class="bold">Icons Preview</h4>
+    <h3 class="text-montserrat">Icons Preview</h3>
         <div class="card shadow-medium">
             <div class="card-body">
                 @guest
                     <h6>Do you want to see the color palette applied to icons?</h6>
-                    <h6><a class="bold color-darkblue" href="/pricing">JOIN</a> Colorffy and become Pro</h6>
+                    <h6><a class="bold color-indigo" href="/pricing">JOIN</a> Colorffy and become Pro</h6>
                 @else
                 <div class="row text-center">
                     <div class="col-6 col-sm-4">

@@ -29,7 +29,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold">Documentation MG</h4>
+            <h3 class="text-montserrat text-indigo">Documentation MG</h3><br>
         </div>
     </div>
     <div class="row">
@@ -37,12 +37,12 @@
             <div class="card card-form">
                <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        <a href="#getting"><li class="list-group-item bold color-indigo">Getting Started</li></a>   
+                        <a href="#getting"><li class="list-group-item text-montserrat color-indigo">Getting Started</li></a>   
                         <a href="#start"><li class="list-group-item color-darkblue">Quick Start</li></a>
                         <a href="#download"><li class="list-group-item color-darkblue">Download</li></a>
                         <a href="#dependencies"><li class="list-group-item color-darkblue">Dependencies</li></a>
                         <a href="#links"><li class="list-group-item color-darkblue">Links</li></a>
-                        <a href="#components"><li class="list-group-item bold color-indigo">Components</li></a>
+                        <a href="#components"><li class="list-group-item text-montserrat color-indigo">Components</li></a>
                         <a href="#colors"><li class="list-group-item color-darkblue">Colors</li></a>
                         <a href="#alerts"><li class="list-group-item color-darkblue">Alerts</li></a>
                         <a href="#badges"><li class="list-group-item color-darkblue">Badges</li></a>
@@ -61,24 +61,24 @@
         <div class="col-md-9">
             <div class="card card-form">
                 <div class="card-body">
-                    <h6 id="getting" class="h6-responsive bold color-indigo">Getting Started</h6>
-                    <h6 id="start" class="h6-responsive bold">Quick Start</h6>
+                    <h6 id="getting" class="h6-responsive text-montserrat text-indigo">Getting Started</h6>
+                    <h6 id="start" class="h6-responsive text-montserrat">Quick Start</h6>
                     <h6>
                         Hello! Getting started with Colorffy it's so fast.
                         Follow this guide and you will have a beautiful gradient UI 
                         <br>
-                        For more information and componentes, check out Bootstrap 4 <a class="bold color-darkblue" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">documentation</a> 
+                        For more information and componentes, check out Bootstrap 4 <a class="text-indigo" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">documentation</a> 
                     </h6><hr>
-                    <h6 id="download" class="h6-responsive bold">Download</h6>
+                    <h6 id="download" class="h6-responsive text-montserrat">Download</h6>
                     <h6>
-                        You can download the Material Gradients css from <a class="bold color-darkblue" href="/design/system">here!</a> <br>
+                        You can download the Material Gradients css from <a class="text-indigo" href="/design/system">here!</a> <br>
                     </h6><hr>
-                    <h6 id="dependencies" class="h6-responsive bold">Dependencies</h6>
+                    <h6 id="dependencies" class="h6-responsive text-montserrat">Dependencies</h6>
                     <h6>
                         Just Bootstrap 4’s core styles and jQuery. <br>
-                        Read more about Bootstrap installation <a class="bold color-darkblue" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">here</a>
+                        Read more about Bootstrap installation <a class="text-indigo" target="_blank" rel="noopener" href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">here</a>
                     </h6><hr>
-                    <h6 id="links" class="h6-responsive bold">Link</h6>
+                    <h6 id="links" class="h6-responsive text-montserrat">Link</h6>
                     <h6 class="h6-responsive">Just copy-paste the stylesheet link into your head after Bootstrap styles to load this css.</h6>
                     <div class="card">
                         <div class="card-body">
@@ -91,9 +91,9 @@
                             </figure>
                         </div>
                     </div><hr>
-                    <h6 id="components" class="h6-responsive bold color-indigo">Components</h6>
-                    <h6 id="colors" class="h6-responsive bold">Colors</h6>
-                    <div class="card">
+                    <h6 id="components" class="h6-responsive text-montserrat text-indigo">Components</h6>
+                    <h6 id="colors" class="h6-responsive text-montserrat">Colors</h6>
+                    <div class="card container-material">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-3">
@@ -137,8 +137,8 @@
                         </div>
                     </div>
                     <hr>
-                    <h6 id="alerts" class="h6-responsive bold">Alerts</h6>
-                    <div class="card">
+                    <h6 id="alerts" class="h6-responsive text-montserrat">Alerts</h6>
+                    <div class="card container-material">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
@@ -184,8 +184,8 @@
                         </div>
                     </div>
                     <hr>
-                    <h6 id="badges" class="h6-responsive bold">Badges</h6>
-                    <div class="card">
+                    <h6 id="badges" class="h6-responsive text-montserrat">Badges</h6>
+                    <div class="card container-material">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-12">
@@ -215,8 +215,8 @@
                         </div>
                     </div>
                     <hr>
-                    <h6 id="breadcrumb" class="h6-responsive bold">Breadcrumb</h6>
-                    <div class="card">
+                    <h6 id="breadcrumb" class="h6-responsive text-montserrat">Breadcrumb</h6>
+                    <div class="card container-material">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
@@ -266,12 +266,12 @@
                         </div>
                     </div>
                     <hr>
-                    <h6 id="buttons" class="h6-responsive bold">Buttons</h6>
-                    <div class="card">
+                    <h6 id="buttons" class="h6-responsive text-montserrat">Buttons</h6>
+                    <div class="card container-material">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h6 class="bold">Normal</h6>
+                                    <h6 class="text-montserrat">Normal</h6>
                                     <h6>Just add the class <code>.ripple</code> to the buttons for a ripple efect</h6>
                                     <button type="button" class="btn btn-mat-g btn-mat-g-primary ripple">Primary</button>
                                     <button type="button" class="btn btn-mat-g btn-mat-g-secondary ripple">Secondary</button>
@@ -283,7 +283,7 @@
                                     <button type="button" class="btn btn-mat-g btn-mat-g-dark ripple">Dark</button>
                                     <button type="button" class="btn btn-mat-g btn-mat-g-link ripple">Link</button>
                                     <br><br>
-                                    <h6 class="bold">Outline</h6>
+                                    <h6 class="text-montserrat">Outline</h6>
                                     <button type="button" class="btn btn-mat-g btn-mat-g-primary-out">Primary</button>
                                     <button type="button" class="btn btn-mat-g btn-mat-g-secondary-out">Secondary</button>
                                     <button type="button" class="btn btn-mat-g btn-mat-g-success-out">Success</button>
@@ -323,12 +323,12 @@
                         </div>
                     </div>
                     <hr>
-                    <h6 id="cards" class="h6-responsive bold">Cards</h6>
-                    <div class="card">
+                    <h6 id="cards" class="h6-responsive text-montserrat">Cards</h6>
+                    <div class="card container-material">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h6 class="bold">Simple</h6>
+                                    <h6 class="text-montserrat">Simple</h6>
                                     <div class="card card-mat-g">
                                         <div class="card-body">
                                             <p class="card-text">A simple card.</p>
@@ -346,14 +346,14 @@
                                     </figure><br>
                                 </div>
                                 <div class="col-md-12">
-                                    <h6 class="bold">Card Image</h6>
+                                    <h6 class="text-montserrat">Card Image</h6>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="card card-mat-g">
                                     <img src="{{asset('/assets/img/colorffy-twitter-card.png')}}" class="card-mat-g-img-top" alt="...">
                                         <div class="card-body">
                                             <h5 class="card-title font-weight-bold ">One Card Title</h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <p class="card-text text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                             <hr>
                                             <a href="#" class="btn btn-mat-g btn-mat-g-primary">Learn More</a>
                                         </div>
@@ -364,7 +364,7 @@
                                     <img src="{{asset('/assets/img/colorffy-twitter-card.png')}}" class="card-mat-g-img-top" alt="colorffy image">
                                         <div class="card-body">
                                             <h5 class="card-title font-weight-bold ">One Card Title</h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <p class="card-text text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                             <hr>
                                             <a href="#" class="btn btn-mat-g btn-mat-g-link">Learn More</a>
                                         </div>
@@ -438,8 +438,8 @@
                             </div>
                         </div>
                     </div><hr>
-                    <h6 id="list" class="h6-responsive bold">List Group</h6>
-                    <div class="card">
+                    <h6 id="list" class="h6-responsive text-montserrat">List Group</h6>
+                    <div class="card container-material">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
@@ -466,12 +466,12 @@
                             </div>
                         </div>
                     </div><hr>
-                    <h6 id="modals" class="h6-responsive bold">Modal</h6>
-                    <div class="card">
+                    <h6 id="modals" class="h6-responsive text-montserrat">Modal</h6>
+                    <div class="card container-material">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button type="button" class="btn btn-mat-g btn-mat-g-primary" data-toggle="modal" data-target="#exampleModal">
+                                    <button type="button" class="btn btn-mat-g btn-mat-g-primary ripple" data-toggle="modal" data-target="#exampleModal">
                                         Open Me!
                                     </button>
                                     <br><br>
@@ -488,8 +488,8 @@
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                                 </div>
                                                 <div class="modal-footer modal-mat-g-body">
-                                                <button type="button" class="btn btn-mat-g btn-mat-g-link" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-mat-g btn-mat-g-link">Continue</button>
+                                                <button type="button" class="btn btn-mat-g btn-mat-g-link ripple" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-mat-g btn-mat-g-link ripple">Continue</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -536,8 +536,8 @@
                         </div>
                     </div>
                     <hr>
-                    <h6 id="navbars" class="h6-responsive bold">Navbars</h6>
-                    <div class="card">
+                    <h6 id="navbars" class="h6-responsive text-montserrat">Navbars</h6>
+                    <div class="card container-material">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
@@ -622,8 +622,8 @@
                         </div>
                     </div>
                     <hr>
-                    <h6 id="progress" class="h6-responsive bold">Progress</h6>
-                    <div class="card">
+                    <h6 id="progress" class="h6-responsive text-montserrat">Progress</h6>
+                    <div class="card container-material">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
@@ -690,8 +690,8 @@
                             </div>
                         </div>
                     </div><hr>
-                    <h6 id="form" class="h6-responsive bold">Form</h6>
-                    <div class="card">
+                    <h6 id="form" class="h6-responsive text-montserrat">Form</h6>
+                    <div class="card container-material">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
@@ -702,7 +702,7 @@
                                         <div class="form-group">
                                             <input type="password" class="form-control form-mat-g" id="exampleInputPassword1" placeholder="Password">
                                         </div>
-                                        <button type="submit" class="btn btn-mat-g btn-mat-g-primary">Submit</button>
+                                        <button type="submit" class="btn btn-mat-g btn-mat-g-primary ripple">Submit</button>
                                     </form>
                                     <br>
                                     <figure class="codebox">

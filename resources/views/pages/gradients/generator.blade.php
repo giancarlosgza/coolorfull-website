@@ -5,18 +5,18 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold text-body">🎯 2 Colors-Gradient Generator</h4>
+            <h3 class="text-montserrat text-indigo">2 Colors-Gradient Generator</h3><br>
         </div>
     </div>
     <div class="card shadow-medium">
         <div class="card-body">
             <div class="form-row">
                 <div class="form-group col-6 col-sm-6">
-                    <label for="color_1" class="bold">Color 1</label><br>
+                    <label for="color_1" class="text-montserrat">Color 1</label><br>
                     <input type="text" class="form-mat-g form-control" id="color_1" value="#000000">        
                 </div>
                 <div class="form-group col-6 col-sm-6">
-                    <label for="color_2" class="bold">Color 2</label><br>
+                    <label for="color_2" class="text-montserrat">Color 2</label><br>
                     <input type="text" class="form-mat-g form-control" id="color_2" value="#000000">
                 </div>
             </div>
@@ -64,7 +64,7 @@
         <div class="col-12 col-sm-12">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h5 class="bold">CSS</h5>
+                    <h5 class="text-montserrat">CSS</h5>
                     <code>
                         <h6 class="bold" id="css"></h6>
                     </code>
@@ -80,10 +80,10 @@
                             <thead>
                                 <tr>
                                 <th scope="col">🎨</th>
-                                <th scope="col">👨‍💻 HEX</th>
-                                <th scope="col">💻 RGB</th>
-                                <th scope="col">💡 HSL</th>
-                                <th scope="col">🖨️ CMYK</th>
+                                <th scope="col" class="text-montserrat">👨‍💻 HEX</th>
+                                <th scope="col" class="text-montserrat">💻 RGB</th>
+                                <th scope="col" class="text-montserrat">💡 HSL</th>
+                                <th scope="col" class="text-montserrat">🖨️ CMYK</th>
                                 </tr>
                             </thead>
                             <tbody>

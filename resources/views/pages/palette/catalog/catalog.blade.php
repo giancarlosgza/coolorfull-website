@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold text-body">🎨 Palettes</h4>
+            <h3 class="text-montserrat text-indigo">Palettes</h3>
         </div>
         <div class="col-sm-12">
             <form action="" method="get">
@@ -25,7 +25,7 @@
                         @foreach($filters as $filter)
                             <th scope="col">
                                 <a class="btn btn-gradient" href="{{ route('palettesCatalog', ['q' => $filter]) }}">
-                                    <div class=" h6-responsive">{{ $filter }}</div>
+                                    <div class="h6-responsive">{{ $filter }}</div>
                                 </a>
                             </th>
                         @endforeach   
@@ -42,7 +42,7 @@
         <div class="col-6 col-md-4 col-lg-3">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h6 class="bold text-center uppercase h6-responsive">{{$palette->name}}</h6>
+                    <h6 class="text-center uppercase h6-responsive bold-500">{{$palette->name}}</h6>
                     <a href="/palettes/{{$palette->id}}" title="{{$palette->name}}">
                         <ul class="list-group">
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_1}}"></li>
@@ -58,7 +58,7 @@
                             <div id="fav-heart-palette-{{$palette->id}}" class="text-left align-self-end fav-heart @if($user->favoritePalettes->contains($palette)) active-heart @endif" onclick="event.preventDefault(); newFavoritePalette({{$palette->id}})"><i class="fas fa-heart"></i></div>
                         </div>
                         <div class="col-8 col-sm-6 col-md-8">
-                            <div id="fav-count-palette-{{$palette->id}}" class="text-right align-self-end color-blue bold">
+                            <div id="fav-count-palette-{{$palette->id}}" class="text-right align-self-end color-indigo bold-500">
                                 @if($palette->usersWhoFav->count() == 1) 
                                 {{ $palette->usersWhoFav->count() }} like
                                 @else
