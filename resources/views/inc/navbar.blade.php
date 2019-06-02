@@ -3,8 +3,8 @@
         <a class="navbar-brand text-montserrat logo-brand" href="/">
             <img src="{{asset('/assets/img/logo-form.svg')}}" width="50px" alt="Colorffy logo">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -20,20 +20,20 @@
                 <li class="nav-item {{ (request()->is('gradients/catalog')) ? 'active' : '' }}">
                     <a class="nav-link nav-color" href="/gradients/catalog">Gradients</a>
                 </li>
-                <li class="nav-item {{ (request()->is('design/system')) ? 'active' : '' }}">
-                    <a class="nav-link nav-color" href="/design/system">Design System</a>
+                <li class="nav-item {{ (request()->is('templates/templates')) ? 'active' : '' }}">
+                    <a class="nav-link nav-color" href="/templates/templates">Templates  <span class="badge badge-secondary">New</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownGG" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Tools <span class="badge badge-secondary">New</span>
+                    <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownGG" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tools
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownGG">
                         <a class="dropdown-item" href="/generator/gradients">2️⃣ Color Gradient</a>
                         <a class="dropdown-item" href="/generator/mgradients">3️⃣ Color Gradient</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/random/color">🎲 Random Color</a>
-                        <a class="dropdown-item" href="/image/color">🖼️ Image Colors</a>              
+                        <a class="dropdown-item" href="/image/color">🖼️ Image Colors</a>
                     </div>
                 </li>
                 @guest
@@ -46,19 +46,19 @@
                 @else
                 @if(auth()->user()->is_admin == 1)
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownHK" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownHK" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Housekeeping
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownHK">
                         <a class="dropdown-item" href="/palettes/admin/panel">⚙️ Palettes Panel</a>
-                        <a class="dropdown-item" href="/gradients/admin/panel">⚙️ Gradients Panel</a>                       
+                        <a class="dropdown-item" href="/gradients/admin/panel">⚙️ Gradients Panel</a>
                     </div>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAc" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAc" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownAc">
@@ -77,10 +77,10 @@
                         </form>
                     </div>
                 </li>
-                @else 
+                @else
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAc" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAc" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownAc">
@@ -104,14 +104,7 @@
                 </li>
                 @endif
                 @endguest
-                <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" id="checkbox" class="custom-control-input">
-                            <label class="custom-control-label theme-switch" for="checkbox">Dark Mode</label>
-                        </div>
-                    </label>
-                </div>
+
             </ul>
         </div>
     </div>

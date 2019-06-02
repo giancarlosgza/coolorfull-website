@@ -49,6 +49,16 @@ Route::get('image/color', function () {return view('pages.colors.imagecolors');}
 Route::get('design/system', function () {return view('pages.design.designsystem');});
 Route::get('design/system/docs', function () {return view('pages.design.docs');});
 
+//------------------------------------------------------------------------------------------------
+// TEMPLATES ROUTES
+//------------------------------------------------------------------------------------------------
+Route::get('templates/templates', function () {return view('templates.templates');});
+Route::get('templates/dashboard-v2/index', function () {return view('templates.dashboard-v2.index');});
+Route::get('templates/dashboard-v2/components', function () {return view('templates.dashboard-v2.components.components');});
+Route::get('templates/dashboard-v2/utilities', function () {return view('templates.dashboard-v2.utilities.utilities');});
+Route::get('templates/dashboard-v2/pages/login', function () {return view('templates.dashboard-v2.pages.login');});
+Route::get('templates/dashboard-v2/pages/register', function () {return view('templates.dashboard-v2.pages.register');});
+
 //Route::get('code/editor', 'GradientController@gradientsEditor');
 //------------------------------------------------------------------------------------------------
 // SUBSCRIPTION ROUTES

@@ -70,7 +70,7 @@
     <div class="card shadow-medium">
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table class="table table-hover table-borderless">
                     <thead>
                         <tr>
                         <th scope="col" class="text-montserrat">🎨</th>

@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <br>
-                    <div id="disable-payments-overlay"></div>
+                    <!--<div id="disable-payments-overlay"></div>-->
                     <div class="form-group row">
                         <div class="col-sm-12 col-md-6">
                             <p class="bold">Register and pay monthly: $2.99 USD</p>
@@ -79,24 +79,6 @@
                 </div>
             </div>
         </div>
-        <!--
-        <div class="col-md-4">
-            <div class="card card-form">
-                <div class="card-body">
-                    <h5 class="bold">Join Colorffy and become Pro</h5>
-                    <hr>
-                    <h5>❤️ Save your <strong>favorites gradients</strong></h5>
-                    <h5>💚 Save your <strong>favorites palettes</strong></h5>
-                    <h5>💻 <strong>HEX, RGB, HSL & CMYK</strong> for every gradients and generators</h5>
-                    <h5>👓 <strong>Color blindness</strong> filter on saved gradients</h5>
-                    <h5>🙆‍♂️ <strong>Create and save</strong> unlimited gradients</h5>
-                    <h5>🚫 No <strong>ads</strong></h5>
-                    <h5>🎨 <strong>Preview icons</strong> with color palettes & colors from images</h5>
-                    <h5>🎁 <strong>Access</strong> to icons, backgrounds and illustrations (coming soon)</h5>
-                    <h5>📧 Do you want some <strong>feature or feedback? <a href="mailto:colorffy@gmail.com" class="color-darkblue" title="Contact Us">request here!</a></strong></h5>
-                </div>
-            </div>
-        </div>-->
     </div>
 </div>
 @endsection

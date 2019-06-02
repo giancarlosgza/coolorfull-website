@@ -12,7 +12,7 @@
         <div class="col-sm-12">
             <form action="" method="get">
                 <div class="input-group mb-3">
-                    <input type="text" name="q" id="query" value="{{ $searchQuery }}" class="form-control shadow-medium no-border"
+                    <input type="text" name="q" id="query" value="{{ $searchQuery }}" class="form-control shadow-medium no-border search-input"
                         placeholder="🔍 Search colors or hex" aria-label="Search colors or hex" aria-describedby="button-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-primary shadow-medium" type="submit" id="button-addon2">Search</button>

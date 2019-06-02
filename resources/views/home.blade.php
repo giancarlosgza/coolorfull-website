@@ -6,8 +6,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-montserrat">Hi {{ Auth::user()->name }}! 👋</h3>
-                <h5 class="text-montserrat">{{ Auth::user()->email }}</h5>
+                <h3 class="text-montserrat color-white-black">Hi {{ Auth::user()->name }}! 👋</h3>
+                <h5 class="text-montserrat color-white-black">{{ Auth::user()->email }}</h5>
             </div>
         </div>
     </div>

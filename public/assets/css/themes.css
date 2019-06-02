@@ -1,0 +1,93 @@
+/*LIGHT THEME*/
+:root {
+    --text-primary-color: #1F2AFF;
+    --text-secondary-color: #ffc107;
+
+    --color-red: #ff0707;
+    --color-green: #0fff07;
+    --color-white-black: #ffffff;
+
+    --font-color: #50555D;
+    --bg-color: #fafbfe;
+
+    --bg-card-color: #ffffff;
+
+    --bg-navbar-color: #ffffff;
+    --text-navbar-hover-color: #000000;
+    --text-navbar-item-color: #6c757d;
+
+    --bg-btn-primary: #1f2aff;
+    --bg-btn-primary-hover: #000eee;
+    --bg-btn-primary-focus: #000eee;
+
+    --bg-btn-secondary: #ffc107;
+    --bg-btn-secondary-hover: #ffb300;
+    --bg-btn-secondary-focus: #ffa000;
+
+    --bg-btn-light: #ffffff;
+    --bg-btn-light-hover: #eeeeee;
+    --bg-btn-light-focus: #f5f5f5;
+
+    --bg-btn-search: #ffffff;
+    --bg-btn-search-hover: #f5f5f5;
+    --bg-btn-search-focus: #eeeeee;
+    --text-btn-search: #000000;
+
+    --bg-btn-link: #6a51ff;
+    --bg-btn-link-hover: #001df2;
+    --bg-btn-link-focus: #000eee;
+
+    --bg-search-input: #ffffff;
+    --bg-search-input-focus: #f5f5f5;
+
+    --bg-field-color: #eeeeee;
+    --bg-field-focus-color: #d3d3d3;
+    --text-field-color: #929292;
+}
+
+/*DARK THEME*/
+[data-theme="dark"] {
+    --text-primary-color: #b19cff;
+    --text-secondary-color: #ffe082;
+
+    --color-red: #fa908c;
+    --color-green: #99fa8c;
+    --color-white-black: #000000;
+
+    --font-color: #ffffff;
+    --bg-color: #121212;
+
+    --bg-card-color: #303030;
+
+    --bg-navbar-color: #3b3b3b;
+    --text-navbar-hover-color: #ffffff;
+    --text-navbar-item-color: #f3f3f3;
+
+    --bg-btn-primary: #b19cff;
+    --bg-btn-primary-hover: #8d72ff;
+    --bg-btn-primary-focus: #6a51ff;
+
+    --bg-btn-secondary: #ffe082;
+    --bg-btn-secondary-hover: #ffd54f;
+    --bg-btn-secondary-focus: #ffca28;
+
+    --bg-btn-light: #000000;
+    --bg-btn-light-hover: #303030;
+    --bg-btn-light-focus: #474747;
+
+    --bg-btn-search: #303030;
+    --bg-btn-search-hover: #3b3b3b;
+    --bg-btn-search-focus: #474747;
+    --text-btn-search: #ffffff;
+
+    --bg-btn-link: #ffe082;
+    --bg-btn-link-hover: #ffd54f;
+    --bg-btn-link-focus: #ffca28;
+
+    --bg-search-input: #303030;
+    --bg-search-input-focus: #474747;
+
+    --bg-field-color: #202020;
+    --bg-field-focus-color: #181818;
+    --text-field-color: #929292;
+}

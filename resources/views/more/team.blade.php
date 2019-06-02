@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-montserrat text-body">👨‍💻 Team</h3><br>
+            <h3 class="text-montserrat text-indigo">Team</h3><br>
         </div>
     </div>
     <div class="row">
