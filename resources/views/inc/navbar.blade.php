@@ -20,8 +20,8 @@
                 <li class="nav-item {{ (request()->is('gradients/catalog')) ? 'active' : '' }}">
                     <a class="nav-link nav-color" href="/gradients/catalog">Gradients</a>
                 </li>
-                <li class="nav-item {{ (request()->is('templates/templates')) ? 'active' : '' }}">
-                    <a class="nav-link nav-color" href="/templates/templates">Templates  <span class="badge badge-secondary">New</span></a>
+                <li class="nav-item {{ (request()->is('templates')) ? 'active' : '' }}">
+                    <a class="nav-link nav-color" href="/templates/themes">Templates  <span class="badge badge-secondary">New</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownGG" role="button"

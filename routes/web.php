@@ -52,12 +52,15 @@ Route::get('design/system/docs', function () {return view('pages.design.docs');}
 //------------------------------------------------------------------------------------------------
 // TEMPLATES ROUTES
 //------------------------------------------------------------------------------------------------
-Route::get('templates/templates', function () {return view('templates.templates');});
+Route::get('templates/themes', function () {return view('templates.templates');});
 Route::get('templates/dashboard-v2/index', function () {return view('templates.dashboard-v2.index');});
 Route::get('templates/dashboard-v2/components', function () {return view('templates.dashboard-v2.components.components');});
 Route::get('templates/dashboard-v2/utilities', function () {return view('templates.dashboard-v2.utilities.utilities');});
 Route::get('templates/dashboard-v2/pages/login', function () {return view('templates.dashboard-v2.pages.login');});
 Route::get('templates/dashboard-v2/pages/register', function () {return view('templates.dashboard-v2.pages.register');});
+
+Route::get('templates/coming-soon/index', function () {return view('templates.coming_soon.index');});
+Route::get('templates/landing-page/landing', function () {return view('templates.landing-page.landing');});
 
 //Route::get('code/editor', 'GradientController@gradientsEditor');
 //------------------------------------------------------------------------------------------------

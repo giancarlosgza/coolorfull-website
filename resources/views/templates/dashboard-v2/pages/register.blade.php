@@ -19,11 +19,11 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <!-- Sidebar CSS -->
-    <link rel="stylesheet" href="{{asset('assets/css/templates/dashboard-v2/css/sidebar.css')}}">
+    <link rel="stylesheet" href="{{asset('templates/dashboard-v2/css/sidebar.css')}}">
     <!-- Colorffy Dashboard v2 Styles-->
-    <link rel="stylesheet" href="{{asset('assets/css/templates/dashboard-v2/css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('templates/dashboard-v2/css/styles.css')}}">
     <!-- Dark Mode JS -->
-    <script async src="{{asset('assets/css/templates/dashboard-v2/js/dark-mode.js')}}">
+    <script async src="{{asset('templates/dashboard-v2/js/dark-mode.js')}}">
     </script>
 </head>
 
@@ -97,7 +97,7 @@
                 <button type="button" id="sidebarCollapse" class="btn btn-light">
                     <i class="fas fa-align-left"></i>
                 </button>
-                <a href="/templates/templates" class="nav-item nav-link ripple text-montserrat font-weight-bold"> Colorffy</a>
+                <a href="/templates/themes" class="nav-item nav-link ripple text-montserrat font-weight-bold"> Colorffy</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -253,7 +253,7 @@
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js">
     </script>
-    <script src="{{asset('assets/css/templates/dashboard-v2/js/sidebar.js')}}" type="text/javascript"></script>
+    <script src="{{asset('templates/dashboard-v2/js/sidebar.js')}}" type="text/javascript"></script>
 </body>
 
 </html>
