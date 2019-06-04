@@ -14,7 +14,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="robots" content="all">
     <meta name="googlebot" content="all">
-    <!--META FACEBOOK-->
+    <!--Facebook Meta-->
     <meta property="og:url" content="https://www.colorffy.com" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="@yield('title') | Colorffy"/>
@@ -33,7 +33,7 @@
     <meta name="twitter:image:alt" content="Colorffy Image Card" />
     <meta name="twitter:site" content="@colorffy" />
     <meta name="twitter:domain" content="https://www.colorffy.com" />
-    <!--FAVICON-->
+    <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/assets/img/favicon/apple-touch-icon.png?v=9BPEpJ6Nzd')}}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/assets/img/favicon/favicon-32x32.png?v=9BPEpJ6Nzd')}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/assets/img/favicon/favicon-16x16.png?v=9BPEpJ6Nzd')}}">
@@ -41,19 +41,19 @@
     <meta name="apple-mobile-web-app-title" content="Colorffy">
     <meta name="application-name" content="Colorffy">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <!-- CSS -->
+    <!-- Css -->
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,500&display=swap" rel="stylesheet">
-    <!--STYLES-->
+    <!--Styles-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         crossorigin="anonymous">
-
     <link rel="stylesheet" href="{{ asset('assets/css/themes.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
-    
     @yield('styles')
+    <!--FONT AWESOME-->
+    <!--<script src="https://kit.fontawesome.com/ddb7d75e39.js"></script>-->
     <!-- MARKUP JSON-LD Google. -->
     <script async type="application/ld+json">
         {"@context":"http://schema.org","@type":"Organization","name":"Colorffy","url":"https://colorffy.com","logo":"https://colorffy.com/assets/new-logo.png"}
@@ -66,7 +66,6 @@
     <style>
         body{font-family:'Roboto',sans-serif; font-weight: 500 !important;}.logo{font-family:'Montserrat',sans-serif}
     </style>
-    
     @yield('googleads')
 </head>
 <body>

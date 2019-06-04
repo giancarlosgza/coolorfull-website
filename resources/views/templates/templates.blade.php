@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-12">
             <h3 class="text-montserrat text-indigo">Templates</h3>
-            <h5>Very simples, easy to use, lightweight and pretty cool. Become PRO, download the themes, use it for
+            <h5>Very simples, minimalist, easy to use, lightweight and pretty cool. Become PRO, download the themes, use it for
                 whatever you want, the times you want and feel free to
                 modify if you want.</h5>
             <br>
@@ -66,6 +66,11 @@
                     @endguest
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><hr>
+            <h1 class="text-center text-montserrat text-indigo">Soon new content...</h1>
         </div>
     </div>
 </div>

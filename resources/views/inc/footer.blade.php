@@ -4,12 +4,12 @@
             <div class="col-md-4">
                 <h4 class="logo text-indigo">Colorffy</h4>
                 <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
+                    <div class="theme-switch">
                         <div class="custom-control custom-switch">
-                            <input type="checkbox" id="checkbox" class="custom-control-input">
+                            <input type="checkbox" id="checkbox" name="checkbox" class="custom-control-input">
                             <label class="custom-control-label theme-switch" for="checkbox">Dark Mode <span class="badge badge-secondary">Beta</span></label>
                         </div>
-                    </label>
+                    </div>
                 </div>
                 <p>
                     Color gradients and palettes! Get css, color codes, images, ui previews or create your own gradients!
