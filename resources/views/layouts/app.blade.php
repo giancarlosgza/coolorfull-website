@@ -34,13 +34,13 @@
     <meta name="twitter:site" content="@colorffy" />
     <meta name="twitter:domain" content="https://www.colorffy.com" />
     <!--Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/assets/img/favicon/apple-touch-icon.png?v=9BPEpJ6Nzd')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/assets/img/favicon/favicon-32x32.png?v=9BPEpJ6Nzd')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/assets/img/favicon/favicon-16x16.png?v=9BPEpJ6Nzd')}}">
-    <link rel="mask-icon" href="{{ asset('/assets/img/favicon/safari-pinned-tab.svg?v=9BPEpJ6Nzd')}}" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/assets/img/favicon/apple-touch-icon.png?v=kP3Xj7q03O')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/assets/img/favicon/favicon-32x32.png?v=kP3Xj7q03O')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/assets/img/favicon/favicon-16x16.png?v=kP3Xj7q03O')}}">
+    <link rel="mask-icon" href="{{ asset('/assets/img/favicon/safari-pinned-tab.svg?v=kP3Xj7q03O')}}" color="#5bbad5">
     <meta name="apple-mobile-web-app-title" content="Colorffy">
     <meta name="application-name" content="Colorffy">
-    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#1f2aff">
     <!-- Css -->
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <!--Import Google Icon Font-->

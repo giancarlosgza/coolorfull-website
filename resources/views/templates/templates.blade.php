@@ -5,7 +5,8 @@
     <div class="row">
         <div class="col-md-12">
             <h3 class="text-montserrat text-indigo">Templates</h3>
-            <h5>Very simples, minimalist, easy to use, lightweight and pretty cool. Become PRO, download the themes, use it for
+            <h5>Very simples, minimalist, easy to use, lightweight and pretty cool. Become PRO, download the themes, use
+                it for
                 whatever you want, the times you want and feel free to
                 modify if you want.</h5>
             <br>
@@ -67,9 +68,48 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-medium">
+                <img src="{{asset('assets/img/templates/download-now.png')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="text-indigo text-center">Download Now</h3>
+                    <hr>
+                    <h5>A Bootstrap 4 very minimalist download now page with dynamic background color.</h5>
+                    <hr>
+                    <a href="/templates/download-now/index" target="_blank"
+                        class="btn btn-primary-light shadow-medium">Live Preview</a>
+                    @guest
+                    <button href="#" class="btn btn-primary shadow-medium" disabled>Download (PRO)</button>
+                    @else
+                    <a href="https://dl.dropboxusercontent.com/s/ftcdpkfsx5o5do5/download-now.zip?dl=0" download
+                        class="btn btn-primary shadow-medium">Download</a>
+                    @endguest
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-medium">
+                <img src="{{asset('assets/img/templates/landing-page-demo.png')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="text-indigo text-center">Landing Page</h3>
+                    <hr>
+                    <h5>A Bootstrap 4 very simple landing page with illustration.</h5>
+                    <hr>
+                    <a href="/templates/landing-page-demo/index" target="_blank"
+                        class="btn btn-primary-light shadow-medium">Live Preview</a>
+                    @guest
+                    <button href="#" class="btn btn-primary shadow-medium" disabled>Download (PRO)</button>
+                    @else
+                    <a href="https://dl.dropboxusercontent.com/s/1rf98f6n2czv3m9/landing-page-demo.zip?dl=0" download
+                        class="btn btn-primary shadow-medium">Download</a>
+                    @endguest
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row">
-        <div class="col-md-12"><hr>
+        <div class="col-md-12">
+            <hr>
             <h1 class="text-center text-montserrat text-indigo">Soon new content...</h1>
         </div>
     </div>

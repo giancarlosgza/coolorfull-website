@@ -3,7 +3,7 @@
     "name": "Colorffy",
     "scope": "/",
     "background_color": "#ffffff",
-    "theme_color": "#258bff",
+    "theme_color": "#1F2AFF",
     "display": "standalone",
     "icons": [
       {

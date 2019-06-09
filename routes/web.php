@@ -61,6 +61,8 @@ Route::get('templates/dashboard-v2/pages/register', function () {return view('te
 
 Route::get('templates/coming-soon/index', function () {return view('templates.coming_soon.index');});
 Route::get('templates/landing-page/landing', function () {return view('templates.landing-page.landing');});
+Route::get('templates/download-now/index', function () {return view('templates.download-now.index');});
+Route::get('templates/landing-page-demo/index', function () {return view('templates.landing-page-demo.index');});
 
 //Route::get('code/editor', 'GradientController@gradientsEditor');
 //------------------------------------------------------------------------------------------------
