@@ -7,45 +7,45 @@
         <div class="col-md-8">
             <div class="card card-form">
                 <div class="card-body">
-                    <h4 class="bold">🆙 Edit color palette</h4>
+                    <h3 class="text-montserrat">Edit color palette</h3><br>
                     <!--FORM-->
                     <form method="POST" action="/palettes/edit" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" id="invisible_id" value="{{$palette->id}}" name="palette_id">
 
                         <div class="form-group">
-                            <label for="name" class="bold">Name:</label>
-                            <input type="name" value="{{ $palette->name }}" class="form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" id="name" name="nombre">
+                            <label for="name" class="text-montserrat">Name:</label>
+                            <input type="name" value="{{ $palette->name }}" class="form-mat-g form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" id="name" name="nombre">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_1" class="bold">Color 1:</label>
-                            <input type="text" class="hexcolor form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" value="{{ $palette->color_1 }}" id="color_1" name="color_1">
+                            <label for="color_1" class="text-montserrat">Color 1:</label>
+                            <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" value="{{ $palette->color_1 }}" id="color_1" name="color_1">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_2" class="bold">Color 2:</label>
-                            <input type="text" class="hexcolor form-control{{ $errors->has('color_2') ? ' is-invalid' : '' }}" value="{{ $palette->color_2 }}" id="color_2" name="color_2">
+                            <label for="color_2" class="text-montserrat">Color 2:</label>
+                            <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_2') ? ' is-invalid' : '' }}" value="{{ $palette->color_2 }}" id="color_2" name="color_2">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_3" class="bold">Color 3:</label>
-                            <input type="text" class="hexcolor form-control{{ $errors->has('color_3') ? ' is-invalid' : '' }}" value="{{ $palette->color_3 }}" id="color_3" name="color_3">
+                            <label for="color_3" class="text-montserrat">Color 3:</label>
+                            <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_3') ? ' is-invalid' : '' }}" value="{{ $palette->color_3 }}" id="color_3" name="color_3">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_4" class="bold">Color 4:</label>
-                            <input type="text" class="hexcolor form-control{{ $errors->has('color_4') ? ' is-invalid' : '' }}" value="{{ $palette->color_4 }}" id="color_4" name="color_4">
+                            <label for="color_4" class="text-montserrat">Color 4:</label>
+                            <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_4') ? ' is-invalid' : '' }}" value="{{ $palette->color_4 }}" id="color_4" name="color_4">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_5" class="bold">Color 5:</label>
-                            <input type="text" class="hexcolor form-control{{ $errors->has('color_5') ? ' is-invalid' : '' }}" value="{{ $palette->color_5 }}" id="color_5" name="color_5">
+                            <label for="color_5" class="text-montserrat">Color 5:</label>
+                            <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_5') ? ' is-invalid' : '' }}" value="{{ $palette->color_5 }}" id="color_5" name="color_5">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_filter" class="bold">Color Filter:</label>
-                            <select id="color_filter" value="{{ $palette->color_filter }}" class="form-control{{ $errors->has('color_filter') ? ' is-invalid' : '' }}"  name="color_filter">
+                            <label for="color_filter" class="text-montserrat">Color Filter:</label>
+                            <select id="color_filter" value="{{ $palette->color_filter }}" class="form-mat-g form-select form-control{{ $errors->has('color_filter') ? ' is-invalid' : '' }}"  name="color_filter">
                                 <option>Red</option>
                                 <option>Green</option>
                                 <option>Blue</option>
@@ -62,8 +62,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="color_filter_2" class="bold">Color Filter 2:</label>
-                            <select id="color_filter_2" value="{{ $palette->color_filter_2 }}" class="form-control{{ $errors->has('color_filter_2') ? ' is-invalid' : '' }}"  name="color_filter_2">
+                            <label for="color_filter_2" class="text-montserrat">Color Filter 2:</label>
+                            <select id="color_filter_2" value="{{ $palette->color_filter_2 }}" class="form-mat-g form-select form-control{{ $errors->has('color_filter_2') ? ' is-invalid' : '' }}"  name="color_filter_2">
                                 <option>Red</option>
                                 <option>Green</option>
                                 <option>Blue</option>

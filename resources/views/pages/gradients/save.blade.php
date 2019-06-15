@@ -4,14 +4,24 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h4 class="bold text-body">🔖 My Saved Gradients</h4><br>
+            <h3 class="text-montserrat text-indigo">Saved Gradients</h3><br>
         </div>
         @if($gradients->count() < 1)
         <div class="col-sm-12">
             <div class="card card-form">
                 <div class="card-body">
-                    <h6 class="bold">No saved gradients 😔</h6>
-                    <a href="/generator/gradients">You can create and save from here</a>
+                    <div class="row text-center">
+                        <div class="col-12 col-sm-6">
+                            <img src="{{ asset ('/assets/img/illustrations/start_up.svg') }}" width="50%" alt="start-up">
+                        <br><br>
+                        </div>
+                        <div class="col-12 col-sm-6 align-self-center">
+                            <h4 class="text-montserrat text-body">Empty saved gradients</h4>
+                            <h5>Create and save a gradient and it will show up here.</h5>
+                            <br>
+                            <a href="/generator/gradients" class="btn btn-primary button-block shadow-medium">Get Started</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -20,7 +30,7 @@
         <div class="col-6 col-md-3">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h6 class="bold text-center uppercase h6-responsive">{{$gradient->name}}</h6>
+                    <h6 class="bold-500 text-center uppercase h6-responsive">{{$gradient->name}}</h6>
                     <a href="/gradients/{{$gradient->id}}" title="{{$gradient->name}}">
                         <div class="card text-center">
                             <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}"

@@ -41,11 +41,29 @@ Route::get('generator/mgradients', 'GradientController@generatorMGradients');
 Route::get('pricing', function(){return view('more.pricing');});
 Route::get('team', function () {return view('more.team');});
 Route::get('whatsnew', function () {return view('more.whatsnew');});
+Route::get('privacy', function(){return view('more.privacy');});
+
 Route::get('random/color', function () {return view('pages.colors.random');});
 Route::get('image/color', function () {return view('pages.colors.imagecolors');});
 
 Route::get('design/system', function () {return view('pages.design.designsystem');});
 Route::get('design/system/docs', function () {return view('pages.design.docs');});
+
+//------------------------------------------------------------------------------------------------
+// TEMPLATES ROUTES
+//------------------------------------------------------------------------------------------------
+Route::get('templates/themes', function () {return view('templates.templates');});
+Route::get('templates/dashboard-v2/index', function () {return view('templates.dashboard-v2.index');});
+Route::get('templates/dashboard-v2/components', function () {return view('templates.dashboard-v2.components.components');});
+Route::get('templates/dashboard-v2/utilities', function () {return view('templates.dashboard-v2.utilities.utilities');});
+Route::get('templates/dashboard-v2/pages/login', function () {return view('templates.dashboard-v2.pages.login');});
+Route::get('templates/dashboard-v2/pages/register', function () {return view('templates.dashboard-v2.pages.register');});
+
+Route::get('templates/coming-soon/index', function () {return view('templates.coming_soon.index');});
+Route::get('templates/landing-page/landing', function () {return view('templates.landing-page.landing');});
+Route::get('templates/download-now/index', function () {return view('templates.download-now.index');});
+Route::get('templates/landing-page-demo/index', function () {return view('templates.landing-page-demo.index');});
+Route::get('templates/photo-portafolio/index', function () {return view('templates.photo-portafolio.index');});
 
 //Route::get('code/editor', 'GradientController@gradientsEditor');
 //------------------------------------------------------------------------------------------------

@@ -1,0 +1,51 @@
+/* BODY */
+body {
+    font-family: Roboto, 'sans-serif';
+    background: linear-gradient(to right, #5c5cff, #59afff);
+    color: #ffffff;
+    height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    font-family: Poppins, 'sans-serif';
+    margin-bottom: 50px;
+}
+
+/* TEXT */
+.text-poppins {
+    font-family: Poppins, 'sans-serif';
+}
+
+/* BUTTONS */
+.btn {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1.25px;
+    border-radius: 6px;
+    transition: all .3s cubic-bezier(.25, .8, .25, 1);
+    border: none;
+}
+
+.btn-primary {
+    background-color: #ffea34;
+    color: #000000 !important;
+}
+
+.btn-primary:hover {
+    background-color: #ffd226;
+}
+
+.btn-primary:active,
+.btn-primary:focus {
+    background-color: #ffb917 !important;
+    color: #000000 !important;
+}
+
+/* CARD */
+.card {
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
