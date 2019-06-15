@@ -12,14 +12,14 @@
                         </div>
                         <div class="col-md-12 col-lg-8">
                             <h3 class="text-montserrat text-center text-indigo">Colorffy</h3>
-                            <h4 class="text-center">Login</h4>
+                            <h3 class="text-center">Login</h3>
                             <br>
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
                                 <div class="row justify-content-center">
                                     <div class="col-md-8">
                                         <div class="form-group">
-                                            <label for="email" class="text-montserrat"><i class="fas fa-user"></i>
+                                            <label for="email"><i class="fas fa-user"></i>
                                                 {{ __('E-Mail or Username') }}</label>
                                             <input id="email" type="text"
                                                 class="form-mat-g form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
@@ -32,7 +32,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="password" class="text-montserrat"><i class="fas fa-lock"></i>
+                                            <label for="password"><i class="fas fa-lock"></i>
                                                 {{ __('Password') }}</label>
                                             <input id="password" type="password"
                                                 class="form-mat-g form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
@@ -48,7 +48,7 @@
                                             <div class="form-check checkbox checkbox-primary">
                                                 <input class="form-check-input " type="checkbox" name="remember"
                                                     id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                                <label class="form-check-label text-montserrat" for="remember">
+                                                <label class="form-check-label" for="remember">
                                                     {{ __('Remember Me') }}
                                                 </label>
                                             </div>

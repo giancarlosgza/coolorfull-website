@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <div class="card card-form">
                     <div class="card-body text-left">
                         <h3 class="text-montserrat text-center">Free</h3>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <div class="card card-form">
                     <div class="card-body text-left">
                         <h3 class="text-montserrat text-center">1 Month</h3>
@@ -44,33 +44,12 @@
                         <h6><i class="fas fa-check-circle text-indigo"></i> No ads in the website.</h6>
                         <h6><i class="fas fa-check-circle text-indigo"></i> Preview icons with color palettes & colors from images.</h6>
                         <h6><i class="fas fa-check-circle text-indigo"></i> Access to templates.</h6>
-                        <h6><i class="fas fa-times-circle text-danger"></i> Forever</h6>
                         <hr>
                         <a href="/register" class="btn btn-primary btn-block shadow-medium">Join Colorffy</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="card card-form">
-                    <div class="card-body text-left">
-                        <h3 class="text-montserrat text-center">Lifetime</h3>
-                        <h3 class="text-montserrat text-indigo text-center">$35 USD</h3>
-                        <h6 class="text-center">Only one payment forever.</h6>
-                        <br>
-                        <h6><i class="fas fa-check-circle text-indigo"></i> Access to every Colorffy's tools.</h6>
-                        <h6><i class="fas fa-check-circle text-indigo"></i> Save your favorites gradients and palettes.</h6>
-                        <h6><i class="fas fa-check-circle text-indigo"></i> Color codes for every gradient, personal gradients and palettes.</h6>
-                        <h6><i class="fas fa-check-circle text-indigo"></i> Color blindness filter for every gradient, saved gradients and palettes.</h6>
-                        <h6><i class="fas fa-check-circle text-indigo"></i> Create and save unlimited gradients.</h6>
-                        <h6><i class="fas fa-check-circle text-indigo"></i> No ads in the website.</h6>
-                        <h6><i class="fas fa-check-circle text-indigo"></i> Preview icons with color palettes & colors from images.</h6>
-                        <h6><i class="fas fa-check-circle text-indigo"></i> Access to templates.</h6>
-                        <h6><i class="fas fa-check-circle text-indigo"></i> Forever</h6>
-                        <hr>
-                        <a href="/register" class="btn btn-secondary btn-block shadow-medium">Join Colorffy</a>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
     </div>

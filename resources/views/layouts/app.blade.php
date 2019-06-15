@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#258bff"/>
-    <meta name="description" content="Preview ui elements, colors codes, random colors, get colors from images & gradients generators.">
-    <meta name="keywords" content="Color, Gradients, Palettes, Color Gradients, Color Palettes, Gradients Generators, Color Codes, Random Color, Color from Images">
+    <meta name="description" content="A lot of colors gradients and palettes for inspiration with colors codes and css. Get more tools, like gradients generators, colors from images, web templates and more! Get a color for your next awesome project.">
+    <meta name="keywords" content="Colors, Gradients, Palettes, Color Gradients, Color Palettes, Gradients Generators, Color Codes, Random Color, Color from Images, Web Teamplates, HTML 5 Templates, Design, Web Design, CSS, Hex, RGB, Fresh Colors, Colors Idea, Colors Inspiration">
     <title>@yield('title') - Colorffy</title>
     <link rel="manifest" href="{{ asset('/manifest.json') }}">
     <!-- CSRF Token -->
@@ -17,8 +17,8 @@
     <!--Facebook Meta-->
     <meta property="og:url" content="https://www.colorffy.com" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="@yield('title') | Colorffy"/>
-    <meta property="og:description" content="Color gradients and palettes! Preview ui elements, colors codes, random colors, get colors from images & gradients generators." />
+    <meta property="og:title" content="@yield('title') - Colorffy"/>
+    <meta property="og:description" content="A lot of colors gradients and palettes for inspiration with colors codes and css. Get more tools, like gradients generators, colors from images, web templates and more! Get a color for your next awesome project." />
     <meta property="og:image" content="https://www.colorffy.com/assets/img/colorffy-full-width-card.jpg">
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="750">
@@ -26,8 +26,8 @@
     <meta property="og:image:alt" content="Colorffy Banner" />
     <!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="@yield('title') | Colorffy" />
-    <meta name="twitter:description" content="Color gradients and palettes! Preview ui elements, colors codes, random colors, get colors from images & gradients generators."/>
+	<meta name="twitter:title" content="@yield('title') - Colorffy" />
+    <meta name="twitter:description" content="A lot of colors gradients and palettes for inspiration with colors codes and css. Get more tools, like gradients generators, colors from images, web templates and more! Get a color for your next awesome project."/>
 	<meta name="twitter:creator" content="@giancarlosgza" />
 	<meta name="twitter:image" content="https://www.colorffy.com/assets/img/colorffy-full-width-card.jpg" />
     <meta name="twitter:image:alt" content="Colorffy Image Card" />
@@ -56,7 +56,7 @@
     <!--<script src="https://kit.fontawesome.com/ddb7d75e39.js"></script>-->
     <!-- MARKUP JSON-LD Google. -->
     <script async type="application/ld+json">
-        {"@context":"http://schema.org","@type":"Organization","name":"Colorffy","url":"https://colorffy.com","logo":"https://colorffy.com/assets/new-logo.png"}
+        {"@context":"http://schema.org","@type":"Organization","name":"Colorffy","url":"https://colorffy.com","logo":"https://colorffy.com/assets/img/logo-gradient-bg.png"}
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114030245-4"></script>

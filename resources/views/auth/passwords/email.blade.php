@@ -25,7 +25,7 @@
                                 <div class="row justify-content-center">
                                     <div class="col-md-8">
                                         <div class="form-group">
-                                            <label for="email" class="text-montserrat"><i class="fas fa-user"></i>
+                                            <label for="email"><i class="fas fa-user"></i>
                                                 {{ __('E-Mail') }}</label>
                                             <input id="email" type="email"
                                                 class="form-mat-g form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
