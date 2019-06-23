@@ -62,7 +62,7 @@
                     <!--<div id="disable-payments-overlay"></div>-->
                     <div class="form-group row text-center">
                         <div class="col-sm-12 col-md-6 offset-md-3">
-                            <p class="bold">Register and pay monthly: $2.99 USD</p>
+                            <p class="bold">Register and pay monthly: $1.99 USD</p>
                             <div id="monthly-paypal-button-container"></div>
                         </div>
                         <!--
