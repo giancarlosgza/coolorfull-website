@@ -21,7 +21,7 @@
                     <a class="nav-link nav-color" href="/gradients/catalog">Gradients</a>
                 </li>
                 <li class="nav-item {{ (request()->is('templates')) ? 'active' : '' }}">
-                    <a class="nav-link nav-color" href="/templates/themes">Templates  <span class="badge badge-secondary">New</span></a>
+                    <a class="nav-link nav-color" href="/templates/themes">Templates <span class="badge badge-secondary">New</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownGG" role="button"
@@ -33,15 +33,15 @@
                         <a class="dropdown-item" href="/generator/mgradients">3️⃣ Color Gradient</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/random/color">🎲 Random Color</a>
-                        <a class="dropdown-item" href="/image/color">🖼️ Image Colors</a>
+                        <a class="dropdown-item" href="/image/color">🖼️ Extract Img Colors</a>
                     </div>
                 </li>
                 @guest
                 <li class="nav-item {{ (request()->is('login')) ? 'active' : '' }}">
-                    <a class="nav-link nav-color" href="/login">Login</a>
+                    <a class="nav-link nav-color" href="/login">Sign In</a>
                 </li>
                 <li class="nav-item {{ (request()->is('register')) ? 'active' : '' }}">
-                    <a class="nav-link nav-color logo-brand" href="/register">Sign Up</a>
+                    <a class="nav-link nav-color logo-brand" href="/register">Register</a>
                 </li>
                 @else
                 @if(auth()->user()->is_admin == 1)

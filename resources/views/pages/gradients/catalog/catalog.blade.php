@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section('title', 'Gradients')
+@section('styles')
+
+@endsection
 @section('googleads')
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 @endsection
@@ -38,6 +41,11 @@
 <br>
 <div class="container">
     <div class="row">
+        <div id="imgNotResult" class="col-12 text-center d-none">
+            <img src="{{asset('assets/img/illustrations/search_engine.svg')}}" width="200px" alt="">
+            <br><br>
+            <h3>Sorry, we couldn't find any gradient with that name.....</h3>
+        </div>
         @foreach($gradients as $gradient)
         <div class="col-6 col-md-4 col-lg-3">
             <div class="card shadow-medium">
@@ -131,4 +139,22 @@
         })
     }
 </script>
+<script>
+    ;(function(y, a, f, i) {
+      var head = a.getElementsByTagName('head')[0];
+      var script = a.createElement('script');
+  
+      y['_yafi-widget'] = { siteId: i, url: f };
+  
+      script.async = 1;
+      script.src = f + 'widget/' + i;
+  
+      head.appendChild(script);
+    })(window, document, 'https://widget.yafi.pro/', '5d1654a725b528002ae69f30');
+
+    //NOT RESULT FOUND
+    @if( $gradients->count() < 1 )
+        $('#imgNotResult').removeClass('d-none');
+    @endif
+  </script>
 @endsection

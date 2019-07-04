@@ -38,6 +38,11 @@
 <br>
 <div class="container">
     <div class="row">
+        <div id="imgNotResult" class="col-12 text-center d-none">
+            <img src="{{asset('assets/img/illustrations/search_engine.svg')}}" width="200px" alt="">
+            <br><br>
+            <h3>Sorry, we couldn't find any palette with that name.....</h3>
+        </div>
         @foreach($palettes as $palette)
         <div class="col-6 col-md-4 col-lg-3">
             <div class="card shadow-medium">
@@ -114,4 +119,22 @@
         })
     }
 </script>
+<script>
+    ;(function(y, a, f, i) {
+      var head = a.getElementsByTagName('head')[0];
+      var script = a.createElement('script');
+  
+      y['_yafi-widget'] = { siteId: i, url: f };
+  
+      script.async = 1;
+      script.src = f + 'widget/' + i;
+  
+      head.appendChild(script);
+    })(window, document, 'https://widget.yafi.pro/', '5d1654a725b528002ae69f30');
+
+    //NOT RESULT FOUND
+    @if( $palettes->count() < 1 )
+        $('#imgNotResult').removeClass('d-none');
+    @endif
+  </script>
 @endsection

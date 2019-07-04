@@ -44,6 +44,20 @@
             </div>
             
         </div>
-
     </div>
+@endsection
+@section('scripts')
+<script>
+;(function(y, a, f, i) {
+    var head = a.getElementsByTagName('head')[0];
+    var script = a.createElement('script');
+
+    y['_yafi-widget'] = { siteId: i, url: f };
+
+    script.async = 1;
+    script.src = f + 'widget/' + i;
+
+    head.appendChild(script);
+})(window, document, 'https://widget.yafi.pro/', '5d1654a725b528002ae69f30');
+</script>
 @endsection

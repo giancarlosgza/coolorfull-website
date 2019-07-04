@@ -22,7 +22,7 @@
                     <a href="/templates/dashboard-v2/index" target="_blank"
                         class="btn btn-primary-light shadow-medium">Live Preview</a>
                     @guest
-                    <button href="#" class="btn btn-primary shadow-medium" disabled>Download (PRO)</button>
+                    <a href="/register" class="btn btn-primary shadow-medium">Download (PRO)</a>
                     @else
                     <a href="https://dl.dropboxusercontent.com/s/0jonin02cxccz8m/dashboard-v2.zip?dl=0" download
                         class="btn btn-primary shadow-medium">Download</a>
@@ -41,7 +41,7 @@
                     <a href="/templates/coming-soon/index" target="_blank"
                         class="btn btn-primary-light shadow-medium">Live Preview</a>
                     @guest
-                    <button href="#" class="btn btn-primary shadow-medium" disabled>Download (PRO)</button>
+                    <a href="/register" class="btn btn-primary shadow-medium">Download (PRO)</a>
                     @else
                     <a href="https://dl.dropboxusercontent.com/s/uh2ot38j4ipxb8f/coming-soon.zip?dl=0" download
                         class="btn btn-primary shadow-medium">Download</a>
@@ -65,7 +65,7 @@
                     <a href="/templates/landing-page/landing" target="_blank"
                         class="btn btn-primary-light shadow-medium">Live Preview</a>
                     @guest
-                    <button href="#" class="btn btn-primary shadow-medium" disabled>Download (PRO)</button>
+                    <a href="/register" class="btn btn-primary shadow-medium">Download (PRO)</a>
                     @else
                     <a href="https://dl.dropboxusercontent.com/s/skwq03vy9ksr2u9/landing-page.zip?dl=0" download
                         class="btn btn-primary shadow-medium">Download</a>
@@ -84,7 +84,7 @@
                     <a href="/templates/download-now/index" target="_blank"
                         class="btn btn-primary-light shadow-medium">Live Preview</a>
                     @guest
-                    <button href="#" class="btn btn-primary shadow-medium" disabled>Download (PRO)</button>
+                    <a href="/register" class="btn btn-primary shadow-medium">Download (PRO)</a>
                     @else
                     <a href="https://dl.dropboxusercontent.com/s/ftcdpkfsx5o5do5/download-now.zip?dl=0" download
                         class="btn btn-primary shadow-medium">Download</a>
@@ -103,7 +103,7 @@
                     <a href="/templates/landing-page-demo/index" target="_blank"
                         class="btn btn-primary-light shadow-medium">Live Preview</a>
                     @guest
-                    <button href="#" class="btn btn-primary shadow-medium" disabled>Download (PRO)</button>
+                    <a href="/register" class="btn btn-primary shadow-medium">Download (PRO)</a>
                     @else
                     <a href="https://dl.dropboxusercontent.com/s/1rf98f6n2czv3m9/landing-page-demo.zip?dl=0" download
                         class="btn btn-primary shadow-medium">Download</a>
@@ -122,7 +122,7 @@
                     <a href="/templates/photo-portafolio/index" target="_blank"
                         class="btn btn-primary-light shadow-medium">Live Preview</a>
                     @guest
-                    <button href="#" class="btn btn-primary shadow-medium" disabled>Download (PRO)</button>
+                    <a href="/register" class="btn btn-primary shadow-medium">Download (PRO)</a>
                     @else
                     <a href="https://dl.dropboxusercontent.com/s/b077lw79czsv8rp/photography-portafolio.zip?dl=0"
                         download class="btn btn-primary shadow-medium">Download</a>
@@ -160,4 +160,19 @@
         </div>
     </div>
 </div>
+@endsection
+@section('scripts')
+<script>
+;(function(y, a, f, i) {
+    var head = a.getElementsByTagName('head')[0];
+    var script = a.createElement('script');
+
+    y['_yafi-widget'] = { siteId: i, url: f };
+
+    script.async = 1;
+    script.src = f + 'widget/' + i;
+
+    head.appendChild(script);
+})(window, document, 'https://widget.yafi.pro/', '5d1654a725b528002ae69f30');
+</script>
 @endsection
