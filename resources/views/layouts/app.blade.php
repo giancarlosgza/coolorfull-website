@@ -129,12 +129,13 @@
     @endif
     <!--CONTENT-->
     @yield('content')
+    <button onclick="topFunction()" id="backTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
     <!--END CONTENT-->
     @include('inc.footer')
     <!--SCRIPTS-->
     <script type="text/javascript">
         "serviceWorker"in navigator&&window.addEventListener("load",function(){navigator.serviceWorker.register("/service-worker.js").then(function(a){console.log("ServiceWorker registration successful with scope: ",a.scope)},function(a){console.log("ServiceWorker registration failed: ",a)})});
-    </script>    
+    </script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $.ajaxSetup({
@@ -142,6 +143,7 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+        window.onscroll=function(){scrollFunction()};function scrollFunction(){document.getElementById("backTop").style.display=20<document.body.scrollTop||20<document.documentElement.scrollTop?"block":"none"}function topFunction(){document.body.scrollTop=0,document.documentElement.scrollTop=0}
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

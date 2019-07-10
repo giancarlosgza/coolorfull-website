@@ -20,7 +20,7 @@
         <br>
         <div class="row">
             <div class="col-6">
-                <h3 class="text-montserrat text-body">Last Gradients</h3>
+                <h3 class="text-montserrat text-body">New Gradients</h3>
             </div>
             <div class="col-6 text-right">
                 <a href="/gradients/catalog" class="color-indigo text-montserrat">

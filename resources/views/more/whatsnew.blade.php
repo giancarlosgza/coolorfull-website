@@ -22,9 +22,10 @@
                         <li>Website styles redesign</li>
                         <li>Preview and download minimalist bootstrap 4 templates (PRO)</li>
                         <li>Dark mode</li>
+                        <li>Extract images color redesign</li>
                     </ul>
                     <br>
-                    <h6 class="text-montserrat"><i class="fas fa-calendar-alt"></i> June 2019</h6><hr>
+                    <h6 class="text-montserrat"><i class="fas fa-calendar-alt"></i> July 2019</h6><hr>
                     <h6><i class="fas fa-check-circle text-success"></i> Version 2.0</h6>
                     <br>
                     <ul>
@@ -33,8 +34,8 @@
                         <li>Like your favorites palettes (PRO)</li>
                         <li>Create and save unlimited gradients (PRO)</li>
                         <li>HEX, RGB, HSL & CMYK for every gradients and generators</li>
-                        <li>Color blindness filter for gradients and palettes (PRO)</li>
-                        <li>Preview icons with color palettes applied (PRO)</li>
+                        <li>Color blindness filter for gradients and palettes</li>
+                        <li>Preview icons with color palettes applied</li>
                         <li>Preview UI elements with the gradients applied</li>
                         <li>Some UI elements redesign</li>
                         <li>Random color generator</li>

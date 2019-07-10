@@ -125,11 +125,7 @@
     <hr><!--ICONS WITH COLOR PALETTES-->
     <h3 class="text-montserrat">Icons Preview</h3>
         <div class="card shadow-medium">
-            <div class="card-body">
-                @guest
-                    <h6>Do you want to see the color palette applied to icons?</h6>
-                    <h6><a class="bold color-indigo" href="/pricing">JOIN</a> Colorffy and become Pro</h6>
-                @else
+            <div class="card-body">           
                 <div class="row text-center">
                     <div class="col-6 col-sm-4">
                         <?php echo '<?xml version="1.0" encoding="UTF-8"?>' ?>
@@ -189,7 +185,6 @@
                         </svg>                            
                     </div>
                 </div>
-                @endguest
             </div>
         </div>
     <hr>

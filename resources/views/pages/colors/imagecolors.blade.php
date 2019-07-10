@@ -4,6 +4,7 @@
 <style>
     .file{height:75px;border:1px solid #fff;margin:10px 5px 0 0;border-radius:15px}.img-palette{color:#000;text-align:center;font-weight:700}
     .svg-1{width:100px}.svg-2{width:120px}.svg-3{width:85px}
+    .upload-btn-wrapper{position:relative;overflow:hidden;display:inline-block}.upload-btn-wrapper input[type=file]{font-size:100px;position:absolute;left:0;top:0;opacity:0}
 </style>
 <div class="container">
     <div class="row">
@@ -14,10 +15,18 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card shadow-medium">
-                <div class="card-body">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile">Choose file</label>
+                <div class="card-body text-center">
+                    <div class="text-center">
+                        <img src="{{ asset('assets/img/illustrations/growing_up.svg') }}" width="150px" alt="">
+                    </div><br>
+                    <h3 class="font-weight-bold">Upload or take a photo</h3>
+                    <h5>PNG, JPEG, JPG or SVG</h5>
+                    <br>
+                    <div class="text-center">
+                        <div class="upload-btn-wrapper">
+                            <button class="btn btn-primary shadow-medium"><i class="fas fa-upload"></i> Choose file</button>
+                            <input type="file" name="myfile" />
+                        </div>
                     </div>
                     <br>
                     <img id="img" class="file" src="" alt="">
@@ -25,12 +34,13 @@
                     <div class="row">
                         <div class="col-md-12">
                             @guest
-                            <button class="btn btn-gradient" disabled>
+                            <a href="#palette-preview" class="btn btn-secondary"><i class="fas fa-arrow-down"></i> Palette</a>
+                            <button class="btn btn-primary-light" disabled>
                                 <i class="fas fa-lock"></i>
                                 Get IMG (PRO)
                             </button>
                             @else
-                            <a class="btn btn-gradient" onclick="downloadimage()">
+                            <a class="btn btn-primary-light" onclick="downloadimage()">
                                 <i class="fas fa-image"></i>
                                 Get IMG
                             </a>
