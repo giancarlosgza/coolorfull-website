@@ -33,7 +33,7 @@
                         <a class="dropdown-item" href="/generator/mgradients">3️⃣ Color Gradient</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/random/color">🎲 Random Color</a>
-                        <a class="dropdown-item" href="/image/color">🖼️ Extract Img Colors</a>
+                        <a class="dropdown-item" href="/image/color">🖼️ Color Extraction</a>
                     </div>
                 </li>
                 @guest
