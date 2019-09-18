@@ -72,6 +72,10 @@ a {
     line-height: 20px;
 }
 
+.nav-pills li a {
+    color: var(--text-primary-color) !important
+}
+
 /* NAVBAR */
 .navbar {
     background-color: var(--bg-navbar-color);
@@ -133,6 +137,13 @@ a {
 .dropdown-item:focus {
     background-color: var(--text-primary-color);
     color: var(--color-white-black) !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--text-primary-color) !important;
+    background-color: var(--bg-navbar-color);
+    border: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 64, 128, .2);
 }
 
 /* MAIN CARD CIRCLES */
@@ -361,7 +372,7 @@ a {
 }
 
 .text-montserrat {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .intro-text {
@@ -370,6 +381,12 @@ a {
 
 .text-body {
     color: var(--font-color) !important;
+}
+
+.display-5 {
+    font-size: 46px;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
 /* CARDS */
@@ -701,8 +718,8 @@ input:-internal-autofill-selected {
 
 /* CODE */
 code {
-    color: #e83e8c;
-    font-weight: 600;
+    color: var(--text-primary-color) !important;
+    font-weight: 500;
     font-family: 'Roboto', sans-serif
 }
 
@@ -726,6 +743,7 @@ code {
 /*TABLES*/
 table th {
     color: var(--text-primary-color) !important;
+    font-family: Poppins, 'sans-serif';
 }
 
 table td {
@@ -737,6 +755,12 @@ table td {
     .login-img {
         padding-top: 8%;
         display: none;
+    }
+
+    .display-5 {
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.2;
     }
 }
 
@@ -781,5 +805,11 @@ table td {
 
     .login-img {
         display: none;
+    }
+
+    .display-5 {
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.2;
     }
 }

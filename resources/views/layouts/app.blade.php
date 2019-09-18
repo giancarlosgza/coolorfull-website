@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#258bff"/>
+    <meta name="theme-color" content="#1f2aff"/>
     <meta name="description" content="A lot of colors gradients and palettes for inspiration with colors codes and css. Get more tools, like gradients generators, colors from images, web templates and more! Get a color for your next awesome project.">
     <meta name="keywords" content="Colors, Gradients, Palettes, Color Gradients, Color Palettes, Gradients Generators, Color Codes, Random Color, Color from Images, Web Teamplates, HTML 5 Templates, Design, Web Design, CSS, Hex, RGB, Fresh Colors, Colors Idea, Colors Inspiration">
     <title>@yield('title') - Colorffy</title>
@@ -44,10 +44,10 @@
     <!-- Css -->
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600|Roboto:400,500&display=swap" rel="stylesheet">
     <!--Styles-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"
         crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/themes.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
@@ -64,7 +64,7 @@
         window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-114030245-4");
     </script>
     <style>
-        body{font-family:'Roboto',sans-serif; font-weight: 500 !important;}.logo{font-family:'Montserrat',sans-serif}
+        body{font-family:'Roboto',sans-serif; font-weight: 500 !important;}.logo{font-family:'Poppins',sans-serif}
     </style>
     @yield('googleads')
 </head>

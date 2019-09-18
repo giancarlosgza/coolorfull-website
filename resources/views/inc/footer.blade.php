@@ -44,7 +44,7 @@
             <div class="col-8 col-md-6 text-left small align-self-center"><br>
                 <p>Made with ❤️ & ☕ by <a href="https://twitter.com/giancarlosgza" title="Twitter" alt="Twitter" target="_blank" rel="noopener" class="color-indigo">@giancarlosgza</a></p>
             </div>
-            <div class="col-4 col-md-6 text-right small align-self-center">©2019 Colorffy v2.3 🎉</div>
+            <div class="col-4 col-md-6 text-right small align-self-center">©2019 Colorffy v2.5 🎉</div>
         </div>
     </div>
 </footer>

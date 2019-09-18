@@ -65,8 +65,7 @@
             <div class="card shadow-medium">
                 <div class="card-body">
                     <h5 class="text-montserrat">CSS</h5>
-                    <code>
-                        <h6 class="bold" id="css"></h6>
+                    <code id="css">
                     </code>
                 </div>
             </div>

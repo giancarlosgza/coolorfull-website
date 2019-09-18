@@ -36,9 +36,8 @@
                         <h6><i class="fas fa-check-circle text-indigo"></i> Save your favorites gradients and palettes.</h6>
                         <h6><i class="fas fa-check-circle text-indigo"></i> Create and save unlimited gradients.</h6>
                         <h6><i class="fas fa-check-circle text-indigo"></i> No ads in the website.</h6>
-                        <h6><i class="fas fa-check-circle text-indigo"></i> Access to templates.</h6>
                         <hr>
-                        <a href="/register" class="btn btn-primary btn-block shadow-medium">Join Colorffy</a>
+                        <a href="/register" class="btn btn-primary btn-block shadow-medium">Join colorffy now</a>
                     </div>
                 </div>
             </div>
