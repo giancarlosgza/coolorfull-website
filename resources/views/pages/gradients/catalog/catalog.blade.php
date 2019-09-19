@@ -16,7 +16,7 @@
             <form action="" method="get">
                 <div class="input-group mb-3">
                     <input type="text" name="q" id="query" value="{{ $searchQuery }}" class="form-control shadow-medium no-border search-input"
-                        placeholder="🔍 Search colors or hex" aria-label="Search colors or hex" aria-describedby="button-addon2">
+                        placeholder="🔍 Search something...." aria-label="Search something...." aria-describedby="button-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-primary shadow-medium" type="submit" id="button-addon2">Search</button>
                     </div>
@@ -50,7 +50,7 @@
         <div class="col-6 col-md-4 col-lg-3">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h6 class="text-center uppercase h6-responsive bold-500">{{$gradient->name}}</h6>
+                    <h6 class="text-center uppercase h6-responsive text-montserrat">{{$gradient->name}}</h6>
                     <a href="/gradients/{{$gradient->id}}" title="{{$gradient->name}}">
                         <div class="card text-center">
                             <div class="card-body card-gradient" title="{{$gradient->name}}" 

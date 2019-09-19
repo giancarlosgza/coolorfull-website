@@ -5,14 +5,16 @@
                 <h4 class="logo text-indigo">Colorffy</h4>
                 <div class="theme-switch-wrapper">
                     <div class="theme-switch">
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" id="checkbox" name="checkbox" class="custom-control-input">
-                            <label class="custom-control-label theme-switch" for="checkbox">Dark Mode <span class="badge badge-secondary">Beta</span></label>
-                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="checkbox" name="checkbox" >
+                            <span class="slider round"></span>
+                        </label>
+                        <label for="checkbox">Dark mode <span class="badge badge-secondary">Beta</span></label>
                     </div>
                 </div>
+                
                 <p>
-                    Color gradients and palettes! Get css, color codes, images, ui previews or create your own gradients!
+                    Try our new Dark Mode!!
                 </p>
                 <p>
                 We creates amazing gradients and palettes for designers and developers. 🚀

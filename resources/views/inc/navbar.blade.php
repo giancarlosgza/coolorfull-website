@@ -25,7 +25,7 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Tools
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGG">
+                    <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdownGG">
                         <a class="dropdown-item" href="/generator/gradients">2️⃣ Color Gradient</a>
                         <a class="dropdown-item" href="/generator/mgradients">3️⃣ Color Gradient</a>
                         <div class="dropdown-divider"></div>

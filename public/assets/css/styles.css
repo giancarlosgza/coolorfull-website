@@ -1,4 +1,6 @@
-/* BODY */
+/* ---------------------------------------------------
+    GENERAL STYLES
+----------------------------------------------------- */
 html {
     scroll-behavior: smooth;
 }
@@ -9,7 +11,9 @@ body {
     font-weight: 500;
 }
 
-/*TYPOGRAPHY*/
+/* ---------------------------------------------------
+    TYPOGRAPHY STYLES
+----------------------------------------------------- */
 h1,
 h2,
 h3,
@@ -76,7 +80,9 @@ a {
     color: var(--text-primary-color) !important
 }
 
-/* NAVBAR */
+/* ---------------------------------------------------
+    NAVBAR STYLES
+----------------------------------------------------- */
 .navbar {
     background-color: var(--bg-navbar-color);
     font-weight: 500;
@@ -139,14 +145,17 @@ a {
     color: var(--color-white-black) !important;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
     color: var(--text-primary-color) !important;
     background-color: var(--bg-navbar-color);
     border: 0;
     box-shadow: 0 2px 4px 0 rgba(0, 64, 128, .2);
 }
 
-/* MAIN CARD CIRCLES */
+/* ---------------------------------------------------
+    MAIN CIRCLE ICON STYLES
+----------------------------------------------------- */
 .gradient {
     background: -webkit-linear-gradient(#003af7, #e000f0);
     -webkit-background-clip: text;
@@ -157,7 +166,9 @@ a {
     color: #ffc107;
 }
 
-/* BUTTONS */
+/* ---------------------------------------------------
+    BUTTONS STYLES
+----------------------------------------------------- */
 .btn {
     font-weight: 500;
     text-transform: uppercase;
@@ -321,7 +332,9 @@ a {
         0px 2px 16px 1px rgba(0, 0, 0, 0.12);
 }
 
-/* COLORS */
+/* ---------------------------------------------------
+    COLORS STYLES
+----------------------------------------------------- */
 .color-blue {
     color: #258bff
 }
@@ -346,7 +359,9 @@ a {
     color: var(--color-red);
 }
 
-/* TEXT */
+/* ---------------------------------------------------
+    TEXT STYLES
+----------------------------------------------------- */
 .bold {
     font-weight: bold
 }
@@ -389,7 +404,9 @@ a {
     line-height: 1.2;
 }
 
-/* CARDS */
+/* ---------------------------------------------------
+    CARDS STYLES
+----------------------------------------------------- */
 .card {
     margin-bottom: 20px;
     border: 0;
@@ -424,7 +441,8 @@ a {
 .card-gradient {
     color: #fff;
     padding-top: 50px;
-    padding-bottom: 50px
+    padding-bottom: 50px;
+    border-radius: 10px;
 }
 
 .card-form {
@@ -444,7 +462,9 @@ a {
     text-align: center
 }
 
-/* SHADOWS */
+/* ---------------------------------------------------
+    SHADOWS STYLES
+----------------------------------------------------- */
 .shadow-medium {
     box-shadow: 0 2px 4px 0 rgba(0, 64, 128, .2);
     transition: all .3s cubic-bezier(.25, .8, .25, 1)
@@ -454,7 +474,9 @@ a {
     box-shadow: 0 4px 8px 0 rgba(0, 64, 128, .2), 0 2px 4px 0 rgba(0, 0, 0, .08)
 }
 
-/* LINKS */
+/* ---------------------------------------------------
+    LINKS STYLES
+----------------------------------------------------- */
 .gradient-link {
     text-transform: uppercase
 }
@@ -468,13 +490,18 @@ a {
     color: var(--text-primary-color)
 }
 
-/* JUMBOTRON */
+/* ---------------------------------------------------
+    JUMBOTRON STYLES
+----------------------------------------------------- */
 .jumbotron-fluid {
     height: 50vh;
-    border-radius: 4px
+    border-radius: 4px;
+    background-color: var(--bg-navbar-color);
 }
 
-/*SECTIONS*/
+/* ---------------------------------------------------
+    SECTIONS STYLES
+----------------------------------------------------- */
 .profile-header {
     background-color: var(--text-primary-color);
     margin-top: -25px;
@@ -484,7 +511,9 @@ a {
     color: #ffffff;
 }
 
-/* LIST GROUP */
+/* ---------------------------------------------------
+    LIST GROUP STYLES
+----------------------------------------------------- */
 .list-group {
     margin-bottom: 20px;
     border-radius: 15px
@@ -498,7 +527,9 @@ a {
     height: 80px
 }
 
-/* FORMS INPUTS */
+/* ---------------------------------------------------
+    FORMS STYLES
+----------------------------------------------------- */
 .form-control:focus {
     color: #495057;
     border-color: #258bff;
@@ -643,7 +674,73 @@ input:-internal-autofill-selected {
     color: #fff;
 }
 
-/* FOOTER */
+/* CUSTOM CSS SWITCH */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 14px;
+
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #b3b3b3;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 0px;
+    bottom: -2px;
+    background-color: #fff;
+    -webkit-transition: .2s;
+    transition: .2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+input:checked+.slider {
+    background-color:  var(--bg-btn-primary);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--bg-btn-primary);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+    background-color: var(--bg-btn-primary-focus);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* ---------------------------------------------------
+    FOOTER STYLES
+----------------------------------------------------- */
 .footer {
     background-color: var(--bg-navbar-color);
     box-shadow: 0 2px 4px 0 rgba(0, 64, 128, .2);
@@ -658,7 +755,9 @@ input:-internal-autofill-selected {
     margin-right: 5px
 }
 
-/* PAGINATION */
+/* ---------------------------------------------------
+    PAGINATION STYLES
+----------------------------------------------------- */
 .page-item.active .page-link {
     color: #fff;
     background-color: var(--text-primary-color);
@@ -679,13 +778,17 @@ input:-internal-autofill-selected {
     flex-wrap: wrap !important
 }
 
-/* NO BORDER */
+/* ---------------------------------------------------
+    NO BORDER STYLES
+----------------------------------------------------- */
 .no-border {
     border: 0;
     border-radius: 15px
 }
 
-/* BADGES */
+/* ---------------------------------------------------
+    BADGES STYLES
+----------------------------------------------------- */
 .badge-primary {
     color: #fff;
     background-color: var(--text-primary-color);
@@ -696,7 +799,9 @@ input:-internal-autofill-selected {
     background-color: var(--bg-btn-secondary);
 }
 
-/* ICONS */
+/* ---------------------------------------------------
+    ICONS STYLES
+----------------------------------------------------- */
 .active-heart,
 .fav-heart {
     transition: all .3s cubic-bezier(.25, .8, .25, 1)
@@ -710,20 +815,26 @@ input:-internal-autofill-selected {
     color: var(--color-red);
 }
 
-/* MODAL */
+/* ---------------------------------------------------
+    MODAL STYLES
+----------------------------------------------------- */
 .modal-content {
     background-color: var(--bg-navbar-color);
     border-radius: 15px
 }
 
-/* CODE */
+/* ---------------------------------------------------
+    CODE STYLES
+----------------------------------------------------- */
 code {
     color: var(--text-primary-color) !important;
     font-weight: 500;
     font-family: 'Roboto', sans-serif
 }
 
-/* OVERLAYS */
+/* ---------------------------------------------------
+    OVERLAYS STYLES
+----------------------------------------------------- */
 #disable-payments-overlay {
     background-color: rgba(255, 255, 255, 0.9);
     position: absolute;
@@ -734,13 +845,17 @@ code {
     z-index: 999;
 }
 
-/*IMAGES*/
+/* ---------------------------------------------------
+    IMAGES STYLES
+----------------------------------------------------- */
 .login-img {
     padding-top: 8%;
     padding-bottom: 5%;
 }
 
-/*TABLES*/
+/* ---------------------------------------------------
+    TABLES STYLES
+----------------------------------------------------- */
 table th {
     color: var(--text-primary-color) !important;
     font-family: Poppins, 'sans-serif';
@@ -750,7 +865,68 @@ table td {
     color: var(--font-color);
 }
 
-/* MEDIA QUERIES */
+/* ---------------------------------------------------
+    ANIMATIONS STYLES
+----------------------------------------------------- */
+/* KEYFRAMES */
+@media (min-width: 992px) {
+    .animate {
+        animation-duration: 0.2s;
+        -webkit-animation-duration: 0.2s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+
+    .animate-md {
+        animation-duration: 1.0s;
+        -webkit-animation-duration: 1.0s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        -webkit-transform: transform;
+        -webkit-opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+}
+
+.slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+}
+
+/* ---------------------------------------------------
+    MEDIA QUERIES STYLES
+----------------------------------------------------- */
 @media screen and (max-width: 992px) {
     .login-img {
         padding-top: 8%;
