@@ -40,11 +40,16 @@
         opacity: 0
     }
 
+    a:not([href]):not([tabindex]) {
+        color: #000;
+        text-decoration: none;
+    }
+
 </style>
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-montserrat text-indigo">Color Extraction <span class="badge badge-secondary">Beta</span>
+            <h3 class="text-poppins text-indigo">Color Extraction <span class="badge badge-secondary">Beta</span>
             </h3><br>
         </div>
     </div>
@@ -53,7 +58,7 @@
             <div class="card shadow-medium">
                 <div class="card-body text-center">
 
-                    <h3 class="font-weight-bold">Upload or take a photo</h3>
+                    <h3 class="font-weight-bold text-poppins">Upload or take a photo</h3>
                     <h5>PNG, JPEG, JPG or SVG</h5>
                     <br>
                     <div class="row">
@@ -124,7 +129,7 @@
                         </div>
                         <div class="col-md-8">
                             <br>
-                            <h6 class="font-weight-bold">By colorffy.com</h6>
+                            <h6 class="font-weight-bold text-poppins">By colorffy.com</h6>
                         </div>
                     </div>
                 </div>

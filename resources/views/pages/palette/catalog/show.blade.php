@@ -46,7 +46,7 @@
         <div class="col-sm-12">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h4 class="text-center text-montserrat uppercase">{{$palette->name}}</h4>
+                    <h4 class="text-center text-poppins uppercase">{{$palette->name}}</h4>
                     <ul id="htmltoimage" class="list-group">
                         <li class="list-group-item palette-show" style="background-color:{{$palette->color_1}}"> </li>
                         <li class="list-group-item palette-show" style="background-color:{{$palette->color_2}}"></li>
@@ -73,9 +73,9 @@
                 <table class="table table-hover table-borderless">
                     <thead>
                         <tr>
-                        <th scope="col" class="text-montserrat">🎨</th>
-                        <th scope="col" class="text-montserrat">👨‍💻 HEX</th>
-                        <th scope="col" class="text-montserrat">💻 RGB</th>
+                        <th scope="col" class="text-poppins">🎨</th>
+                        <th scope="col" class="text-poppins">👨‍💻 HEX</th>
+                        <th scope="col" class="text-poppins">💻 RGB</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -110,7 +110,7 @@
         </div>
     </div>
     <hr>
-    <h3 class="text-montserrat">Color Blindness</h3>
+    <h3 class="text-poppins">Color Blindness</h3>
     <h6><strong>Note:</strong> The color blindness filters doesn't work on some browsers</h6>
     <div class="card shadow-medium">
         <div class="card-body">
@@ -121,7 +121,7 @@
         </div>
     </div>
     <hr><!--ICONS WITH COLOR PALETTES-->
-    <h3 class="text-montserrat">Icons Preview</h3>
+    <h3 class="text-poppins">Icons Preview</h3>
         <div class="card shadow-medium">
             <div class="card-body">           
                 <div class="row text-center">

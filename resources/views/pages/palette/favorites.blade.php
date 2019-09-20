@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-montserrat text-indigo">Liked Palettes</h3><br>
+            <h3 class="text-poppins text-indigo">Liked Palettes</h3><br>
         </div>
         @if ($user->favoritePalettes->count() < 1)
         <div class="col-sm-12">
@@ -16,7 +16,7 @@
                         <br><br>
                         </div>
                         <div class="col-12 col-sm-6 align-self-center">
-                            <h4 class="text-montserrat text-body">Empty liked palettes</h4>
+                            <h4 class="text-poppins text-body">Empty liked palettes</h4>
                             <h5>Search and like a palette and it will show up here.</h5>
                             <br>
                             <a href="/palettes/catalog" class="btn btn-primary button-block shadow-medium">Get Started</a>

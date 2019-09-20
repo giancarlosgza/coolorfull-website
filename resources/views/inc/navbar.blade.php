@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container">
-        <a class="navbar-brand text-montserrat logo-brand" href="/">
+        <a class="navbar-brand text-poppins logo-brand" href="/">
             <img src="{{asset('/assets/img/logo-form.svg')}}" width="50px" alt="Colorffy logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"

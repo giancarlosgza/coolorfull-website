@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-montserrat text-indigo">Palettes</h3>
+            <h3 class="text-poppins text-indigo">Palettes</h3>
         </div>
         <div class="col-sm-12">
             <form action="" method="get">
@@ -47,7 +47,7 @@
         <div class="col-6 col-md-4 col-lg-3">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h6 class="text-center uppercase h6-responsive text-montserrat">{{$palette->name}}</h6>
+                    <h6 class="text-center uppercase h6-responsive text-poppins">{{$palette->name}}</h6>
                     <a href="/palettes/{{$palette->id}}" title="{{$palette->name}}">
                         <ul class="list-group">
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_1}}"></li>

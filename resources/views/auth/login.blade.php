@@ -11,7 +11,7 @@
                             <img src="{{ asset ('/assets/img/illustrations/authentication.svg') }}"  width="60%" alt="auth">
                         </div>
                         <div class="col-md-12 col-lg-8">
-                            <h3 class="text-montserrat text-center text-indigo">Colorffy</h3>
+                            <h3 class="text-poppins text-center text-indigo">Colorffy</h3>
                             <h3 class="text-center">Login</h3>
                             <br>
                             <form method="POST" action="{{ route('login') }}">

@@ -5,21 +5,21 @@
 <div class="main">
     <div class="container">
         <div class="row mt-5">
-            <div class="col-6 col-sm-6">
+            <div class="col-12 col-sm-6">
                 <a href="/gradients/catalog">
                     <div class="card card-white shadow-medium">
                         <div class="card-body">
-                            <h6 class="text-montserrat h6-responsive"><i class="fas fa-circle gradient"></i> Gradients
+                            <h6 class="text-poppins h6-responsive"><i class="fas fa-circle gradient"></i> Gradients
                             </h6>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-6 col-sm-6">
+            <div class="col-12 col-sm-6">
                 <a href="/palettes/catalog">
                     <div class="card card-white shadow-medium">
                         <div class="card-body">
-                            <h6 class="text-montserrat h6-responsive"><i class="fas fa-circle palette"></i> Palettes
+                            <h6 class="text-poppins h6-responsive"><i class="fas fa-circle palette"></i> Palettes
                             </h6>
                         </div>
                     </div>
@@ -29,10 +29,10 @@
         <br>
         <div class="row">
             <div class="col-6">
-                <h3 class="text-montserrat text-body">New gradients</h3>
+                <h3 class="text-poppins text-body">New gradients</h3>
             </div>
             <div class="col-6 text-right">
-                <a href="/gradients/catalog" class="color-indigo text-montserrat">
+                <a href="/gradients/catalog" class="color-indigo text-poppins">
                     🔥 View all
                 </a>
             </div>

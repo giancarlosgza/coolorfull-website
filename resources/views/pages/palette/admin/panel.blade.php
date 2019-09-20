@@ -20,7 +20,7 @@
                         <br><br>
                         </div>
                         <div class="col-12 col-sm-6 align-self-center">
-                            <h4 class="text-montserrat text-body">Empty palettes</h4>
+                            <h4 class="text-poppins text-body">Empty palettes</h4>
                             <h5>Create palettes and it will show up here.</h5>
                             <br>
                             <a href="/palettes/admin/create" class="btn btn-primary button-block shadow-medium">Create palette</a>

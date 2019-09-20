@@ -6,8 +6,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-montserrat color-white-black">Hi {{ Auth::user()->name }}! 👋</h3>
-                <h5 class="text-montserrat color-white-black">{{ Auth::user()->email }}</h5>
+                <h3 class="text-poppins color-white-black">Hi {{ Auth::user()->name }}! 👋</h3>
+                <h5 class="text-poppins color-white-black">{{ Auth::user()->email }}</h5>
             </div>
         </div>
     </div>
@@ -15,10 +15,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h4 class="text-montserrat">Shortcuts</h4>
+            <h3 class="text-poppins">Shortcuts</h3>
         </div>
     </div>
-    <div class="row text-center">
+    <div class="row text-center mb-4">
         <div class="col-md-4">
             <a href="/saved/gradients">
                 <div class="card shadow-medium">
@@ -61,10 +61,10 @@
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-12">
-            <h4 class="text-montserrat">Your Information</h4>
+            <h3 class="text-poppins">My Information</h3>
             <div class="card card-form">
                 <div class="card-body">
-                    <h6 class="text-montserrat"><i class="fas fa-user"></i> Profile Information</h6>
+                    <h6 class="text-poppins"><i class="fas fa-user"></i> Profile Information</h6>
                     <div class="table-responsive">
                         <table class="table table-borderless">
                             <thead>

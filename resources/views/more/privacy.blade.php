@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body card-form">
-                    <h3 class="text-montserrat text-indigo">PRIVACY POLICY</h3>
+                    <h3 class="text-poppins text-indigo">PRIVACY POLICY</h3>
                         <p><br>
                         <br>
                         Effective date: 04/11/2019<br>

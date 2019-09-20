@@ -5,18 +5,18 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-montserrat text-indigo">2 Colors-Gradient Generator</h3><br>
+            <h3 class="text-poppins text-indigo">2 Colors Gradient Generator</h3><br>
         </div>
     </div>
     <div class="card shadow-medium">
         <div class="card-body">
             <div class="form-row">
                 <div class="form-group col-6 col-sm-6">
-                    <label for="color_1" class="text-montserrat">Color 1</label><br>
+                    <label for="color_1" class="text-poppins">Color 1</label><br>
                     <input type="text" class="form-mat-g form-control" id="color_1" value="#000000">        
                 </div>
                 <div class="form-group col-6 col-sm-6">
-                    <label for="color_2" class="text-montserrat">Color 2</label><br>
+                    <label for="color_2" class="text-poppins">Color 2</label><br>
                     <input type="text" class="form-mat-g form-control" id="color_2" value="#000000">
                 </div>
             </div>
@@ -64,7 +64,7 @@
         <div class="col-12 col-sm-12">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h5 class="text-montserrat">CSS</h5>
+                    <h5 class="text-poppins">CSS</h5>
                     <code id="css">
                     </code>
                 </div>
@@ -79,10 +79,10 @@
                             <thead>
                                 <tr>
                                 <th scope="col">🎨</th>
-                                <th scope="col" class="text-montserrat">👨‍💻 HEX</th>
-                                <th scope="col" class="text-montserrat">💻 RGB</th>
-                                <th scope="col" class="text-montserrat">💡 HSL</th>
-                                <th scope="col" class="text-montserrat">🖨️ CMYK</th>
+                                <th scope="col" class="text-poppins">👨‍💻 HEX</th>
+                                <th scope="col" class="text-poppins">💻 RGB</th>
+                                <th scope="col" class="text-poppins">💡 HSL</th>
+                                <th scope="col" class="text-poppins">🖨️ CMYK</th>
                                 </tr>
                             </thead>
                             <tbody>

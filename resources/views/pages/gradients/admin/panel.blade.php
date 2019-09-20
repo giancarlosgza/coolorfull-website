@@ -20,7 +20,7 @@
                         <br><br>
                         </div>
                         <div class="col-12 col-sm-6 align-self-center">
-                            <h4 class="text-montserrat text-body">Empty gradients</h4>
+                            <h4 class="text-poppins text-body">Empty gradients</h4>
                             <h5>Create gradients and it will show up here.</h5>
                             <br>
                             <a href="/gradients/admin/create" class="btn btn-primary button-block shadow-medium">Create gradient</a>

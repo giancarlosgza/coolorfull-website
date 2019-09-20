@@ -6,7 +6,7 @@
             <div class="col-md-4">
                 <div class="card card-form">
                     <div class="card-body">
-                        <h5 class="text-montserrat text-indigo">Pro Subscription</h5>
+                        <h5 class="text-poppins text-indigo">Pro Subscription</h5>
                         <hr>
                         <h5>❤️ Save your <strong>favorites gradients</strong></h5>
                         <h5>💚 Save your <strong>favorites palettes</strong></h5>

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-montserrat text-indigo">Team</h3><br>
+            <h3 class="text-poppins text-indigo">Team</h3><br>
         </div>
     </div>
     <div class="row">
@@ -13,7 +13,7 @@
                 <div class="card-body text-center">
                     <img src="{{asset('/assets/img/illustrations/male_avatar.svg')}}" class="img-fluid mb-2"
                         width="100px" alt="user avatar">
-                    <h4 class="text-montserrat">Giancarlos Garza</h4>
+                    <h4 class="text-poppins">Giancarlos Garza</h4>
                     <p>Founder | UI & UX</p>
                     <hr>
                     <a href="https://twitter.com/giancarlosgza" class="color-indigo footer-icon" title="Twitter"
@@ -28,7 +28,7 @@
                 <div class="card-body text-center">
                     <img src="{{asset('/assets/img/illustrations/male_avatar.svg')}}" class="img-fluid mb-2"
                         width="100px" alt="user avatar">
-                    <h4 class="text-montserrat">Carlos Lopez</h4>
+                    <h4 class="text-poppins">Carlos Lopez</h4>
                     <p>Co-Founder | Developer</p>
                     <hr>
                     <a href="https://twitter.com/carloselilopez" class="color-indigo footer-icon" title="Twitter"
@@ -43,7 +43,7 @@
                 <div class="card-body text-center">
                     <img src="{{asset('/assets/img/illustrations/male_avatar.svg')}}" class="img-fluid mb-2"
                         width="100px" alt="user avatar">
-                    <h4 class="text-montserrat">Abner Anzures</h4>
+                    <h4 class="text-poppins">Abner Anzures</h4>
                     <p>Co-Founder | Designer</p>
                     <hr>
                     <a href="https://twitter.com/AbnerAnzures" class="color-indigo footer-icon" title="Twitter"
