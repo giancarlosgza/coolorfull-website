@@ -12,6 +12,9 @@
             <div class="jumbotron jumbotron-fluid" id="color-random">
             </div>
         </div>
+        <div class="col-md-12 mb-3">
+            <button class="btn btn-primary shadow-medium" onClick="window.location.reload();">Reload page</button>
+        </div>
         <div class="col-sm-12">
             <div class="card shadow-medium">
                 <div class="card-body">

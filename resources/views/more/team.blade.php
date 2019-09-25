@@ -28,13 +28,15 @@
                 <div class="card-body text-center">
                     <img src="{{asset('/assets/img/illustrations/male_avatar.svg')}}" class="img-fluid mb-2"
                         width="100px" alt="user avatar">
-                    <h4 class="text-poppins">Carlos Lopez</h4>
+                    <h4 class="text-poppins">Carlos Eli Lopez</h4>
                     <p>Co-Founder | Developer</p>
                     <hr>
                     <a href="https://twitter.com/carloselilopez" class="color-indigo footer-icon" title="Twitter"
                         target="_blank" rel="noopener"><i class="fab fa-twitter fa-2x"></i></a>
                     <a href="https://github.com/Serveix" class="color-indigo footer-icon" title="Github" target="_blank"
                         rel="noopener"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://carloseli.tech" class="color-indigo footer-icon" title="Blog" target="_blank" rel="noopener">
+                        <i class="fas fa-rss fa-2x"></i></a>
                 </div>
             </div>
         </div>

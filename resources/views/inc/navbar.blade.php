@@ -47,7 +47,7 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Housekeeping
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownHK">
+                    <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdownHK">
                         <a class="dropdown-item" href="/palettes/admin/panel">⚙️ Palettes Panel</a>
                         <a class="dropdown-item" href="/gradients/admin/panel">⚙️ Gradients Panel</a>
                     </div>
@@ -58,7 +58,7 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ Auth::user()->name }}
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAc">
+                    <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdownAc">
                         <a class="dropdown-item" href="/home">✌️ Account</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/saved/gradients">🔖 My Gradients</a>
