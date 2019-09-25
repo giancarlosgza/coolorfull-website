@@ -7,13 +7,13 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-montserrat text-indigo">Palettes</h3>
+            <h3 class="text-poppins text-indigo">Palettes</h3>
         </div>
         <div class="col-sm-12">
             <form action="" method="get">
                 <div class="input-group mb-3">
                     <input type="text" name="q" id="query" value="{{ $searchQuery }}" class="form-control shadow-medium no-border search-input"
-                        placeholder="🔍 Search colors or hex" aria-label="Search colors or hex" aria-describedby="button-addon2">
+                        placeholder="🔍 Search something...." aria-label="Search something...." aria-describedby="button-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-primary shadow-medium" type="submit" id="button-addon2">Search</button>
                     </div>
@@ -38,11 +38,16 @@
 <br>
 <div class="container">
     <div class="row">
+        <div id="imgNotResult" class="col-12 text-center d-none">
+            <img src="{{asset('assets/img/illustrations/search_engine.svg')}}" width="200px" alt="">
+            <br><br>
+            <h3>Sorry, we couldn't find any palette with that name.....</h3>
+        </div>
         @foreach($palettes as $palette)
         <div class="col-6 col-md-4 col-lg-3">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h6 class="text-center uppercase h6-responsive bold-500">{{$palette->name}}</h6>
+                    <h6 class="text-center uppercase h6-responsive text-poppins">{{$palette->name}}</h6>
                     <a href="/palettes/{{$palette->id}}" title="{{$palette->name}}">
                         <ul class="list-group">
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_1}}"></li>
@@ -114,4 +119,22 @@
         })
     }
 </script>
+<script>
+    ;(function(y, a, f, i) {
+      var head = a.getElementsByTagName('head')[0];
+      var script = a.createElement('script');
+  
+      y['_yafi-widget'] = { siteId: i, url: f };
+  
+      script.async = 1;
+      script.src = f + 'widget/' + i;
+  
+      head.appendChild(script);
+    })(window, document, 'https://widget.yafi.pro/', '5d1654a725b528002ae69f30');
+
+    //NOT RESULT FOUND
+    @if( $palettes->count() < 1 )
+        $('#imgNotResult').removeClass('d-none');
+    @endif
+  </script>
 @endsection

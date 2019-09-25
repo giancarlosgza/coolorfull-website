@@ -7,44 +7,44 @@
         <div class="col-md-8">
             <div class="card card-form">
                 <div class="card-body">
-                    <h3 class="text-montserrat">Edit color palette</h3><br>
+                    <h3 class="text-poppins">Edit color palette</h3><br>
                     <!--FORM-->
                     <form method="POST" action="/palettes/edit" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" id="invisible_id" value="{{$palette->id}}" name="palette_id">
 
                         <div class="form-group">
-                            <label for="name" class="text-montserrat">Name:</label>
+                            <label for="name" class="text-poppins">Name:</label>
                             <input type="name" value="{{ $palette->name }}" class="form-mat-g form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" id="name" name="nombre">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_1" class="text-montserrat">Color 1:</label>
+                            <label for="color_1" class="text-poppins">Color 1:</label>
                             <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" value="{{ $palette->color_1 }}" id="color_1" name="color_1">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_2" class="text-montserrat">Color 2:</label>
+                            <label for="color_2" class="text-poppins">Color 2:</label>
                             <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_2') ? ' is-invalid' : '' }}" value="{{ $palette->color_2 }}" id="color_2" name="color_2">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_3" class="text-montserrat">Color 3:</label>
+                            <label for="color_3" class="text-poppins">Color 3:</label>
                             <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_3') ? ' is-invalid' : '' }}" value="{{ $palette->color_3 }}" id="color_3" name="color_3">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_4" class="text-montserrat">Color 4:</label>
+                            <label for="color_4" class="text-poppins">Color 4:</label>
                             <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_4') ? ' is-invalid' : '' }}" value="{{ $palette->color_4 }}" id="color_4" name="color_4">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_5" class="text-montserrat">Color 5:</label>
+                            <label for="color_5" class="text-poppins">Color 5:</label>
                             <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_5') ? ' is-invalid' : '' }}" value="{{ $palette->color_5 }}" id="color_5" name="color_5">
                         </div>
 
                         <div class="form-group">
-                            <label for="color_filter" class="text-montserrat">Color Filter:</label>
+                            <label for="color_filter" class="text-poppins">Color Filter:</label>
                             <select id="color_filter" value="{{ $palette->color_filter }}" class="form-mat-g form-select form-control{{ $errors->has('color_filter') ? ' is-invalid' : '' }}"  name="color_filter">
                                 <option>Red</option>
                                 <option>Green</option>
@@ -62,7 +62,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="color_filter_2" class="text-montserrat">Color Filter 2:</label>
+                            <label for="color_filter_2" class="text-poppins">Color Filter 2:</label>
                             <select id="color_filter_2" value="{{ $palette->color_filter_2 }}" class="form-mat-g form-select form-control{{ $errors->has('color_filter_2') ? ' is-invalid' : '' }}"  name="color_filter_2">
                                 <option>Red</option>
                                 <option>Green</option>

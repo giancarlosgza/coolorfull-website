@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section('title', 'Gradients')
+@section('styles')
+
+@endsection
 @section('googleads')
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 @endsection
@@ -7,13 +10,13 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-montserrat text-indigo">Gradients</h3>
+            <h3 class="text-poppins text-indigo">Gradients</h3>
         </div>
         <div class="col-sm-12">
             <form action="" method="get">
                 <div class="input-group mb-3">
                     <input type="text" name="q" id="query" value="{{ $searchQuery }}" class="form-control shadow-medium no-border search-input"
-                        placeholder="🔍 Search colors or hex" aria-label="Search colors or hex" aria-describedby="button-addon2">
+                        placeholder="🔍 Search something...." aria-label="Search something...." aria-describedby="button-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-primary shadow-medium" type="submit" id="button-addon2">Search</button>
                     </div>
@@ -38,11 +41,16 @@
 <br>
 <div class="container">
     <div class="row">
+        <div id="imgNotResult" class="col-12 text-center d-none">
+            <img src="{{asset('assets/img/illustrations/search_engine.svg')}}" width="200px" alt="">
+            <br><br>
+            <h3>Sorry, we couldn't find any gradient with that name.....</h3>
+        </div>
         @foreach($gradients as $gradient)
         <div class="col-6 col-md-4 col-lg-3">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h6 class="text-center uppercase h6-responsive bold-500">{{$gradient->name}}</h6>
+                    <h6 class="text-center uppercase h6-responsive text-poppins">{{$gradient->name}}</h6>
                     <a href="/gradients/{{$gradient->id}}" title="{{$gradient->name}}">
                         <div class="card text-center">
                             <div class="card-body card-gradient" title="{{$gradient->name}}" 
@@ -131,4 +139,22 @@
         })
     }
 </script>
+<script>
+    ;(function(y, a, f, i) {
+      var head = a.getElementsByTagName('head')[0];
+      var script = a.createElement('script');
+  
+      y['_yafi-widget'] = { siteId: i, url: f };
+  
+      script.async = 1;
+      script.src = f + 'widget/' + i;
+  
+      head.appendChild(script);
+    })(window, document, 'https://widget.yafi.pro/', '5d1654a725b528002ae69f30');
+
+    //NOT RESULT FOUND
+    @if( $gradients->count() < 1 )
+        $('#imgNotResult').removeClass('d-none');
+    @endif
+  </script>
 @endsection

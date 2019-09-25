@@ -4,13 +4,16 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-montserrat text-indigo">Random Color</h3><br>
+            <h3 class="text-poppins text-indigo">Random Color</h3><br>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-sm-12">
             <div class="jumbotron jumbotron-fluid" id="color-random">
             </div>
+        </div>
+        <div class="col-md-12 mb-3">
+            <button class="btn btn-primary shadow-medium" onClick="window.location.reload();">Reload page</button>
         </div>
         <div class="col-sm-12">
             <div class="card shadow-medium">
@@ -19,11 +22,11 @@
                         <table class="table table-hover table-borderless">
                             <thead>
                                 <tr>
-                                <th scope="col" class="text-montserrat">🎨</th>
-                                <th scope="col" class="text-montserrat">👨‍💻 HEX</th>
-                                <th scope="col" class="text-montserrat">💻 RGB</th>
-                                <th scope="col" class="text-montserrat">💡 HSL</th>
-                                <th scope="col" class="text-montserrat">🖨️ CMYK</th>
+                                <th scope="col" class="text-poppins">🎨</th>
+                                <th scope="col" class="text-poppins">👨‍💻 HEX</th>
+                                <th scope="col" class="text-poppins">💻 RGB</th>
+                                <th scope="col" class="text-poppins">💡 HSL</th>
+                                <th scope="col" class="text-poppins">🖨️ CMYK</th>
                                 </tr>
                             </thead>
                             <tbody>

@@ -5,14 +5,16 @@
                 <h4 class="logo text-indigo">Colorffy</h4>
                 <div class="theme-switch-wrapper">
                     <div class="theme-switch">
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" id="checkbox" name="checkbox" class="custom-control-input">
-                            <label class="custom-control-label theme-switch" for="checkbox">Dark Mode <span class="badge badge-secondary">Beta</span></label>
-                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="checkbox" name="checkbox" >
+                            <span class="slider round"></span>
+                        </label>
+                        <label for="checkbox">Dark mode <span class="badge badge-secondary">Beta</span></label>
                     </div>
                 </div>
+                
                 <p>
-                    Color gradients and palettes! Get css, color codes, images, ui previews or create your own gradients!
+                    Try our new Dark Mode!!
                 </p>
                 <p>
                 We creates amazing gradients and palettes for designers and developers. 🚀
@@ -20,6 +22,7 @@
             </div>
             <div class="col-md-4 offset-md-4">
                 <h4 class="logo">More</h4>
+                <a href="https://medium.com/colorffy" class="color-indigo text-spacing" target="_blank" rel="noopener">📖 Blog <span class="badge badge-secondary">New</span></a><br>
                 <a href="/pricing" class="color-indigo text-spacing" title="Pricing">💳 Pricing</a><br>
                 <a href="/whatsnew" class="color-indigo text-spacing" title="What's new?">🆕 What's new?</a><br>
                 <!--<a href="https://www.paypal.me/giancarlosgza?locale.x=es_XC" class="color-darkblue text-spacing" title="Buy me a Coffee" target="_blank" rel="noopener">☕ Buy me a Coffee</a>-->
@@ -43,7 +46,7 @@
             <div class="col-8 col-md-6 text-left small align-self-center"><br>
                 <p>Made with ❤️ & ☕ by <a href="https://twitter.com/giancarlosgza" title="Twitter" alt="Twitter" target="_blank" rel="noopener" class="color-indigo">@giancarlosgza</a></p>
             </div>
-            <div class="col-4 col-md-6 text-right small align-self-center">©2019 Colorffy v2.3 🎉</div>
+            <div class="col-4 col-md-6 text-right small align-self-center">©2019 Colorffy v2.5 🎉</div>
         </div>
     </div>
 </footer>

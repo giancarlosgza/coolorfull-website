@@ -6,10 +6,10 @@
         <div class="col-md-8">
             <div class="card card-form">
                 <div class="card-body">
-                    <h3 class="text-montserrat text-center text-indigo">Colorffy</h3>
-                    <h3 class="text-center">Register</h3>
+                    <h3 class="text-poppins text-center text-indigo">Colorffy</h3>
+                    <h3 class="text-center">Create account</h3>
                     <!--
-                    <p class="text-center text-montserrat">Fill in the form to enable the registration buttons.</p>
+                    <p class="text-center text-poppins">Fill in the form to enable the registration buttons.</p>
                     -->
                     <br>
                     <div class="row justify-content-center">
@@ -61,8 +61,8 @@
                     <br>
                     <!--<div id="disable-payments-overlay"></div>-->
                     <div class="form-group row text-center">
-                        <div class="col-sm-12 col-md-6 offset-md-3">
-                            <p class="bold">Register and pay monthly: $2.99 USD</p>
+                        <div class="col-sm-12 col-md-8 offset-md-2">
+                            <p class="bold">Register now and pay just for one month: $1.99 USD</p>
                             <div id="monthly-paypal-button-container"></div>
                         </div>
                         <!--

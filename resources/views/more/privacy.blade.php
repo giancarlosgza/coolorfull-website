@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body card-form">
-                    <h3 class="text-montserrat text-indigo">PRIVACY POLICY</h3>
+                    <h3 class="text-poppins text-indigo">PRIVACY POLICY</h3>
                         <p><br>
                         <br>
                         Effective date: 04/11/2019<br>
@@ -404,4 +404,19 @@
         </div>
     </div>
 </div>
+@endsection
+@section('scripts')
+<script>
+;(function(y, a, f, i) {
+    var head = a.getElementsByTagName('head')[0];
+    var script = a.createElement('script');
+
+    y['_yafi-widget'] = { siteId: i, url: f };
+
+    script.async = 1;
+    script.src = f + 'widget/' + i;
+
+    head.appendChild(script);
+})(window, document, 'https://widget.yafi.pro/', '5d1654a725b528002ae69f30');
+</script>
 @endsection

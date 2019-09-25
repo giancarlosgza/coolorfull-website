@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-montserrat text-indigo">Liked Gradients</h3><br>
+            <h3 class="text-poppins text-indigo">Liked Gradients</h3><br>
         </div>
         @if ($user->favoriteGradients->count() < 1)
         <div class="col-sm-12">
@@ -16,7 +16,7 @@
                         <br><br>
                         </div>
                         <div class="col-12 col-sm-6 align-self-center">
-                            <h4 class="text-montserrat text-body">Empty liked gradients</h4>
+                            <h4 class="text-poppins text-body">Empty liked gradients</h4>
                             <h5>Search and like a gradient and it will show up here.</h5>
                             <br>
                             <a href="/gradients/catalog" class="btn btn-primary button-block shadow-medium">Get Started</a>

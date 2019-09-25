@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container">
-        <a class="navbar-brand text-montserrat logo-brand" href="/">
+        <a class="navbar-brand text-poppins logo-brand" href="/">
             <img src="{{asset('/assets/img/logo-form.svg')}}" width="50px" alt="Colorffy logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -20,28 +20,25 @@
                 <li class="nav-item {{ (request()->is('gradients/catalog')) ? 'active' : '' }}">
                     <a class="nav-link nav-color" href="/gradients/catalog">Gradients</a>
                 </li>
-                <li class="nav-item {{ (request()->is('templates')) ? 'active' : '' }}">
-                    <a class="nav-link nav-color" href="/templates/themes">Templates  <span class="badge badge-secondary">New</span></a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-color" href="#" id="navbarDropdownGG" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Tools
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownGG">
+                    <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdownGG">
                         <a class="dropdown-item" href="/generator/gradients">2️⃣ Color Gradient</a>
                         <a class="dropdown-item" href="/generator/mgradients">3️⃣ Color Gradient</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/random/color">🎲 Random Color</a>
-                        <a class="dropdown-item" href="/image/color">🖼️ Image Colors</a>
+                        <a class="dropdown-item" href="/image/color">🖼️ Color Extraction</a>
                     </div>
                 </li>
                 @guest
                 <li class="nav-item {{ (request()->is('login')) ? 'active' : '' }}">
-                    <a class="nav-link nav-color" href="/login">Login</a>
+                    <a class="nav-link nav-color" href="/login">Sign In</a>
                 </li>
                 <li class="nav-item {{ (request()->is('register')) ? 'active' : '' }}">
-                    <a class="nav-link nav-color logo-brand" href="/register">Sign Up</a>
+                    <a class="nav-link nav-color logo-brand" href="/register">Register</a>
                 </li>
                 @else
                 @if(auth()->user()->is_admin == 1)
@@ -50,7 +47,7 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Housekeeping
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownHK">
+                    <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdownHK">
                         <a class="dropdown-item" href="/palettes/admin/panel">⚙️ Palettes Panel</a>
                         <a class="dropdown-item" href="/gradients/admin/panel">⚙️ Gradients Panel</a>
                     </div>
@@ -61,7 +58,7 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ Auth::user()->name }}
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAc">
+                    <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdownAc">
                         <a class="dropdown-item" href="/home">✌️ Account</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/saved/gradients">🔖 My Gradients</a>
