@@ -8,11 +8,18 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-sm-12">
-            <div class="jumbotron jumbotron-fluid" id="color-random">
+        <div class="col-12 col-md-8">
+            <div class="jumbotron jumbotron-fluid mb-2" id="color-random">
             </div>
+            <h6 class="mt-0 text-poppins">Random color</h6>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="jumbotron jumbotron-fluid mb-2" id="color-complementary">
+            </div>
+            <h6 class="mt-0 text-poppins">Complementary color</h6>
         </div>
         <div class="col-md-12 mb-3">
+            <hr>
             <button class="btn btn-primary shadow-medium" onClick="window.location.reload();">Reload page</button>
         </div>
         <div class="col-sm-12">
@@ -37,6 +44,13 @@
                                     <td id="hsl"></td>
                                     <td id="cmyk"></td>
                                 </tr>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-circle" id="color2"></i></th>
+                                    <td id="hex2"></td>
+                                    <td id="rgb2"></td>
+                                    <td id="hsl2"></td>
+                                    <td id="cmyk2"></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -47,7 +61,8 @@
 </div>
 @endsection
 @section('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Colors.js/1.2.3/colors.min.js"></script>
 <script>
-var r,g,b,h,s,l,hex;r=Math.floor(256*Math.random()).toString(16),g=Math.floor(256*Math.random()).toString(16),b=Math.floor(256*Math.random()).toString(16),r=2===r.length?r:"0"+r,g=2===g.length?g:"0"+g,b=2===b.length?b:"0"+b,hex=r+g+b,document.getElementById("hex").innerHTML="#"+hex,document.getElementById("color-random").style.backgroundColor="#"+hex,document.getElementById("color1").style.color="#"+hex;var C1="#"+hex;hexToRgb(C1);function hexToRgb(a){if("#"===a.charAt(0)&&(a=a.substr(1)),2>a.length||6<a.length)return!1;var c,d,e,f=a.split("");if(2===a.length)c=parseInt(f[0].toString()+f[1].toString(),16),d=c,e=c;else if(3===a.length)c=parseInt(f[0].toString()+f[0].toString(),16),d=parseInt(f[1].toString()+f[1].toString(),16),e=parseInt(f[2].toString()+f[2].toString(),16);else if(6===a.length)c=parseInt(f[0].toString()+f[1].toString(),16),d=parseInt(f[2].toString()+f[3].toString(),16),e=parseInt(f[4].toString()+f[5].toString(),16);else return!1;document.getElementById("rgb").innerHTML="rgb("+c+", "+d+", "+e+")"}hexToHsl(C1);function hexToHsl(a){let b=0,c=0,d=0;4==a.length?(b="0x"+a[1]+a[1],c="0x"+a[2]+a[2],d="0x"+a[3]+a[3]):7==a.length&&(b="0x"+a[1]+a[2],c="0x"+a[3]+a[4],d="0x"+a[5]+a[6]),b/=255,c/=255,d/=255;let e=Math.min(b,c,d),f=Math.max(b,c,d),g=f-e,i=0,j=0,k=0;i=0==g?0:f==b?(c-d)/g%6:f==c?(d-b)/g+2:(b-c)/g+4,i=Math.round(60*i),0>i&&(i+=360),k=(f+e)/2,j=0==g?0:g/(1-Math.abs(2*k-1)),j=+(100*j).toFixed(1),k=+(100*k).toFixed(1),document.getElementById("hsl").innerHTML="hsl("+Math.round(i)+"\xB0, "+Math.round(j)+"%, "+Math.round(k)+"%)"}hexToCmyk(C1);function hexToCmyk(a){var c=0,d=0,e=0,f=0;a="#"==a.charAt(0)?a.substring(1,7):a;var h=parseInt(a.substring(0,2),16),i=parseInt(a.substring(2,4),16),g=parseInt(a.substring(4,6),16);c=1-h/255,d=1-i/255,e=1-g/255;var b=Math.min(c,Math.min(d,e));c=(c-b)/(1-b),d=(d-b)/(1-b),e=(e-b)/(1-b),f=b,document.getElementById("cmyk").innerHTML="cmyk("+Math.round(100*c)+"%, "+Math.round(100*d)+"%, "+Math.round(100*e)+"%, "+Math.round(100*f)+"%)"}
+var r,g,b,h,s,l,hex;r=Math.floor(256*Math.random()).toString(16),g=Math.floor(256*Math.random()).toString(16),b=Math.floor(256*Math.random()).toString(16),r=2===r.length?r:"0"+r,g=2===g.length?g:"0"+g,b=2===b.length?b:"0"+b,hex=r+g+b,document.getElementById("hex").innerHTML="#"+hex,document.getElementById("color-random").style.backgroundColor="#"+hex,document.getElementById("color1").style.color="#"+hex;var C1="#"+hex;hexToRgb(C1);function hexToRgb(b){if("#"===b.charAt(0)&&(b=b.substr(1)),2>b.length||6<b.length)return!1;var g,h,i,j=b.split("");if(2===b.length)g=parseInt(j[0].toString()+j[1].toString(),16),h=g,i=g;else if(3===b.length)g=parseInt(j[0].toString()+j[0].toString(),16),h=parseInt(j[1].toString()+j[1].toString(),16),i=parseInt(j[2].toString()+j[2].toString(),16);else if(6===b.length)g=parseInt(j[0].toString()+j[1].toString(),16),h=parseInt(j[2].toString()+j[3].toString(),16),i=parseInt(j[4].toString()+j[5].toString(),16);else return!1;document.getElementById("rgb").innerHTML="rgb("+g+", "+h+", "+i+")"}hexToHsl(C1);function hexToHsl(h){let a=0,l=0,m=0;4==h.length?(a="0x"+h[1]+h[1],l="0x"+h[2]+h[2],m="0x"+h[3]+h[3]):7==h.length&&(a="0x"+h[1]+h[2],l="0x"+h[3]+h[4],m="0x"+h[5]+h[6]),a/=255,l/=255,m/=255;let n=Math.min(a,l,m),e=Math.max(a,l,m),f=e-n,g=0,o=0,p=0;g=0==f?0:e==a?(l-m)/f%6:e==l?(m-a)/f+2:(a-l)/f+4,g=Math.round(60*g),0>g&&(g+=360),p=(e+n)/2,o=0==f?0:f/(1-Math.abs(2*p-1)),o=+(100*o).toFixed(1),p=+(100*p).toFixed(1),document.getElementById("hsl").innerHTML="hsl("+Math.round(g)+"\xB0, "+Math.round(o)+"%, "+Math.round(p)+"%)"}hexToCmyk(C1);function hexToCmyk(j){var k=0,l=0,m=0,n=0;j="#"==j.charAt(0)?j.substring(1,7):j;var o=parseInt(j.substring(0,2),16),h=parseInt(j.substring(2,4),16),i=parseInt(j.substring(4,6),16);k=1-o/255,l=1-h/255,m=1-i/255;var g=Math.min(k,Math.min(l,m));k=(k-g)/(1-g),l=(l-g)/(1-g),m=(m-g)/(1-g),n=g,document.getElementById("cmyk").innerHTML="cmyk("+Math.round(100*k)+"%, "+Math.round(100*l)+"%, "+Math.round(100*m)+"%, "+Math.round(100*n)+"%)"}var C2=$c.complement(C1);function colors(a){var b=$c.complement(a);$("#hex2").html(b),$("#color-complementary").css({"background-color":b}),$("#color2").css({color:b}),console.log(b)}$(document).ready(function(){colors(C1)}),hexToRgb2(C2);function hexToRgb2(b){if("#"===b.charAt(0)&&(b=b.substr(1)),2>b.length||6<b.length)return!1;var g,h,i,j=b.split("");if(2===b.length)g=parseInt(j[0].toString()+j[1].toString(),16),h=g,i=g;else if(3===b.length)g=parseInt(j[0].toString()+j[0].toString(),16),h=parseInt(j[1].toString()+j[1].toString(),16),i=parseInt(j[2].toString()+j[2].toString(),16);else if(6===b.length)g=parseInt(j[0].toString()+j[1].toString(),16),h=parseInt(j[2].toString()+j[3].toString(),16),i=parseInt(j[4].toString()+j[5].toString(),16);else return!1;document.getElementById("rgb2").innerHTML="rgb("+g+", "+h+", "+i+")"}hexToHsl2(C2);function hexToHsl2(h){let a=0,l=0,m=0;4==h.length?(a="0x"+h[1]+h[1],l="0x"+h[2]+h[2],m="0x"+h[3]+h[3]):7==h.length&&(a="0x"+h[1]+h[2],l="0x"+h[3]+h[4],m="0x"+h[5]+h[6]),a/=255,l/=255,m/=255;let n=Math.min(a,l,m),e=Math.max(a,l,m),f=e-n,g=0,o=0,p=0;g=0==f?0:e==a?(l-m)/f%6:e==l?(m-a)/f+2:(a-l)/f+4,g=Math.round(60*g),0>g&&(g+=360),p=(e+n)/2,o=0==f?0:f/(1-Math.abs(2*p-1)),o=+(100*o).toFixed(1),p=+(100*p).toFixed(1),document.getElementById("hsl2").innerHTML="hsl("+Math.round(g)+"\xB0, "+Math.round(o)+"%, "+Math.round(p)+"%)"}hexToCmyk2(C2);function hexToCmyk2(j){var k=0,l=0,m=0,n=0;j="#"==j.charAt(0)?j.substring(1,7):j;var o=parseInt(j.substring(0,2),16),h=parseInt(j.substring(2,4),16),i=parseInt(j.substring(4,6),16);k=1-o/255,l=1-h/255,m=1-i/255;var g=Math.min(k,Math.min(l,m));k=(k-g)/(1-g),l=(l-g)/(1-g),m=(m-g)/(1-g),n=g,document.getElementById("cmyk2").innerHTML="cmyk("+Math.round(100*k)+"%, "+Math.round(100*l)+"%, "+Math.round(100*m)+"%, "+Math.round(100*n)+"%)"}
 </script>
 @endsection
