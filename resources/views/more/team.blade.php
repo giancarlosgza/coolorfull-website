@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section('title', 'Team')
+@section('googleads')
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+@endsection
 @section('content')
 <div class="container">
     <div class="row">
@@ -54,6 +57,24 @@
                         target="_blank" rel="noopener"><i class="fab fa-github fa-2x"></i></a>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row text-center justify-content-center">
+        <div class="col-sm-12">
+            @guest
+            <br>
+            <!-- colorffy_ads_md -->
+            <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5211873894116133"
+            data-ad-slot="3087365012"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            @else
+            @endguest
         </div>
     </div>
 </div>

@@ -24,9 +24,9 @@
                 <div class="card shadow-medium">
                     <div class="card-body">
                         <img src="/assets/img/illustrations/designer_3.svg" width="54%" alt="">
-                        <h3 class="bold-500 color-indigo">
+                        <h3 class="bold-500 color-indigo text-poppins">
                             <br>
-                            My Gradients
+                            My gradients
                         </h3>
                     </div>
                 </div>
@@ -37,9 +37,9 @@
                 <div class="card shadow-medium">
                     <div class="card-body">
                         <img src="/assets/img/illustrations/creative_process_2.svg" width="61%" alt="">
-                        <h3 class="bold-500 color-indigo">
+                        <h3 class="bold-500 color-indigo text-poppins">
                             <br>
-                            Liked Palettes
+                            Liked palettes
                         </h3>
                     </div>
                 </div>
@@ -50,9 +50,9 @@
                 <div class="card shadow-medium">
                     <div class="card-body">
                         <img src="/assets/img/illustrations/like.svg" width="50%" alt="">
-                        <h3 class="bold-500 color-indigo">
+                        <h3 class="bold-500 color-indigo text-poppins">
                             <br>
-                            Liked Gradients
+                            Liked gradients
                         </h3>
                     </div>
                 </div>
@@ -66,14 +66,14 @@
                 <div class="card-body">
                     <h6 class="text-poppins"><i class="fas fa-user"></i> Profile Information</h6>
                     <div class="table-responsive">
-                        <table class="table table-borderless">
+                        <table class="table table-borderless table-hover">
                             <thead>
+                            </thead>
+                            <tbody>
                                 <tr>
                                     <th scope="col">Full Name</th>
                                     <td>{{ Auth::user()->name }}</td>
                                 </tr>
-                            </thead>
-                            <tbody>
                                 <tr>
                                     <th scope="row">Email</th>
                                     <td>{{ Auth::user()->email }}</td>

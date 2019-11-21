@@ -85,15 +85,17 @@
             {{ $palettes->appends($_GET)->onEachSide(1)->links()  }}
         </div>
     </div>
-    <div class="row text-center">
+    <div class="row text-center justify-content-center">
         <div class="col-sm-12">
             @guest
             <br>
-            <!-- colorffy_ads_xs -->
+            <!-- colorffy_ads_md -->
             <ins class="adsbygoogle"
-                style="display:inline-block;width:320px;height:50px"
-                data-ad-client="ca-pub-5211873894116133"
-                data-ad-slot="2188507199"></ins>
+            style="display:block"
+            data-ad-client="ca-pub-5211873894116133"
+            data-ad-slot="3087365012"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
             <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script>

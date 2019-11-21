@@ -9,14 +9,14 @@
     </div>
     <div class="row">
         <div class="col-12 col-md-8">
-            <div class="jumbotron jumbotron-fluid mb-2" id="color-random">
+            <div class="jumbotron mb-2" id="color-random">
             </div>
-            <h6 class="mt-0 text-poppins">Random color</h6>
+            <h6 class="mt-0 text-poppins">Color</h6>
         </div>
         <div class="col-12 col-md-4">
-            <div class="jumbotron jumbotron-fluid mb-2" id="color-complementary">
+            <div class="jumbotron mb-2" id="color-complementary">
             </div>
-            <h6 class="mt-0 text-poppins">Complementary color</h6>
+            <h6 class="mt-0 text-poppins">Complementary</h6>
         </div>
         <div class="col-md-12 mb-3">
             <hr>

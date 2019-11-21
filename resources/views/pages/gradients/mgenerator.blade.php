@@ -1,25 +1,28 @@
 @extends('layouts.app')
-@section('title', '3 Colors-Gradient Generator')
+@section('title', '3 Colors Gradient Generator')
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/jquery.minicolors.css') }}">
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-poppins text-indigo">3 Colors Gradient Generator</h3><br>
+            <h3 class="text-poppins text-indigo">Gradient Generator</h3><br>
         </div>
     </div>
     <div class="card shadow-medium">
         <div class="card-body">
-            <div class="form-row">
-                <div class="form-group col-6 col-sm-6">
+            <div class="form-row justify-content-center">
+                <div class="col-md-12 text-center mb-2">
+                    <h1 class="text-poppins font-weight-bold">Make some crazy colors!</h1>
+                </div>
+                <div class="form-group col-6 col-md-4">
                     <label for="color_1" class="text-poppins">Color 1</label><br>
                     <input type="text" class="form-mat-g form-control" id="color_1" value="#000000">        
                 </div>
-                <div class="form-group col-6 col-sm-6">
+                <div class="form-group col-6 col-md-4">
                     <label for="color_2" class="text-poppins">Color 2</label><br>
                     <input type="text" class="form-mat-g form-control" id="color_2" value="#000000">
                 </div>
-                <div class="form-group col-12 col-sm-12">
+                <div class="form-group col-6 col-md-4">
                     <label for="color_3" class="text-poppins">Color 3</label><br>
                     <input type="text" class="form-mat-g form-control" id="color_3" value="#000000">
                 </div>
@@ -50,17 +53,10 @@
             </div>
         </div>
         <div class="col-12 col-sm-12">
-            @if($validSub)
             <a class="btn btn-gradient" onclick="downloadimage()">
                 <i class="fas fa-image"></i>
                 Get IMG
             </a>
-            @else
-            <button class="btn btn-gradient" disabled>
-                <i class="fas fa-lock"></i>
-                Get IMG (PRO)
-            </button>
-            @endif
             <hr>    
         </div>
     </div>
