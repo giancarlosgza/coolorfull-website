@@ -866,6 +866,17 @@ table td {
 }
 
 /* ---------------------------------------------------
+    MINI COLORS SWATCH STYLES
+----------------------------------------------------- */
+.minicolors-swatch-color {
+    border-radius: 25px;
+}
+
+.minicolors-theme-default .minicolors-swatch {
+    border-radius: 25px;
+}
+
+/* ---------------------------------------------------
     ANIMATIONS STYLES
 ----------------------------------------------------- */
 /* KEYFRAMES */

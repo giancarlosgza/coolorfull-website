@@ -6,8 +6,7 @@
         <div class="col-md-8">
             <div class="card card-form">
                 <div class="card-body">
-                    <h3 class="text-poppins text-center text-indigo">Colorffy</h3>
-                    <h3 class="text-center">Create account</h3>
+                    <h3 class="text-poppins text-center text-indigo">Create my account</h3>
                     <!--
                     <p class="text-center text-poppins">Fill in the form to enable the registration buttons.</p>
                     -->

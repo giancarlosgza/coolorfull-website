@@ -22,7 +22,7 @@
             </div>
             <div class="col-md-4 offset-md-4">
                 <h4 class="logo">More</h4>
-                <a href="https://medium.com/colorffy" class="color-indigo text-spacing" target="_blank" rel="noopener">📖 Blog <span class="badge badge-secondary">New</span></a><br>
+                <a href="https://medium.com/colorffy" class="color-indigo text-spacing" target="_blank" rel="noopener">📖 Blog</a><br>
                 <a href="/pricing" class="color-indigo text-spacing" title="Pricing">💳 Pricing</a><br>
                 <a href="/whatsnew" class="color-indigo text-spacing" title="What's new?">🆕 What's new?</a><br>
                 <!--<a href="https://www.paypal.me/giancarlosgza?locale.x=es_XC" class="color-darkblue text-spacing" title="Buy me a Coffee" target="_blank" rel="noopener">☕ Buy me a Coffee</a>-->
