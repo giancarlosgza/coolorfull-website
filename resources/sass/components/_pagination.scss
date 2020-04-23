@@ -1,0 +1,21 @@
+.page-item.active .page-link {
+    color: var(--theme-on-primary-inverse);
+    background-color: var(--theme-primary);
+    border-color: var(--theme-primary);
+}
+
+.page-link {
+    background-color: var(--theme-surface);
+    border: var(--theme-surface);
+    color: var(--theme-on-primary);
+}
+
+.page-item.disabled .page-link {
+    background-color: var(--theme-primary-hover);
+    border: var(--theme-primary-active);
+    color: var(--theme-on-primary-inverse);
+}
+
+.pagination {
+    flex-wrap: wrap !important
+}

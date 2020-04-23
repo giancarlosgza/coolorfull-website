@@ -1,0 +1,85 @@
+@import '../_variables.scss';
+
+/* ---------------------------------------------------
+    CARD
+----------------------------------------------------- */
+.card {
+    background-color: var(--theme-surface-1dp);
+    border-color: var(--theme-surface-1dp);
+    color: var(--theme-on-primary);
+    border-radius: $border-radius-12;
+    /* 1dp */
+    box-shadow: $shadow-1dp;
+    transition: $transition-cubic-bezier;
+
+    &:hover {
+        /* 8dp */
+        box-shadow: $shadow-4dp;
+    }
+
+}
+
+.card-header {
+    background-color: var(--theme-surface-1dp);
+    border-bottom: 1px solid transparent;
+}
+
+.card-header:first-child {
+    border-top-left-radius: $border-radius-12;
+    border-top-right-radius: $border-radius-12;
+}
+
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color: var(--theme-surface-1dp);
+    border-top: 1px solid rgba(0, 0, 0, .125);
+}
+
+.card-footer:last-child {
+    border-bottom-left-radius: $border-radius-12;
+    border-bottom-right-radius: $border-radius-12;
+}
+
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: $border-radius-8;
+    border-top-right-radius: $border-radius-8;
+}
+
+.card-square {
+    border-radius: 0px;
+}
+
+.card-round {
+    border-radius: 50px;
+}
+
+.card-outline {
+    box-shadow: none !important;
+    border: 1px solid var(--theme-surface-card-outline);
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+.card-static-elevation {
+    /* 1dp */
+    box-shadow: $shadow-1dp;
+
+    &:hover {
+        /* 1dp */
+        box-shadow: $shadow-1dp;
+    }
+}
+
+.card-gradient {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: $border-radius-8;
+    box-shadow: $shadow-0dp !important;
+
+    &:hover {
+        box-shadow: $shadow-0dp !important;
+    }
+}

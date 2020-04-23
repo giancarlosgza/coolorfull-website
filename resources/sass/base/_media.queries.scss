@@ -1,0 +1,62 @@
+@media screen and (max-width: 992px) {
+    .login-img {
+        padding-top: 8%;
+        display: none;
+    }
+
+    .display-5 {
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .palette-show {
+        height: 80px
+    }
+
+    h1 {
+        font-size: 30px
+    }
+
+    .intro-text {
+        display: none
+    }
+
+    .btn-return {
+        display: flex !important;
+        margin-bottom: 10px
+    }
+
+    .button-block {
+        width: 100%
+    }
+
+    .device {
+        display: none
+    }
+
+    .alert-device {
+        display: flex !important;
+    }
+
+    #disable-payments-overlay {
+        bottom: 80px;
+        height: 390px;
+    }
+
+    .h6-responsive {
+        font-size: 13px;
+    }
+
+    .login-img {
+        display: none;
+    }
+
+    .display-5 {
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+}

@@ -1,14 +1,18 @@
-
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito|Roboto');
-
 // Variables
+
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
+@import './base/typography';
+@import './base/layout';
+@import './base/utilities';
+@import './base/animations';
+@import './components/navbars';
+@import './components/buttons';
+@import './components/cards'; 
+@import './components/jumbotron';
+@import './components/forms';   
+@import './components/pagination';
+@import './components/lists';   
+@import './components/badges';   
+@import './components/modals'; 
+@import './base/media.queries';     

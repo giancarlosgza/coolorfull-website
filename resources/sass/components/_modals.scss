@@ -1,0 +1,16 @@
+.modal {
+    .modal-header {
+        border-bottom: 1px solid var(--theme-surface-1dp);
+    }
+
+    .modal-content {
+        background-color: var(--theme-surface-1dp);
+        border-radius: $border-radius-25;
+        box-shadow: $shadow-12dp;
+        border: var(--theme-surface-1dp);
+    }
+
+    .modal-footer {
+        border-top: 1px solid var(--theme-surface-1dp);
+    }
+}

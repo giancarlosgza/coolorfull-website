@@ -10,10 +10,11 @@ var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
  | for your Laravel application. By default, we are compiling the Sass
  | file for the application as well as bundling up all the JS files.
  |
- */
+ */ 
 
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/theme.scss', 'public/css');
 
 //this is what generates the service-worker.js file on your public folder
 mix.webpackConfig({

@@ -1,20 +1,150 @@
+//  Basic colors 
+$black: #000;
+$white: #fff; 
 
-// Body
-$body-bg: #f8fafc;
+// Fonts
+$font-roboto: 'Roboto',
+sans-serif;
+$font-poppins: 'Poppins',
+sans-serif;
 
-// Typography
-$font-family-sans-serif: "Nunito", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+// Type scale
+$mdc-typography-styles-headline1: (font-family: unquote("Poppins"),
+    font-weight: lighter,
+    font-size: 93px,
+    letter-spacing: -1.5px,
+);
 
-// Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66D9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+$mdc-typography-styles-headline2: (font-family: unquote("Poppins"),
+    font-weight: lighter,
+    font-size: 58px,
+    letter-spacing: -0.5px,
+);
+
+$mdc-typography-styles-headline3: (font-family: unquote("Poppins"),
+    font-weight: normal,
+    font-size: 46px,
+    letter-spacing: 0px,
+);
+
+$mdc-typography-styles-headline4: (font-family: unquote("Poppins"),
+    font-weight: normal,
+    font-size: 33px,
+    letter-spacing: 0.25px,
+);
+
+$mdc-typography-styles-headline5: (font-family: unquote("Poppins"),
+    font-weight: normal,
+    font-size: 23px,
+    letter-spacing: 0px,
+);
+
+$mdc-typography-styles-headline6: (font-family: unquote("Poppins"),
+    font-weight: medium,
+    font-size: 19px,
+    letter-spacing: 0.15px,
+);
+
+$mdc-typography-styles-subtitle1: (font-family: unquote("Poppins"),
+    font-weight: normal,
+    font-size: 15px,
+    letter-spacing: 0.15px,
+);
+
+$mdc-typography-styles-subtitle2: (font-family: unquote("Poppins"),
+    font-weight: medium,
+    font-size: 13px,
+    letter-spacing: 0.1px,
+);
+
+$mdc-typography-styles-body1: (font-family: unquote("Roboto"),
+    font-weight: normal,
+    font-size: 16px,
+    letter-spacing: 0.5px,
+);
+
+$mdc-typography-styles-body2: (font-family: unquote("Roboto"),
+    font-weight: normal,
+    font-size: 14px,
+    letter-spacing: 0.25px,
+);
+
+$mdc-typography-styles-button: (font-family: unquote("Roboto"),
+    font-weight: bold,
+    font-size: 14px,
+    letter-spacing: 1.25px,
+);
+
+$mdc-typography-styles-caption: (font-family: unquote("Roboto"),
+    font-weight: medium,
+    font-size: 10px,
+    letter-spacing: 0.4px,
+);
+
+$mdc-typography-styles-overline: (font-family: unquote("Roboto"),
+    font-weight: normal,
+    font-size: 10px,
+    letter-spacing: 1.5px,
+);
+
+// Border radius
+$border-radius-0: 0px;
+$border-radius-4: 4px;
+$border-radius-8: 8px;
+$border-radius-12: 12px;
+$border-radius-25: 25px;
+$border-radius-50: 50px;
+
+// Transition
+$transition-cubic-bezier: all 0.3s cubic-bezier(.25, .8, .25, 1);
+
+// Elevations shadows
+$shadow-0dp: none;
+
+$shadow-1dp: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+
+$shadow-2dp: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+
+$shadow-3dp: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),
+0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+
+$shadow-4dp: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+$shadow-5dp: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+0px 5px 8px 0px rgba(0, 0, 0, 0.14),
+0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+
+$shadow-6dp: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+
+$shadow-7dp: 0px 4px 5px -2px rgba(0, 0, 0, 0.2),
+0px 7px 10px 1px rgba(0, 0, 0, 0.14),
+0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+
+$shadow-8dp: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+0px 8px 10px 1px rgba(0, 0, 0, 0.14),
+0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+$shadow-9dp: 0px 5px 6px -3px rgba(0, 0, 0, 0.2),
+0px 9px 12px 1px rgba(0, 0, 0, 0.14),
+0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+
+$shadow-10dp: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),
+0px 10px 14px 1px rgba(0, 0, 0, 0.14),
+0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+
+$shadow-11dp: 0px 6px 7px -4px rgba(0, 0, 0, 0.2),
+0px 11px 15px 1px rgba(0, 0, 0, 0.14),
+0px 4px 20px 3px rgba(0, 0, 0, 0.12);
+
+$shadow-12dp: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),
+0px 12px 17px 2px rgba(0, 0, 0, 0.14),
+0px 5px 22px 4px rgba(0, 0, 0, 0.12);

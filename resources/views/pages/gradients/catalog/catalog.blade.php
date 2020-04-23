@@ -10,15 +10,15 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-poppins text-indigo">Gradients</h3>
+            <h4 class="font-weight-bold text-indigo">Gradients</h4>
         </div>
         <div class="col-sm-12">
             <form action="" method="get">
                 <div class="input-group mb-3">
                     <input type="text" name="q" id="query" value="{{ $searchQuery }}" class="form-control shadow-medium no-border search-input"
                         placeholder="🔍 Search something...." aria-label="Search something...." aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary shadow-medium" type="submit" id="button-addon2">Search</button>
+                    <div class="input-group-append ml-2">
+                        <button class="btn btn-primary btn-sm btn-round my-0" type="submit" id="button-addon2"><i class="material-icons">search</i></button>
                     </div>
                 </div>
             </form>
@@ -27,7 +27,7 @@
                     <thead>
                         @foreach($filters as $filter)
                             <td scope="col">
-                                <a class="btn btn-gradient" href="{{ route('gradientsCatalog', ['q' => $filter]) }}">
+                                <a class="btn btn-round btn-outline ripple ripple-dark" href="{{ route('gradientsCatalog', ['q' => $filter]) }}">
                                     <div class="h6-responsive">{{ $filter }}</div>
                                 </a>
                             </td>
@@ -47,12 +47,12 @@
             <h3>Sorry, we couldn't find any gradient with that name.....</h3>
         </div>
         @foreach($gradients as $gradient)
-        <div class="col-6 col-md-4 col-lg-3">
-            <div class="card shadow-medium">
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <div class="card">
                 <div class="card-body">
-                    <h6 class="text-center uppercase h6-responsive text-poppins">{{$gradient->name}}</h6>
+                    <h6 class="text-center text-uppercase h6-responsive text-poppins">{{$gradient->name}}</h6>
                     <a href="/gradients/{{$gradient->id}}" title="{{$gradient->name}}">
-                        <div class="card text-center">
+                        <div class="card text-center box-shadow-0">
                             <div class="card-body card-gradient" title="{{$gradient->name}}" 
                                 @if($gradient->color_3)
                                 style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}}, {{$gradient->color_3}});">
@@ -64,10 +64,10 @@
                         <div class="row">
                             @if($user)
                             <div class="col-4 col-sm-6 col-md-4"> 
-                                <div id="fav-heart-gradient-{{$gradient->id}}" class="text-left align-self-end fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})"><i class="fas fa-heart"></i></div>
+                                <div id="fav-heart-gradient-{{$gradient->id}}" class="mt-3 text-left align-self-end fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})"><i class="material-icons">favorite</i></div>
                             </div>
                             <div class="col-8 col-sm-6 col-md-8">
-                                <div id="fav-count-gradient-{{$gradient->id}}" class="text-right align-self-end color-indigo bold-500">
+                                <div id="fav-count-gradient-{{$gradient->id}}" class="text-right align-self-end text-primary font-weight-bold mt-3">
                                     @if($gradient->usersWhoFav->count() == 1) 
                                     {{ $gradient->usersWhoFav->count() }} like
                                     @else
@@ -76,10 +76,8 @@
                                 </div>
                             </div>
                             @else
-                            <div class="col-8 col-sm-6 col-md-8">
-                                <a href="/favorites/gradients" title="Fav Gradient"><i class="fas fa-heart fav-heart footer-icon"></i></a>
-                                <!--<a class="copy-url" onclick="copyUrl(this)" data-clipboard-text="https://www.colorffy.com/gradients/{{$gradient->id}}" data-toggle="tooltip"><i class="fas fa-share-alt text-body"></i></a>
-                                -->
+                            <div class="col-8 col-sm-6 col-md-8 mt-3">
+                                <a href="/favorites/gradients" title="Like gradient"><i class="material-icons">favorite</i></a>
                             </div>
                             @endif
                         </div>
@@ -89,7 +87,7 @@
         </div>
         @endforeach    
     </div>
-    <div class="row">
+    <div class="row my-3">
         <div class="col-12 col-md-12">
             {{ $gradients->appends($_GET)->onEachSide(1)->links()  }}
         </div>

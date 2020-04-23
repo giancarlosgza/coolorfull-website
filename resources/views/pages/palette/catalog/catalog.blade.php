@@ -6,16 +6,16 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-sm-12">
-            <h3 class="text-poppins text-indigo">Palettes</h3>
+        <div class="col-sm-12"> 
+            <h4 class="font-weight-bold text-indigo">Palettes</h4>
         </div>
         <div class="col-sm-12">
             <form action="" method="get">
                 <div class="input-group mb-3">
-                    <input type="text" name="q" id="query" value="{{ $searchQuery }}" class="form-control shadow-medium no-border search-input"
+                    <input type="text" name="q" id="query" value="{{ $searchQuery }}" class="form-control search-input"
                         placeholder="🔍 Search something...." aria-label="Search something...." aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary shadow-medium" type="submit" id="button-addon2">Search</button>
+                    <div class="input-group-append ml-2">
+                        <button class="btn btn-primary btn-sm btn-round my-0" type="submit" id="button-addon2"><i class="material-icons">search</i></button>
                     </div>
                 </div>
             </form>
@@ -24,7 +24,7 @@
                     <thead>
                         @foreach($filters as $filter)
                             <th scope="col">
-                                <a class="btn btn-gradient" href="{{ route('palettesCatalog', ['q' => $filter]) }}">
+                                <a class="btn btn-round btn-outline ripple ripple-dark" href="{{ route('palettesCatalog', ['q' => $filter]) }}">
                                     <div class="h6-responsive">{{ $filter }}</div>
                                 </a>
                             </th>
@@ -44,10 +44,10 @@
             <h3>Sorry, we couldn't find any palette with that name.....</h3>
         </div>
         @foreach($palettes as $palette)
-        <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
             <div class="card shadow-medium">
                 <div class="card-body">
-                    <h6 class="text-center uppercase h6-responsive text-poppins">{{$palette->name}}</h6>
+                    <h6 class="text-center text-uppercase h6-responsive">{{$palette->name}}</h6>
                     <a href="/palettes/{{$palette->id}}" title="{{$palette->name}}">
                         <ul class="list-group">
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_1}}"></li>
@@ -60,10 +60,10 @@
                     <div class="row">
                         <div class="col-4 col-sm-6 col-md-4">
                             @if(Auth::user())
-                            <div id="fav-heart-palette-{{$palette->id}}" class="text-left align-self-end fav-heart @if($user->favoritePalettes->contains($palette)) active-heart @endif" onclick="event.preventDefault(); newFavoritePalette({{$palette->id}})"><i class="fas fa-heart"></i></div>
+                            <div id="fav-heart-palette-{{$palette->id}}" class="text-left align-self-end fav-heart @if($user->favoritePalettes->contains($palette)) active-heart @endif" onclick="event.preventDefault(); newFavoritePalette({{$palette->id}})"><i class="material-icons">favorite</i></div>
                         </div>
                         <div class="col-8 col-sm-6 col-md-8">
-                            <div id="fav-count-palette-{{$palette->id}}" class="text-right align-self-end color-indigo bold-500">
+                            <div id="fav-count-palette-{{$palette->id}}" class="text-right align-self-end text-primary font-weight-bold">
                                 @if($palette->usersWhoFav->count() == 1) 
                                 {{ $palette->usersWhoFav->count() }} like
                                 @else
@@ -71,7 +71,7 @@
                                 @endif 
                             </div>
                             @else
-                            <a href="/favorites/palettes" title="Fav Palette"><i class="fas fa-heart fav-heart"></i></a>
+                            <a href="/favorites/palettes" title="Like palette"><i class="material-icons">favorite</i></a>
                             @endif
                         </div>
                     </div>
@@ -80,7 +80,7 @@
         </div>
         @endforeach
     </div>
-    <div class="row">
+    <div class="row my-3">
         <div class="col-12 col-md-12">
             {{ $palettes->appends($_GET)->onEachSide(1)->links()  }}
         </div>

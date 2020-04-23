@@ -2,33 +2,29 @@
     <div class="container py-3">
         <div class="row">
             <div class="col-md-4">
-                <h4 class="logo text-indigo">Colorffy</h4>
-                <div class="theme-switch-wrapper">
+                <h5 class="font-weight-bold text-primary">Colorffy</h5>
+                <div class="theme-switch-wrapper my-3">
                     <div class="theme-switch">
                         <label class="switch">
                             <input type="checkbox" id="checkbox" name="checkbox" >
                             <span class="slider round"></span>
                         </label>
-                        <label for="checkbox">Dark mode <span class="badge badge-secondary">Beta</span></label>
+                        <label for="checkbox"><i class="fab fa-empire"></i> The dark side of the force</label>
                     </div>
                 </div>
-                
                 <p>
-                    Try our new Dark Mode!!
-                </p>
-                <p>
-                We creates amazing gradients and palettes for designers and developers. 🚀
+                We create awesome color gradients and palettes for you. 🚀
                 </p>
             </div>
             <div class="col-md-4 offset-md-4">
-                <h4 class="logo">More</h4>
-                <a href="https://medium.com/colorffy" class="color-indigo text-spacing" target="_blank" rel="noopener">📖 Blog</a><br>
-                <a href="/pricing" class="color-indigo text-spacing" title="Pricing">💳 Pricing</a><br>
-                <a href="/whatsnew" class="color-indigo text-spacing" title="What's new?">🆕 What's new?</a><br>
+                <h5 class="">More</h5>
+                <a href="https://medium.com/colorffy" class="text-primary text-spacing" target="_blank" rel="noopener">📖 Blog</a><br>
+                <a href="/pricing" class="text-primary text-spacing" title="Pricing">💳 Pricing</a><br>
+                <a href="/whatsnew" class="text-primary text-spacing" title="What's new?">🆕 What's new?</a><br>
                 <!--<a href="https://www.paypal.me/giancarlosgza?locale.x=es_XC" class="color-darkblue text-spacing" title="Buy me a Coffee" target="_blank" rel="noopener">☕ Buy me a Coffee</a>-->
-                <a href="/team" class="color-indigo text-spacing" title="Team">👨‍💻 Team</a><br>
-                <a href="mailto:colorffy@gmail.com" class="color-indigo text-spacing" title="Contact Us">📧 Contact Us</a><br>
-                <a href="/privacy" class="color-indigo text-spacing" title="Privacy Policy">📄 Privacy Policy</a>
+                <a href="/team" class="text-primary text-spacing" title="Team">👨‍💻 Team</a><br>
+                <a href="mailto:colorffy@gmail.com" class="text-primary text-spacing" title="Contact Us">📧 Contact Us</a><br>
+                <a href="/privacy" class="text-primary text-spacing" title="Privacy Policy">📄 Privacy Policy</a>
             </div>
         </div>
         <div class="row">
@@ -37,16 +33,16 @@
 
             </div>
             <div class="col-6 col-md-6 text-right small align-self-end"><br>
-                <a href="https://twitter.com/colorffy" class="color-indigo footer-icon" title="Twitter" alt="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="https://www.instagram.com/colorffyweb/" class="color-indigo" title="Instagram" alt="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://twitter.com/colorffy" class="text-primary mr-3" title="Twitter" alt="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.instagram.com/colorffyweb/" class="text-primary" title="Instagram" alt="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram fa-2x"></i></a>
             </div>
         </div>
         <hr>
         <div class="row">
             <div class="col-8 col-md-6 text-left small align-self-center"><br>
-                <p>Made with ❤️ & ☕ by <a href="https://twitter.com/giancarlosgza" title="Twitter" alt="Twitter" target="_blank" rel="noopener" class="color-indigo">@giancarlosgza</a></p>
+                <p>Made with ❤️ & ☕ by <a href="https://twitter.com/giancarlosgza" title="Twitter" alt="Twitter" target="_blank" rel="noopener" class="">@giancarlosgza</a> and <a href="https://twitter.com/carloselilopez" title="Twitter" alt="Twitter" target="_blank" rel="noopener" class="">@carloselilopez</a></p>
             </div>
-            <div class="col-4 col-md-6 text-right small align-self-center">©2019 Colorffy v2.5 🎉</div>
+            <div class="col-4 col-md-6 text-right small align-self-center text-primary">©2020 Colorffy v3 🎉</div>
         </div>
     </div>
 </footer>
