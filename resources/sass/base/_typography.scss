@@ -170,8 +170,16 @@ label {
     color: var(--theme-danger) !important;
 }
 
+.text-muted {
+    color: var(--theme-muted) !important;
+}
+
 .text-spacing {
     line-height: 30px;
+}
+
+.text-size-14 {
+    font-size: 14px;
 }
 
 code {

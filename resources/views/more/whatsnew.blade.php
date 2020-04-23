@@ -7,37 +7,51 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-poppins text-indigo">What's new?</h3><br>
+            <h4 class="font-weight-bold">What's new?</h4><br>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-md-12">
-            <div class="card card-form">
+            <div class="card card-outline">
                 <div class="card-body">
-                    <h4 class="text-indigo text-poppins">
+                    <h4 class="">
                         <img src="{{asset('/assets/img/logo-form.svg')}}" width="50px" alt="Colorffy logo">
                         Colorffy
                     </h4>
                     <br>
-                    <h6><i class="fas fa-check-circle text-success"></i> Version 2.5</h6>
+
+                    <h6><i class="material-icons text-success">check</i> Version 3</h6>
+                    <ul>
+                        <li>UI: We redesign the UI to bring a new and more fresh look</li>
+                    </ul>
+                    <p class="text-muted"><i class="material-icons text-size-14">calendar_today</i> April 2020</p>
+                    
+                    <hr>
+
+                    <h6><i class="material-icons text-success">check</i> Version 2.5</h6>
                     <ul>
                         <li>UI: Some minors design changes</li>
                         <li>UI: Some dark mode improvements</li>
                         <li>Gradient: New color blindness filter on gradients ui component</li>
                         <li>Tools: Get a random color and the complementary color with some color codes</li>
                     </ul>
-                    <h6 class="text-poppins"><i class="fas fa-calendar-alt"></i> September 2019</h6><hr>
-                    <h6><i class="fas fa-check-circle text-success"></i> Version 2.3</h6>
+                    <p class="text-muted"><i class="material-icons text-size-14">calendar_today</i> September 2019</p>
+                    
+                    <hr>
+
+                    <h6><i class="material-icons text-success">check</i> Version 2.3</h6>
                     <ul>
                         <li>UI: Website styles redesign</li>
                         <li>UI: New dark mode</li>
                         <li>Tools: Extract images color redesign</li>
                     </ul>
-                    <h6 class="text-poppins"><i class="fas fa-calendar-alt"></i> July 2019</h6>
+                    <p class="text-muted"><i class="material-icons text-size-14">calendar_today</i> July 2019</p>
+
                     <hr>
-                    <h6><i class="fas fa-check-circle text-success"></i> Version 2.0</h6>
+
+                    <h6><i class="material-icons text-success">check</i> Version 2.0</h6>
                     <ul>
-                        <li class="text-poppins text-indigo">Website: Colorffy PRO</li>
+                        <li>Website: Colorffy PRO</li>
                         <li>Gradients: Like your favorites gradients (PRO)</li>
                         <li>Palettes: Like your favorites palettes (PRO)</li>
                         <li>Tools: Create and save unlimited gradients (PRO)</li>
@@ -49,8 +63,9 @@
                         <li>Tools: Random color generator</li>
                         <li>Tools: Get colors from image</li>
                     </ul>
-                    <h6 class="text-poppins"><i class="fas fa-calendar-alt"></i> March 2019</h6>
+                    <p class="text-muted"><i class="material-icons text-size-14">calendar_today</i> March 2019</p>
                     <hr>
+
                     <a href="https://www.producthunt.com/posts/colorffy?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-colorffy"
                         target="_blank"><img
                             src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=149375&theme=light"

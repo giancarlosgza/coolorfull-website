@@ -55,7 +55,7 @@
 
     &:hover {
         background-color: var(--theme-primary-hover);
-        color: var(--theme-on-primary-inverse);
+        color: var(--theme-on-primary-inverse) !important;
     }
 
     &:focus,

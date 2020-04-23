@@ -166,8 +166,16 @@ label {
   color: var(--theme-danger) !important;
 }
 
+.text-muted {
+  color: var(--theme-muted) !important;
+}
+
 .text-spacing {
   line-height: 30px;
+}
+
+.text-size-14 {
+  font-size: 14px;
 }
 
 code {
@@ -527,7 +535,7 @@ table td {
 
 .btn-primary:hover {
   background-color: var(--theme-primary-hover);
-  color: var(--theme-on-primary-inverse);
+  color: var(--theme-on-primary-inverse) !important;
 }
 
 .btn-primary:focus,

@@ -4,9 +4,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-body card-form">
-                    <h3 class="text-poppins text-indigo">PRIVACY POLICY</h3>
+            <div class="card card-outline">
+                <div class="card-body">
+                    <h4 class="font-weight-bold">PRIVACY POLICY</h4>
                         <p><br>
                         <br>
                         Effective date: 04/11/2019<br>
@@ -401,7 +401,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
 </div>
 @endsection
