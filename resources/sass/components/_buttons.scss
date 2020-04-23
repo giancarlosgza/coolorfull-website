@@ -11,7 +11,7 @@
     /*height: 36px;*/
     background-color: var(--theme-surface);
     color: var(--theme-on-primary);
-    border-radius: $border-radius-4;
+    border-radius: $border-radius-8;
     border-style: none;
     text-transform: uppercase;
     box-shadow: $shadow-1dp;
@@ -67,18 +67,18 @@
 
 .btn-secondary {
     background-color: var(--theme-secondary);
-    color: var(--theme-on-primary);
+    color: $black !important;
     border: none !important;
 
     &:hover {
         background-color: var(--theme-secondary-hover);
-        color: var(--theme-on-primary);
+        color: $black !important;
     }
 
     &:focus,
     &:active {
         background-color: var(--theme-secondary-active) !important;
-        color: var(--theme-on-primary) !important;
+        color: $black !important;
     }
 }
 

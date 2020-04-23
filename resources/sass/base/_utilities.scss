@@ -13,6 +13,10 @@
     padding-bottom: 5%;
 }
 
+.img-logo {
+    filter: var(--theme-img-logo);
+}
+
 table th {
     color: var(--theme-primary) !important;
     font-family: Poppins, 'sans-serif';

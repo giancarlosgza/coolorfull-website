@@ -4,26 +4,26 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-poppins text-indigo">Random Color</h3><br>
+            <h4 class="font-weight-bold">Random Color</h4><br>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-md-8">
             <div class="jumbotron mb-2" id="color-random">
             </div>
-            <h6 class="mt-0 text-poppins">Color</h6>
+            <h6 class="mt-0"><i class="material-icons-outlined">looks_one</i> Color</h6>
         </div>
         <div class="col-12 col-md-4">
             <div class="jumbotron mb-2" id="color-complementary">
             </div>
-            <h6 class="mt-0 text-poppins">Complementary</h6>
+            <h6 class="mt-0"><i class="material-icons-outlined">looks_two</i> Complementary</h6>
         </div>
         <div class="col-md-12 mb-3">
             <hr>
             <button class="btn btn-primary shadow-medium" onClick="window.location.reload();">Reload page</button>
         </div>
         <div class="col-sm-12">
-            <div class="card shadow-medium">
+            <div class="card card-outline">
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover table-borderless">

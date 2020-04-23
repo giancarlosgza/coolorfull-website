@@ -19,7 +19,7 @@
             <form action="" method="get">
                 <div class="input-group mb-3">
                     <input type="text" name="q" id="query" value="{{ $searchQuery }}"
-                        class="form-control search-input" placeholder="🔍 Search something...."
+                        class="form-control search-input" placeholder="Search something cool...."
                         aria-label="Search something..." aria-describedby="button-addon2">
                     <div class="input-group-append ml-2">
                         <button class="btn btn-primary btn-sm btn-round my-0" type="submit" id="button-addon2"><i class="material-icons">search</i></button>

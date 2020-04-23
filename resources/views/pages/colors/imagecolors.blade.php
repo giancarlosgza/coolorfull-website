@@ -49,29 +49,29 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-poppins text-indigo">Color Extraction <span class="badge badge-secondary">Beta</span>
-            </h3><br>
+            <h4 class="font-weight-bold">Color Extraction <span class="badge badge-secondary">Beta</span>
+            </h4><br>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <div class="card shadow-medium">
+        <div class="col-md-12 mb-3">
+            <div class="card card-static-elevation">
                 <div class="card-body text-center">
 
-                    <h3 class="font-weight-bold text-poppins">Upload or take a photo</h3>
-                    <h5>PNG, JPEG, JPG or SVG</h5>
+                    <h4 class="font-weight-bold text-poppins">Upload or take a photo</h4>
+                    <h6 class="text-roboto">PNG, JPEG, JPG or SVG</h6>
                     <br>
                     <div class="row">
                         <div class="col-6 text-right">
                             <div class="upload-btn-wrapper">
-                                <button class="btn btn-primary shadow-medium"><i class="fas fa-upload"></i> Choose
+                                <button class="btn btn-primary shadow-medium"><i class="material-icons">publish</i> Choose
                                     file</button>
                                 <input type="file" name="myfile" />
                             </div>
                         </div>
                         <div class="col-6 text-left">
                             <a class="btn btn-secondary" onclick="downloadimage()">
-                                <i class="fas fa-image"></i>
+                                <i class="material-icons">photo</i>
                                 Get IMG
                             </a>
                         </div>
@@ -81,7 +81,7 @@
             </div>
         </div>
         <div class="col-md-12">
-            <div class="card shadow-medium">
+            <div class="card card-outline">
                 <div class="card-body" id="palette-preview">
                     <div class="row justify-content-center">
                         <div class="col-md-8 mb-2">
@@ -90,46 +90,46 @@
                         <div class="col-md-8">
                             <div class="row" id="htmltoimage">
                                 <div class="col-2">
-                                    <div id="palette-1" class="card h-100">
+                                    <div id="palette-1" class="card box-shadow-0 h-100">
                                         <div class="card-body">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-2">
-                                    <div id="palette-2" class="card h-100">
+                                    <div id="palette-2" class="card box-shadow-0 h-100">
                                         <div class="card-body">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-2">
-                                    <div id="palette-3" class="card h-100">
+                                    <div id="palette-3" class="card box-shadow-0 h-100">
                                         <div class="card-body">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-2">
-                                    <div id="palette-4" class="card h-100">
+                                    <div id="palette-4" class="card box-shadow-0 h-100">
                                         <div class="card-body">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-2">
-                                    <div id="palette-5" class="card h-100">
+                                    <div id="palette-5" class="card box-shadow-0 h-100">
                                         <div class="card-body">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-2">
-                                    <div id="palette-6" class="card h-100">
+                                    <div id="palette-6" class="card box-shadow-0 h-100">
                                         <div class="card-body">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 mt-2">
                             <br>
-                            <h6 class="font-weight-bold text-poppins">By colorffy.com</h6>
+                            <h6 class="font-weight-bold text-primary">By colorffy.com</h6>
                         </div>
                     </div>
                 </div>

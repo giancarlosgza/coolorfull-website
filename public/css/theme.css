@@ -21,6 +21,7 @@
   --theme-background-70: #eeeeee;
   --theme-background-60: #d3d3d3;
   --theme-background-50: #929292;
+  --theme-img-logo: none;
 }
 
 [data-theme=dark] {
@@ -46,5 +47,6 @@
   --theme-background-70: #474747;
   --theme-background-60: #181818;
   --theme-background-50: #202020;
+  --theme-img-logo: brightness(0) invert(1);
 }
 

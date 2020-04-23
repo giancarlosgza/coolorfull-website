@@ -5,14 +5,14 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-poppins text-indigo">Gradient Generator</h3><br>
+            <h4 class="font-weight-bold">Gradient Generator</h4><br>
         </div>
     </div>
-    <div class="card shadow-medium">
+    <div class="card card-static-elevation mb-3">
         <div class="card-body">
-            <div class="form-row justify-content-center">
+            <div class="form-row justify-content-center mb-2">
                 <div class="col-md-12 text-center mb-2">
-                    <h1 class="text-poppins font-weight-bold">Make some crazy colors!</h1>
+                    <h3 class="font-weight-bold">Make some crazy colors!</h3>
                 </div>
                 <div class="form-group col-6 col-md-4">
                     <label for="color_1" class="text-poppins">Color 1</label><br>
@@ -26,7 +26,7 @@
             @if($validSub)
             <div class="row">
                 <div class="col text-right">
-                    <button id="save-gradient-btn" class="btn btn-primary shadow-medium">
+                    <button id="save-gradient-btn" class="btn btn-primary">
                         Save gradient (PRO)
                     </button>
                 </div>
@@ -34,8 +34,8 @@
             @else 
             <div class="row">
                 <div class="col text-right">
-                    <button id="save-gradient-btn" class="btn btn-primary shadow-medium" disabled>
-                        <i class="fas fa-lock"></i>
+                    <button id="save-gradient-btn" class="btn btn-primary" disabled>
+                        <i class="material-icons">lock</i>
                         Save gradient (PRO)
                     </button>
                 </div>
@@ -49,27 +49,26 @@
             </div>
         </div>
         <div class="col-12 col-sm-12">
-            
-            <a class="btn btn-gradient" onclick="downloadimage()">
-                <i class="fas fa-image"></i>
+            <a class="btn btn-secondary ripple ripple-dark" onclick="downloadimage()">
+                <i class="material-icons">image</i>
                 Get IMG
             </a>
             <hr>    
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-sm-12">
-            <div class="card shadow-medium">
+        <div class="col-12 col-sm-12 mb-3">
+            <div class="card card-outline">
                 <div class="card-body">
-                    <h5 class="text-poppins">CSS</h5>
+                    <h5 class="font-weight-bold">CSS</h5>
                     <code id="css">
                     </code>
                 </div>
             </div>
         </div>
         <!-- TABLE COLORS CODE -->
-        <div class="col-sm-12">
-            <div class="card shadow-medium">
+        <div class="col-sm-12 mb-3">
+            <div class="card card-outline">
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover table-borderless">
@@ -106,7 +105,6 @@
         <!--END TABLE-->
     </div>
     <hr>
-    <div class="sharethis-inline-share-buttons"></div>
 </div>
 @endsection
 @section('scripts')
@@ -135,7 +133,6 @@
     document.getElementById("hsl2").innerHTML="hsl("+b.apply(null,g).join(",")+")"
     document.getElementById("cmyk2").innerHTML="cmyk("+d.apply(null,g)+")"},13)})})
     </script>
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5c883fc8cbb218001761db20&product='inline-share-buttons'" async="async"></script>
     @if($validSub)
     <script>
     {{-- Only paid users will see this --}}

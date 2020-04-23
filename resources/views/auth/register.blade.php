@@ -4,9 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card card-form">
+            <div class="card card-static-elevation">
                 <div class="card-body">
-                    <h3 class="text-poppins text-center text-indigo">Create my account</h3>
+                    <h4 class="font-weight-bold text-center">Create my account</h4>
                     <!--
                     <p class="text-center text-poppins">Fill in the form to enable the registration buttons.</p>
                     -->
@@ -14,44 +14,44 @@
                     <div class="row justify-content-center">
                         <div class="col-md-8">
                             <div class="form-group">
-                                <label for="name"><i class="fas fa-user"></i> {{ __('Name') }}</label>
+                                <label for="name"><i class="material-icons">person</i> {{ __('Name') }}</label>
                                     <input id="name" type="text" class="form-mat-g form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
-                                        name="name" value="{{ old('name') }}" placeholder="Name" required autofocus >    
+                                        name="name" value="{{ old('name') }}" placeholder="John Doe" required autofocus >    
 
                                 <span id="name-error" class="invalid-feedback @if(!$errors->has('name')) d-none @endif" role="alert">
                                     <strong>{{ $errors->first('name') }}</strong>
                                 </span>
                             </div>
                             <div class="form-group">
-                                <label for="username"><i class="fas fa-user-tag"></i> {{ __('Username') }}</label>
+                                <label for="username"><i class="material-icons">label</i> {{ __('Username') }}</label>
                                 <input id="username" type="text" class="form-mat-g form-control{{ $errors->has('username') ? ' is-invalid' : '' }}"
-                                    name="username" value="{{ old('username') }}" placeholder="Username" required maxlength="20">
+                                    name="username" value="{{ old('username') }}" placeholder="johndoe98" required maxlength="20">
                                 <span id="username-error" class="invalid-feedback @if(!$errors->has('username')) d-none @endif" role="alert">
                                     <strong>{{ $errors->first('username') }}</strong>
                                 </span>
                             </div>
                             <div class="form-group">
-                                <label for="email"><i class="fas fa-envelope"></i> {{ __('E-Mail') }}</label>
+                                <label for="email"><i class="material-icons">mail</i> {{ __('E-Mail') }}</label>
                                 <input id="email" type="email" class="form-mat-g form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                                    name="email" value="{{ old('email') }}" placeholder="Email" required>
+                                    name="email" value="{{ old('email') }}" placeholder="johndoe@mail.com" required>
                                 <span id="email-error" class="invalid-feedback @if (!$errors->has('email')) d-none @endif" role="alert">
                                     <strong>{{ $errors->first('email') }}</strong>
                                 </span>
                             </div>
                             <div class="form-group">
-                                <label for="password"><i class="fas fa-lock"></i> {{ __('Password') }}</label>
+                                <label for="password"><i class="material-icons">lock</i> {{ __('Password') }}</label>
                                 <input id="password" type="password" class="form-mat-g form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
-                                    name="password" placeholder="Password" required>
+                                    name="password" placeholder="********" required>
 
                                 <span id="password-error" class="invalid-feedback @if (!$errors->has('password')) d-none @endif" role="alert">
                                     <strong>{{ $errors->first('password') }}</strong>
                                 </span>
                             </div>
                             <div class="form-group">
-                                <label for="password-confirm"><i class="fas fa-lock"></i> {{ __('Confirm
+                                <label for="password-confirm"><i class="material-icons">lock</i> {{ __('Confirm
                                     Password') }}</label>
                                 <input id="password-confirm" type="password" class="form-mat-g form-control" name="password_confirmation"
-                                placeholder="Confirm Password" required>
+                                placeholder="********" required>
 
                                 <span id="password-confirm-error" class="invalid-feedback d-none" role="alert"></span>
                             </div>
@@ -61,7 +61,7 @@
                     <!--<div id="disable-payments-overlay"></div>-->
                     <div class="form-group row text-center">
                         <div class="col-sm-12 col-md-8 offset-md-2">
-                            <p class="bold">Register now and pay just for one month: $1.99 USD</p>
+                            <p class="bold">Register now and pay for one month: $1.99 USD</p>
                             <div id="monthly-paypal-button-container"></div>
                         </div>
                         <!--
@@ -73,7 +73,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <hr><br>
-                            <a class="btn btn-link" href="{{ route('login') }}">
+                            <a class="btn btn-link ripple ripple-dark" href="{{ route('login') }}">
                                 {{ __('Already have an account? Login!') }}
                             </a>
                         </div>

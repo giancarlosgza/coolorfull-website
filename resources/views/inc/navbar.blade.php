@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container">
-        <a class="navbar-brand text-poppins logo-brand" href="/">
+        <a class="navbar-brand img-logo" href="/">
             <img src="{{asset('/assets/img/logo-form.svg')}}" width="50px" alt="Colorffy logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="material-icons">menu</i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
@@ -26,11 +26,11 @@
                         Tools
                     </a>
                     <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdownGG">
-                        <a class="dropdown-item" href="/generator/gradients">2️⃣ Color Gradient</a>
-                        <a class="dropdown-item" href="/generator/mgradients">3️⃣ Color Gradient</a>
+                        <a class="dropdown-item" href="/generator/gradients"><i class="material-icons">gradient</i> 2 Color Gradient</a>
+                        <a class="dropdown-item" href="/generator/mgradients"><i class="material-icons">colorize</i> 3️ Color Gradient</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/random/color">🎲 Random Color</a>
-                        <a class="dropdown-item" href="/image/color">🖼️ Color Extraction</a>
+                        <a class="dropdown-item" href="/random/color"><i class="material-icons">casino</i> Random Color</a>
+                        <a class="dropdown-item" href="/image/color"><i class="material-icons">palette</i> Color Extraction</a>
                     </div>
                 </li>
                 @guest
@@ -48,8 +48,8 @@
                         Housekeeping
                     </a>
                     <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdownHK">
-                        <a class="dropdown-item" href="/palettes/admin/panel">⚙️ Palettes Panel</a>
-                        <a class="dropdown-item" href="/gradients/admin/panel">⚙️ Gradients Panel</a>
+                        <a class="dropdown-item" href="/palettes/admin/panel"><i class="material-icons">settings</i> Palettes Panel</a>
+                        <a class="dropdown-item" href="/gradients/admin/panel"><i class="material-icons">settings</i> Gradients Panel</a>
                     </div>
                 </li>
 
@@ -59,15 +59,15 @@
                         {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdownAc">
-                        <a class="dropdown-item" href="/home">✌️ Account</a>
+                        <a class="dropdown-item" href="/home"><i class="material-icons-outlined">account_circle</i> Account</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/saved/gradients">🔖 My Gradients</a>
-                        <a class="dropdown-item" href="/favorites/palettes">❤️ Liked Palettes</a>
-                        <a class="dropdown-item" href="/favorites/gradients">❤️ Liked Gradients</a>
+                        <a class="dropdown-item" href="/saved/gradients"><i class="material-icons-outlined">label</i> My Gradients</a>
+                        <a class="dropdown-item" href="/favorites/palettes"><i class="material-icons">favorite_border</i> Liked Palettes</a>
+                        <a class="dropdown-item" href="/favorites/gradients"><i class="material-icons">favorite_border</i> Liked Gradients</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                            👋 {{ __('Logout') }}
+                            <i class="material-icons">exit_to_app</i> {{ __('Logout') }}
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf

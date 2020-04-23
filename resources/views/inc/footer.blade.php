@@ -9,7 +9,7 @@
                             <input type="checkbox" id="checkbox" name="checkbox" >
                             <span class="slider round"></span>
                         </label>
-                        <label for="checkbox"><i class="fab fa-empire"></i> The dark side of the force</label>
+                        <label for="checkbox"><i class="fab fa-empire"></i> The dark side</label>
                     </div>
                 </div>
                 <p>
@@ -18,13 +18,13 @@
             </div>
             <div class="col-md-4 offset-md-4">
                 <h5 class="">More</h5>
-                <a href="https://medium.com/colorffy" class="text-primary text-spacing" target="_blank" rel="noopener">📖 Blog</a><br>
-                <a href="/pricing" class="text-primary text-spacing" title="Pricing">💳 Pricing</a><br>
-                <a href="/whatsnew" class="text-primary text-spacing" title="What's new?">🆕 What's new?</a><br>
+                <a href="https://medium.com/colorffy" class="text-spacing" target="_blank" rel="noopener"><i class="material-icons">book</i> Blog</a><br>
+                <a href="/pricing" class="text-spacing" title="Pricing"><i class="material-icons">credit_card</i> Pricing</a><br>
+                <a href="/whatsnew" class="text-spacing" title="What's new?"><i class="material-icons">new_releases</i> What's new?</a><br>
                 <!--<a href="https://www.paypal.me/giancarlosgza?locale.x=es_XC" class="color-darkblue text-spacing" title="Buy me a Coffee" target="_blank" rel="noopener">☕ Buy me a Coffee</a>-->
-                <a href="/team" class="text-primary text-spacing" title="Team">👨‍💻 Team</a><br>
-                <a href="mailto:colorffy@gmail.com" class="text-primary text-spacing" title="Contact Us">📧 Contact Us</a><br>
-                <a href="/privacy" class="text-primary text-spacing" title="Privacy Policy">📄 Privacy Policy</a>
+                <a href="/team" class="text-spacing" title="Team"><i class="material-icons">people</i> Team</a><br>
+                <a href="mailto:colorffy@gmail.com" class="text-spacing" title="Contact Us"><i class="material-icons">mail</i> Contact Us</a><br>
+                <a href="/privacy" class="text-spacing" title="Privacy Policy"><i class="material-icons">description</i> Privacy Policy</a>
             </div>
         </div>
         <div class="row">
@@ -33,8 +33,8 @@
 
             </div>
             <div class="col-6 col-md-6 text-right small align-self-end"><br>
-                <a href="https://twitter.com/colorffy" class="text-primary mr-3" title="Twitter" alt="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="https://www.instagram.com/colorffyweb/" class="text-primary" title="Instagram" alt="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://twitter.com/colorffy" class=" mr-3" title="Twitter" alt="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.instagram.com/colorffyweb/" class="" title="Instagram" alt="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram fa-2x"></i></a>
             </div>
         </div>
         <hr>
@@ -42,7 +42,7 @@
             <div class="col-8 col-md-6 text-left small align-self-center"><br>
                 <p>Made with ❤️ & ☕ by <a href="https://twitter.com/giancarlosgza" title="Twitter" alt="Twitter" target="_blank" rel="noopener" class="">@giancarlosgza</a> and <a href="https://twitter.com/carloselilopez" title="Twitter" alt="Twitter" target="_blank" rel="noopener" class="">@carloselilopez</a></p>
             </div>
-            <div class="col-4 col-md-6 text-right small align-self-center text-primary">©2020 Colorffy v3 🎉</div>
+            <div class="col-4 col-md-6 text-right small align-self-center text-primary">©2020 Colorffy v3 <i class="material-icons">code</i></div>
         </div>
     </div>
 </footer>

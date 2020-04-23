@@ -33,7 +33,7 @@
             </div>
             <div class="col-6 text-right">
                 <a href="/gradients/catalog" class="btn btn-link ripple ripple-dark">
-                    🔥 View all
+                    <i class="material-icons">more_horiz</i> View More
                 </a>
             </div>
         </div>

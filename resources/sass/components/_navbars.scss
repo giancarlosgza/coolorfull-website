@@ -45,8 +45,13 @@
     }
 }
 
+.navbar-light .navbar-toggler {
+    color: var(--theme-on-surface);
+    border-color: var(--theme-on-surface);
+}
+
 .dropdown-menu {
-    background-color: var(--theme-surface-1dp);
+    background-color: var(--theme-surface);
     border: none;
     box-shadow: $shadow-8dp;
     border-radius: $border-radius-8;
