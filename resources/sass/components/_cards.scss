@@ -78,8 +78,19 @@
     padding-bottom: 50px;
     border-radius: $border-radius-8;
     box-shadow: $shadow-0dp !important;
+    transition: $transition-cubic-bezier;
 
     &:hover {
         box-shadow: $shadow-0dp !important;
+        transform: scale(1.1);
+    }
+}
+
+.card-palette {
+    transition: $transition-cubic-bezier;
+
+    &:hover {
+        box-shadow: $shadow-0dp !important;
+        transform: scale(1.1);
     }
 }

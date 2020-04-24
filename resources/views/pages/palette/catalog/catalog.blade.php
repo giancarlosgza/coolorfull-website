@@ -45,11 +45,11 @@
         </div>
         @foreach($palettes as $palette)
         <div class="col-6 col-md-4 col-lg-3 mb-3">
-            <div class="card shadow-medium">
+            <div class="card">
                 <div class="card-body">
                     <h6 class="text-center text-uppercase h6-responsive">{{$palette->name}}</h6>
                     <a href="/palettes/{{$palette->id}}" title="{{$palette->name}}">
-                        <ul class="list-group">
+                        <ul class="list-group card-palette">
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_1}}"></li>
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_2}}"></li>
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_3}}"></li>

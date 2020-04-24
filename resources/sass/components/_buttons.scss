@@ -82,6 +82,23 @@
     }
 }
 
+.btn-light {
+    background-color: var(--theme-surface-1dp);
+    color: var(--theme-on-primary) !important;
+    border: none !important;
+
+    &:hover {
+        background-color: var(--theme-surface);
+        color: var(--theme-on-primary) !important;
+    }
+
+    &:focus,
+    &:active {
+        background-color: var(--theme-surface) !important;
+        color: var(--theme-on-primary) !important;
+    }
+}
+
 .btn-link {
     background-color: var(--theme-background);
     color: var(--theme-primary);
@@ -107,20 +124,21 @@
 
 .btn-outline {
     background-color: var(--theme-surface);
+    color: var(--theme-on-primary) !important;
     border: 1px solid var(--theme-background-70);
     box-shadow: $shadow-0dp;
 
     &:hover {
         background-color: var(--theme-primary-light);
-        color: var(--theme-primary-active);
+        color: var(--theme-primary-active) !important;
         box-shadow: $shadow-0dp;
         text-decoration: none;
     }
 
     &:focus,
     &:active {
-        background-color: var(--theme-primary-light);
-        color: var(--theme-primary-active);
+        background-color: var(--theme-primary-light) !important;
+        color: var(--theme-primary-active) !important;
         box-shadow: $shadow-0dp !important;
         text-decoration: none;
     }

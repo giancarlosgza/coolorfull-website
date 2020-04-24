@@ -77,6 +77,11 @@
     color: var(--theme-on-primary) !important;
 }
 
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--theme-on-primary-inverse) !important;
+    background-color: var(--theme-primary);
+}
+
 .footer {
     background-color: var(--theme-surface);
     box-shadow: $shadow-2dp;

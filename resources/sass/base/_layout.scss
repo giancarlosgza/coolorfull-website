@@ -74,3 +74,16 @@ i.material-icons-outlined {
 .box-shadow-0 {
     box-shadow: $shadow-0dp !important;
 }
+
+.section-color-blindness {
+    h6 {
+        font-size: 18px !important;
+    }
+    .card {
+        border-radius: $border-radius-25;
+
+        .card-body {
+            border-radius: $border-radius-25;
+        }
+    } 
+}
