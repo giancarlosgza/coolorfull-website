@@ -43,7 +43,7 @@
             <br><br>
             <h3>Sorry, we couldn't find any palette with that name.....</h3>
         </div>
-        @foreach($palettes as $palette)
+        @foreach($palettes as $palette) 
         <div class="col-6 col-md-4 col-lg-3 mb-3">
             <div class="card">
                 <div class="card-body">

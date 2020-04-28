@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="text-poppins text-indigo">Liked Gradients</h3><br>
+            <h4 class="font-weight-bold">Liked Gradients</h4><br>
         </div>
         @if ($user->favoriteGradients->count() < 1)
         <div class="col-sm-12">
@@ -27,13 +27,13 @@
         </div>
         @else 
         @foreach($user->favoriteGradients as $gradient)
-        <div class="col-6 col-md-3">
-            <div class="card shadow-medium">
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <div class="card">
                 <div class="card-body">
                     <h6 class="bold-500 text-center uppercase h6-responsive">{{$gradient->name}}</h6>
                     <a href="/gradients/{{$gradient->id}}" title="{{$gradient->name}}">
-                        <div class="card text-center">        
-                            <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" 
+                        <div class="card text-center box-shadow-0">        
+                            <div class="card-body card-gradient" title="{{$gradient->name}}" 
                                 @if($gradient->color_3)
                                 style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}}, {{$gradient->color_3}});">
                                 @else
@@ -41,12 +41,12 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mt-3">
                             <div class="col-6"> 
-                                <div id="fav-heart-gradient-{{$gradient->id}}" class="text-left align-self-end fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})"><i class="fas fa-heart"></i></div>
+                                <div id="fav-heart-gradient-{{$gradient->id}}" class="text-left align-self-end fav-heart @if($user->favoriteGradients->contains($gradient)) active-heart @endif" onclick="event.preventDefault(); newFavoriteGradient({{$gradient->id}})"><i class="material-icons">favorite</i></div>
                             </div>
                             <div class="col-6">
-                                <div id="fav-count-gradient-{{$gradient->id}}" class="text-right align-self-end bold-500 color-indigo">
+                                <div id="fav-count-gradient-{{$gradient->id}}" class="text-right align-self-end font-weight-bold">
                                     @if($gradient->usersWhoFav->count() == 1) 
                                     {{ $gradient->usersWhoFav->count() }} like
                                     @else

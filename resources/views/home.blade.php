@@ -6,54 +6,51 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-poppins color-white-black">Hi {{ Auth::user()->name }}! 👋</h3>
-                <h5 class="text-poppins color-white-black">{{ Auth::user()->email }}</h5>
+                <h4 class="font-weight-bold">Hi {{ Auth::user()->name }}! 👋</h4>
+                <h5 class="">{{ Auth::user()->email }}</h5>
             </div>
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container mt-5">
     <div class="row">
         <div class="col-md-12">
-            <h3 class="text-poppins">Shortcuts</h3>
+            <h4 class="font-weight-bold">Shortcuts</h4>
         </div>
     </div>
     <div class="row text-center mb-4">
-        <div class="col-md-4">
+        <div class="col-md-4 mb-3">
             <a href="/saved/gradients">
-                <div class="card shadow-medium">
+                <div class="card">
                     <div class="card-body">
                         <img src="/assets/img/illustrations/designer_3.svg" width="54%" alt="">
-                        <h3 class="bold-500 color-indigo text-poppins">
-                            <br>
+                        <h5 class="font-weight-bold mt-3">
                             My gradients
-                        </h3>
+                        </h5>
                     </div>
                 </div>
             </a>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-3">
             <a href="/favorites/palettes">
-                <div class="card shadow-medium">
+                <div class="card">
                     <div class="card-body">
                         <img src="/assets/img/illustrations/creative_process_2.svg" width="61%" alt="">
-                        <h3 class="bold-500 color-indigo text-poppins">
-                            <br>
+                        <h5 class="font-weight-bold mt-3">
                             Liked palettes
-                        </h3>
+                        </h5>
                     </div>
                 </div>
             </a>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-3">
             <a href="/favorites/gradients">
-                <div class="card shadow-medium">
+                <div class="card">
                     <div class="card-body">
                         <img src="/assets/img/illustrations/like.svg" width="50%" alt="">
-                        <h3 class="bold-500 color-indigo text-poppins">
-                            <br>
+                        <h5 class="font-weight-bold mt-3">
                             Liked gradients
-                        </h3>
+                        </h5>
                     </div>
                 </div>
             </a>
@@ -61,10 +58,10 @@
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-12">
-            <h3 class="text-poppins">My Information</h3>
-            <div class="card card-form">
+            <h4 class="font-weight-bold">My Information</h4>
+            <div class="card card-outline">
                 <div class="card-body">
-                    <h6 class="text-poppins"><i class="fas fa-user"></i> Profile Information</h6>
+                    <h6 class=""><i class="material-icons">person</i> Profile Information</h6>
                     <div class="table-responsive">
                         <table class="table table-borderless table-hover">
                             <thead>

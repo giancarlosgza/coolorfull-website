@@ -45,7 +45,7 @@
             <img src="{{asset('assets/img/illustrations/search_engine.svg')}}" width="200px" alt="">
             <br><br>
             <h3>Sorry, we couldn't find any gradient with that name.....</h3>
-        </div>
+        </div>  
         @foreach($gradients as $gradient)
         <div class="col-6 col-md-4 col-lg-3 mb-3">
             <div class="card">
