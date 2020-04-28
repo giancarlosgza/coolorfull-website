@@ -12,39 +12,21 @@
         <div class="card-body">
             <div class="form-row justify-content-center mb-2">
                 <div class="col-md-12 text-center mb-2">
-                    <h3 class="font-weight-bold">Make some crazy colors!</h3>
+                    <h4 class="font-weight-bold">Make some crazy colors!</h4>
                 </div>
                 <div class="form-group col-6 col-md-4">
                     <label for="color_1" class="text-poppins">Color 1</label><br>
-                    <input type="text" class="form-mat-g form-control" id="color_1" value="#000000">        
+                    <input type="text" class="form-control form-control-lg" id="color_1" value="#000000">        
                 </div>
                 <div class="form-group col-6 col-md-4">
                     <label for="color_2" class="text-poppins">Color 2</label><br>
-                    <input type="text" class="form-mat-g form-control" id="color_2" value="#000000">
+                    <input type="text" class="form-control form-control-lg" id="color_2" value="#000000">
                 </div>
                 <div class="form-group col-12 col-md-4">
                     <label for="color_3" class="text-poppins">Color 3</label><br>
-                    <input type="text" class="form-mat-g form-control" id="color_3" value="#000000">
+                    <input type="text" class="form-control form-control-lg" id="color_3" value="#000000">
                 </div>
             </div>
-            @if($validSub)
-                <div class="row">
-                    <div class="col text-right">
-                        <button id="save-gradient-btn" class="btn btn-primary">
-                            Save gradient (PRO)
-                        </button>
-                    </div>
-                </div>
-            @else
-                <div class="row">
-                    <div class="col text-right">
-                        <button id="save-gradient-btn" class="btn btn-primary" disabled>
-                            <i class="material-icons">lock</i>
-                            Save gradient (PRO)
-                        </button>
-                    </div>
-                </div>
-            @endif
         </div>
     </div>
     <div class="row">
@@ -57,6 +39,16 @@
                 <i class="material-icons">image</i>
                 Get IMG
             </a>
+            @if($validSub)
+                <button id="save-gradient-btn" class="btn btn-primary">
+                    Save gradient (PRO)
+                </button>
+            @else
+                <button id="save-gradient-btn" class="btn btn-primary" disabled>
+                    <i class="material-icons">lock</i>
+                    Save gradient (PRO)
+                </button>
+            @endif
             <hr>    
         </div>
     </div>

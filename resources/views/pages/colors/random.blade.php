@@ -9,18 +9,18 @@
     </div>
     <div class="row">
         <div class="col-12 col-md-8">
-            <div class="jumbotron mb-2" id="color-random">
+            <div class="jumbotron-fluid mb-2" id="color-random">
             </div>
             <h6 class="mt-0"><i class="material-icons-outlined">looks_one</i> Color</h6>
         </div>
         <div class="col-12 col-md-4">
-            <div class="jumbotron mb-2" id="color-complementary">
+            <div class="jumbotron-fluid mb-2" id="color-complementary">
             </div>
             <h6 class="mt-0"><i class="material-icons-outlined">looks_two</i> Complementary</h6>
         </div>
         <div class="col-md-12 mb-3">
             <hr>
-            <button class="btn btn-primary shadow-medium" onClick="window.location.reload();">Reload page</button>
+            <button class="btn btn-primary ripple   " onClick="window.location.reload();"><i class="material-icons">refresh</i> Reload page</button>
         </div>
         <div class="col-sm-12">
             <div class="card card-outline">
@@ -35,7 +35,7 @@
                                 <th scope="col" class="text-poppins">💡 HSL</th>
                                 <th scope="col" class="text-poppins">🖨️ CMYK</th>
                                 </tr>
-                            </thead>
+                            </thead> 
                             <tbody>
                                 <tr>
                                     <th scope="row"><i class="fas fa-circle" id="color1"></i></th>

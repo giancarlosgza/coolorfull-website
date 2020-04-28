@@ -47,13 +47,89 @@
             <div class="card card-outline">
                 <div class="card-body">
                     <h4 class="text-center text-poppins text-uppercase">{{$palette->name}}</h4>
-                    <ul id="htmltoimage" class="list-group">
+                    <!-- PALETTE BODY -->
+                    {{-- <ul id="htmltoimage" class="list-group">
                         <li class="list-group-item palette-show" style="background-color:{{$palette->color_1}}"> </li>
                         <li class="list-group-item palette-show" style="background-color:{{$palette->color_2}}"></li>
                         <li class="list-group-item palette-show" style="background-color:{{$palette->color_3}}"></li>
                         <li class="list-group-item palette-show" style="background-color:{{$palette->color_4}}"></li>
                         <li class="list-group-item palette-show" style="background-color:{{$palette->color_5}}"></li>
-                    </ul>
+                    </ul> --}}
+                    <div class="accordion" id="accordionPalette">
+                        <div class="card card-outline">
+                          <div class="card-header" id="headingOne" style="background-color:{{$palette->color_1}}">
+                            <h2 class="mb-0">
+                              <button class="btn btn-light ripple ripple-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                {{$palette->color_1}}
+                              </button>
+                            </h2>
+                          </div>
+                      
+                          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionPalette">
+                            <div class="card-body" style="background-color:{{$palette->color_1}}">
+                                <h3>Text - AAA</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card card-outline">
+                          <div class="card-header" id="headingTwo" style="background-color:{{$palette->color_2}}">
+                            <h2 class="mb-0">
+                              <button class="btn btn-light ripple ripple-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                {{$palette->color_2}}
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionPalette">
+                            <div class="card-body" style="background-color:{{$palette->color_2}}">
+                                <h3>Text - AAA</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card card-outline">
+                          <div class="card-header" id="headingThree" style="background-color:{{$palette->color_3}}">
+                            <h2 class="mb-0">
+                              <button class="btn btn-light ripple ripple-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                {{$palette->color_3}}
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionPalette">
+                            <div class="card-body" style="background-color:{{$palette->color_3}}">
+                                <h3>Text - AAA</h3>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card card-outline">
+                            <div class="card-header" id="headingFour" style="background-color:{{$palette->color_4}}">
+                              <h2 class="mb-0">
+                                <button class="btn btn-light ripple ripple-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                  {{$palette->color_4}}
+                                </button>
+                              </h2>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionPalette">
+                              <div class="card-body" style="background-color:{{$palette->color_4}}">
+                                <h3>Text - AAA</h3>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="card card-outline">
+                            <div class="card-header" id="headingFive" style="background-color:{{$palette->color_5}}">
+                              <h2 class="mb-0">
+                                <button class="btn btn-light ripple ripple-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                                  {{$palette->color_5}}
+                                </button>
+                              </h2>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionPalette">
+                              <div class="card-body" style="background-color:{{$palette->color_5}}">
+                                <h3>Text - AAA</h3>
+                              </div>
+                            </div>
+                        </div>
+                          
+                      </div>
+                    <!-- END PALETTE BODY -->
                 </div>
             </div>
         </div>

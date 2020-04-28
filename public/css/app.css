@@ -803,8 +803,12 @@ table td {
 
 .jumbotron-fluid {
   height: 50vh;
-  border-radius: 8px;
+  border-radius: 25px;
   background-color: var(--theme-surface);
+}
+
+.form-control {
+  border-radius: 8px;
 }
 
 .form-control:focus {
