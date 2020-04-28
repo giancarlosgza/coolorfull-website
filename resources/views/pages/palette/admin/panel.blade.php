@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-12">
-            <a href="/palettes/admin/create" class="btn btn-primary shadow-medium">
+            <a href="/palettes/admin/create" class="btn btn-primary ripple ripple-dark">
                 CREATE PALETTE
             </a>
         </div>
@@ -12,7 +12,7 @@
     <div class="row">
         @if ($palettes->count() < 1)
         <div class="col-sm-12">
-            <div class="card card-form">
+            <div class="card card-outline">
                 <div class="card-body">
                     <div class="row text-center">
                         <div class="col-12 col-sm-6">
@@ -31,12 +31,12 @@
         </div>
         @else 
         @foreach($palettes as $palette)
-        <div class="col-12 col-md-4 col-lg-3">
-            <div class="card shadow-medium">
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <div class="card card-outline">
                 <div class="card-body">
-                    <h6 class="bold-500 text-center uppercase h6-responsive">{{$palette->name}}</h6>
+                    <h6 class=" text-center text-uppercase h6-responsive">{{$palette->name}}</h6>
                     <a href="/palettes/{{$palette->id}}" title="{{$palette->name}}">
-                        <ul class="list-group">
+                        <ul class="list-group card-palette">
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_1}}"></li>
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_2}}"></li>
                             <li class="list-group-item list-palette" style="background-color:{{$palette->color_3}}"></li>
@@ -45,13 +45,13 @@
                         </ul>
                     </a>
                     <div class="text-left">
-                            <a href="/palettes/{{$palette->id}}" class="btn btn-primary shadow-medium">View</a>
-                            <a href="/palettes/admin/edit/{{$palette->id}}" class="btn btn-primary-light shadow-medium">Edit</a>
+                            <a href="/palettes/{{$palette->id}}" class="btn btn-primary">View</a>
+                            <a href="/palettes/admin/edit/{{$palette->id}}" class="btn btn-light">Edit</a>
                             <hr>
                             <form method="POST" action="/palettes/delete">
                                 @csrf
                                 <input id="invisible_id" name="palette_id" type="hidden" value="{{$palette->id}}">
-                                <button value="POST" type="submit" class='btn btn-danger shadow-medium'>Delete</button>
+                                <button value="POST" type="submit" class='btn btn-danger'>Delete</button>
                             </form>
                         </div>
                 </div>

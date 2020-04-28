@@ -5,39 +5,39 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card card-form">
+        <div class="col-md-6">
+            <div class="card card-outline">
                 <div class="card-body"> 
-                    <h3 class="text-poppins">Create new Gradient</h3><br>
+                    <h4 class="font-weight-bold">Create color gradient</h4><br>
                     <!--FORM-->
                     <form method="POST" action="/gradients/new" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group">
                             <label for="name" class="text-poppins">Name:</label>
-                            <input type="name" class="form-mat-g form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" id="name" name="nombre" placeholder="Fire Red, Dusk, Sunset" value="{{ old('nombre') }}">
+                            <input type="name" class="form-control{{ $errors->has('nombre') ? ' is-invalid' : '' }}" id="name" name="nombre" placeholder="Fire Red, Dusk, Sunset" value="{{ old('nombre') }}" autocomplete="off">
                         </div>
 
                         <div class="form-group">
                             <label for="color_1" class="text-poppins">Color 1:</label>
-                            <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" id="color_1" name="color_1" placeholder="#11998e" value="{{ old('color_1') }}">
+                            <input type="text" class="hexcolor form-control{{ $errors->has('color_1') ? ' is-invalid' : '' }}" id="color_1" name="color_1" placeholder="#11998e" value="{{ old('color_1') }}" autocomplete="off">
                         </div>
 
                         <div class="form-group">
                             <label for="color_2" class="text-poppins">Color 2:</label>
-                            <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_2') ? ' is-invalid' : '' }}" id="color_2" name="color_2" placeholder="#38ef7d" value="{{ old('color_2') }}">
+                            <input type="text" class="hexcolor form-control{{ $errors->has('color_2') ? ' is-invalid' : '' }}" id="color_2" name="color_2" placeholder="#38ef7d" value="{{ old('color_2') }}" autocomplete="off">
                         </div>
 
                         <div class="form-group">
                             <label for="color_3" class="text-poppins">Color 3: (OPTIONAL)</label>
-                            <input type="text" class="form-mat-g hexcolor form-control{{ $errors->has('color_3') ? ' is-invalid' : '' }}" id="color_3" name="color_3" placeholder="#11dbed" value="{{ old('color_3') }}">
+                            <input type="text" class="hexcolor form-control{{ $errors->has('color_3') ? ' is-invalid' : '' }}" id="color_3" name="color_3" placeholder="#11dbed" value="{{ old('color_3') }}" autocomplete="off">
                         </div>
 
                         <div class="row">
                             <div class="col-md-6 col-6">     
                                 <div class="form-group">
                                     <label for="color_filter" class="text-poppins">Color Filter:</label>
-                                    <select class="form-mat-g form-select form-control{{ $errors->has('color_filter') ? ' is-invalid' : '' }}" id="color_filter" name="color_filter" placeholder="Red, Blue, Green" value="{{ old('color_filter') }}">
+                                    <select class="form-control{{ $errors->has('color_filter') ? ' is-invalid' : '' }}" id="color_filter" name="color_filter" placeholder="Red, Blue, Green" value="{{ old('color_filter') }}">
                                         <option>Red</option>
                                         <option>Green</option>
                                         <option>Blue</option>
@@ -56,7 +56,7 @@
                             <div class="col-md-6 col-6"> 
                                 <div class="form-group">
                                     <label for="color_filter_2" class="text-poppins">Color Filter 2:</label>
-                                    <select class="form-mat-g form-select form-control{{ $errors->has('color_filter_2') ? ' is-invalid' : '' }}" id="color_filter_2" name="color_filter_2" placeholder="Red, Blue, Green" value="{{ old('color_filter_2') }}">
+                                    <select class="form-control{{ $errors->has('color_filter_2') ? ' is-invalid' : '' }}" id="color_filter_2" name="color_filter_2" placeholder="Red, Blue, Green" value="{{ old('color_filter_2') }}">
                                         <option>Red</option>
                                         <option>Green</option>
                                         <option>Blue</option>

@@ -82,6 +82,23 @@
     }
 }
 
+.btn-danger {
+    background-color: var(--theme-danger);
+    color: var(--theme-on-primary-inverse);
+    border: none !important;
+
+    &:hover {
+        background-color: var(--theme-danger);
+        color: var(--theme-on-primary-inverse) !important;
+    }
+
+    &:focus,
+    &:active {
+        background-color: var(--theme-danger) !important;
+        color: var(--theme-on-primary-inverse) !important;
+    }
+}
+
 .btn-light {
     background-color: var(--theme-surface-1dp);
     color: var(--theme-on-primary) !important;

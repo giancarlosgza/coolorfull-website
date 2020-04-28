@@ -579,6 +579,23 @@ table td {
   color: #000 !important;
 }
 
+.btn-danger {
+  background-color: var(--theme-danger);
+  color: var(--theme-on-primary-inverse);
+  border: none !important;
+}
+
+.btn-danger:hover {
+  background-color: var(--theme-danger);
+  color: var(--theme-on-primary-inverse) !important;
+}
+
+.btn-danger:focus,
+.btn-danger:active {
+  background-color: var(--theme-danger) !important;
+  color: var(--theme-on-primary-inverse) !important;
+}
+
 .btn-light {
   background-color: var(--theme-surface-1dp);
   color: var(--theme-on-primary) !important;

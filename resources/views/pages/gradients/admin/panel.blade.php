@@ -12,7 +12,7 @@
     <div class="row">
         @if ($gradients->count() < 1)
         <div class="col-sm-12">
-            <div class="card card-form">
+            <div class="card card-outline">
                 <div class="card-body">
                     <div class="row text-center">
                         <div class="col-12 col-sm-6">
@@ -31,49 +31,30 @@
         </div>
         @else    
         @foreach($gradients as $gradient)
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card shadow-medium">
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <div class="card card-outline">
                 <div class="card-body">
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-gradient">
-                                <i class="fas fa-circle" style="color: {{$gradient->color_1}};"></i> {{$gradient->color_1}}
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-gradient">
-                                <i class="fas fa-circle" style="color: {{$gradient->color_2}};"></i> {{$gradient->color_2}}
-                            </a>
-                        </li>
-                        @if($gradient->color_3)
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-gradient">
-                                <i class="fas fa-circle" style="color: {{$gradient->color_3}};"></i> {{$gradient->color_3}}
-                            </a>
-                        </li>
-                        @else
-                        @endif
-                    </ul><br>
-                    <h6 class="bold-500 text-center uppercase">{{$gradient->name}}</h6>
+                    <h6 class="text-center text-uppercase">{{$gradient->name}}</h6>
                     <a href="/gradients/{{$gradient->id}}" title="{{$gradient->name}}">
-                        <div class="card text-center">
-                            <div class="card-body card-gradient shadow-medium" title="{{$gradient->name}}" 
+                        <div class="card card-outline text-center">
+                            <div class="card-body card-gradient" title="{{$gradient->name}}" 
                                 @if($gradient->color_3)
                                 style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}}, {{$gradient->color_3}});">
                                 @else
                                 style="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}});">
                                 @endif   
                             </div>
-                            <div class="text-left"><br>
-                                <a href="/gradients/{{$gradient->id}}" class="btn btn-primary shadow-medium">View</a>
-                                <a href="/gradients/admin/edit/{{$gradient->id}}" class="btn btn-primary-light shadow-medium">Edit</a>
-                                <hr>
-                                <form method="POST" action="/gradients/delete">
-                                    @csrf
-                                    <input id="invisible_id" name="gradient_id" type="hidden" value="{{$gradient->id}}">
-                                    <button value="POST" type="submit" class='btn btn-danger shadow-medium'>Delete</button>
-                                </form>
-                            </div>
+                            
+                        </div>
+                        <div class="text-left"><br>
+                            <a href="/gradients/{{$gradient->id}}" class="btn btn-primary">View</a>
+                            <a href="/gradients/admin/edit/{{$gradient->id}}" class="btn btn-primary-light">Edit</a>
+                            <hr>
+                            <form method="POST" action="/gradients/delete">
+                                @csrf
+                                <input id="invisible_id" name="gradient_id" type="hidden" value="{{$gradient->id}}">
+                                <button value="POST" type="submit" class='btn btn-danger'>Delete</button>
+                            </form>
                         </div>
                     </a>
                 </div>
