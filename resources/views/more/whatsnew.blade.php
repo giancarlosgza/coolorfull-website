@@ -15,7 +15,7 @@
             <div class="card card-outline">
                 <div class="card-body">
                     <h4 class="">
-                        <img src="{{asset('/assets/img/logo-form.svg')}}" width="50px" alt="Colorffy logo">
+                        <img src="{{asset('/assets/img/logo-form.svg')}}" width="50px" alt="Colorffy logo" class="img-logo">
                         Colorffy
                     </h4>
                     <br>
