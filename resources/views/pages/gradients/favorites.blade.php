@@ -30,7 +30,7 @@
         <div class="col-6 col-md-4 col-lg-3 mb-3">
             <div class="card">
                 <div class="card-body">
-                    <h6 class="bold-500 text-center uppercase h6-responsive">{{$gradient->name}}</h6>
+                    <h6 class="bold-500 text-center uppercase h6-responsive text-uppercase">{{$gradient->name}}</h6>
                     <a href="/gradients/{{$gradient->id}}" title="{{$gradient->name}}">
                         <div class="card text-center box-shadow-0">        
                             <div class="card-body card-gradient" title="{{$gradient->name}}" 

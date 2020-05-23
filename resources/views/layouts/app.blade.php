@@ -47,7 +47,7 @@
     <!--Import Google Icon Font-->
     {{-- <link href="https://fonts.googleapis.com/css?family=Poppins:600|Roboto:400,500&display=swap" rel="stylesheet"> --}}
     <!--Styles-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"
         crossorigin="anonymous">
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/themes.min.css') }}"> --}}
@@ -141,7 +141,7 @@
     <script type="text/javascript">
         "serviceWorker"in navigator&&window.addEventListener("load",function(){navigator.serviceWorker.register("/service-worker.js").then(function(a){console.log("ServiceWorker registration successful with scope: ",a.scope)},function(a){console.log("ServiceWorker registration failed: ",a)})});
     </script> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $.ajaxSetup({
             headers: {
@@ -151,7 +151,7 @@
         window.onscroll=function(){scrollFunction()};function scrollFunction(){document.getElementById("backTop").style.display=20<document.body.scrollTop||20<document.documentElement.scrollTop?"block":"none"}function topFunction(){document.body.scrollTop=0,document.documentElement.scrollTop=0}
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script async src="{{ asset('assets/js/dark-mode.js') }}"></script>
     <script async src="{{ asset('assets/js/animated.headlines.js') }}"></script>
     @yield('scripts')

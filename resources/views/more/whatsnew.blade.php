@@ -20,11 +20,11 @@
                     </h4>
                     <br>
 
-                    <h6><i class="material-icons text-success">check</i> Version 3</h6>
+                    <h6><i class="material-icons text-success">check</i> Version 3.0</h6>
                     <ul>
                         <li>UI: We redesign the UI to bring a new and more fresh look</li>
                     </ul>
-                    <p class="text-muted"><i class="material-icons text-size-14">calendar_today</i> April 2020</p>
+                    <p class="text-muted"><i class="material-icons text-size-14">calendar_today</i> May 2020</p>
                     
                     <hr>
 
