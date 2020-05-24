@@ -23,6 +23,7 @@
                     <h6><i class="material-icons text-success">check</i> Version 3.0</h6>
                     <ul>
                         <li>UI: We redesign the UI to bring a new and more fresh look</li>
+                        <li>Gradients: Android colors</li>
                     </ul>
                     <p class="text-muted"><i class="material-icons text-size-14">calendar_today</i> May 2020</p>
                     

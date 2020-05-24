@@ -54,9 +54,13 @@
     <div class="row mb-4">
         <div class="col-sm-12 col-md-12">
             <!-- Button trigger modal -->
-            <a class="btn btn-light ripple ripple-dark" data-toggle="modal" data-target="#exampleModal">
+            <a class="btn btn-light ripple ripple-dark" data-toggle="modal" data-target="#cssModal">
                 <i class="material-icons">code</i>
-                Get CSS
+                CSS
+            </a>
+            <a class="btn btn-light ripple ripple-dark" data-toggle="modal" data-target="#androidModal">
+                <i class="material-icons">adb</i>
+                Android colors
             </a>
             <a class="btn btn-light ripple ripple-dark" onclick="downloadimage()">
                 <i class="material-icons">image</i>
@@ -145,9 +149,64 @@
         </div>
     </div>
 
-    
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> <div class="modal-dialog modal-dialog-centered" role="document"> <div class="modal-content"> <div class="modal-header"> <h4 class="modal-title text-poppins text-uppercase font-weight-bold" id="exampleModalLabel">CSS</h4> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div> <div class="modal-body"> <div class="table-responsive"> <table class="table table-hover table-borderless"> <thead> <tr class="h6-responsive"> <th scope="col">Orientation</th> <th scope="col">CSS</th> <th>Action</th> </tr> </thead> <tbody> <tr class="h6-responsive"> <th scope="row" class="text-center">➡️</th> <td><code>background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);</code></td> <td><button type="button" class="btn btn-primary shadow-medium " data-dismiss="modal" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);">Copy</button></td> </tr> <tr class="h6-responsive"> <th scope="row" class="text-center">⬅️</th> <td><code>background: linear-gradient(to left, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);</code></td> <td><button type="button" class="btn btn-primary shadow-medium " data-dismiss="modal" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to left, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);">Copy</button></td> </tr> <tr class="h6-responsive"> <th scope="row" class="text-center">⬇️</th> <td><code>background: linear-gradient(to bottom, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);</code></td> <td><button type="button" class="btn btn-primary shadow-medium " data-dismiss="modal" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to bottom, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);">Copy</button></td> </tr> <tr class="h6-responsive"> <th scope="row" class="text-center">⬆️</th> <td><code>background: linear-gradient(to top, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);</code></td> <td><button type="button" class="btn btn-primary shadow-medium " data-dismiss="modal" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to top, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);">Copy</button></td> </tr> </tbody> </table> </div> </div> <div class="modal-footer"> <button type="button" class="btn btn-secondary shadow-medium " data-dismiss="modal">Close</button> </div> </div> </div></div>
+    <!-- CSS Modal -->
+    <div class="modal fade" id="cssModal" tabindex="-1" role="dialog" aria-labelledby="cssModalLabel" aria-hidden="true"> <div class="modal-dialog modal-dialog-centered" role="document"> <div class="modal-content"> <div class="modal-header"> <h4 class="modal-title text-poppins text-uppercase font-weight-bold" id="cssModalLabel">CSS</h4> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div> <div class="modal-body"> <div class="table-responsive"> <table class="table table-hover table-borderless"> <thead> <tr class="h6-responsive"> <th scope="col">Orientation</th> <th scope="col">CSS</th> <th>Action</th> </tr> </thead> <tbody> <tr class="h6-responsive"> <th scope="row" class="text-center">➡️</th> <td><code>background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);</code></td> <td><button type="button" class="btn btn-primary shadow-medium " data-dismiss="modal" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to right, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);">Copy</button></td> </tr> <tr class="h6-responsive"> <th scope="row" class="text-center">⬅️</th> <td><code>background: linear-gradient(to left, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);</code></td> <td><button type="button" class="btn btn-primary shadow-medium " data-dismiss="modal" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to left, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);">Copy</button></td> </tr> <tr class="h6-responsive"> <th scope="row" class="text-center">⬇️</th> <td><code>background: linear-gradient(to bottom, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);</code></td> <td><button type="button" class="btn btn-primary shadow-medium " data-dismiss="modal" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to bottom, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);">Copy</button></td> </tr> <tr class="h6-responsive"> <th scope="row" class="text-center">⬆️</th> <td><code>background: linear-gradient(to top, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);</code></td> <td><button type="button" class="btn btn-primary shadow-medium " data-dismiss="modal" onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy" data-clipboard-text="background: linear-gradient(to top, {{$gradient->color_1}}, {{$gradient->color_2}}@if($gradient->color_3), {{$gradient->color_3}}@endif);">Copy</button></td> </tr> </tbody> </table> </div> </div> <div class="modal-footer"> <button type="button" class="btn btn-secondary shadow-medium " data-dismiss="modal">Close</button> </div> </div> </div></div>
+    <!-- Android Modal -->
+    <div class="modal fade" id="androidModal" tabindex="-1" role="dialog" aria-labelledby="androidModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h4 class="modal-title font-weight-bold" id="androidModalLabel">Android Colors</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-borderless">
+                        <thead>
+                            <tr>
+                                <th>Color</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row" class="text-lowercase user-select-all"><code>&#60;color name="{{$gradient->name}}_1"&#62;{{$gradient->color_1}}&#60;/color&#62;</code></td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                    onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy"
+                                    data-clipboard-text="&#60;color name=&#34;{{$gradient->name}}_1&#34;&#62;{{$gradient->color_1}}&#60;/color&#62;">Copy</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row" class="text-lowercase user-select-all"><code>&#60;color name="{{$gradient->name}}_2"&#62;{{$gradient->color_2}}&#60;/color&#62;</code></td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                    onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy"
+                                    data-clipboard-text="&#60;color name=&#34;{{$gradient->name}}_2&#34;&#62;{{$gradient->color_2}}&#60;/color&#62;">Copy</button>
+                                </td>
+                            </tr>
+                            @if($gradient->color_3)
+                            <tr>
+                                <td scope="row" class="text-lowercase user-select-all"><code>&#60;color name="{{$gradient->name}}_3"&#62;{{$gradient->color_3}}&#60;/color&#62;</code></td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                    onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy"
+                                    data-clipboard-text="&#60;color name=&#34;{{$gradient->name}}_3&#34;&#62;{{$gradient->color_3}}&#60;/color&#62;">Copy</button>
+                                </td>
+                            </tr>
+                            @endif
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
 </div>
 @endsection
 @section('scripts')
