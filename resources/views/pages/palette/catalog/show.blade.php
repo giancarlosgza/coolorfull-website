@@ -55,80 +55,81 @@
                         <li class="list-group-item palette-show" style="background-color:{{$palette->color_4}}"></li>
                         <li class="list-group-item palette-show" style="background-color:{{$palette->color_5}}"></li>
                     </ul> --}}
-                    <div class="accordion" id="accordionPalette">
-                        <div class="card card-outline">
-                          <div class="card-header" id="headingOne" style="background-color:{{$palette->color_1}}">
-                            <h2 class="mb-0">
-                              <button class="btn btn-light ripple ripple-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                {{$palette->color_1}}
-                              </button>
-                            </h2>
-                          </div>
-                      
-                          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionPalette">
-                            <div class="card-body" style="background-color:{{$palette->color_1}}">
-                                <h3>Text - AAA</h3>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card card-outline">
-                          <div class="card-header" id="headingTwo" style="background-color:{{$palette->color_2}}">
-                            <h2 class="mb-0">
-                              <button class="btn btn-light ripple ripple-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                {{$palette->color_2}}
-                              </button>
-                            </h2>
-                          </div>
-                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionPalette">
-                            <div class="card-body" style="background-color:{{$palette->color_2}}">
-                                <h3>Text - AAA</h3>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card card-outline">
-                          <div class="card-header" id="headingThree" style="background-color:{{$palette->color_3}}">
-                            <h2 class="mb-0">
-                              <button class="btn btn-light ripple ripple-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                {{$palette->color_3}}
-                              </button>
-                            </h2>
-                          </div>
-                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionPalette">
-                            <div class="card-body" style="background-color:{{$palette->color_3}}">
-                                <h3>Text - AAA</h3>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card card-outline">
-                            <div class="card-header" id="headingFour" style="background-color:{{$palette->color_4}}">
-                              <h2 class="mb-0">
-                                <button class="btn btn-light ripple ripple-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                  {{$palette->color_4}}
+                    <div id="htmltoimage">
+                        <div class="accordion" id="accordionPalette">
+                            <div class="card card-outline">
+                            <div class="card-header" id="headingOne" style="background-color:{{$palette->color_1}}">
+                                <h2 class="mb-0">
+                                <button class="btn btn-light ripple ripple-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    {{$palette->color_1}}
                                 </button>
-                              </h2>
+                                </h2>
                             </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionPalette">
-                              <div class="card-body" style="background-color:{{$palette->color_4}}">
-                                <h3>Text - AAA</h3>
-                              </div>
+                        
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionPalette">
+                                <div class="card-body" style="background-color:{{$palette->color_1}}">
+                                    <h3>Text - AAA</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card card-outline">
-                            <div class="card-header" id="headingFive" style="background-color:{{$palette->color_5}}">
-                              <h2 class="mb-0">
-                                <button class="btn btn-light ripple ripple-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-                                  {{$palette->color_5}}
+                            </div>
+                            <div class="card card-outline">
+                            <div class="card-header" id="headingTwo" style="background-color:{{$palette->color_2}}">
+                                <h2 class="mb-0">
+                                <button class="btn btn-light ripple ripple-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    {{$palette->color_2}}
                                 </button>
-                              </h2>
+                                </h2>
                             </div>
-                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionPalette">
-                              <div class="card-body" style="background-color:{{$palette->color_5}}">
-                                <h3>Text - AAA</h3>
-                              </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionPalette">
+                                <div class="card-body" style="background-color:{{$palette->color_2}}">
+                                    <h3>Text - AAA</h3>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="card card-outline">
+                            <div class="card-header" id="headingThree" style="background-color:{{$palette->color_3}}">
+                                <h2 class="mb-0">
+                                <button class="btn btn-light ripple ripple-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    {{$palette->color_3}}
+                                </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionPalette">
+                                <div class="card-body" style="background-color:{{$palette->color_3}}">
+                                    <h3>Text - AAA</h3>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="card card-outline">
+                                <div class="card-header" id="headingFour" style="background-color:{{$palette->color_4}}">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-light ripple ripple-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                    {{$palette->color_4}}
+                                    </button>
+                                </h2>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionPalette">
+                                <div class="card-body" style="background-color:{{$palette->color_4}}">
+                                    <h3>Text - AAA</h3>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="card card-outline">
+                                <div class="card-header" id="headingFive" style="background-color:{{$palette->color_5}}">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-light ripple ripple-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                                    {{$palette->color_5}}
+                                    </button>
+                                </h2>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionPalette">
+                                <div class="card-body" style="background-color:{{$palette->color_5}}">
+                                    <h3>Text - AAA</h3>
+                                </div>
+                                </div>
                             </div>
                         </div>
-                          
-                      </div>
+                    </div>
                     <!-- END PALETTE BODY -->
                 </div>
             </div>
@@ -140,6 +141,17 @@
                 <i class="material-icons">image</i>
                 Get IMG
             </a>
+            @guest
+            <button class="btn btn-light ripple ripple-dark" disabled>
+                <i class="material-icons">adb</i>
+                Android colors (PRO)
+            </button>
+            @else
+            <a class="btn btn-light ripple ripple-dark" data-toggle="modal" data-target="#androidModal">
+                <i class="material-icons">adb</i>
+                Android colors
+            </a>
+            @endguest 
         </div>
     </div>
     <hr><!--COLORS HEX RGB TABLE-->
@@ -262,6 +274,77 @@
             </div>
         </div>
     <hr>
+    <!-- Android Modal -->
+    <div class="modal fade" id="androidModal" tabindex="-1" role="dialog" aria-labelledby="androidModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h4 class="modal-title font-weight-bold" id="androidModalLabel">Android Colors</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-borderless">
+                        <thead>
+                            <tr>
+                                <th>Color</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row" class="text-lowercase user-select-all"><code>&#60;color name="{{$palette->name}}_1"&#62;{{$palette->color_1}}&#60;/color&#62;</code></td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                    onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy"
+                                    data-clipboard-text="&#60;color name=&#34;{{$palette->name}}_1&#34;&#62;{{$palette->color_1}}&#60;/color&#62;">Copy</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row" class="text-lowercase user-select-all"><code>&#60;color name="{{$palette->name}}_2"&#62;{{$palette->color_2}}&#60;/color&#62;</code></td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                    onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy"
+                                    data-clipboard-text="&#60;color name=&#34;{{$palette->name}}_2&#34;&#62;{{$palette->color_2}}&#60;/color&#62;">Copy</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row" class="text-lowercase user-select-all"><code>&#60;color name="{{$palette->name}}_3"&#62;{{$palette->color_3}}&#60;/color&#62;</code></td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                    onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy"
+                                    data-clipboard-text="&#60;color name=&#34;{{$palette->name}}_3&#34;&#62;{{$palette->color_3}}&#60;/color&#62;">Copy</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row" class="text-lowercase user-select-all"><code>&#60;color name="{{$palette->name}}_4"&#62;{{$palette->color_4}}&#60;/color&#62;</code></td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                    onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy"
+                                    data-clipboard-text="&#60;color name=&#34;{{$palette->name}}_4&#34;&#62;{{$palette->color_4}}&#60;/color&#62;">Copy</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row" class="text-lowercase user-select-all"><code>&#60;color name="{{$palette->name}}_5"&#62;{{$palette->color_5}}&#60;/color&#62;</code></td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                    onclick="copyColor(this)" data-toggle="tooltip" title="Click to copy"
+                                    data-clipboard-text="&#60;color name=&#34;{{$palette->name}}_5&#34;&#62;{{$palette->color_5}}&#60;/color&#62;">Copy</button>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
 </div>
 @endsection
 @section('scripts')

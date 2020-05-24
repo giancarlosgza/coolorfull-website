@@ -34,6 +34,7 @@
                         <h6 class="text-roboto"><i class="fas fa-check-circle text-primary"></i> Access to every Colorffy's tools.</h6>
                         <h6 class="text-roboto"><i class="fas fa-check-circle text-primary"></i> Save your favorites gradients and palettes.</h6>
                         <h6 class="text-roboto"><i class="fas fa-check-circle text-primary"></i> Create and save unlimited gradients.</h6>
+                        <h6 class="text-roboto"><i class="fas fa-check-circle text-primary"></i> Get Android colors from palettes and gradients</h6>
                         {{-- <h6><i class="fas fa-check-circle text-primary mb-4"></i> No ads in the website.</h6> --}}
                         <hr>
                         <a href="/register" class="btn btn-primary btn-block ripple">Start my first month</a>

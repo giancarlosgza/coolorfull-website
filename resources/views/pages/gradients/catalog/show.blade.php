@@ -58,10 +58,17 @@
                 <i class="material-icons">code</i>
                 CSS
             </a>
+            @guest
+            <button class="btn btn-light ripple ripple-dark" disabled>
+                <i class="material-icons">adb</i>
+                Android colors (PRO)
+            </button>
+            @else
             <a class="btn btn-light ripple ripple-dark" data-toggle="modal" data-target="#androidModal">
                 <i class="material-icons">adb</i>
                 Android colors
             </a>
+            @endguest 
             <a class="btn btn-light ripple ripple-dark" onclick="downloadimage()">
                 <i class="material-icons">image</i>
                 Get IMG
