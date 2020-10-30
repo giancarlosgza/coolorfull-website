@@ -114,6 +114,11 @@
         background-color: var(--theme-surface) !important;
         color: var(--theme-on-primary) !important;
     }
+
+    &:disabled {
+        background-color: var(--theme-background-80) !important;
+        color: var(--theme-on-primary) !important;
+    }
 }
 
 .btn-link {

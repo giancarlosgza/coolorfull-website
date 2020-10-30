@@ -59,20 +59,12 @@
             </div>
         </div>
     </div>
-    <div class="row text-center justify-content-center">
-        <div class="col-sm-12">
+    <div class="row">
+        <div class="col-12 col-md-4 col-lg-3 text-center mb-3">
             @guest
             <br>
             <!-- colorffy_ads_md -->
-            <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-5211873894116133"
-            data-ad-slot="3087365012"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEBI6K7Y&placement=wwwcolorffycom" id="_carbonads_js"></script>
             @else
             @endguest
         </div>
@@ -81,21 +73,5 @@
 @endsection
 @section('scripts')
 <script>
-    ;
-    (function (y, a, f, i) {
-        var head = a.getElementsByTagName('head')[0];
-        var script = a.createElement('script');
-
-        y['_yafi-widget'] = {
-            siteId: i,
-            url: f
-        };
-
-        script.async = 1;
-        script.src = f + 'widget/' + i;
-
-        head.appendChild(script);
-    })(window, document, 'https://widget.yafi.pro/', '5d1654a725b528002ae69f30');
-
 </script>
 @endsection

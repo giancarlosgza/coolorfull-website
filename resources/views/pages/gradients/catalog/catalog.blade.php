@@ -3,9 +3,7 @@
 @section('styles')
 
 @endsection
-@section('googleads')
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-@endsection
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -45,7 +43,15 @@
             <img src="{{asset('assets/img/illustrations/search_engine.svg')}}" width="200px" alt="">
             <br><br>
             <h3>Sorry, we couldn't find any gradient with that name.....</h3>
-        </div>  
+        </div> 
+        <div class="col-12 col-md-4 col-lg-3 text-center mb-3">
+            @guest
+            <br>
+            <!-- colorffy_ads_md -->
+            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEBI6K7Y&placement=wwwcolorffycom" id="_carbonads_js"></script>
+            @else
+            @endguest
+        </div>
         @foreach($gradients as $gradient)
         <div class="col-6 col-md-4 col-lg-3 mb-3">
             <div class="card">
@@ -92,25 +98,6 @@
             {{ $gradients->appends($_GET)->onEachSide(1)->links()  }}
         </div>
     </div>
-    <div class="row text-center justify-content-center">
-        <div class="col-sm-12">
-            @guest
-            <br>
-            <!-- colorffy_ads_md -->
-            <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-5211873894116133"
-            data-ad-slot="3087365012"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-            @else
-            @endguest
-        </div>
-    </div>
 </div>
 @endsection
 @section('scripts') 
@@ -141,18 +128,6 @@
     }
 </script>
 <script>
-    ;(function(y, a, f, i) {
-      var head = a.getElementsByTagName('head')[0];
-      var script = a.createElement('script');
-  
-      y['_yafi-widget'] = { siteId: i, url: f };
-  
-      script.async = 1;
-      script.src = f + 'widget/' + i;
-  
-      head.appendChild(script);
-    })(window, document, 'https://widget.yafi.pro/', '5d1654a725b528002ae69f30');
-
     //NOT RESULT FOUND
     @if( $gradients->count() < 1 )
         $('#imgNotResult').removeClass('d-none');

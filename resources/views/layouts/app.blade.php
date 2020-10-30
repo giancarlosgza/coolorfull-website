@@ -71,7 +71,7 @@
     <style>
         body{font-family:'Roboto',sans-serif; font-weight: 500 !important;}.logo{font-family:'Poppins',sans-serif}
     </style>
-    @yield('googleads')
+    
 </head>
 <body>
     @include('inc.navbar')
